@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nobel Prize Timeline (2016-2025) - 石川 佑樹</title>
+  <meta name="description" content="ノーベル賞受賞者タイムライン (2016-2025) — 全6部門の受賞者と業績を時系列で一覧">
+  <link rel="icon" href="../../images/favicon.jpg" type="image/jpeg">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Hiragino Sans', sans-serif;
+      background: #f5f5f4;
+      color: #1c1917;
+      min-height: 100vh;
+      padding: 2rem 1rem;
+    }
+
+    .container {
+      max-width: 720px;
+      width: 100%;
+      margin: 0 auto;
+      padding-bottom: 3rem;
+    }
+
+    .header {
+      margin-bottom: 2rem;
+    }
+
+    .back-link {
+      font-size: 0.8rem;
+      color: #a8a29e;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.3rem;
+      transition: color 0.15s;
+    }
+
+    .back-link:hover {
+      color: #57534e;
+    }
+
+    .page-title {
+      font-size: 1.6rem;
+      font-weight: 700;
+      margin-top: 1rem;
+      letter-spacing: 0.02em;
+    }
+
+    .page-description {
+      font-size: 0.85rem;
+      color: #78716c;
+      margin-top: 0.4rem;
+      line-height: 1.6;
+    }
+
+    /* Legend */
+    .legend {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+      margin-top: 1rem;
+    }
+
+    /* Category pills */
+    .pill {
+      display: inline-block;
+      font-size: 0.65rem;
+      font-weight: 600;
+      padding: 0.2rem 0.6rem;
+      border-radius: 9999px;
+      letter-spacing: 0.02em;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+
+    .pill-physics    { background: #dbeafe; color: #1d4ed8; }
+    .pill-chemistry  { background: #dcfce7; color: #15803d; }
+    .pill-medicine   { background: #ffe4e6; color: #be123c; }
+    .pill-literature { background: #fef3c7; color: #a16207; }
+    .pill-peace      { background: #f3e8ff; color: #7e22ce; }
+    .pill-economics  { background: #ccfbf1; color: #0f766e; }
+
+    /* Timeline */
+    .timeline {
+      position: relative;
+      padding-left: 2rem;
+    }
+
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 0.5rem;
+      top: 0;
+      bottom: 0;
+      width: 2px;
+      background: #e7e5e4;
+    }
+
+    /* Year section */
+    .year-section {
+      margin-bottom: 1.5rem;
+    }
+
+    .year-marker {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      background: #f5f5f4;
+      padding: 0.5rem 0;
+    }
+
+    .year-marker::before {
+      content: '';
+      position: absolute;
+      left: -1.75rem;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: #78716c;
+      border: 2px solid #f5f5f4;
+    }
+
+    .year-label {
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: #1c1917;
+      letter-spacing: 0.05em;
+    }
+
+    /* Year entries card */
+    .year-entries {
+      background: #fff;
+      border-radius: 1rem;
+      overflow: hidden;
+    }
+
+    /* Individual entry */
+    .entry {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.75rem;
+      padding: 0.85rem 1.25rem;
+    }
+
+    .entry + .entry {
+      border-top: 1px solid #f5f5f4;
+    }
+
+    .entry-pill {
+      padding-top: 0.1rem;
+    }
+
+    .entry-content {
+      flex: 1;
+      min-width: 0;
+    }
+
+    .entry-description {
+      font-size: 0.82rem;
+      font-weight: 500;
+      color: #1c1917;
+      line-height: 1.55;
+    }
+
+    .entry-description a {
+      color: inherit;
+      text-decoration: none;
+      transition: color 0.15s;
+    }
+
+    .entry-description a:hover {
+      color: #57534e;
+      text-decoration: underline;
+      text-underline-offset: 2px;
+      text-decoration-color: #a8a29e;
+    }
+
+    .entry-description a::after {
+      content: ' \2197';
+      font-size: 0.7em;
+      color: #a8a29e;
+      vertical-align: super;
+    }
+
+    .entry-winners {
+      font-size: 0.72rem;
+      color: #78716c;
+      line-height: 1.5;
+      margin-top: 0.2rem;
+    }
+
+    @media (max-width: 480px) {
+      body { padding: 1.5rem 0.75rem; }
+      .timeline { padding-left: 1.5rem; }
+      .year-marker::before { left: -1.25rem; width: 10px; height: 10px; }
+      .year-label { font-size: 1.2rem; }
+      .year-entries { border-radius: 0.75rem; }
+      .entry {
+        flex-direction: column;
+        gap: 0.3rem;
+        padding: 0.7rem 1rem;
+      }
+      .pill { font-size: 0.6rem; }
+      .entry-description { font-size: 0.78rem; }
+      .entry-winners { font-size: 0.68rem; }
+      .legend { gap: 0.3rem; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <a href="/playground/" class="back-link">&larr; Playground</a>
+      <h1 class="page-title">Nobel Prize Timeline</h1>
+      <p class="page-description">2016-2025年のノーベル賞受賞者と業績の一覧</p>
+      <div class="legend">
+        <span class="pill pill-physics">Physics</span>
+        <span class="pill pill-chemistry">Chemistry</span>
+        <span class="pill pill-medicine">Medicine</span>
+        <span class="pill pill-literature">Literature</span>
+        <span class="pill pill-peace">Peace</span>
+        <span class="pill pill-economics">Economics</span>
+      </div>
+    </div>
+
+    <div class="timeline">
+
+      <!-- 2025 -->
+      <section class="year-section">
+        <div class="year-marker">
+          <div class="year-label">2025</div>
+        </div>
+        <div class="year-entries">
+          <div class="entry">
+            <div class="entry-pill"><span class="pill pill-physics">Physics</span></div>
+            <div class="entry-content">
+              <div class="entry-description"><a href="https://www.nobelprize.org/prizes/physics/2025/summary/" target="_blank" rel="noopener">巨視的量子力学的トンネル効果と電気回路におけるエネルギー量子化の発見</a></div>
+              <div class="entry-winners">John Clarke, Michel H. Devoret, John M. Martinis</div>
+            </div>
+          </div>
+          <div class="entry">
+            <div class="entry-pill"><span class="pill pill-chemistry">Chemistry</span></div>
+            <div class="entry-content">
+              <div class="entry-description"><a href="https://www.nobelprize.org/prizes/chemistry/2025/summary/" target="_blank" rel="noopener">金属有機構造体（MOFs）の開発</a></div>
+              <div class="entry-winners">Susumu Kitagawa（北川進）, Richard Robson, Omar M. Yaghi</div>
+            </div>
+          </div>
+          <div class="entry">
+            <div class="entry-pill"><span class="pill pill-medicine">Medicine</span></div>
+            <div class="entry-content">
+              <div class="entry-description"><a href="https://www.nobelprize.org/prizes/medicine/2025/summary/" target="_blank" rel="noopener">制御性T細胞の発見 — 免疫系が自己の細胞を攻撃するのを防ぐ仕組みの解明</a></div>
+              <div class="entry-winners">Mary E. Brunkow, Fred Ramsdell, Shimon Sakaguchi（坂口志文）</div>
+            </div>
+          </div>
+          <div class="entry">
+            <div class="entry-pill"><span class="pill pill-literature">Literature</span></div>
+            <div class="entry-content">
+              <div class="entry-description"><a href="https://www.nobelprize.org/prizes/literature/2025/summary/" target="_blank" rel="noopener">終末的恐怖の中にあっても芸術の力を再確認する、説得力ある先見的な作品群</a></div>
+              <div class="entry-winners">László Krasznahorkai（クラスナホルカイ・ラースロー）</div>
+            </div>
+          </div>
+          <div class="entry">
+            <div class="entry-pill"><span class="pill pill-peace">Peace</span></div>
+            <div class="entry-content">
+              <div class="entry-description"><a href="https://www.nobelprize.org/prizes/peace/2025/summary/" target="_blank" rel="noopener">ベネズエラの民主的権利と独裁から民主主義への平和的移行のための闘い</a></div>
+              <div class="entry-winners">Maria Corina Machado</div>
+            </div>
+          </div>
+          <div class="entry">
+            <div class="entry-pill"><span class="pill pill-economics">Economics</span></div>
+            <div class="entry-content">
+              <div class="entry-description"><a href="https://www.nobelprize.org/prizes/economic-sciences/2025/summary/" target="_blank" rel="noopener">イノベーション主導の経済成長の解明への貢献</a></div>
+              <div class="entry-winners">Joel Mokyr, Philippe Aghion, Peter Howitt</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 2024 -->
+      <section class="year-section">
+        <div class="year-marker">
+          <div class="year-label">2024</div>
+        </div>
+        <div class="year-entries">
+          <div class="entry">
+            <div class="entry-pill"><span class="pill pill-physics">Physics</span></div>
+            <div class="entry-content">
+              <div class="entry-description"><a href="https://www.nobelprize.org/prizes/physics/2024/summary/" target="_blank" rel="noopener">人工ニューラルネットワークによる機械学習を可能にした基礎的発見と発明</a></div>
+              <div class="entry-winners">John J. Hopfield, Geoffrey E. Hinton</div>
+            </div>
+          </div>
+          <div class="entry">
+            <div class="entry-pill"><span class="pill pill-chemistry">Chemistry</span></div>
+            <div class="entry-content">
+              <div class="entry-description"><a href="https://www.nobelprize.org/prizes/chemistry/2024/summary/" target="_blank" rel="noopener">コンピュータによるタンパク質設計とAIによるタンパク質構造予測（AlphaFold2）</a></div>
+              <div class="entry-winners">David Baker, Demis Hassabis, John Jumper</div>
+            </div>
+          </div>
+          <div class="entry">
+            <div class="entry-pill"><span class="pill pill-medicine">Medicine</span></div>
+            <div class="entry-content">
+              <div class="entry-description"><a href="https://www.nobelprize.org/prizes/medicine/2024/summary/" target="_blank" rel="noopener">遺伝子制御に重要な役割を果たすマイクロRNAの発見</a></div>
+              <div class="entry-winners">Victor Ambros, Gary Ruvkun</div>
+            </div>
+          </div>
+          <div class="entry">
+            <div class="entry-pill"><span class="pill pill-literature">Literature</span></div>
+            <div class="entry-content">
+              <div class="entry-description"><a href="https://www.nobelprize.org/prizes/literature/2024/summary/" target="_blank" rel="noopener">歴史的トラウマに対峙し、人間の生の脆さを露わにする激しく詩的な散文</a></div>
+              <div class="entry-winners">Han Kang（ハン・ガン）</div>
+            </div>
+          </div>
+          <div class="entry">
+            <div class="entry-pill"><span class="pill pill-peace">Peace</span></div>
+            <div class="entry-content">
+              <div class="entry-description"><a href="https://www.nobelprize.org/prizes/peace/2024/summary/" target="_blank" rel="noopener">核兵器のない世界の実現と、証言を通じて核兵器は二度と使用されてはならないことを示した功績</a></div>
+              <div class="entry-winners">日本被団協（Nihon Hidankyo）</div>
+            </div>
+          </div>
+          <div class="entry">
+            <div class="entry-pill"><span class="pill pill-economics">Economics</span></div>
+            <div class="entry-content">
+              <div class="entry-description"><a href="https://www.nobelprize.org/prizes/economic-sciences/2024/summary/" target="_blank" rel="noopener">制度が国家の繁栄にいかに影響するかの研究</a></div>
+              <div class="entry-winners">Daron Acemoglu, Simon Johnson, James Robinson</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 2023 -->
+      <section class="year-section">
+        <div class="year-marker">
+          <div class="year-label">2023</div>
+        </div>
+        <div class="year-entries">
+          <div class="entry">
+            <div class="entry-pill"><span class="pill pill-physics">Physics</span></div>
+            <div class="entry-content">
+              <div class="entry-description"><a href="https://www.nobelprize.org/prizes/physics/2023/summary/" target="_blank" rel="noopener">物質中の電子動力学を研究するためのアト秒光パルス生成の実験的手法</a></div>
+              <div class="entry-winners">Pierre Agostini, Ferenc Krausz, Anne L'Huillier</div>
+            </div>
+          </div>
+          <div class="entry">
+            <div class="entry-pill"><span class="pill pill-chemistry">Chemistry</span></div>
+            <div class="entry-content">
+              <div class="entry-description"><a href="https://www.nobelprize.org/prizes/chemistry/2023/summary/" target="_blank" rel="noopener">量子ドットの発見と合成</a></div>
+              <div class="entry-winners">Moungi G. Bawendi, Louis E. Brus, Aleksey Yekimov</div>
+            </div>
+          </div>
+          <div class="entry">
+            <div class="entry-pill"><span class="pill pill-medicine">Medicine</span></div>
+            <div class="entry-content">
+              <div class="entry-description"><a href="https://www.nobelprize.org/prizes/medicine/2023/summary/" target="_blank" rel="noopener">COVID-19ワクチン開発を可能にしたmRNA修飾に関する発見</a></div>
+              <div class="entry-winners">Katalin Karikó, Drew Weissman</div>
+            </div>
+          </div>
+          <div class="entry">
+            <div class="entry-pill"><span class="pill pill-literature">Literature</span></div>
+            <div class="entry-content">
+              <div class="entry-description"><a href="https://www.nobelprize.org/prizes/literature/2023/summary/" target="_blank" rel="noopener">言い表せないものに声を与える革新的な戯曲と散文</a></div>
+              <div class="entry-winners">Jon Fosse（ヨン・フォッセ）</div>
+            </div>
+          </div>
+          <div class="entry">
+            <div class="entry-pill"><span class="pill pill-peace">Peace</span></div>
+            <div class="entry-content">
+              <div class="entry-description"><a href="https://www.nobelprize.org/prizes/peace/2023/summary/" target="_blank" rel="noopener">イランにおける女性への弾圧に対する闘いと人権・自由の促進</a></div>
+              <div class="entry-winners">Narges Mohammadi</div>
+            </div>
+          </div>
+          <div class="entry">
+            <div class="entry-pill"><span class="pill pill-economics">Economics</span></div>
+            <div class="entry-content">
+              <div class="entry-description"><a href="https://www.nobelprize.org/prizes/economic-sciences/2023/summary/" target="_blank" rel="noopener">女性の労働市場での成果に関する理解の前進</a></div>
+              <div class="entry-winners">Claudia Goldin</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 2022 -->
+      <section class="year-section">
+        <div class="year-marker">
+          <div class="year-label">2022</div>
+        </div>
+        <div class="year-entries">
+          <div class="entry">
+            <div class="entry-pill"><span class="pill pill-physics">Physics</span></div>
+            <div class="entry-content">
+              <div class="entry-description"><a href="https://www.nobelprize.org/prizes/physics/2022/summary/" target="_blank" rel="noopener">もつれた光子を用いた実験、ベルの不等式の破れの実証、量子情報科学の先駆的研究</a></div>
+              <div class="entry-winners">Alain Aspect, John F. Clauser, Anton Zeilinger</div>
+            </div>
+          </div>
+          <div class="entry">
+            <div class="entry-pill"><span class="pill pill-chemistry">Chemistry</span></div>
+            <div class="entry-content">
+              <div class="entry-description"><a href="https://www.nobelprize.org/prizes/chemistry/2022/summary/" target="_blank" rel="noopener">クリックケミストリーと生体直交化学の開発</a></div>
+              <div class="entry-winners">Carolyn R. Bertozzi, Morten Meldal, K. Barry Sharpless</div>
+            </div>
+          </div>
+          <div class="entry">
+            <div class="entry-pill"><span class="pill pill-medicine">Medicine</span></div>
+            <div class="entry-content">
+              <div class="entry-description"><a href="https://www.nobelprize.org/prizes/medicine/2022/summary/" target="_blank" rel="noopener">絶滅したヒト族のゲノムと人類進化に関する発見</a></div>
+              <div class="entry-winners">Svante Pääbo（スヴァンテ・ペーボ）</div>
+            </div>
+          </div>
+          <div class="entry">
+            <div class="entry-pill"><span class="pill pill-literature">Literature</span></div>
+            <div class="entry-content">
+              <div class="entry-description"><a href="https://www.nobelprize.org/prizes/literature/2022/summary/" target="_blank" rel="noopener">個人的な記憶の根源、疎外、集団的制約を勇気と臨床的鋭さで明らかにした功績</a></div>
+              <div class="entry-winners">Annie Ernaux（アニー・エルノー）</div>
+            </div>
+          </div>
+          <div class="entry">
+            <div class="entry-pill"><span class="pill pill-peace">Peace</span></div>
+            <div class="entry-content">
+              <div class="entry-description"><a href="https://www.nobelprize.org/prizes/peace/2022/summary/" target="_blank" rel="noopener">ベラルーシ、ロシア、ウクライナにおける人権擁護活動</a></div>
+              <div class="entry-winners">Ales Bialiatski, Memorial, Center for Civil Liberties</div>
+            </div>
+          </div>
+          <div class="entry">
+            <div class="entry-pill"><span class="pill pill-economics">Economics</span></div>
+            <div class="entry-content">
+              <div class="entry-description"><a href="https://www.nobelprize.org/prizes/economic-sciences/2022/summary/" target="_blank" rel="noopener">銀行と金融危機に関する研究</a></div>
+              <div class="entry-winners">Ben Bernanke, Douglas Diamond, Philip Dybvig</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 2021 -->
+      <section class="year-section">
+        <div class="year-marker">
+          <div class="year-label">2021</div>
+        </div>
+        <div class="year-entries">
+          <div class="entry">
+            <div class="entry-pill"><span class="pill pill-physics">Physics</span></div>
+            <div class="entry-content">
+              <div class="entry-description"><a href="https://www.nobelprize.org/prizes/physics/2021/summary/" target="_blank" rel="noopener">地球気候の物理的モデリングと複雑系における無秩序と揺らぎの相互作用の発見</a></div>
+              <div class="entry-winners">Syukuro Manabe（真鍋淑郎）, Klaus Hasselmann, Giorgio Parisi</div>
+            </div>
+          </div>
+          <div class="entry">
+            <div class="entry-pill"><span class="pill pill-chemistry">Chemistry</span></div>
+            <div class="entry-content">
+              <div class="entry-description"><a href="https://www.nobelprize.org/prizes/chemistry/2021/summary/" target="_blank" rel="noopener">不斉有機触媒の開発</a></div>
+              <div class="entry-winners">Benjamin List, David MacMillan</div>
+            </div>
+          </div>
+          <div class="entry">
+            <div class="entry-pill"><span class="pill pill-medicine">Medicine</span></div>
+            <div class="entry-content">
+              <div class="entry-description"><a href="https://www.nobelprize.org/prizes/medicine/2021/summary/" target="_blank" rel="noopener">温度と触覚の受容体の発見</a></div>
+              <div class="entry-winners">David Julius, Ardem Patapoutian</div>
+            </div>
+          </div>
+          <div class="entry">
+            <div class="entry-pill"><span class="pill pill-literature">Literature</span></div>
+            <div class="entry-content">
+              <div class="entry-description"><a href="https://www.nobelprize.org/prizes/literature/2021/summary/" target="_blank" rel="noopener">植民地主義の影響と文化間の難民の運命への妥協なき洞察</a></div>
+              <div class="entry-winners">Abdulrazak Gurnah（アブドゥルラザク・グルナ）</div>
+            </div>
+          </div>
+          <div class="entry">
+            <div class="entry-pill"><span class="pill pill-peace">Peace</span></div>
+            <div class="entry-content">
+              <div class="entry-description"><a href="https://www.nobelprize.org/prizes/peace/2021/summary/" target="_blank" rel="noopener">民主主義と恒久的平和の前提条件としての表現の自由を守るための努力</a></div>
+              <div class="entry-winners">Maria Ressa, Dmitry Muratov</div>
+            </div>
+          </div>
+          <div class="entry">
+            <div class="entry-pill"><span class="pill pill-economics">Economics</span></div>
+            <div class="entry-content">
+              <div class="entry-description"><a href="https://www.nobelprize.org/prizes/economic-sciences/2021/summary/" target="_blank" rel="noopener">労働経済学への実証的貢献と因果関係分析の方法論的貢献</a></div>
+              <div class="entry-winners">David Card, Joshua Angrist, Guido W. Imbens</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 2020 -->
+      <section class="year-section">
+        <div class="year-marker">
+          <div class="year-label">2020</div>
+        </div>
+        <div class="year-entries">
+          <div class="entry">
+            <div class="entry-pill"><span class="pill pill-physics">Physics</span></div>
+            <div class="entry-content">
+              <div class="entry-description"><a href="https://www.nobelprize.org/prizes/physics/2020/summary/" target="_blank" rel="noopener">ブラックホール形成が一般相対性理論の確固たる予測であることの発見、および銀河中心の超大質量天体の発見</a></div>
+              <div class="entry-winners">Roger Penrose, Reinhard Genzel, Andrea Ghez</div>
+            </div>
+          </div>
+          <div class="entry">
+            <div class="entry-pill"><span class="pill pill-chemistry">Chemistry</span></div>
+            <div class="entry-content">
+              <div class="entry-description"><a href="https://www.nobelprize.org/prizes/chemistry/2020/summary/" target="_blank" rel="noopener">ゲノム編集手法 CRISPR-Cas9 の開発</a></div>
+              <div class="entry-winners">Emmanuelle Charpentier, Jennifer A. Doudna</div>
+            </div>
+          </div>
+          <div class="entry">
+            <div class="entry-pill"><span class="pill pill-medicine">Medicine</span></div>
+            <div class="entry-content">
+              <div class="entry-description"><a href="https://www.nobelprize.org/prizes/medicine/2020/summary/" target="_blank" rel="noopener">C型肝炎ウイルスの発見</a></div>
+              <div class="entry-winners">Harvey J. Alter, Michael Houghton, Charles M. Rice</div>
+            </div>
+          </div>
+          <div class="entry">
+            <div class="entry-pill"><span class="pill pill-literature">Literature</span></div>
+            <div class="entry-content">
+              <div class="entry-description"><a href="https://www.nobelprize.org/prizes/literature/2020/summary/" target="_blank" rel="noopener">厳格な美しさで個人の存在を普遍的なものにする、紛れもない詩的声</a></div>
+              <div class="entry-winners">Louise Glück（ルイーズ・グリュック）</div>
+            </div>
+          </div>
+          <div class="entry">
+            <div class="entry-pill"><span class="pill pill-peace">Peace</span></div>
+            <div class="entry-content">
+              <div class="entry-description"><a href="https://www.nobelprize.org/prizes/peace/2020/summary/" target="_blank" rel="noopener">飢餓との闘い、紛争地域の平和条件改善への取り組み</a></div>
+              <div class="entry-winners">World Food Programme（国連世界食糧計画 / WFP）</div>
+            </div>
+          </div>
+          <div class="entry">
+            <div class="entry-pill"><span class="pill pill-economics">Economics</span></div>
+            <div class="entry-content">
+              <div class="entry-description"><a href="https://www.nobelprize.org/prizes/economic-sciences/2020/summary/" target="_blank" rel="noopener">オークション理論の改善と新たなオークション形式の発明</a></div>
+              <div class="entry-winners">Paul Milgrom, Robert Wilson</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 2019 -->
+      <section class="year-section">
+        <div class="year-marker">
+          <div class="year-label">2019</div>
+        </div>
+        <div class="year-entries">
+          <div class="entry">
+            <div class="entry-pill"><span class="pill pill-physics">Physics</span></div>
+            <div class="entry-content">
+              <div class="entry-description"><a href="https://www.nobelprize.org/prizes/physics/2019/summary/" target="_blank" rel="noopener">物理的宇宙論における理論的発見、および太陽型恒星を周回する系外惑星の発見</a></div>
+              <div class="entry-winners">James Peebles, Michel Mayor, Didier Queloz</div>
+            </div>
+          </div>
+          <div class="entry">
+            <div class="entry-pill"><span class="pill pill-chemistry">Chemistry</span></div>
+            <div class="entry-content">
+              <div class="entry-description"><a href="https://www.nobelprize.org/prizes/chemistry/2019/summary/" target="_blank" rel="noopener">リチウムイオン電池の開発</a></div>
+              <div class="entry-winners">John B. Goodenough, M. Stanley Whittingham, Akira Yoshino（吉野彰）</div>
+            </div>
+          </div>
+          <div class="entry">
+            <div class="entry-pill"><span class="pill pill-medicine">Medicine</span></div>
+            <div class="entry-content">
+              <div class="entry-description"><a href="https://www.nobelprize.org/prizes/medicine/2019/summary/" target="_blank" rel="noopener">細胞が酸素利用可能量を感知し適応する仕組みの発見</a></div>
+              <div class="entry-winners">William G. Kaelin Jr, Sir Peter J. Ratcliffe, Gregg L. Semenza</div>
+            </div>
+          </div>
+          <div class="entry">
+            <div class="entry-pill"><span class="pill pill-literature">Literature</span></div>
+            <div class="entry-content">
+              <div class="entry-description"><a href="https://www.nobelprize.org/prizes/literature/2019/summary/" target="_blank" rel="noopener">言語的独創性をもって人間の経験の周縁と特殊性を探求した影響力ある作品</a></div>
+              <div class="entry-winners">Peter Handke（ペーター・ハントケ）</div>
+            </div>
+          </div>
+          <div class="entry">
+            <div class="entry-pill"><span class="pill pill-peace">Peace</span></div>
+            <div class="entry-content">
+              <div class="entry-description"><a href="https://www.nobelprize.org/prizes/peace/2019/summary/" target="_blank" rel="noopener">平和と国際協力、特にエリトリアとの国境紛争解決への決定的なイニシアチブ</a></div>
+              <div class="entry-winners">Abiy Ahmed Ali（アビィ・アハメド・アリ）</div>
+            </div>
+          </div>
+          <div class="entry">
+            <div class="entry-pill"><span class="pill pill-economics">Economics</span></div>
+            <div class="entry-content">
+              <div class="entry-description"><a href="https://www.nobelprize.org/prizes/economic-sciences/2019/summary/" target="_blank" rel="noopener">世界の貧困を緩和するための実験的アプローチ</a></div>
+              <div class="entry-winners">Abhijit Banerjee, Esther Duflo, Michael Kremer</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 2018 -->
+      <section class="year-section">
+        <div class="year-marker">
+          <div class="year-label">2018</div>
+        </div>
+        <div class="year-entries">
+          <div class="entry">
+            <div class="entry-pill"><span class="pill pill-physics">Physics</span></div>
+            <div class="entry-content">
+              <div class="entry-description"><a href="https://www.nobelprize.org/prizes/physics/2018/summary/" target="_blank" rel="noopener">光ピンセットの発明と生物系への応用、および高強度超短光パルスの生成方法</a></div>
+              <div class="entry-winners">Arthur Ashkin, Gérard Mourou, Donna Strickland</div>
+            </div>
+          </div>
+          <div class="entry">
+            <div class="entry-pill"><span class="pill pill-chemistry">Chemistry</span></div>
+            <div class="entry-content">
+              <div class="entry-description"><a href="https://www.nobelprize.org/prizes/chemistry/2018/summary/" target="_blank" rel="noopener">酵素の指向性進化、ペプチドと抗体のファージディスプレイ</a></div>
+              <div class="entry-winners">Frances H. Arnold, George P. Smith, Sir Gregory P. Winter</div>
+            </div>
+          </div>
+          <div class="entry">
+            <div class="entry-pill"><span class="pill pill-medicine">Medicine</span></div>
+            <div class="entry-content">
+              <div class="entry-description"><a href="https://www.nobelprize.org/prizes/medicine/2018/summary/" target="_blank" rel="noopener">免疫チェックポイント阻害によるがん治療法の発見</a></div>
+              <div class="entry-winners">James P. Allison, Tasuku Honjo（本庶佑）</div>
+            </div>
+          </div>
+          <div class="entry">
+            <div class="entry-pill"><span class="pill pill-literature">Literature</span></div>
+            <div class="entry-content">
+              <div class="entry-description"><a href="https://www.nobelprize.org/prizes/literature/2018/summary/" target="_blank" rel="noopener">境界を越えることを生き方として表現する、百科全書的な情熱による物語的想像力</a></div>
+              <div class="entry-winners">Olga Tokarczuk（オルガ・トカルチュク）</div>
+            </div>
+          </div>
+          <div class="entry">
+            <div class="entry-pill"><span class="pill pill-peace">Peace</span></div>
+            <div class="entry-content">
+              <div class="entry-description"><a href="https://www.nobelprize.org/prizes/peace/2018/summary/" target="_blank" rel="noopener">戦争および武力紛争における性暴力の使用を終わらせるための努力</a></div>
+              <div class="entry-winners">Denis Mukwege, Nadia Murad</div>
+            </div>
+          </div>
+          <div class="entry">
+            <div class="entry-pill"><span class="pill pill-economics">Economics</span></div>
+            <div class="entry-content">
+              <div class="entry-description"><a href="https://www.nobelprize.org/prizes/economic-sciences/2018/summary/" target="_blank" rel="noopener">気候変動および技術革新を長期マクロ経済分析に統合した功績</a></div>
+              <div class="entry-winners">William D. Nordhaus, Paul M. Romer</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 2017 -->
+      <section class="year-section">
+        <div class="year-marker">
+          <div class="year-label">2017</div>
+        </div>
+        <div class="year-entries">
+          <div class="entry">
+            <div class="entry-pill"><span class="pill pill-physics">Physics</span></div>
+            <div class="entry-content">
+              <div class="entry-description"><a href="https://www.nobelprize.org/prizes/physics/2017/summary/" target="_blank" rel="noopener">LIGO検出器への決定的貢献と重力波の観測</a></div>
+              <div class="entry-winners">Rainer Weiss, Barry C. Barish, Kip S. Thorne</div>
+            </div>
+          </div>
+          <div class="entry">
+            <div class="entry-pill"><span class="pill pill-chemistry">Chemistry</span></div>
+            <div class="entry-content">
+              <div class="entry-description"><a href="https://www.nobelprize.org/prizes/chemistry/2017/summary/" target="_blank" rel="noopener">溶液中の生体分子の高分解能構造決定のためのクライオ電子顕微鏡法の開発</a></div>
+              <div class="entry-winners">Jacques Dubochet, Joachim Frank, Richard Henderson</div>
+            </div>
+          </div>
+          <div class="entry">
+            <div class="entry-pill"><span class="pill pill-medicine">Medicine</span></div>
+            <div class="entry-content">
+              <div class="entry-description"><a href="https://www.nobelprize.org/prizes/medicine/2017/summary/" target="_blank" rel="noopener">概日リズムを制御する分子メカニズムの発見</a></div>
+              <div class="entry-winners">Jeffrey C. Hall, Michael Rosbash, Michael W. Young</div>
+            </div>
+          </div>
+          <div class="entry">
+            <div class="entry-pill"><span class="pill pill-literature">Literature</span></div>
+            <div class="entry-content">
+              <div class="entry-description"><a href="https://www.nobelprize.org/prizes/literature/2017/summary/" target="_blank" rel="noopener">強い感情の力をもつ小説で、世界とのつながりという幻想の下に潜む深淵を明らかにした</a></div>
+              <div class="entry-winners">Kazuo Ishiguro（カズオ・イシグロ）</div>
+            </div>
+          </div>
+          <div class="entry">
+            <div class="entry-pill"><span class="pill pill-peace">Peace</span></div>
+            <div class="entry-content">
+              <div class="entry-description"><a href="https://www.nobelprize.org/prizes/peace/2017/summary/" target="_blank" rel="noopener">核兵器使用がもたらす壊滅的な人道的結果への注意喚起と核兵器禁止条約実現への努力</a></div>
+              <div class="entry-winners">ICAN（核兵器廃絶国際キャンペーン）</div>
+            </div>
+          </div>
+          <div class="entry">
+            <div class="entry-pill"><span class="pill pill-economics">Economics</span></div>
+            <div class="entry-content">
+              <div class="entry-description"><a href="https://www.nobelprize.org/prizes/economic-sciences/2017/summary/" target="_blank" rel="noopener">行動経済学への貢献</a></div>
+              <div class="entry-winners">Richard H. Thaler</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 2016 -->
+      <section class="year-section">
+        <div class="year-marker">
+          <div class="year-label">2016</div>
+        </div>
+        <div class="year-entries">
+          <div class="entry">
+            <div class="entry-pill"><span class="pill pill-physics">Physics</span></div>
+            <div class="entry-content">
+              <div class="entry-description"><a href="https://www.nobelprize.org/prizes/physics/2016/summary/" target="_blank" rel="noopener">トポロジカル相転移とトポロジカル物質相の理論的発見</a></div>
+              <div class="entry-winners">David J. Thouless, F. Duncan M. Haldane, J. Michael Kosterlitz</div>
+            </div>
+          </div>
+          <div class="entry">
+            <div class="entry-pill"><span class="pill pill-chemistry">Chemistry</span></div>
+            <div class="entry-content">
+              <div class="entry-description"><a href="https://www.nobelprize.org/prizes/chemistry/2016/summary/" target="_blank" rel="noopener">分子マシンの設計と合成</a></div>
+              <div class="entry-winners">Jean-Pierre Sauvage, Sir J. Fraser Stoddart, Bernard L. Feringa</div>
+            </div>
+          </div>
+          <div class="entry">
+            <div class="entry-pill"><span class="pill pill-medicine">Medicine</span></div>
+            <div class="entry-content">
+              <div class="entry-description"><a href="https://www.nobelprize.org/prizes/medicine/2016/summary/" target="_blank" rel="noopener">オートファジーのメカニズムの発見</a></div>
+              <div class="entry-winners">Yoshinori Ohsumi（大隅良典）</div>
+            </div>
+          </div>
+          <div class="entry">
+            <div class="entry-pill"><span class="pill pill-literature">Literature</span></div>
+            <div class="entry-content">
+              <div class="entry-description"><a href="https://www.nobelprize.org/prizes/literature/2016/summary/" target="_blank" rel="noopener">偉大なアメリカの歌の伝統の中に新たな詩的表現を創造した功績</a></div>
+              <div class="entry-winners">Bob Dylan（ボブ・ディラン）</div>
+            </div>
+          </div>
+          <div class="entry">
+            <div class="entry-pill"><span class="pill pill-peace">Peace</span></div>
+            <div class="entry-content">
+              <div class="entry-description"><a href="https://www.nobelprize.org/prizes/peace/2016/summary/" target="_blank" rel="noopener">コロンビアの50年以上にわたる内戦を終結させるための断固たる努力</a></div>
+              <div class="entry-winners">Juan Manuel Santos</div>
+            </div>
+          </div>
+          <div class="entry">
+            <div class="entry-pill"><span class="pill pill-economics">Economics</span></div>
+            <div class="entry-content">
+              <div class="entry-description"><a href="https://www.nobelprize.org/prizes/economic-sciences/2016/summary/" target="_blank" rel="noopener">契約理論への貢献</a></div>
+              <div class="entry-winners">Oliver Hart, Bengt Holmström</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </div>
+</body>
+</html>
