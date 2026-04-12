@@ -26,6 +26,40 @@
 
     .header { margin-bottom: 2rem; }
 
+    .header-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 1rem;
+    }
+
+    .view-toggle {
+      display: flex;
+      gap: 2px;
+      background: #e7e5e4;
+      border-radius: 6px;
+      padding: 2px;
+    }
+
+    .view-toggle button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 30px;
+      height: 26px;
+      border: none;
+      background: transparent;
+      border-radius: 4px;
+      cursor: pointer;
+      color: #a8a29e;
+      transition: background 0.15s, color 0.15s;
+    }
+
+    .view-toggle button:hover { color: #57534e; }
+    .view-toggle button.active { background: #fff; color: #1c1917; box-shadow: 0 1px 2px rgba(0,0,0,0.08); }
+
+    .view-toggle svg { width: 14px; height: 14px; }
+
     .back-link {
       font-size: 0.8rem;
       color: #a8a29e;
@@ -212,6 +246,89 @@
       text-shadow: 0 1px 2px rgba(0,0,0,0.2);
     }
 
+    /* Grid View */
+    .view-grid .shelf-board,
+    .view-grid .shelf-detail { display: none; }
+
+    .view-grid .shelf { background: transparent; border-radius: 0; overflow: visible; }
+
+    .view-grid .books {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0.5rem;
+      overflow-x: visible;
+      overflow-y: visible;
+      padding: 0;
+      min-height: 0;
+      align-items: start;
+    }
+
+    .view-grid .book { flex-shrink: unset; }
+
+    .view-grid .spine { display: none; }
+
+    .book .tile { display: none; }
+
+    .view-grid .book .tile {
+      display: flex;
+      flex-direction: column;
+      background: #fff;
+      border-radius: 0.5rem;
+      overflow: hidden;
+      height: 100%;
+      transition: transform 0.15s, box-shadow 0.15s;
+    }
+
+    .view-grid .book:hover .tile {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    }
+
+    .tile-cover {
+      aspect-ratio: 3 / 4;
+      background: #e7e5e4;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .tile-cover img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .tile-cover .tile-fallback {
+      padding: 0.5rem;
+      font-size: 0.6rem;
+      color: #a8a29e;
+      text-align: center;
+      line-height: 1.4;
+      word-break: break-all;
+    }
+
+    .tile-title {
+      padding: 0.4rem 0.5rem;
+      font-size: 0.65rem;
+      font-weight: 600;
+      color: #1c1917;
+      line-height: 1.35;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+
+    .tile-author {
+      padding: 0 0.5rem 0.4rem;
+      font-size: 0.58rem;
+      color: #a8a29e;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
     /* Loading */
     .loading {
       text-align: center;
@@ -320,6 +437,7 @@
       .spine-title { font-size: 0.5rem; }
       .shelf-detail.visible { padding: 0.5rem 0.75rem; }
       .modal-card { max-width: 260px; }
+      .view-grid .books { grid-template-columns: repeat(3, 1fr); }
     }
   </style>
 </head>
@@ -327,7 +445,17 @@
   <div class="container">
     <div class="header">
       <a href="/playground/" class="back-link">&larr; Playground</a>
-      <h1 class="page-title">My Books</h1>
+      <div class="header-row">
+        <h1 class="page-title">My Books</h1>
+        <div class="view-toggle" id="viewToggle">
+          <button id="btn-shelf" class="active" title="Shelf view">
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="1" y1="14" x2="15" y2="14"/><rect x="2" y="3" width="3" height="11" rx="0.5"/><rect x="6" y="5" width="3" height="9" rx="0.5"/><rect x="10" y="4" width="3" height="10" rx="0.5"/></svg>
+          </button>
+          <button id="btn-grid" title="Grid view">
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="1" y="1" width="6" height="6" rx="1"/><rect x="9" y="1" width="6" height="6" rx="1"/><rect x="1" y="9" width="6" height="6" rx="1"/><rect x="9" y="9" width="6" height="6" rx="1"/></svg>
+          </button>
+        </div>
+      </div>
       <p class="page-description">読書ログ。</p>
       <div class="stats" id="stats"></div>
     </div>
@@ -389,6 +517,10 @@
         var booksHtml = books.map(function(book, i) {
           var color = COLORS[(hash(book.title) + i) % COLORS.length];
           var height = 125 + (hash(book.title + book.author) % 35);
+          var tileImg = book.cover
+            ? '<img src="' + esc(book.cover) + '" alt="' + esc(book.title) + '" loading="lazy">'
+            : '<span class="tile-fallback">' + esc(book.title) + '</span>';
+
           return '<div class="book" tabindex="0"' +
             ' data-title="' + esc(book.title) + '"' +
             ' data-author="' + esc(book.author) + '"' +
@@ -398,6 +530,11 @@
             '>' +
             '<div class="spine" style="background-color:' + color + ';height:' + height + 'px">' +
               '<span class="spine-title">' + esc(book.title) + '</span>' +
+            '</div>' +
+            '<div class="tile">' +
+              '<div class="tile-cover">' + tileImg + '</div>' +
+              '<div class="tile-title">' + esc(book.title) + '</div>' +
+              '<div class="tile-author">' + esc(book.author) + '</div>' +
             '</div>' +
           '</div>';
         }).join('');
@@ -501,6 +638,30 @@
         book.addEventListener('click', function() { openModal(book); });
       });
     }
+
+    // View toggle
+    (function() {
+      var btnShelf = document.getElementById('btn-shelf');
+      var btnGrid = document.getElementById('btn-grid');
+      var saved = localStorage.getItem('mybooks-view');
+      if (saved === 'grid') {
+        document.body.classList.add('view-grid');
+        btnShelf.classList.remove('active');
+        btnGrid.classList.add('active');
+      }
+      btnShelf.addEventListener('click', function() {
+        document.body.classList.remove('view-grid');
+        btnShelf.classList.add('active');
+        btnGrid.classList.remove('active');
+        localStorage.setItem('mybooks-view', 'shelf');
+      });
+      btnGrid.addEventListener('click', function() {
+        document.body.classList.add('view-grid');
+        btnGrid.classList.add('active');
+        btnShelf.classList.remove('active');
+        localStorage.setItem('mybooks-view', 'grid');
+      });
+    })();
 
     fetch('./books-data.json')
       .then(function(r) { return r.json(); })
