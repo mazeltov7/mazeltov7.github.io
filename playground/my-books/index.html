@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Books - 石川 佑樹</title>
+  <meta name="description" content="石川 佑樹の読書記録 (2021-2026)">
+  <link rel="icon" href="../../images/favicon.jpg" type="image/jpeg">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Hiragino Sans', sans-serif;
+      background: #f5f5f4;
+      color: #1c1917;
+      min-height: 100vh;
+      padding: 2rem 1rem;
+    }
+
+    .container {
+      max-width: 720px;
+      width: 100%;
+      margin: 0 auto;
+      padding-bottom: 3rem;
+    }
+
+    .header { margin-bottom: 2rem; }
+
+    .back-link {
+      font-size: 0.8rem;
+      color: #a8a29e;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.3rem;
+      transition: color 0.15s;
+    }
+    .back-link:hover { color: #57534e; }
+
+    .page-title {
+      font-size: 1.6rem;
+      font-weight: 700;
+      margin-top: 1rem;
+      letter-spacing: 0.02em;
+    }
+
+    .page-description {
+      font-size: 0.85rem;
+      color: #78716c;
+      margin-top: 0.4rem;
+      line-height: 1.6;
+    }
+
+    .stats {
+      font-size: 0.75rem;
+      color: #a8a29e;
+      margin-top: 0.5rem;
+    }
+
+    /* Shelf Section */
+    .shelf-section { margin-bottom: 1.5rem; }
+
+    .shelf-header {
+      display: flex;
+      align-items: baseline;
+      gap: 0.6rem;
+      margin-bottom: 0.6rem;
+      padding-left: 0.25rem;
+    }
+
+    .year-label {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: #1c1917;
+    }
+
+    .book-count {
+      font-size: 0.7rem;
+      color: #a8a29e;
+      font-weight: 400;
+    }
+
+    /* Shelf Container */
+    .shelf {
+      background: #fff;
+      border-radius: 1rem;
+      overflow: hidden;
+    }
+
+    .books {
+      display: flex;
+      gap: 3px;
+      overflow-x: auto;
+      padding: 1.25rem 1rem 0.75rem;
+      align-items: flex-end;
+      min-height: 150px;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: thin;
+      scrollbar-color: #d6d3d1 transparent;
+    }
+
+    .books::-webkit-scrollbar { height: 3px; }
+    .books::-webkit-scrollbar-track { background: transparent; }
+    .books::-webkit-scrollbar-thumb { background: #d6d3d1; border-radius: 2px; }
+
+    /* Shelf Board */
+    .shelf-board {
+      height: 6px;
+      background: linear-gradient(180deg, #d6d3d1 0%, #e7e5e4 100%);
+      box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+    }
+
+    /* Detail Strip */
+    .shelf-detail {
+      padding: 0 1rem;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.2s ease, padding 0.2s ease;
+    }
+
+    .shelf-detail.visible {
+      max-height: 80px;
+      padding: 0.6rem 1rem;
+    }
+
+    .shelf-detail-inner {
+      display: flex;
+      align-items: baseline;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+    }
+
+    .shelf-detail .d-title {
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: #1c1917;
+      line-height: 1.4;
+    }
+
+    .shelf-detail .d-en {
+      font-size: 0.65rem;
+      color: #78716c;
+      font-style: italic;
+    }
+
+    .shelf-detail .d-author {
+      font-size: 0.68rem;
+      color: #78716c;
+    }
+
+    .shelf-detail .d-publisher {
+      font-size: 0.62rem;
+      color: #a8a29e;
+    }
+
+    .shelf-detail .d-sep {
+      color: #d6d3d1;
+      font-size: 0.6rem;
+    }
+
+    /* Book Spine */
+    .book {
+      position: relative;
+      flex-shrink: 0;
+      cursor: pointer;
+      outline: none;
+    }
+
+    .spine {
+      width: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 1px 3px 2px 1px;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      box-shadow: inset -2px 0 3px rgba(0,0,0,0.12), 1px 0 2px rgba(0,0,0,0.05);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .spine::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(90deg, rgba(255,255,255,0.08) 0%, transparent 30%, transparent 70%, rgba(0,0,0,0.06) 100%);
+      pointer-events: none;
+    }
+
+    .book:hover .spine,
+    .book:focus .spine {
+      transform: translateY(-6px);
+      box-shadow: inset -2px 0 3px rgba(0,0,0,0.12), 2px 4px 8px rgba(0,0,0,0.12);
+    }
+
+    .book.active .spine {
+      transform: translateY(-6px);
+      box-shadow: inset -2px 0 3px rgba(0,0,0,0.12), 2px 4px 8px rgba(0,0,0,0.15);
+    }
+
+    .spine-title {
+      writing-mode: vertical-rl;
+      text-orientation: mixed;
+      font-size: 0.55rem;
+      color: rgba(255,255,255,0.88);
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      max-height: calc(100% - 12px);
+      padding: 6px 0;
+      font-weight: 500;
+      letter-spacing: 0.03em;
+      text-shadow: 0 1px 2px rgba(0,0,0,0.2);
+    }
+
+    /* Loading */
+    .loading {
+      text-align: center;
+      padding: 3rem;
+      color: #a8a29e;
+      font-size: 0.85rem;
+    }
+
+    /* Responsive */
+    @media (max-width: 480px) {
+      body { padding: 1.5rem 0.75rem; }
+      .shelf { border-radius: 0.75rem; }
+      .books { padding: 1rem 0.75rem 0.6rem; min-height: 130px; }
+      .spine { width: 26px; }
+      .spine-title { font-size: 0.5rem; }
+      .shelf-detail.visible { padding: 0.5rem 0.75rem; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <a href="/playground/" class="back-link">&larr; Playground</a>
+      <h1 class="page-title">My Books</h1>
+      <p class="page-description">Instagramストーリーに記録してきた読書ログ。</p>
+      <div class="stats" id="stats"></div>
+    </div>
+    <div id="shelves">
+      <div class="loading">Loading...</div>
+    </div>
+  </div>
+
+  <script>
+    var COLORS = [
+      '#7c6f5e', '#5e7c6b', '#7c5e6b', '#5e6a7c',
+      '#8a7e6a', '#6a7a6a', '#7a6a7a', '#6a6a7a',
+      '#8e7b65', '#657b6e', '#7b6578', '#657882'
+    ];
+
+    function hash(str) {
+      var h = 0;
+      for (var i = 0; i < str.length; i++) {
+        h = ((h << 5) - h) + str.charCodeAt(i);
+        h |= 0;
+      }
+      return Math.abs(h);
+    }
+
+    function esc(s) {
+      var d = document.createElement('div');
+      d.textContent = s;
+      return d.innerHTML;
+    }
+
+    function render(data) {
+      var container = document.getElementById('shelves');
+      var years = Object.keys(data).sort(function(a, b) { return b - a; });
+      var total = 0;
+      years.forEach(function(y) { total += data[y].length; });
+
+      document.getElementById('stats').textContent =
+        total + ' books \u00b7 ' + years[years.length - 1] + '\u2013' + years[0];
+
+      container.innerHTML = '';
+
+      years.forEach(function(year) {
+        var books = data[year];
+        var section = document.createElement('section');
+        section.className = 'shelf-section';
+
+        var booksHtml = books.map(function(book, i) {
+          var color = COLORS[(hash(book.title) + i) % COLORS.length];
+          var height = 125 + (hash(book.title + book.author) % 35);
+          return '<div class="book" tabindex="0"' +
+            ' data-title="' + esc(book.title) + '"' +
+            ' data-author="' + esc(book.author) + '"' +
+            (book.titleEn ? ' data-en="' + esc(book.titleEn) + '"' : '') +
+            (book.publisher ? ' data-pub="' + esc(book.publisher) + '"' : '') +
+            '>' +
+            '<div class="spine" style="background-color:' + color + ';height:' + height + 'px">' +
+              '<span class="spine-title">' + esc(book.title) + '</span>' +
+            '</div>' +
+          '</div>';
+        }).join('');
+
+        section.innerHTML =
+          '<div class="shelf-header">' +
+            '<h2 class="year-label">' + year + '</h2>' +
+            '<span class="book-count">' + books.length + ' books</span>' +
+          '</div>' +
+          '<div class="shelf">' +
+            '<div class="books">' + booksHtml + '</div>' +
+            '<div class="shelf-board"></div>' +
+            '<div class="shelf-detail"><div class="shelf-detail-inner"></div></div>' +
+          '</div>';
+
+        container.appendChild(section);
+      });
+
+      initInteractions();
+    }
+
+    function initInteractions() {
+      var activeBook = null;
+
+      document.querySelectorAll('.book').forEach(function(book) {
+        function show() {
+          var shelf = book.closest('.shelf');
+          var detail = shelf.querySelector('.shelf-detail');
+          var inner = detail.querySelector('.shelf-detail-inner');
+          var t = book.dataset.title;
+          var a = book.dataset.author;
+          var en = book.dataset.en;
+          var pub = book.dataset.pub;
+
+          var html = '<span class="d-title">' + t + '</span>';
+          if (en) html += ' <span class="d-en">' + en + '</span>';
+          if (a) html += '<span class="d-sep">\u00b7</span><span class="d-author">' + a + '</span>';
+          if (pub) html += '<span class="d-sep">\u00b7</span><span class="d-publisher">' + pub + '</span>';
+
+          inner.innerHTML = html;
+          detail.classList.add('visible');
+
+          if (activeBook && activeBook !== book) activeBook.classList.remove('active');
+          book.classList.add('active');
+          activeBook = book;
+        }
+
+        function hide() {
+          var shelf = book.closest('.shelf');
+          var detail = shelf.querySelector('.shelf-detail');
+          detail.classList.remove('visible');
+          book.classList.remove('active');
+          if (activeBook === book) activeBook = null;
+        }
+
+        book.addEventListener('mouseenter', show);
+        book.addEventListener('mouseleave', hide);
+        book.addEventListener('focus', show);
+        book.addEventListener('blur', hide);
+      });
+    }
+
+    fetch('./books-data.json')
+      .then(function(r) { return r.json(); })
+      .then(render)
+      .catch(function(err) {
+        console.error(err);
+        document.getElementById('shelves').innerHTML =
+          '<div class="loading">Failed to load data.</div>';
+      });
+  </script>
+</body>
+</html>
