@@ -30,7 +30,9 @@ arg: 省略可。指定があれば「Amazon URL [年]」を直接追加する�
 5. 指定年（または当年）の配列末尾に entry を追加
 6. JSON 妥当性検証
 7. ローカルサーバ (port 8765) が起動していなければ起動して、Claude in Chrome で読み込み確認
-8. 結果サマリ提示 → ユーザー確認 → commit & push
+8. 結果サマリ提示 → ユーザー確認
+9. **enrich チェーン**: 「追加した N 冊について `/enrich-book` を実行しますか？ (A) 全部 / (B) 個別選択 / (C) スキップ」と問う。A/B 選択時は対象本ごとに enrich-book の調査→提示→承認フローを回し、採用された本だけ books-data.json と notes/{KEY}.md を更新
+10. enrich の有無に関わらず最後に **1 つのコミット** にまとめて commit & push
 
 ### モード2: Instagram 自動検出（引数なし）
 
@@ -67,11 +69,19 @@ arg: 省略可。指定があれば「Amazon URL [年]」を直接追加する�
    - 「以下の N 冊を追加します。承認しますか？」形式で年・タイトル・著者・出版社・cover URL を列挙
    - ユーザー承認後に実際に書き込み
 
-7. **books-data.json に追加 → commit & push**
+7. **books-data.json に追加**
    - 該当年配列の末尾に entry を append
    - JSON 妥当性検証
    - ローカルブラウザで loaded 確認
-   - commit メッセージ例: `MyBooks: {N}冊追加 ({titles...})`
+
+8. **enrich チェーン（必須確認）**
+   - 「追加した N 冊について `/enrich-book` を実行しますか？ (A) 全部 / (B) 個別選択 / (C) スキップ」と問う
+   - A/B 選択時: 対象本ごとに `/enrich-book` の調査→出典付き下書き提示→承認フローを回す。承認分のみ books-data.json と notes/{KEY}.md に反映
+   - C 選択時: スキップ
+
+9. **commit & push**
+   - 追加 + enrich の変更をまとめて 1 コミット
+   - commit メッセージ例: `MyBooks: {N}冊追加 ({titles...})` あるいは enrich があれば `MyBooks: {N}冊追加 + enrich ({titles...})`
    - push して `mazeltov7.github.io` 本番へ反映
 
 ## entry のスキーマ
