@@ -254,7 +254,7 @@
 
     .view-grid .books {
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
+      grid-template-columns: repeat(4, minmax(0, 1fr));
       gap: 0.5rem;
       overflow-x: visible;
       overflow-y: visible;
@@ -437,7 +437,7 @@
       .spine-title { font-size: 0.5rem; }
       .shelf-detail.visible { padding: 0.5rem 0.75rem; }
       .modal-card { max-width: 260px; }
-      .view-grid .books { grid-template-columns: repeat(3, 1fr); }
+      .view-grid .books { grid-template-columns: repeat(3, minmax(0, 1fr)); }
     }
   </style>
 </head>

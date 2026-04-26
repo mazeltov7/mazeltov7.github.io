@@ -15,7 +15,7 @@
       "titleEn": "Living and Working with AI",
       "author": "Ethan Mollick",
       "publisher": "KADOKAWA",
-      "cover": "https://books.google.com/books/content?id=r13gEAAAQBAJ&printsec=frontcover&img=1&zoom=3"
+      "cover": "https://m.media-amazon.com/images/P/B0DPLVNYS3.jpg"
     },
     {
       "title": "SHIFT 解剖 究極の人的資本経営",
@@ -27,7 +27,7 @@
       "title": "稲盛和夫 私の履歴書 ガキの自叙伝",
       "author": "稲盛和夫",
       "publisher": "日経ビジネス人文庫",
-      "cover": "https://books.google.com/books/content?id=O-BkPQAACAAJ&printsec=frontcover&img=1&zoom=1"
+      "cover": "https://m.media-amazon.com/images/P/4532192498.jpg"
     },
     {
       "title": "城の崎にて・小僧の神様",
@@ -57,7 +57,7 @@
       "title": "わたしを離さないで",
       "titleEn": "Never Let Me Go",
       "author": "カズオ・イシグロ",
-      "cover": "https://books.google.com/books/content?id=u2vaTWhcEBsC&printsec=frontcover&img=1&zoom=3"
+      "cover": "https://m.media-amazon.com/images/P/4152087196.jpg"
     },
     {
       "title": "運 ドン・キホーテ創業者「最強の遺言」",
@@ -69,115 +69,124 @@
       "title": "新・五代友厚伝",
       "author": "八木孝昌",
       "publisher": "PHP電子",
-      "cover": "https://books.google.com/books/content?id=IDXMzQEACAAJ&printsec=frontcover&img=1&zoom=1"
+      "cover": "https://m.media-amazon.com/images/P/456984538X.jpg"
     },
     {
       "title": "五代友厚",
       "author": "田付茉莉子",
-      "publisher": "ミネルヴァ書房"
+      "publisher": "ミネルヴァ書房",
+      "cover": "https://m.media-amazon.com/images/P/462308499X.jpg"
     },
     {
       "title": "異星の客",
       "titleEn": "Stranger in a Strange Land",
       "author": "ロバート・A・ハインライン",
-      "cover": "https://books.google.com/books/content?id=x7OrDwAAQBAJ&printsec=frontcover&img=1&zoom=3"
+      "cover": "https://m.media-amazon.com/images/P/4488618030.jpg"
     },
     {
-      "title": "プロジェクト・ヘイル・メアリー",
+      "title": "プロジェクト・ヘイル・メアリー (上)",
       "titleEn": "Project Hail Mary",
       "author": "アンディ・ウィアー",
       "publisher": "早川書房",
-      "cover": "https://books.google.com/books/content?id=OCWuEQAAQBAJ&printsec=frontcover&img=1&zoom=3"
+      "cover": "https://m.media-amazon.com/images/P/B0GGHDTGVK.jpg"
+    },
+    {
+      "title": "プロジェクト・ヘイル・メアリー (下)",
+      "titleEn": "Project Hail Mary",
+      "author": "アンディ・ウィアー",
+      "publisher": "早川書房",
+      "cover": "https://m.media-amazon.com/images/P/B0GGHFBGMH.jpg"
     }
   ],
   "2025": [
     {
       "title": "吉田松陰 (1)",
       "author": "山岡荘八",
-      "cover": "https://books.google.com/books/content?id=1JUIAAAAMAAJ&printsec=frontcover&img=1&zoom=3"
+      "cover": "https://m.media-amazon.com/images/P/406195072X.jpg"
     },
     {
       "title": "吉田松陰 (2)",
       "author": "山岡荘八",
-      "cover": "https://books.google.com/books/content?id=1JUIAAAAMAAJ&printsec=frontcover&img=1&zoom=3"
+      "cover": "https://m.media-amazon.com/images/P/4061950738.jpg"
     },
     {
       "title": "孟子 (上)",
       "author": "小林勝人 訳注",
       "publisher": "岩波文庫",
-      "cover": "https://books.google.com/books/content?id=eIZrSXY7RmwC&printsec=frontcover&img=1&zoom=3"
+      "cover": "https://m.media-amazon.com/images/P/4003320417.jpg"
     },
     {
       "title": "孟子 (下)",
       "author": "小林勝人 訳注",
       "publisher": "岩波文庫",
-      "cover": "https://books.google.com/books/content?id=eIZrSXY7RmwC&printsec=frontcover&img=1&zoom=3"
+      "cover": "https://m.media-amazon.com/images/P/4003320425.jpg"
     },
     {
       "title": "論語",
       "author": "金谷治 訳注",
       "publisher": "岩波文庫",
-      "cover": "https://books.google.com/books/content?id=_yddAMI1NKIC&printsec=frontcover&img=1&zoom=3"
+      "cover": "https://m.media-amazon.com/images/P/4003320212.jpg"
     },
     {
       "title": "世に棲む日日 (一)",
       "author": "司馬遼太郎",
-      "cover": "https://books.google.com/books/content?id=pwXNDwAAQBAJ&printsec=frontcover&img=1&zoom=3"
+      "cover": "https://m.media-amazon.com/images/P/B00OT8C2I2.jpg"
     },
     {
       "title": "世に棲む日日 (二)",
       "author": "司馬遼太郎",
-      "cover": "https://books.google.com/books/content?id=owXNDwAAQBAJ&printsec=frontcover&img=1&zoom=3"
+      "cover": "https://m.media-amazon.com/images/P/B00PVUMPX4.jpg"
     },
     {
       "title": "大学・中庸",
       "author": "金谷治 訳注",
       "publisher": "岩波文庫",
-      "cover": "https://books.google.com/books/content?id=A3stAQAAIAAJ&printsec=frontcover&img=1&zoom=1"
+      "cover": "https://m.media-amazon.com/images/P/4003322215.jpg"
     },
     {
       "title": "世に棲む日日 (三)",
       "author": "司馬遼太郎",
-      "cover": "https://books.google.com/books/content?id=pwXNDwAAQBAJ&printsec=frontcover&img=1&zoom=3"
+      "cover": "https://m.media-amazon.com/images/P/B00PVUMQ2O.jpg"
     },
     {
       "title": "詩経",
       "author": "目加田誠",
       "publisher": "講談社学術文庫",
-      "cover": "https://books.google.com/books/content?id=p481AQAAIAAJ&printsec=frontcover&img=1&zoom=1"
+      "cover": "https://m.media-amazon.com/images/P/4061589539.jpg"
     },
     {
       "title": "易経 (上)",
       "author": "高田真治・後藤基巳 訳",
       "publisher": "岩波文庫",
-      "cover": "https://books.google.com/books/content?id=N5nlEAAAQBAJ&printsec=frontcover&img=1&zoom=3"
+      "cover": "https://m.media-amazon.com/images/P/4003320115.jpg"
     },
     {
       "title": "世界でいちばん透きとおった物語",
       "author": "杉井光",
-      "publisher": "新潮文庫"
+      "publisher": "新潮文庫",
+      "cover": "https://m.media-amazon.com/images/P/4101802629.jpg"
     },
     {
       "title": "世に棲む日日 (四)",
       "author": "司馬遼太郎",
-      "cover": "https://books.google.com/books/content?id=pwXNDwAAQBAJ&printsec=frontcover&img=1&zoom=3"
+      "cover": "https://m.media-amazon.com/images/P/B00PVUMQAG.jpg"
     },
     {
       "title": "牛店雑談 安愚楽鍋 初編",
       "author": "仮名垣魯文",
-      "cover": "https://books.google.com/books/content?id=UXg9AQAAIAAJ&printsec=frontcover&img=1&zoom=1"
+      "cover": "https://m.media-amazon.com/images/P/4003100115.jpg"
     },
     {
       "title": "小説神髄",
       "author": "坪内逍遥",
       "publisher": "岩波文庫",
-      "cover": "https://books.google.com/books/content?id=g1K3SgAACAAJ&printsec=frontcover&img=1&zoom=1"
+      "cover": "https://m.media-amazon.com/images/P/4003100417.jpg"
     },
     {
       "title": "浮雲",
       "author": "二葉亭四迷",
       "publisher": "青空文庫",
-      "cover": "https://books.google.com/books/content?id=Dg84Bcdq6bEC&printsec=frontcover&img=1&zoom=3"
+      "cover": "https://m.media-amazon.com/images/P/B009IYB3UA.jpg"
     },
     {
       "title": "破戒",
@@ -190,17 +199,18 @@
       "titleEn": "The Road to Character",
       "author": "デイヴィッド・ブルックス",
       "publisher": "早川書房",
-      "cover": "https://books.google.com/books/content?id=mz63BQAAQBAJ&printsec=frontcover&img=1&zoom=3"
+      "cover": "https://m.media-amazon.com/images/P/B07FTD9CHY.jpg"
     },
     {
       "title": "留魂録読本",
       "author": "吉田松陰",
-      "cover": "https://books.google.com/books/content?id=kNbvBQAAQBAJ&printsec=frontcover&img=1&zoom=3"
+      "cover": "https://m.media-amazon.com/images/P/B0897Y4CRY.jpg"
     },
     {
       "title": "当世書生気質",
       "author": "坪内逍遥",
-      "publisher": "岩波文庫"
+      "publisher": "岩波文庫",
+      "cover": "https://m.media-amazon.com/images/P/4003100425.jpg"
     },
     {
       "title": "番狂わせの起業法",
@@ -213,17 +223,18 @@
       "titleEn": "Confessiones",
       "author": "アウグスティヌス",
       "publisher": "中公文庫",
-      "cover": "https://covers.openlibrary.org/b/id/292115-L.jpg"
+      "cover": "https://m.media-amazon.com/images/P/4122059283.jpg"
     },
     {
       "title": "なぜ宇宙は存在するのか",
       "author": "野村泰紀",
       "publisher": "講談社ブルーバックス",
-      "cover": "https://books.google.com/books/content?id=0LdpEAAAQBAJ&printsec=frontcover&img=1&zoom=1"
+      "cover": "https://m.media-amazon.com/images/P/B09XMKNYV2.jpg"
     },
     {
       "title": "ローマ人の物語 I",
-      "author": "塩野七生"
+      "author": "塩野七生",
+      "cover": "https://m.media-amazon.com/images/P/4103096101.jpg"
     },
     {
       "title": "世界秩序が変わるとき",
@@ -246,7 +257,7 @@
     {
       "title": "ローマ人の物語 III",
       "author": "塩野七生",
-      "cover": "https://books.google.com/books/content?id=2Hw2AAAACAAJ&printsec=frontcover&img=1&zoom=1"
+      "cover": "https://m.media-amazon.com/images/P/4103096128.jpg"
     },
     {
       "title": "宙に参る (1)",
@@ -255,7 +266,8 @@
     },
     {
       "title": "日本の歴史をよみなおす（全）",
-      "author": "網野善彦"
+      "author": "網野善彦",
+      "cover": "https://m.media-amazon.com/images/P/4480089292.jpg"
     },
     {
       "title": "東大教授がおしえる やばい日本史",
@@ -277,41 +289,41 @@
     {
       "title": "ローマ人の物語 IV",
       "author": "塩野七生",
-      "cover": "https://books.google.com/books/content?id=NDkQAQAAMAAJ&printsec=frontcover&img=1&zoom=1"
+      "cover": "https://m.media-amazon.com/images/P/4103096136.jpg"
     },
     {
       "title": "戦争は女の顔をしていない (1)",
       "author": "小梅けいと",
-      "cover": "https://books.google.com/books/content?id=5u_Z0QEACAAJ&printsec=frontcover&img=1&zoom=1"
+      "cover": "https://m.media-amazon.com/images/P/4049129825.jpg"
     },
     {
       "title": "ガリア戦記",
       "author": "カエサル",
       "publisher": "講談社学術文庫",
-      "cover": "https://books.google.com/books/content?id=fMc0EQAAQBAJ&printsec=frontcover&img=1&zoom=3"
+      "cover": "https://m.media-amazon.com/images/P/400334071X.jpg"
     },
     {
       "title": "ローマ人の物語 V",
       "author": "塩野七生",
-      "cover": "https://books.google.com/books/content?id=mS_iAAAACAAJ&printsec=frontcover&img=1&zoom=1"
+      "cover": "https://m.media-amazon.com/images/P/4103096144.jpg"
     },
     {
       "title": "産後クライシス",
       "author": "内田明香, 坪井健人",
       "publisher": "ポプラ新書",
-      "cover": "https://books.google.com/books/content?id=p3ZrEAAAQBAJ&printsec=frontcover&img=1&zoom=3"
+      "cover": "https://m.media-amazon.com/images/P/4591136779.jpg"
     },
     {
       "title": "完全版 知恵の七柱 1",
       "author": "T.E.ロレンス",
       "publisher": "平凡社 東洋文庫",
-      "cover": "https://books.google.com/books/content?id=KRPDQQAACAAJ&printsec=frontcover&img=1&zoom=1"
+      "cover": "https://m.media-amazon.com/images/P/4582807771.jpg"
     },
     {
       "title": "氷川清話",
       "author": "勝海舟",
       "publisher": "角川ソフィア文庫",
-      "cover": "https://books.google.com/books/content?id=nqN8DwAAQBAJ&printsec=frontcover&img=1&zoom=3"
+      "cover": "https://m.media-amazon.com/images/P/B00DVZROUA.jpg"
     },
     {
       "title": "すばらしい人体",
@@ -322,7 +334,7 @@
     {
       "title": "アンサングシンデレラ (1)",
       "author": "荒井ママレ",
-      "cover": "https://books.google.com/books/content?id=TFf5DwAAQBAJ&printsec=frontcover&img=1&zoom=3"
+      "cover": "https://m.media-amazon.com/images/P/B07K8FCH79.jpg"
     },
     {
       "title": "イラストレーターのためのお金の話",
@@ -331,45 +343,53 @@
       "cover": "https://books.google.com/books/content?id=TmAH0QEACAAJ&printsec=frontcover&img=1&zoom=1"
     },
     {
-      "title": "がん ―4000年の歴史―",
+      "title": "がん ―4000年の歴史― (上)",
       "titleEn": "The Emperor of All Maladies",
       "author": "シッダールタ・ムカジー",
       "publisher": "早川書房",
-      "cover": "https://books.google.com/books/content?id=80ixDAEACAAJ&printsec=frontcover&img=1&zoom=1"
+      "cover": "https://m.media-amazon.com/images/P/4150504679.jpg"
+    },
+    {
+      "title": "がん ―4000年の歴史― (下)",
+      "author": "シッダールタ・ムカジー",
+      "publisher": "早川書房",
+      "cover": "https://m.media-amazon.com/images/P/4150504687.jpg",
+      "titleEn": "The Emperor of All Maladies"
     },
     {
       "title": "翔ぶが如く (一)",
       "author": "司馬遼太郎",
-      "cover": "https://books.google.com/books/content?id=5f3MDwAAQBAJ&printsec=frontcover&img=1&zoom=3"
+      "cover": "https://m.media-amazon.com/images/P/B00PVUMPHU.jpg"
     },
     {
       "title": "もういちど読む 山川日本史",
-      "author": "山川出版社"
+      "author": "山川出版社",
+      "cover": "https://m.media-amazon.com/images/P/4634590905.jpg"
     },
     {
       "title": "翔ぶが如く (二)",
       "author": "司馬遼太郎",
-      "cover": "https://books.google.com/books/content?id=5f3MDwAAQBAJ&printsec=frontcover&img=1&zoom=3"
+      "cover": "https://m.media-amazon.com/images/P/B00PVUMPHA.jpg"
     },
     {
       "title": "翔ぶが如く (三)",
       "author": "司馬遼太郎",
-      "cover": "https://books.google.com/books/content?id=ujFNDwAAQBAJ&printsec=frontcover&img=1&zoom=3"
+      "cover": "https://m.media-amazon.com/images/P/B00PVUMPDE.jpg"
     },
     {
       "title": "学問のすすめ",
       "author": "福沢諭吉",
-      "cover": "https://books.google.com/books/content?id=gXKVAgAAQBAJ&printsec=frontcover&img=1&zoom=3"
+      "cover": "https://m.media-amazon.com/images/P/4003310233.jpg"
     },
     {
       "title": "翔ぶが如く (四)",
       "author": "司馬遼太郎",
-      "cover": "https://books.google.com/books/content?id=5f3MDwAAQBAJ&printsec=frontcover&img=1&zoom=3"
+      "cover": "https://m.media-amazon.com/images/P/B00PVUMPCA.jpg"
     },
     {
       "title": "翔ぶが如く (五)",
       "author": "司馬遼太郎",
-      "cover": "https://books.google.com/books/content?id=5f3MDwAAQBAJ&printsec=frontcover&img=1&zoom=3"
+      "cover": "https://m.media-amazon.com/images/P/B00PVUMPFW.jpg"
     },
     {
       "title": "勝負師 孫正義の冒険",
@@ -381,43 +401,43 @@
     {
       "title": "満州アヘンスクワッド 1",
       "author": "門馬司, 鹿子",
-      "cover": "https://books.google.com/books/content?id=YiJLEAAAQBAJ&printsec=frontcover&img=1&zoom=3"
+      "cover": "https://m.media-amazon.com/images/P/B08F24WDRK.jpg"
     },
     {
       "title": "翔ぶが如く (六)",
       "author": "司馬遼太郎",
-      "cover": "https://books.google.com/books/content?id=5f3MDwAAQBAJ&printsec=frontcover&img=1&zoom=3"
+      "cover": "https://m.media-amazon.com/images/P/B00PVUMPES.jpg"
     },
     {
       "title": "翔ぶが如く (七)",
       "author": "司馬遼太郎",
-      "cover": "https://books.google.com/books/content?id=ujFNDwAAQBAJ&printsec=frontcover&img=1&zoom=3"
+      "cover": "https://m.media-amazon.com/images/P/B00PVUMPLG.jpg"
     },
     {
       "title": "アンサングシンデレラ (15)",
       "author": "荒井ママレ",
-      "cover": "https://books.google.com/books/content?id=FcCY0AEACAAJ&printsec=frontcover&img=1&zoom=1"
+      "cover": "https://m.media-amazon.com/images/P/4867207845.jpg"
     },
     {
       "title": "ベルセルク 43",
       "titleEn": "BERSERK",
       "author": "三浦建太郎",
-      "cover": "https://books.google.com/books/content?id=MON9DwAAQBAJ&printsec=frontcover&img=1&zoom=3"
+      "cover": "https://m.media-amazon.com/images/P/B0FHYR6VMF.jpg"
     },
     {
       "title": "翔ぶが如く (八)",
       "author": "司馬遼太郎",
-      "cover": "https://books.google.com/books/content?id=5f3MDwAAQBAJ&printsec=frontcover&img=1&zoom=3"
+      "cover": "https://m.media-amazon.com/images/P/B00PVUMPGQ.jpg"
     },
     {
       "title": "翔ぶが如く (九)",
       "author": "司馬遼太郎",
-      "cover": "https://books.google.com/books/content?id=5f3MDwAAQBAJ&printsec=frontcover&img=1&zoom=3"
+      "cover": "https://m.media-amazon.com/images/P/B00PVUMPFC.jpg"
     },
     {
       "title": "翔ぶが如く (十)",
       "author": "司馬遼太郎",
-      "cover": "https://books.google.com/books/content?id=5f3MDwAAQBAJ&printsec=frontcover&img=1&zoom=3"
+      "cover": "https://m.media-amazon.com/images/P/B00PVUMQ0Q.jpg"
     },
     {
       "title": "家畜人ヤプー (1)",
@@ -425,15 +445,21 @@
       "cover": "https://books.google.com/books/content?id=XR12CAAAQBAJ&printsec=frontcover&img=1&zoom=3"
     },
     {
-      "title": "宿命の子",
+      "title": "宿命の子 (上)",
       "author": "船橋洋一",
       "publisher": "文藝春秋",
-      "cover": "https://books.google.com/books/content?id=oeMoEQAAQBAJ&printsec=frontcover&img=1&zoom=3"
+      "cover": "https://m.media-amazon.com/images/P/4163919104.jpg"
+    },
+    {
+      "title": "宿命の子 (下)",
+      "author": "船橋洋一",
+      "publisher": "文藝春秋",
+      "cover": "https://m.media-amazon.com/images/P/4163919112.jpg"
     },
     {
       "title": "舞姫",
       "author": "森鷗外",
-      "cover": "https://books.google.com/books/content?id=vOl-EAAAQBAJ&printsec=frontcover&img=1&zoom=3"
+      "cover": "https://m.media-amazon.com/images/P/B009IYDZTW.jpg"
     },
     {
       "title": "シンドラーに救われた少年",
@@ -445,7 +471,7 @@
     {
       "title": "みだれ髪",
       "author": "与謝野晶子",
-      "cover": "https://books.google.com/books/content?id=l7qBEAAAQBAJ&printsec=frontcover&img=1&zoom=3"
+      "cover": "https://m.media-amazon.com/images/P/B009NJBF80.jpg"
     },
     {
       "title": "新宝島",
@@ -455,7 +481,8 @@
     {
       "title": "日本近代史",
       "author": "坂野潤治",
-      "publisher": "ちくま新書"
+      "publisher": "ちくま新書",
+      "cover": "https://m.media-amazon.com/images/P/448006642X.jpg"
     },
     {
       "title": "大正十二年九月一日の大震に際して",
@@ -465,33 +492,34 @@
     {
       "title": "吾輩は猫である",
       "author": "夏目漱石",
-      "cover": "https://books.google.com/books/content?id=4vzLCwAAQBAJ&printsec=frontcover&img=1&zoom=3"
+      "cover": "https://m.media-amazon.com/images/P/B009IXLHZ2.jpg"
     },
     {
       "title": "あんぱんまん",
       "author": "やなせたかし",
-      "cover": "https://books.google.com/books/content?id=8ufFvgEACAAJ&printsec=frontcover&img=1&zoom=1"
+      "cover": "https://m.media-amazon.com/images/P/4577047306.jpg"
     },
     {
       "title": "やさしいライオン",
-      "author": "やなせたかし"
+      "author": "やなせたかし",
+      "cover": "https://m.media-amazon.com/images/P/4577050951.jpg"
     },
     {
       "title": "十二の真珠",
       "author": "やなせたかし",
-      "cover": "https://books.google.com/books/content?id=kbrJMQEACAAJ&printsec=frontcover&img=1&zoom=1"
+      "cover": "https://m.media-amazon.com/images/P/4835449010.jpg"
     },
     {
       "title": "アンパンマン伝説",
       "author": "やなせたかし",
-      "cover": "https://books.google.com/books/content?id=-WNMEQAAQBAJ&printsec=frontcover&img=1&zoom=3"
+      "cover": "https://m.media-amazon.com/images/P/4577051419.jpg"
     }
   ],
   "2024": [
     {
       "title": "Steve Jobs",
       "author": "Walter Isaacson",
-      "cover": "https://books.google.com/books/content?id=A4kvBgAAQBAJ&printsec=frontcover&img=1&zoom=3"
+      "cover": "https://m.media-amazon.com/images/P/B005J3IEZQ.jpg"
     },
     {
       "title": "生成AIで世界はこう変わる",
@@ -502,18 +530,18 @@
     {
       "title": "JUST KEEP BUYING",
       "author": "ニック・マジューリ",
-      "cover": "https://books.google.com/books/content?id=68nWzwEACAAJ&printsec=frontcover&img=1&zoom=1"
+      "cover": "https://m.media-amazon.com/images/P/4478116989.jpg"
     },
     {
       "title": "Azure OpenAI Serviceではじめる ChatGPT/LLMシステム構築入門",
       "author": "永田祥平 ほか",
       "publisher": "技術評論社",
-      "cover": "https://books.google.com/books/content?id=zXk0EAAAQBAJ&printsec=frontcover&img=1&zoom=3"
+      "cover": "https://m.media-amazon.com/images/P/B0CRT96W82.jpg"
     },
     {
       "title": "日経Robotics 2024年1月号",
       "author": "日経BP",
-      "cover": "https://books.google.com/books/content?id=hCTLEQAAQBAJ&printsec=frontcover&img=1&zoom=3"
+      "cover": "https://cdn-xtech.nikkei.com/atcl/nxt/mag/rob/18/ROB_backnumber/202401/cover.jpg"
     },
     {
       "title": "ユーザーファースト 穐田誉輝とくふうカンパニー",
@@ -533,12 +561,12 @@
     {
       "title": "バッタを倒しにアフリカへ",
       "author": "前野ウルド浩太郎",
-      "cover": "https://books.google.com/books/content?id=HauctAEACAAJ&printsec=frontcover&img=1&zoom=1"
+      "cover": "https://m.media-amazon.com/images/P/4334039898.jpg"
     },
     {
       "title": "BASARA (1)",
       "author": "田村由美",
-      "cover": "https://books.google.com/books/content?id=NxIeNwAACAAJ&printsec=frontcover&img=1&zoom=1"
+      "cover": "https://m.media-amazon.com/images/P/4091997422.jpg"
     },
     {
       "title": "交雑する人類",
@@ -560,7 +588,7 @@
     {
       "title": "生成AI時代を勝ち抜く事業・組織のつくり方",
       "author": "梶谷健人",
-      "cover": "https://books.google.com/books/content?id=PyWG0AEACAAJ&printsec=frontcover&img=1&zoom=1"
+      "cover": "https://m.media-amazon.com/images/P/4296204262.jpg"
     },
     {
       "title": "起業のファイナンス 増補改訂版",
@@ -569,7 +597,8 @@
     },
     {
       "title": "アイアンハート",
-      "author": "折口雅博"
+      "author": "折口雅博",
+      "cover": "https://m.media-amazon.com/images/P/4398145788.jpg"
     },
     {
       "title": "嫌われた監督",
@@ -599,7 +628,7 @@
     {
       "title": "わが投資術",
       "author": "清原達郎",
-      "cover": "https://books.google.com/books/content?id=KgXc0QEACAAJ&printsec=frontcover&img=1&zoom=1"
+      "cover": "https://m.media-amazon.com/images/P/4065350352.jpg"
     },
     {
       "title": "銀と金 (1)",
@@ -609,7 +638,7 @@
     {
       "title": "ハイキュー!! (1)",
       "author": "古舘春一",
-      "cover": "https://books.google.com/books/content?id=RZQGogEACAAJ&printsec=frontcover&img=1&zoom=1"
+      "cover": "https://m.media-amazon.com/images/P/B009GZJYW0.jpg"
     },
     {
       "title": "残酷すぎる成功法則",
@@ -635,24 +664,24 @@
     {
       "title": "弱いロボット",
       "author": "岡田美智男",
-      "cover": "https://books.google.com/books/content?id=h9bR0AEACAAJ&printsec=frontcover&img=1&zoom=1"
+      "cover": "https://m.media-amazon.com/images/P/4260016733.jpg"
     },
     {
       "title": "ドラえもんを本気でつくる",
       "author": "大澤正彦",
-      "cover": "https://books.google.com/books/content?id=sDnPDwAAQBAJ&printsec=frontcover&img=1&zoom=1"
+      "cover": "https://m.media-amazon.com/images/P/4569845924.jpg"
     },
     {
       "title": "百年の孤独",
       "titleEn": "Cien Anos de Soledad",
       "author": "ガルシア＝マルケス",
       "publisher": "新潮文庫",
-      "cover": "https://books.google.com/books/content?id=Ztas0AEACAAJ&printsec=frontcover&img=1&zoom=1"
+      "cover": "https://m.media-amazon.com/images/P/4102052127.jpg"
     },
     {
       "title": "ヒストリエ (1)",
       "author": "岩明均",
-      "cover": "https://books.google.com/books/content?id=v-0NEQAAQBAJ&printsec=frontcover&img=1&zoom=3"
+      "cover": "https://m.media-amazon.com/images/P/B009KYCHCG.jpg"
     },
     {
       "title": "ヒストリエ (12)",
@@ -667,17 +696,18 @@
     {
       "title": "肩をすくめるアトラス 第一部",
       "author": "アイン・ランド",
-      "cover": "https://books.google.com/books/content?id=ga-gEAAAQBAJ&printsec=frontcover&img=1&zoom=3"
+      "cover": "https://m.media-amazon.com/images/P/4908222010.jpg"
     },
     {
       "title": "大規模言語モデル入門",
       "author": "山田育矢 監修",
-      "publisher": "技術評論社"
+      "publisher": "技術評論社",
+      "cover": "https://m.media-amazon.com/images/P/4297136333.jpg"
     },
     {
       "title": "温かいテクノロジー",
       "author": "林要",
-      "cover": "https://books.google.com/books/content?id=6yurzwEACAAJ&printsec=frontcover&img=1&zoom=1"
+      "cover": "https://m.media-amazon.com/images/P/4909044434.jpg"
     },
     {
       "title": "機械仕掛けの愛 (7)",
@@ -704,12 +734,12 @@
     {
       "title": "肩をすくめるアトラス 第二部",
       "author": "アイン・ランド",
-      "cover": "https://books.google.com/books/content?id=ga-gEAAAQBAJ&printsec=frontcover&img=1&zoom=3"
+      "cover": "https://m.media-amazon.com/images/P/4908222029.jpg"
     },
     {
       "title": "決算分析の地図",
       "author": "村上茂久",
-      "cover": "https://books.google.com/books/content?id=zNqv0AEACAAJ&printsec=frontcover&img=1&zoom=1"
+      "cover": "https://m.media-amazon.com/images/P/4802614691.jpg"
     },
     {
       "title": "小学館の図鑑 NEO+ 分解する図鑑",
@@ -725,12 +755,12 @@
     {
       "title": "ユニクロ",
       "author": "杉本貴司",
-      "cover": "https://books.google.com/books/content?id=9thzEAAAQBAJ&printsec=frontcover&img=1&zoom=3"
+      "cover": "https://m.media-amazon.com/images/P/B0CW1H3BKR.jpg"
     },
     {
       "title": "たまごっち誕生記",
       "author": "横井昭裕",
-      "cover": "https://books.google.com/books/content?id=SvvlAAAAMAAJ&printsec=frontcover&img=1&zoom=3"
+      "cover": "https://m.media-amazon.com/images/I/61cRyyFIbEL.jpg"
     },
     {
       "title": "一冊の手帳で夢は必ずかなう",
@@ -746,39 +776,40 @@
       "title": "世界の技術を支配する ベル研究所の興亡",
       "author": "ジョン・ガートナー",
       "publisher": "文藝春秋",
-      "cover": "https://books.google.com/books/content?id=SeagEQAAQBAJ&printsec=frontcover&img=1&zoom=3"
+      "cover": "https://m.media-amazon.com/images/P/4163764704.jpg"
     },
     {
       "title": "ソニーを創ったもうひとりの男 岩間和夫",
       "author": "大朏博善",
-      "cover": "https://books.google.com/books/content?id=3ITyAgAACAAJ&printsec=frontcover&img=1&zoom=1"
+      "cover": "https://m.media-amazon.com/images/P/4898310931.jpg"
     },
     {
       "title": "日本メーカー超進化論",
       "author": "ものづくり太郎",
       "publisher": "KADOKAWA",
-      "cover": "https://books.google.com/books/content?id=5L-N0AEACAAJ&printsec=frontcover&img=1&zoom=1"
+      "cover": "https://m.media-amazon.com/images/P/4046067217.jpg"
     },
     {
       "title": "フランクリン自伝",
       "author": "フランクリン",
       "publisher": "岩波文庫",
-      "cover": "https://books.google.com/books/content?id=fRaEDwAAQBAJ&printsec=frontcover&img=1&zoom=1"
+      "cover": "https://m.media-amazon.com/images/P/4003230116.jpg"
     },
     {
       "title": "科学革命の構造 新版",
       "author": "トマス・S・クーン",
       "publisher": "みすず書房",
-      "cover": "https://books.google.com/books/content?id=T8auH-V9j00C&printsec=frontcover&img=1&zoom=3"
+      "cover": "https://m.media-amazon.com/images/P/4622096129.jpg"
     },
     {
       "title": "孫正義 リーダーのための意思決定の極意",
-      "author": "孫正義"
+      "author": "孫正義",
+      "cover": "https://m.media-amazon.com/images/P/4334036260.jpg"
     },
     {
       "title": "チ。(1)",
       "author": "魚豊",
-      "cover": "https://books.google.com/books/content?id=SZpGEAAAQBAJ&printsec=frontcover&img=1&zoom=3"
+      "cover": "https://m.media-amazon.com/images/P/B08P5GG18C.jpg"
     },
     {
       "title": "これが物理学だ!",
@@ -789,14 +820,14 @@
     {
       "title": "キングダム (69)",
       "author": "原泰久",
-      "cover": "https://books.google.com/books/content?id=bCXKCwAAQBAJ&printsec=frontcover&img=1&zoom=3"
+      "cover": "https://m.media-amazon.com/images/P/B0C695Z7DH.jpg"
     },
     {
       "title": "あなたの人生の意味 (上)",
       "titleEn": "The Road to Character",
       "author": "デイヴィッド・ブルックス",
       "publisher": "早川書房",
-      "cover": "https://covers.openlibrary.org/b/id/7442841-L.jpg"
+      "cover": "https://m.media-amazon.com/images/P/4150505268.jpg"
     }
   ],
   "2023": [
@@ -826,7 +857,7 @@
       "title": "HEALTH RULES",
       "author": "津川友介",
       "publisher": "集英社",
-      "cover": "https://books.google.com/books/content?id=ZpdaEAAAQBAJ&printsec=frontcover&img=1&zoom=3"
+      "cover": "https://m.media-amazon.com/images/P/4087717798.jpg"
     },
     {
       "title": "危機と人類",
@@ -836,7 +867,8 @@
     },
     {
       "title": "狼侠",
-      "author": "笠岡和雄"
+      "author": "笠岡和雄",
+      "cover": "https://m.media-amazon.com/images/I/51TsXS1lagL.jpg"
     },
     {
       "title": "歴史思考",
@@ -847,7 +879,7 @@
     {
       "title": "シンギュラリティは近い [エッセンス版]",
       "author": "レイ・カーツワイル",
-      "cover": "https://books.google.com/books/content?id=GoG6DAEACAAJ&printsec=frontcover&img=1&zoom=1"
+      "cover": "https://m.media-amazon.com/images/P/414081697X.jpg"
     },
     {
       "title": "望郷太郎 (1)",
@@ -865,35 +897,42 @@
       "title": "Hit Refresh",
       "author": "サティア・ナデラ",
       "publisher": "日経BP",
-      "cover": "https://books.google.com/books/content?id=rP2K0QEACAAJ&printsec=frontcover&img=1&zoom=1"
+      "cover": "https://m.media-amazon.com/images/P/4822255336.jpg"
     },
     {
-      "title": "野望の王国 完全版 (13)",
+      "title": "野望の王国 完全版 (21)",
       "author": "雁屋哲, 由起賢二",
-      "cover": "https://books.google.com/books/content?id=BRVjDQAAQBAJ&printsec=frontcover&img=1&zoom=3"
+      "cover": "https://m.media-amazon.com/images/P/B00M84FZ7Y.jpg"
     },
     {
       "title": "【推しの子】(1)",
       "author": "赤坂アカ, 横槍メンゴ",
-      "cover": "https://books.google.com/books/content?id=TyLPEAAAQBAJ&printsec=frontcover&img=1&zoom=3"
+      "cover": "https://m.media-amazon.com/images/P/B08BFW6GSV.jpg"
     },
     {
       "title": "脳と人工知能をつないだら、人間の能力はどこまで拡張できるのか",
       "author": "池谷裕二, 紺野大地",
-      "cover": "https://books.google.com/books/content?id=vxFSEAAAQBAJ&printsec=frontcover&img=1&zoom=1"
+      "cover": "https://m.media-amazon.com/images/P/4065265150.jpg"
     },
     {
-      "title": "コード・ブレーカー",
+      "title": "コード・ブレーカー (上)",
       "titleEn": "The Code Breaker",
       "author": "ウォルター・アイザックソン",
       "publisher": "文藝春秋",
-      "cover": "https://books.google.com/books/content?id=eo5uzwEACAAJ&printsec=frontcover&img=1&zoom=1"
+      "cover": "https://m.media-amazon.com/images/P/4163916245.jpg"
+    },
+    {
+      "title": "コード・ブレーカー (下)",
+      "author": "ウォルター・アイザックソン",
+      "publisher": "文藝春秋",
+      "cover": "https://m.media-amazon.com/images/P/4163916253.jpg",
+      "titleEn": "The Code Breaker"
     },
     {
       "title": "大規模言語モデルは新たな知能か",
       "author": "岡野原大輔",
       "publisher": "岩波科学ライブラリー",
-      "cover": "https://books.google.com/books/content?id=8H3YzwEACAAJ&printsec=frontcover&img=1&zoom=1"
+      "cover": "https://m.media-amazon.com/images/P/4000297198.jpg"
     },
     {
       "title": "創始者たち",
@@ -922,7 +961,7 @@
     {
       "title": "会社四季報 2023年3集 夏号",
       "author": "東洋経済新報社",
-      "cover": "https://books.google.com/books/content?id=Oj82EQAAQBAJ&printsec=frontcover&img=1&zoom=3"
+      "cover": "https://m.media-amazon.com/images/P/B0C3ZM419F.jpg"
     },
     {
       "title": "10億ドルを自力で稼いだ人は何を考え、どう行動し、誰と仕事をしているのか",
@@ -947,7 +986,7 @@
       "titleEn": "Proof of Stake",
       "author": "ヴィタリック・ブテリン",
       "publisher": "日経BP",
-      "cover": "https://books.google.com/books/content?id=DaO6EAAAQBAJ&printsec=frontcover&img=1&zoom=3"
+      "cover": "https://m.media-amazon.com/images/P/4296001272.jpg"
     },
     {
       "title": "半導体戦争",
@@ -960,14 +999,14 @@
       "title": "STARTUP",
       "author": "堀新一郎, 琴坂将広, 井上大智",
       "publisher": "NewsPicksパブリッシング",
-      "cover": "https://books.google.com/books/content?id=turmDwAAQBAJ&printsec=frontcover&img=1&zoom=3"
+      "cover": "https://m.media-amazon.com/images/P/4910063072.jpg"
     },
     {
       "title": "最後の海賊",
       "titleEn": "The Last Pirate",
       "author": "大西康之",
       "publisher": "小学館",
-      "cover": "https://books.google.com/books/content?id=jgAb0AEACAAJ&printsec=frontcover&img=1&zoom=1"
+      "cover": "https://m.media-amazon.com/images/P/4093891303.jpg"
     },
     {
       "title": "2050年の世界",
@@ -987,24 +1026,25 @@
       "title": "安倍晋三 回顧録",
       "author": "安倍晋三",
       "publisher": "中央公論新社",
-      "cover": "https://books.google.com/books/content?id=Qc-czwEACAAJ&printsec=frontcover&img=1&zoom=1"
+      "cover": "https://m.media-amazon.com/images/P/4120056341.jpg"
     },
     {
       "title": "お金のむこうに人がいる",
       "author": "田内学",
-      "publisher": "ダイヤモンド社"
+      "publisher": "ダイヤモンド社",
+      "cover": "https://m.media-amazon.com/images/P/4478113726.jpg"
     },
     {
       "title": "おもてなしの心とおもてなしをうける心",
       "author": "盛田良子",
-      "cover": "https://books.google.com/books/content?id=vlkxAAAAMAAJ&printsec=frontcover&img=1&zoom=3"
+      "cover": "https://tengai-f.com/_wp/wp-content/uploads/2022/09/omotenashi_book.jpg"
     },
     {
       "title": "アイデアのつくり方",
       "titleEn": "A Technique for Producing Ideas",
       "author": "ジェームス・W・ヤング",
       "publisher": "CCCメディアハウス",
-      "cover": "https://covers.openlibrary.org/b/id/641883-L.jpg"
+      "cover": "https://m.media-amazon.com/images/P/4484881047.jpg"
     },
     {
       "title": "Kaggleに挑む 深層学習プログラミングの極意",
@@ -1016,7 +1056,7 @@
       "title": "CFO思考",
       "author": "徳成旨亮",
       "publisher": "ダイヤモンド社",
-      "cover": "https://books.google.com/books/content?id=kFfXzwEACAAJ&printsec=frontcover&img=1&zoom=1"
+      "cover": "https://m.media-amazon.com/images/P/4478118043.jpg"
     },
     {
       "title": "Going Infinite",
@@ -1027,52 +1067,59 @@
       "title": "漂流",
       "author": "吉村昭",
       "publisher": "新潮文庫",
-      "cover": "https://books.google.com/books/content?id=L8FaEAAAQBAJ&printsec=frontcover&img=1&zoom=3"
+      "cover": "https://m.media-amazon.com/images/P/B00BIXNK82.jpg"
     },
     {
       "title": "BUILD ビルド",
       "author": "トニー・ファデル",
-      "publisher": "早川書房"
+      "publisher": "早川書房",
+      "cover": "https://m.media-amazon.com/images/P/B0C5D732XW.jpg"
     },
     {
       "title": "Newton 2024年1月号",
       "author": "ニュートンプレス",
-      "cover": "https://books.google.com/books/content?id=-rzkEAAAQBAJ&printsec=frontcover&img=1&zoom=3"
+      "cover": "https://m.media-amazon.com/images/P/B0CNBZHYHR.jpg"
     },
     {
       "title": "鋼の錬金術師 (1)",
       "titleEn": "FULLMETAL ALCHEMIST",
       "author": "荒川弘",
-      "cover": "https://books.google.com/books/content?id=ztZUEAAAQBAJ&printsec=frontcover&img=1&zoom=3"
+      "cover": "https://m.media-amazon.com/images/P/B009T8RYF8.jpg"
     },
     {
-      "title": "The Power Law",
+      "title": "The Power Law (上)",
       "author": "セバスチャン・マラビー",
       "publisher": "日本経済新聞出版",
-      "cover": "https://books.google.com/books/content?id=9rkM0AEACAAJ&printsec=frontcover&img=1&zoom=1"
+      "cover": "https://m.media-amazon.com/images/P/4296115081.jpg"
+    },
+    {
+      "title": "The Power Law (下)",
+      "author": "セバスチャン・マラビー",
+      "publisher": "日本経済新聞出版",
+      "cover": "https://m.media-amazon.com/images/P/429611509X.jpg"
     },
     {
       "title": "NARUTO -ナルト- (1)",
       "author": "岸本斉史",
-      "cover": "https://books.google.com/books/content?id=EErMCwAAQBAJ&printsec=frontcover&img=1&zoom=3"
+      "cover": "https://m.media-amazon.com/images/P/B009GZK8WU.jpg"
     },
     {
       "title": "Newton 2024年2月号",
       "author": "ニュートンプレス",
-      "cover": "https://books.google.com/books/content?id=P7I8EQAAQBAJ&printsec=frontcover&img=1&zoom=3"
+      "cover": "https://m.media-amazon.com/images/P/B0CQN66GJ2.jpg"
     }
   ],
   "2022": [
     {
       "title": "The Cold Start Problem",
       "author": "Andrew Chen",
-      "cover": "https://books.google.com/books/content?id=d0q1DwAAQBAJ&printsec=frontcover&img=1&zoom=3"
+      "cover": "https://m.media-amazon.com/images/P/B08W2ZSWRL.jpg"
     },
     {
       "title": "Makuake式「売れる」の新法則",
       "author": "坊垣佳奈",
       "publisher": "日本経済新聞出版",
-      "cover": "https://books.google.com/books/content?id=K8drzgEACAAJ&printsec=frontcover&img=1&zoom=1"
+      "cover": "https://m.media-amazon.com/images/P/4532324017.jpg"
     },
     {
       "title": "レオナルド・ダ・ヴィンチ",
@@ -1090,7 +1137,8 @@
     {
       "title": "メタバースとWeb3",
       "author": "國光宏尚",
-      "publisher": "MdN"
+      "publisher": "MdN",
+      "cover": "https://m.media-amazon.com/images/P/4295202819.jpg"
     },
     {
       "title": "世界2.0 メタバースの歩き方と創り方",
@@ -1103,7 +1151,7 @@
       "titleEn": "Attention Factory",
       "author": "",
       "publisher": "かんき出版",
-      "cover": "https://covers.openlibrary.org/b/id/10527094-L.jpg"
+      "cover": "https://m.media-amazon.com/images/P/4761276207.jpg"
     },
     {
       "title": "Double Your Profits In Six Months or Less",
@@ -1113,19 +1161,19 @@
     {
       "title": "The Great CEO Within",
       "author": "Matt Mochary",
-      "cover": "https://covers.openlibrary.org/b/id/10085060-L.jpg"
+      "cover": "https://m.media-amazon.com/images/P/B07ZLGQZYC.jpg"
     },
     {
       "title": "ジェームズ・クリアー式 複利で伸びる1つの習慣",
       "titleEn": "Atomic Habits",
       "author": "ジェームズ・クリアー",
-      "cover": "https://books.google.com/books/content?id=A-w3EAAAQBAJ&printsec=frontcover&img=1&zoom=1"
+      "cover": "https://m.media-amazon.com/images/P/4775942158.jpg"
     },
     {
       "title": "数字でキチンと学ぶ 不動産投資のキホン",
       "author": "テリー隊長",
       "publisher": "朝日新聞出版",
-      "cover": "https://books.google.com/books/content?id=HRQ6zwEACAAJ&printsec=frontcover&img=1&zoom=1"
+      "cover": "https://m.media-amazon.com/images/P/B0B6N1SZQS.jpg"
     },
     {
       "title": "CEOの時間管理",
@@ -1137,12 +1185,12 @@
     {
       "title": "The Intelligent Investor",
       "author": "Benjamin Graham",
-      "cover": "https://books.google.com/books/content?id=-NdcCSt8t_YC&printsec=frontcover&img=1&zoom=3"
+      "cover": "https://m.media-amazon.com/images/P/0060555661.jpg"
     },
     {
       "title": "Amp It Up",
       "author": "Frank Slootman",
-      "cover": "https://books.google.com/books/content?id=KjxZEAAAQBAJ&printsec=frontcover&img=1&zoom=1"
+      "cover": "https://m.media-amazon.com/images/P/1119836417.jpg"
     },
     {
       "title": "年商10億円以下の小さな会社がNASDAQに上場する方法",
@@ -1156,7 +1204,8 @@
     },
     {
       "title": "スピリチュアルズ 「わたし」の謎",
-      "author": "橘玲"
+      "author": "橘玲",
+      "cover": "https://m.media-amazon.com/images/P/4344037987.jpg"
     }
   ],
   "2021": [
@@ -1164,19 +1213,19 @@
       "title": "現代経済学の直観的方法",
       "author": "長沼伸一郎",
       "publisher": "講談社",
-      "cover": "https://books.google.com/books/content?id=BbDZDwAAQBAJ&printsec=frontcover&img=1&zoom=1"
+      "cover": "https://m.media-amazon.com/images/P/4065195039.jpg"
     },
     {
       "title": "ブリッツスケーリング",
       "titleEn": "Blitzscaling",
       "author": "リード・ホフマン, クリス・イェ",
-      "cover": "https://covers.openlibrary.org/b/id/8294642-L.jpg"
+      "cover": "https://m.media-amazon.com/images/P/4822288595.jpg"
     },
     {
       "title": "ディズニーCEOが実践する10の原則",
       "titleEn": "The Ride of a Lifetime",
       "author": "ロバート・アイガー",
-      "cover": "https://books.google.com/books/content?id=LFqTDwAAQBAJ&printsec=frontcover&img=1&zoom=3"
+      "cover": "https://m.media-amazon.com/images/P/415209933X.jpg"
     },
     {
       "title": "ワークマンはなぜ2倍売れたのか",
@@ -1188,7 +1237,7 @@
       "title": "Running Lean 実践リーンスタートアップ",
       "author": "アッシュ・マウリャ",
       "publisher": "O'Reilly",
-      "cover": "https://books.google.com/books/content?id=KemQkwEACAAJ&printsec=frontcover&img=1&zoom=1"
+      "cover": "https://m.media-amazon.com/images/P/4873115914.jpg"
     },
     {
       "title": "未来を実装する",
@@ -1201,12 +1250,12 @@
       "titleEn": "How to Avoid a Climate Disaster",
       "author": "ビル・ゲイツ",
       "publisher": "早川書房",
-      "cover": "https://books.google.com/books/content?id=zqiKzgEACAAJ&printsec=frontcover&img=1&zoom=1"
+      "cover": "https://m.media-amazon.com/images/P/4152100435.jpg"
     },
     {
       "title": "FINAL FANTASY XVの人工知能",
       "author": "三宅陽一郎",
-      "cover": "https://books.google.com/books/content?id=8PC-DgAAQBAJ&printsec=frontcover&img=1&zoom=3"
+      "cover": "https://m.media-amazon.com/images/P/B0D2N3MRCN.jpg"
     },
     {
       "title": "LIFESPAN 老いなき世界",
@@ -1230,19 +1279,26 @@
       "title": "2040年の未来予測",
       "author": "成毛眞",
       "publisher": "日経BP",
-      "cover": "https://books.google.com/books/content?id=M9ob0QEACAAJ&printsec=frontcover&img=1&zoom=1"
+      "cover": "https://m.media-amazon.com/images/P/4296121669.jpg"
     },
     {
       "title": "生命科学的思考",
       "author": "高橋祥子",
       "publisher": "NewsPicksパブリッシング",
-      "cover": "https://books.google.com/books/content?id=tKc5zgEACAAJ&printsec=frontcover&img=1&zoom=1"
+      "cover": "https://m.media-amazon.com/images/P/4910063145.jpg"
     },
     {
-      "title": "約束の地",
+      "title": "約束の地 (上)",
       "titleEn": "A Promised Land",
       "author": "バラク・オバマ",
-      "cover": "https://books.google.com/books/content?id=DEY2EAAAQBAJ&printsec=frontcover&img=1&zoom=3"
+      "cover": "https://m.media-amazon.com/images/P/4087861333.jpg"
+    },
+    {
+      "title": "約束の地 (下)",
+      "author": "バラク・オバマ",
+      "publisher": "",
+      "cover": "https://m.media-amazon.com/images/P/4087861341.jpg",
+      "titleEn": "A Promised Land"
     },
     {
       "title": "監督不行届",
@@ -1252,7 +1308,8 @@
     {
       "title": "ネット興亡記 敗れざる者たち",
       "author": "杉本貴司",
-      "publisher": "日本経済新聞出版"
+      "publisher": "日本経済新聞出版",
+      "cover": "https://m.media-amazon.com/images/P/B08GJWJ5B2.jpg"
     },
     {
       "title": "爆速成長マネジメント",
@@ -1265,34 +1322,43 @@
       "title": "魔王 奸智と暴力のサイバー犯罪帝国を築いた男",
       "titleEn": "The Mastermind",
       "author": "エヴァン・ラトリフ",
-      "cover": "https://books.google.com/books/content?id=nNDBEQAAQBAJ&printsec=frontcover&img=1&zoom=3"
+      "cover": "https://m.media-amazon.com/images/P/B07YYCBVH5.jpg"
     },
     {
       "title": "SXの時代",
-      "author": "坂野俊哉, 磯貝友紀"
+      "author": "坂野俊哉, 磯貝友紀",
+      "cover": "https://m.media-amazon.com/images/P/4296000209.jpg"
     },
     {
       "title": "BAD BLOOD シリコンバレー最大の捏造スキャンダル 全真相",
       "author": "ジョン・キャリールー",
-      "cover": "https://books.google.com/books/content?id=PEY2EAAAQBAJ&printsec=frontcover&img=1&zoom=3"
+      "cover": "https://m.media-amazon.com/images/P/4087861260.jpg"
     },
     {
       "title": "なぜ今、仏教なのか",
       "titleEn": "Why Buddhism Is True",
       "author": "ロバート・ライト",
       "publisher": "早川書房",
-      "cover": "https://books.google.com/books/content?id=Tf7VzQEACAAJ&printsec=frontcover&img=1&zoom=1"
+      "cover": "https://m.media-amazon.com/images/P/4152097868.jpg"
     },
     {
       "title": "探究する精神",
-      "author": "大栗博司"
+      "author": "大栗博司",
+      "cover": "https://m.media-amazon.com/images/P/4344986148.jpg"
     },
     {
-      "title": "ケインとアベル",
+      "title": "ケインとアベル (上)",
       "titleEn": "Kane and Abel",
       "author": "ジェフリー・アーチャー",
       "publisher": "新潮文庫",
-      "cover": "https://books.google.com/books/content?id=SfSxAAAAIAAJ&printsec=frontcover&img=1&zoom=3"
+      "cover": "https://m.media-amazon.com/images/P/4102161031.jpg"
+    },
+    {
+      "title": "ケインとアベル (下)",
+      "author": "ジェフリー・アーチャー",
+      "publisher": "新潮文庫",
+      "cover": "https://m.media-amazon.com/images/P/410216104X.jpg",
+      "titleEn": "Kane and Abel"
     },
     {
       "title": "中国オンラインビジネスモデル図鑑",
@@ -1311,7 +1377,7 @@
       "title": "官邸VS携帯大手 値下げを巡る1000日戦争",
       "author": "堀越功",
       "publisher": "日経BP",
-      "cover": "https://books.google.com/books/content?id=v7YFzgEACAAJ&printsec=frontcover&img=1&zoom=1"
+      "cover": "https://m.media-amazon.com/images/P/4296107348.jpg"
     },
     {
       "title": "失敗を語ろう。「わからないことだらけ」を突き進んだ僕らが学んだこと",
@@ -1322,7 +1388,7 @@
       "title": "WHO YOU ARE 君の真の言葉と行動こそが困難を生き抜くチームをつくる",
       "titleEn": "What You Do Is Who You Are",
       "author": "ベン・ホロウィッツ",
-      "cover": "https://covers.openlibrary.org/b/id/10330486-L.jpg"
+      "cover": "https://m.media-amazon.com/images/P/4822288811.jpg"
     },
     {
       "title": "買い物ゼロ秒時代の未来地図",
@@ -1347,7 +1413,7 @@
       "titleEn": "No Filter",
       "author": "サラ・フライヤー",
       "publisher": "NewsPicksパブリッシング",
-      "cover": "https://books.google.com/books/content?id=vQGLzgEACAAJ&printsec=frontcover&img=1&zoom=1"
+      "cover": "https://m.media-amazon.com/images/P/4910063188.jpg"
     },
     {
       "title": "ビジョナリー・カンパニー ZERO",
@@ -1366,18 +1432,18 @@
       "title": "AI・データ分析プロジェクトのすべて",
       "author": "大城信晃 ほか",
       "publisher": "技術評論社",
-      "cover": "https://books.google.com/books/content?id=s4IdzgEACAAJ&printsec=frontcover&img=1&zoom=1"
+      "cover": "https://m.media-amazon.com/images/P/4297117584.jpg"
     },
     {
       "title": "誰のためのデザイン？",
       "titleEn": "The Design of Everyday Things",
       "author": "D.A.ノーマン",
-      "cover": "https://books.google.com/books/content?id=sAWArgEACAAJ&printsec=frontcover&img=1&zoom=1"
+      "cover": "https://m.media-amazon.com/images/P/4788514346.jpg"
     },
     {
       "title": "中国デジタル・イノベーション ネット飽和時代の競争地図",
       "author": "岡野寿彦",
-      "cover": "https://books.google.com/books/content?id=DjnczQEACAAJ&printsec=frontcover&img=1&zoom=1"
+      "cover": "https://m.media-amazon.com/images/P/4532323584.jpg"
     },
     {
       "title": "進化思考 生き残るコンセプトをつくる「変異と適応」",
@@ -1390,7 +1456,7 @@
       "titleEn": "Die With Zero",
       "author": "ビル・パーキンス",
       "publisher": "ダイヤモンド社",
-      "cover": "https://books.google.com/books/content?id=JUT3zQEACAAJ&printsec=frontcover&img=1&zoom=1"
+      "cover": "https://m.media-amazon.com/images/P/4478109680.jpg"
     },
     {
       "title": "マチネの終わりに",
@@ -1401,17 +1467,19 @@
     {
       "title": "突き抜けるまで問い続けろ 巨大スタートアップ「ビジョナル」挫折と奮闘、成長の軌跡",
       "author": "蛯谷敏",
-      "cover": "https://books.google.com/books/content?id=MF6LzgEACAAJ&printsec=frontcover&img=1&zoom=1"
+      "cover": "https://m.media-amazon.com/images/P/4478113076.jpg"
     },
     {
       "title": "この国のかたち 一",
       "author": "司馬遼太郎",
-      "publisher": "文春文庫"
+      "publisher": "文春文庫",
+      "cover": "https://m.media-amazon.com/images/P/B01M4NDMJ2.jpg"
     },
     {
       "title": "この国のかたち 二",
       "author": "司馬遼太郎",
-      "publisher": "文春文庫"
+      "publisher": "文春文庫",
+      "cover": "https://m.media-amazon.com/images/P/B01M28RMWA.jpg"
     },
     {
       "title": "SHOE DOG 靴にすべてを。",
@@ -1423,19 +1491,20 @@
     {
       "title": "組織デザイン",
       "author": "沼上幹",
-      "publisher": "日本経済新聞出版"
+      "publisher": "日本経済新聞出版",
+      "cover": "https://m.media-amazon.com/images/P/4532110238.jpg"
     },
     {
       "title": "フラッシュ・ボーイズ 10億分の1秒の男たち",
       "titleEn": "Flash Boys",
       "author": "マイケル・ルイス",
-      "cover": "https://books.google.com/books/content?id=DWazoQEACAAJ&printsec=frontcover&img=1&zoom=1"
+      "cover": "https://m.media-amazon.com/images/P/4167913402.jpg"
     },
     {
       "title": "Invent & Wander",
       "titleEn": "Invent & Wander",
       "author": "ジェフ・ベゾス",
-      "cover": "https://books.google.com/books/content?id=KZSzzgEACAAJ&printsec=frontcover&img=1&zoom=1"
+      "cover": "https://m.media-amazon.com/images/P/4478112134.jpg"
     }
   ]
 }
