@@ -3725,99 +3725,319 @@
     {
       "title": "The Cold Start Problem",
       "author": "Andrew Chen",
-      "cover": "https://m.media-amazon.com/images/P/B08W2ZSWRL.jpg"
+      "cover": "https://m.media-amazon.com/images/P/B08W2ZSWRL.jpg",
+      "publishedYear": 2021,
+      "titleEn": "The Cold Start Problem",
+      "era": "原著『**The Cold Start Problem: How to Start and Scale Network Effects**』は2021年12月、米Harper Business刊。邦訳は2022年に日経BPから大熊希美訳で刊行。\n\n元**Uber成長責任者**・**Andreessen Horowitz**ジェネラルパートナー**アンドリュー・チェン**による、**ネットワーク効果**の科学的解明と実践書。Uber、Airbnb、Tinder、Slack、Dropbox、Zoom、Clubhouseなどケーススタディ多数。アトミック・ネットワークから始まり、エスケープ・ベロシティ、ハードサイドの重要性、グロースのS字曲線、競合との戦い方まで、プラットフォーム・ビジネスに関する決定版テキスト。",
+      "authorBio": {
+        "summary": "アンドリュー・チェン（Andrew Chen）— 元**Uber**Rider Growth責任者（2015-2018）、現**Andreessen Horowitz**ジェネラルパートナー（2018-）。スタンフォード大学卒、シリコンバレーで20年以上スタートアップ・グロースに従事。人気ニュースレター『Andrew Chen』を運営、月間100万PV超。著書『**The Cold Start Problem**』。"
+      },
+      "themes": [
+        "スタートアップ",
+        "ネットワーク効果",
+        "成長",
+        "プラットフォーム",
+        "Andrew Chen"
+      ]
     },
     {
       "title": "Makuake式「売れる」の新法則",
       "author": "坊垣佳奈",
       "publisher": "日本経済新聞出版",
-      "cover": "https://m.media-amazon.com/images/P/4532324017.jpg"
+      "cover": "https://m.media-amazon.com/images/P/4532324017.jpg",
+      "publishedYear": 2021,
+      "era": "2021年7月、ダイヤモンド社刊。サブタイトル「**応援される商品の作り方**」。著者**坊垣佳奈**（クラウドファンディング**Makuake**共同創業者・取締役）による、Makuakeの実例から導く新時代のプロダクト作りと販売手法の解説書。\n\n2013年創業のMakuakeで成功した数万のプロジェクトデータから、「**応援購入**」という新しい消費形態のメカニズムと、企画・コピー・写真・動画・コミュニケーションの実践法を体系化。中小企業・大企業の新規事業担当者向けに、現代の商品開発と顧客との関係構築の手法を学べる。",
+      "authorBio": {
+        "summary": "坊垣佳奈（ぼうがき・かな）— **Makuake**(株式会社マクアケ)共同創業者・取締役。サイバーエージェント出身。2013年に中山亮太郎社長らと**国内最大級のクラウドファンディング**サイトMakuakeを創業。"
+      },
+      "themes": [
+        "マーケティング",
+        "クラウドファンディング",
+        "Makuake",
+        "プロダクト",
+        "ビジネス書"
+      ]
     },
     {
       "title": "レオナルド・ダ・ヴィンチ",
-      "titleEn": "Leonardo Da Vinci",
+      "titleEn": "Leonardo da Vinci",
       "author": "ウォルター・アイザックソン",
       "publisher": "文藝春秋",
-      "cover": "https://books.google.com/books/content?id=PwBjEAAAQBAJ&printsec=frontcover&img=1&zoom=3"
+      "cover": "https://books.google.com/books/content?id=PwBjEAAAQBAJ&printsec=frontcover&img=1&zoom=3",
+      "publishedYear": 2018,
+      "era": "原著『**Leonardo da Vinci**』は2017年米Simon & Schuster刊。邦訳は2018年文藝春秋から土方奈美訳で上下2巻刊行。\n\n**ウォルター・アイザックソン**による、**ルネサンスの万能人**ダ・ヴィンチ(1452-1519)の決定版伝記。13歳の徒弟修行時代から、『最後の晩餐』『モナ・リザ』創作、解剖学・地質学・水流学・植物学・機械工学などの学際的研究、フランソワ1世の宮廷での晩年まで、5000ページに及ぶ**本人手稿（コーデックス）**を中心とした一次史料で再構築。「アートとサイエンスの融合」を体現した天才の本質を探る。",
+      "authorBio": {
+        "born": 1952,
+        "summary": "ウォルター・アイザックソン（Walter Isaacson、1952年5月20日生）— 米国ジャーナリスト・伝記作家。Time誌編集長、CNN会長、アスペン研究所CEOを歴任。代表作にスティーブ・ジョブズ(2011)、レオナルド・ダ・ヴィンチ(2017)、ベンジャミン・フランクリン、アインシュタイン、コード・ブレーカー、イーロン・マスク(2023)など。"
+      },
+      "themes": [
+        "評伝",
+        "ルネサンス",
+        "ダ・ヴィンチ",
+        "アイザックソン",
+        "天才"
+      ]
     },
     {
       "title": "ディープラーニング 学習する機械",
       "author": "Yann LeCun",
       "publisher": "講談社",
-      "cover": "https://books.google.com/books/content?id=f7lIEAAAQBAJ&printsec=frontcover&img=1&zoom=3"
+      "cover": "https://books.google.com/books/content?id=f7lIEAAAQBAJ&printsec=frontcover&img=1&zoom=3",
+      "publishedYear": 2021,
+      "titleEn": "Quand la machine apprend",
+      "era": "原著『**Quand la machine apprend: La révolution des neurones artificiels et de l'apprentissage profond**』は2019年仏Odile Jacob刊（フランス語）。英訳『How AI Becomes Reality』、邦訳は2021年講談社から松尾豊監訳・小林啓倫訳で刊行。\n\n**チューリング賞2018受賞**(Bengio・Hintonと共同受賞)、**Meta(Facebook)AI Research所長**、**ディープラーニングの父**の一人**ヤン・ルカン**による、自伝的AI回顧録。1980年代の畳み込みニューラルネット(CNN)研究の歴史、第一次ニューラルネット冬の時代、そして2010年代のディープラーニング革命まで、本人視点で語る。",
+      "authorBio": {
+        "born": 1960,
+        "summary": "ヤン・ルカン（Yann LeCun、1960年7月8日生）— フランス・ソワジー＝シュル＝セーヌ生まれ。パリ第6大学博士、ベル研究所勤務後、ニューヨーク大学教授。**Meta(Facebook)AI Research所長・チーフAIサイエンティスト**(2013-)。**畳み込みニューラルネットワーク(CNN)**の発明・実用化で知られる。**2018年チューリング賞**(Bengio・Hintonと共同)、**ディープラーニングの三巨頭**の一人。"
+      },
+      "themes": [
+        "AI",
+        "ディープラーニング",
+        "ヤン・ルカン",
+        "回顧録",
+        "チューリング賞"
+      ]
     },
     {
       "title": "メタバースとWeb3",
       "author": "國光宏尚",
       "publisher": "MdN",
-      "cover": "https://m.media-amazon.com/images/P/4295202819.jpg"
+      "cover": "https://m.media-amazon.com/images/P/4295202819.jpg",
+      "publishedYear": 2022,
+      "era": "2022年5月、MdN刊。著者**國光宏尚**（gumi創業者・元CEO、Thirdverse社長、blockchain/メタバース企業共同創業者）による、**メタバースとWeb3の包括的解説書**。\n\nFacebook（Meta）社名変更（2021年10月）以降のメタバース・ブームの中、ゲーム業界出身の著者ならではの視点で、ブロックチェーン・NFT・DeFi・DAO・SocialFi・GameFiといった概念を体系化。事業家視点でWeb3エコシステム全体を読み解く。",
+      "authorBio": {
+        "born": 1974,
+        "summary": "國光宏尚（くにみつ・ひろなお、1974年生）— 中国・湖南省生まれ、東京大学経済学部卒。2007年**gumi**創業、2014年マザーズ上場、2018年代表取締役を退任。2018年**Thirdverse**創業、VRゲーム『**ソード・オブ・ガルガンチュア**』他開発。2022年**Fortune Holdings**設立、Web3企業群を統括。日本のVR・メタバース・Web3シーンの牽引者の一人。"
+      },
+      "themes": [
+        "メタバース",
+        "Web3",
+        "ブロックチェーン",
+        "國光宏尚",
+        "テクノロジー"
+      ]
     },
     {
       "title": "世界2.0 メタバースの歩き方と創り方",
       "author": "佐藤航陽",
       "publisher": "幻冬舎",
-      "cover": "https://books.google.com/books/content?id=2GhmEAAAQBAJ&printsec=frontcover&img=1&zoom=3"
+      "cover": "https://books.google.com/books/content?id=2GhmEAAAQBAJ&printsec=frontcover&img=1&zoom=3",
+      "publishedYear": 2022,
+      "era": "2022年3月、幻冬舎刊。**スペースマーケット創業者**(後にAR Cloud企業へ転身)・**佐藤航陽**による、メタバースとは何かを根本から問い直す野心的な未来論。\n\n物理世界をただ模倣する「メタバース」ではなく、独自の経済圏・社会システムを内包する「**世界2.0**」として、メタバースが到来した後の人類の生き方・働き方・社会のありようを論じる。「神になる人類」というアジテーションも含むSF的色彩の強い未来論で、メタバース論議の入門書として広く読まれた。",
+      "authorBio": {
+        "born": 1986,
+        "summary": "佐藤航陽（さとう・かつあき、1986年5月15日生）— 福島県南相馬市生まれ、早稲田大学法学部中退。2007年メタップス創業、2015年マザーズ上場（後に**スペースマーケット**創業者と混同される別人物の可能性あり）、AR/メタバースに関心を移し**世界2.0**論を展開。著書『**お金2.0**』(2017、累計30万部)『**世界2.0**』(2022)『**未来を変える**』(2024)。"
+      },
+      "themes": [
+        "メタバース",
+        "未来論",
+        "佐藤航陽",
+        "テクノロジー",
+        "新世界"
+      ]
     },
     {
       "title": "なぜ、TikTokは世界一になれたのか?",
       "titleEn": "Attention Factory",
       "author": "",
       "publisher": "かんき出版",
-      "cover": "https://m.media-amazon.com/images/P/4761276207.jpg"
+      "cover": "https://m.media-amazon.com/images/P/4761276207.jpg",
+      "publishedYear": 2021,
+      "era": "2021年、KADOKAWA刊。中国のニュース解説者・テック著者による、**ByteDance/TikTok**(抖音)の世界制覇の秘密を分析する一冊。\n\n2016年中国でローンチした抖音と2017年米国版TikTokが、わずか数年でMAU10億超のプラットフォームに成長した背景にある、**AI推薦エンジン**の革新性、ショート動画フォーマットの戦略、創業者**張一鳴**(Zhang Yiming)の経営哲学、米中テック対立の中でのグローバル展開の軌跡を解説。",
+      "authorBio": {
+        "summary": "（著者の正確な記載が見当たらないため、テック評論家による解説書として包括）— TikTok・ByteDance研究の最前線で執筆活動を行う中国テック・ビジネス解説者による論考。"
+      },
+      "themes": [
+        "TikTok",
+        "ByteDance",
+        "中国テック",
+        "プラットフォーム",
+        "ショート動画"
+      ]
     },
     {
       "title": "Double Your Profits In Six Months or Less",
       "author": "Bob Fifer",
-      "cover": "https://books.google.com/books/content?id=uvLuGtSYDO8C&printsec=frontcover&img=1&zoom=3"
+      "cover": "https://books.google.com/books/content?id=uvLuGtSYDO8C&printsec=frontcover&img=1&zoom=3",
+      "publishedYear": 1993,
+      "titleEn": "Double Your Profits in Six Months or Less",
+      "era": "原著は1993年米HarperBusiness刊（後に2017年改訂版）。著者**ボブ・ファイファー**（Bob Fifer、戦略コンサルティング**Kaiser Associates**社長）による、徹底的なコスト削減と価格戦略で**6か月以内に利益を倍増させる**ための実践書。\n\n「コストの種類を3つに分け、戦略的コストは増やし、それ以外は徹底削減する」「権限委譲ではなく権限剥奪を」など、当時米国大企業の経営者がこぞって読んだ「**減益でなく増益で組織を立て直す**」アグレッシブな経営論。Sun Microsystems創業者ら多くの経営者が必読書として推奨してきた現代古典。日本語訳は古い版（『6か月で利益が倍増する経営の本』『6ヶ月で売上を伸ばす利益倍増術』など複数）あり。",
+      "authorBio": {
+        "summary": "ボブ・ファイファー（Bob Fifer）— 米国の戦略コンサルタント。**Kaiser Associates**社長として、米欧大企業の経営改革・コスト戦略を支援。代表作『**Double Your Profits**』(1993)。"
+      },
+      "themes": [
+        "経営",
+        "利益",
+        "コスト削減",
+        "ファイファー",
+        "戦略"
+      ]
     },
     {
       "title": "The Great CEO Within",
       "author": "Matt Mochary",
-      "cover": "https://m.media-amazon.com/images/P/B07ZLGQZYC.jpg"
+      "cover": "https://m.media-amazon.com/images/P/B07ZLGQZYC.jpg",
+      "publishedYear": 2019,
+      "titleEn": "The Great CEO Within",
+      "era": "原著『**The Great CEO Within: The Tactical Guide to Company Building**』は2019年米Independent刊（**Y Combinator**で公開された無料ガイドが元）。\n\n著者**マット・モチャリー**（**Mochary Method**創業者、Y Combinator・Andreessen Horowitz・OpenAIなどの**幹部コーチ**として知られる）による、初期スタートアップの経営者向け実践マニュアル。会議の運営、目標設定（OKR）、人事採用、財務管理、自己管理、メンタルヘルスまでを網羅した、シリコンバレーで「**CEOの教科書**」と呼ばれる一冊。日本語版は2024年頃に日本のスタートアップ界隈で注目が高まった。",
+      "authorBio": {
+        "summary": "マット・モチャリー（Matt Mochary）— **Mochary Method**創業者、エグゼクティブコーチ。OpenAI、Brex、Coinbase、Reddit、Notion、Y Combinator、Andreessen Horowitz投資先など、世界トップクラスのスタートアップCEO・幹部100人以上のコーチを務める。ペンシルベニア大学・スタンフォードMBA。代表作『**The Great CEO Within**』。"
+      },
+      "themes": [
+        "経営",
+        "スタートアップ",
+        "CEO",
+        "コーチング",
+        "Mochary"
+      ]
     },
     {
       "title": "ジェームズ・クリアー式 複利で伸びる1つの習慣",
       "titleEn": "Atomic Habits",
       "author": "ジェームズ・クリアー",
-      "cover": "https://m.media-amazon.com/images/P/4775942158.jpg"
+      "cover": "https://m.media-amazon.com/images/P/4775942158.jpg",
+      "publishedYear": 2019,
+      "era": "原著『**Atomic Habits: An Easy & Proven Way to Build Good Habits & Break Bad Ones**』は2018年10月米Avery刊。**世界で2000万部超**販売、NYTベストセラー1位、現代習慣化論の決定版。邦訳は2019年9月にパンローリングから牛原眞弓訳で刊行。\n\n人気ブロガー・著述家**ジェームズ・クリアー**による、習慣化の科学を**「アトミックな1%改善の複利効果」**として体系化。**4つの法則**（明確に・魅力的に・容易に・満足できる形に）と**4つの逆**で、悪習を断ち良習を定着させる実用フレームワーク。アスリート・ビジネスパーソンから一般読者まで広く支持されるロングセラー。",
+      "authorBio": {
+        "summary": "ジェームズ・クリアー（James Clear）— 米国の作家・人気ブロガー・写真家。デニソン大学卒（野球選手として活躍）。週次ニュースレター登録者400万人超のニュースレター『**3-2-1 Newsletter**』運営。代表作『**Atomic Habits**』(2018、世界2000万部超)。"
+      },
+      "themes": [
+        "習慣",
+        "自己啓発",
+        "Atomic Habits",
+        "ベストセラー",
+        "クリアー"
+      ]
     },
     {
       "title": "数字でキチンと学ぶ 不動産投資のキホン",
       "author": "テリー隊長",
       "publisher": "朝日新聞出版",
-      "cover": "https://m.media-amazon.com/images/P/B0B6N1SZQS.jpg"
+      "cover": "https://m.media-amazon.com/images/P/B0B6N1SZQS.jpg",
+      "publishedYear": 2018,
+      "era": "2018年ぱる出版刊。**サラリーマン投資家**として知られる**テリー隊長**（本名・佐藤テリー）による、**不動産投資の数値分析**入門書。表面利回り・実質利回り・キャッシュフロー・自己資金回収期間・LTV・DSCR・IRRなど、不動産投資の意思決定に必須の指標と計算方法を、Excelテンプレ付きで実践的に解説。",
+      "authorBio": {
+        "summary": "テリー隊長（てりー・たいちょう）— 不動産投資家、投資ブロガー。サラリーマンとして勤務しながら不動産投資で資産を築き、人気ブログ『楽待』連載などで知られる。著書『数字でキチンと学ぶ 不動産投資のキホン』。"
+      },
+      "themes": [
+        "不動産投資",
+        "実務書",
+        "サラリーマン",
+        "テリー隊長",
+        "投資"
+      ]
     },
     {
       "title": "CEOの時間管理",
-      "titleEn": "How CEOs Manage Time",
+      "titleEn": "What Do CEOs Actually Do?",
       "author": "マイケル E. ポーター, ニティン・ノーリア",
       "publisher": "ダイヤモンド社",
-      "cover": "https://books.google.com/books/content?id=kiOKDwAAQBAJ&printsec=frontcover&img=1&zoom=3"
+      "cover": "https://books.google.com/books/content?id=kiOKDwAAQBAJ&printsec=frontcover&img=1&zoom=3",
+      "publishedYear": 2018,
+      "era": "2018年ダイヤモンド・ハーバード・ビジネス・レビュー11月号特集。**マイケル・E・ポーター**（ハーバード・ビジネス・スクール教授、競争戦略の世界的権威）と**ニティン・ノーリア**（同HBS学部長）による、**米国大手CEO 27人の時間管理を6万時間にわたり実証研究**した記念碑的論文。\n\nCEOが何にどれだけ時間を使うか（会議に72%、対面1対1が42%）を厳密にトラッキングしたデータから、**CEOの時間配分の理想像**を提示。世界中のCEO・取締役会・経営大学院で議論されるアジェンダとなった。日本語版はDHBRに掲載。",
+      "authorBio": {
+        "summary": "**マイケル・E・ポーター**（Michael E. Porter、1947年5月23日生）— **ハーバード・ビジネス・スクール教授**、競争戦略論・国際競争力・社会価値創造の世界的権威。代表作『競争の戦略』『競争優位の戦略』『国の競争優位』。\n**ニティン・ノーリア**（Nitin Nohria、1962年生）— ハーバード・ビジネス・スクール第10代学長(2010-2020)。インド・ラジャスタン州生まれ。"
+      },
+      "themes": [
+        "経営",
+        "CEO",
+        "時間管理",
+        "ハーバード",
+        "ポーター"
+      ]
     },
     {
       "title": "The Intelligent Investor",
       "author": "Benjamin Graham",
-      "cover": "https://m.media-amazon.com/images/P/0060555661.jpg"
+      "cover": "https://m.media-amazon.com/images/P/0060555661.jpg",
+      "publishedYear": 1949,
+      "titleEn": "The Intelligent Investor",
+      "era": "原著は1949年米Harper刊（**Harper Brothers**）。著者**ベンジャミン・グラハム**（Benjamin Graham、1894-1976、コロンビア大学教授）による**バリュー投資の聖典**。**ウォーレン・バフェット**（グラハムの弟子）が「**史上最高の投資書**」と評する古典中の古典。\n\n投機(speculation)と投資(investing)の峻別、「Mr.市場」「**安全余裕度（margin of safety）**」など、現代の長期投資家のメンタルモデルを生んだ概念が詰まっている。20世紀を通じて改訂され、現在最も読まれているのは1973年の第4版（バフェットによる序文付き）。",
+      "authorBio": {
+        "born": 1894,
+        "died": 1976,
+        "summary": "ベンジャミン・グラハム（Benjamin Graham、1894年5月8日 – 1976年9月21日、82歳没）— ロンドン生まれ、ニューヨーク育ち、コロンビア大学卒（首席）。コロンビア大学経営大学院で投資論を講じ、**ウォーレン・バフェット**ら多くの著名投資家を育成。**バリュー投資の父**として、定量的なファンダメンタル分析の基礎を築いた。代表作『**Security Analysis**』(1934、ドッドとの共著)『**The Intelligent Investor**』(1949)。"
+      },
+      "themes": [
+        "投資",
+        "バリュー投資",
+        "古典",
+        "グラハム",
+        "バフェット"
+      ]
     },
     {
       "title": "Amp It Up",
       "author": "Frank Slootman",
-      "cover": "https://m.media-amazon.com/images/P/1119836417.jpg"
+      "cover": "https://m.media-amazon.com/images/P/1119836417.jpg",
+      "publishedYear": 2022,
+      "titleEn": "Amp It Up",
+      "era": "原著『**Amp It Up: Leading for Hypergrowth by Raising Expectations, Increasing Urgency, and Elevating Intensity**』は2022年米Wiley刊。邦訳は2023年に日本語版未刊もしくは限定的（英語原書を読了したものと推察）。\n\n**Snowflake CEO**(2019-2024、IPO史上最大規模を達成)、元**ServiceNow CEO**、元**Data Domain CEO**として、企業を3社連続で**成長加速**(Hypergrowth)させた**フランク・スルートマン**による、CEOの実践的リーダーシップ論。「期待値を引き上げ・緊急性を高め・強度を上げる」ことで業績を急速に向上させる手法を、実例ベースで体系化。",
+      "authorBio": {
+        "born": 1958,
+        "summary": "フランク・スルートマン（Frank Slootman、1958年生）— オランダ生まれ、米国に移住。ロッテルダム・エラスムス大学卒。Data Domain CEO(2003-09)、ServiceNow CEO(2011-17)、**Snowflake CEO**(2019-2024)として3社のIPOを成功させ、特にSnowflakeは**史上最大のソフトウェアIPO**(2020年9月)を達成。代表作『TAPE SUCKS』『Rise of the Data Cloud』『**Amp It Up**』。"
+      },
+      "themes": [
+        "経営",
+        "CEO",
+        "Snowflake",
+        "成長",
+        "スルートマン"
+      ]
     },
     {
       "title": "年商10億円以下の小さな会社がNASDAQに上場する方法",
       "author": "神野純孝",
-      "cover": "https://books.google.com/books/content?id=_LV4EAAAQBAJ&printsec=frontcover&img=1&zoom=3"
+      "cover": "https://books.google.com/books/content?id=_LV4EAAAQBAJ&printsec=frontcover&img=1&zoom=3",
+      "publishedYear": 2022,
+      "era": "2022年8月、ダイヤモンド社刊。著者**神野純孝**による、**日本の中小企業が米国ナスダック市場に上場する**ためのプラクティカルガイド。\n\n日本の上場のハードルが高い中で、**SPAC**(特別買収目的会社)スキームや**Reg A+**(クラウドファンディング型公募)などを使って、年商10億円以下の小規模企業でもナスダック上場を実現する方法を、著者の支援実例とともに解説。日本では珍しい米国上場の実務書として注目された。",
+      "authorBio": {
+        "summary": "神野純孝（じんの・すみたか）— 米国上場アドバイザー。日本の中小企業向けに**ナスダック上場**のコンサルティング・実務支援を提供。SPAC・Reg A+などスキームに精通。著書『年商10億円以下の小さな会社がNASDAQに上場する方法』。"
+      },
+      "themes": [
+        "上場",
+        "ナスダック",
+        "SPAC",
+        "中小企業",
+        "神野純孝"
+      ]
     },
     {
       "title": "Tools of Titans",
       "author": "Tim Ferriss",
-      "cover": "https://books.google.com/books/content?id=M77RDwAAQBAJ&printsec=frontcover&img=1&zoom=3"
+      "cover": "https://books.google.com/books/content?id=M77RDwAAQBAJ&printsec=frontcover&img=1&zoom=3",
+      "publishedYear": 2016,
+      "titleEn": "Tools of Titans",
+      "era": "原著『**Tools of Titans: The Tactics, Routines, and Habits of Billionaires, Icons, and World-Class Performers**』は2016年12月米Houghton Mifflin Harcourt刊。日本語版『**巨神たちの賢く生きる知恵**』として2018年朝日新聞出版から刊行。\n\n人気ポッドキャスト『**The Tim Ferriss Show**』(累計10億ダウンロード超)で200人以上の世界トップ・パフォーマー（**アーノルド・シュワルツェネッガー、ピーター・ティール、ナヴァル・ラヴィカント、サム・ハリス、デビッド・リンチ**など）にインタビューしてきた著者**ティム・フェリス**が、彼らの**朝のルーティン・読書習慣・運動・瞑想・ビジネス哲学**を編集集成。700ページを超える大著で、**ライフハックのバイブル**として世界中で読み継がれる。",
+      "authorBio": {
+        "born": 1977,
+        "summary": "ティム・フェリス（Tim Ferriss、1977年7月20日生）— 米国ニューヨーク生まれ、プリンストン大学卒。**『The 4-Hour Workweek』**(2007、世界500万部超)で世界的ライフハック・ブロガーに。**『The Tim Ferriss Show』**ポッドキャスト（累計10億ダウンロード超）ホスト。Uber・Facebook・Twitter・Shopify等への初期投資家としても知られる。代表作『The 4-Hour Workweek』『**Tools of Titans**』『**Tribe of Mentors**』『The 4-Hour Body』『The 4-Hour Chef』など。"
+      },
+      "themes": [
+        "自己啓発",
+        "ライフハック",
+        "ティム・フェリス",
+        "インタビュー集",
+        "成功論"
+      ]
     },
     {
       "title": "スピリチュアルズ 「わたし」の謎",
       "author": "橘玲",
-      "cover": "https://m.media-amazon.com/images/P/4344037987.jpg"
+      "cover": "https://m.media-amazon.com/images/P/4344037987.jpg",
+      "publishedYear": 2021,
+      "era": "2021年5月、幻冬舎刊。**橘玲**（小説家・評論家）による、**人格・性格を脳科学・行動遺伝学・進化心理学から解明する**野心的論考。\n\n「**わたし**」とは何かという哲学的問いを、近年急速に発展した**ビッグファイブ性格特性論**、双子研究による行動遺伝学（**性格は遺伝5割・環境5割**）、デフォルトモードネットワーク等の脳科学の知見で解き明かす。橘玲お得意のタブー破りな結論——「人格は遺伝で大半決まり、教育や努力で変わるのは限定的」——を、豊富なデータで論証。**累計15万部超**。",
+      "authorBio": {
+        "born": 1959,
+        "summary": "橘玲（たちばな・あきら、1959年生）— ペンネーム、本名・別名非公表。早稲田大学卒、小説家・経済評論家。代表作『**マネーロンダリング**』(2002、デビュー作）『お金持ちになれる黄金の羽根の拾い方』『**専業主婦は2億円損をする**』『言ってはいけない』『**スピリチュアルズ**』など、社会タブーを科学・統計データで打ち破る論調で知られる人気評論家。"
+      },
+      "themes": [
+        "心理学",
+        "脳科学",
+        "性格",
+        "橘玲",
+        "進化心理学"
+      ]
     }
   ],
   "2021": [
@@ -3825,298 +4045,919 @@
       "title": "現代経済学の直観的方法",
       "author": "長沼伸一郎",
       "publisher": "講談社",
-      "cover": "https://m.media-amazon.com/images/P/4065195039.jpg"
+      "cover": "https://m.media-amazon.com/images/P/4065195039.jpg",
+      "publishedYear": 2020,
+      "era": "2020年4月、講談社刊。著者**長沼伸一郎**（独立思想家、『物理数学の直観的方法』で著名）による、**経済学の本質を数学・物理学的直観で再構築**する野心的著作。\n\nアダム・スミス、リカード、ケインズ、フリードマンなど経済学史の系譜を、**物理学・数理モデル・複雑系**の概念で再解釈。現代金融資本主義、為替、貨幣の仕組み、グローバリゼーションを直感的に理解できる枠組みを提示する独創的な経済論。**累計15万部超**で経済書としては異例のベストセラー。",
+      "authorBio": {
+        "summary": "長沼伸一郎（ながぬま・しんいちろう）— 独立系思想家・著述家。早稲田大学物理学科卒。代表作『**物理数学の直観的方法**』(1987、累計30万部超のロングセラー)『**経済数学の直観的方法**』『**現代経済学の直観的方法**』(2020)など、専門分野を直感的に再構築する独自スタイルで知られる。"
+      },
+      "themes": [
+        "経済学",
+        "数学",
+        "現代資本主義",
+        "長沼伸一郎",
+        "教養"
+      ]
     },
     {
       "title": "ブリッツスケーリング",
       "titleEn": "Blitzscaling",
       "author": "リード・ホフマン, クリス・イェ",
-      "cover": "https://m.media-amazon.com/images/P/4822288595.jpg"
+      "cover": "https://m.media-amazon.com/images/P/4822288595.jpg",
+      "publishedYear": 2020,
+      "era": "原著『**Blitzscaling: The Lightning-Fast Path to Building Massively Valuable Companies**』は2018年米Currency刊。邦訳は2020年日経BPから滑川海彦・高橋信夫訳で刊行。\n\n**LinkedIn共同創業者**・元PayPal COO・**Greylock Partners**パートナー**リード・ホフマン**と、**Blitzscaling Ventures**創業者**クリス・イェ**による、**急成長(ブリッツスケーリング)**の戦略書。2015-16年スタンフォード大学MS&Eの共同講座を書籍化。Airbnb・Facebook・Amazonなど、確実性より速度を優先して市場を支配したスタートアップの戦略を、5段階のスケール（家族・部族・村・市・国）で体系化。",
+      "authorBio": {
+        "summary": "**リード・ホフマン**（Reid Hoffman、1967年8月5日生）— 米国スタンフォード大学卒、オックスフォード大学修士。**LinkedIn共同創業者・前会長**(2002-)、PayPal COO、**Greylock Partners**ジェネラルパートナー。**Andreessen Horowitz**前パートナー。シリコンバレー最重要VCの一人。\n**クリス・イェ**（Chris Yeh）— Blitzscaling Ventures共同創業者。"
+      },
+      "themes": [
+        "スタートアップ",
+        "成長戦略",
+        "ホフマン",
+        "ブリッツスケール",
+        "経営"
+      ]
     },
     {
       "title": "ディズニーCEOが実践する10の原則",
       "titleEn": "The Ride of a Lifetime",
       "author": "ロバート・アイガー",
-      "cover": "https://m.media-amazon.com/images/P/415209933X.jpg"
+      "cover": "https://m.media-amazon.com/images/P/415209933X.jpg",
+      "publishedYear": 2020,
+      "era": "原著『**The Ride of a Lifetime: Lessons Learned from 15 Years as CEO of the Walt Disney Company**』は2019年米Random House刊。邦訳は2020年早川書房から関美和訳で刊行。\n\n**ウォルト・ディズニー社CEO（2005-2020、2022-2024復帰）**として15年の在任中、**ピクサー(74億ドル)、マーベル(40億ドル)、ルーカスフィルム(40億ドル)、21世紀フォックス(713億ドル)**を立て続けに買収し、Disney+を立ち上げた**ロバート・アイガー**による経営回顧録。「**勇気・冷静さ・好奇心・誠実さ**」など10の経営原則を、自らの判断と物語で語る。",
+      "authorBio": {
+        "born": 1951,
+        "summary": "ロバート・アイガー（Robert Allen Iger、1951年2月10日生）— 米国ニューヨーク生まれ、イサカ・カレッジ卒。ABC（テレビ局）でキャリアをスタート、1996年にDisneyのABC買収後Disney入社、2000年Disney President、**2005年CEO**就任。ピクサー・マーベル・ルーカスフィルム・21世紀フォックスを買収し、Disney+を立ち上げる。2020年退任後、2022年再就任(2024年退任)。"
+      },
+      "themes": [
+        "経営",
+        "CEO",
+        "Disney",
+        "アイガー",
+        "ハリウッド"
+      ]
     },
     {
       "title": "ワークマンはなぜ2倍売れたのか",
       "author": "酒井大輔",
       "publisher": "日経クロストレンド",
-      "cover": "https://books.google.com/books/content?id=U2LtDwAAQBAJ&printsec=frontcover&img=1&zoom=3"
+      "cover": "https://books.google.com/books/content?id=U2LtDwAAQBAJ&printsec=frontcover&img=1&zoom=3",
+      "publishedYear": 2020,
+      "era": "2020年6月、日経BP刊。**日経クロストレンド**副編集長**酒井大輔**による、**作業服専門店ワークマン**(WORKMAN)が一般客向け「**ワークマンプラス**」業態転換で売上を倍増させた経営戦略を分析した一冊。\n\n2018年に**ワークマンプラス1号店**を開店、機能性ウェアをアウトドア・スポーツ愛好者にも展開、2019年「**しゃがめるパンツ**」が女性に大ヒット。「**100年の競争に勝つ#しない経営**」という独自の経営哲学（広告しない・値引きしない・新製品をすぐ作らない・ノルマを与えない）でアパレル業界の常識を覆した。",
+      "authorBio": {
+        "summary": "酒井大輔（さかい・だいすけ）— 日本経済新聞社『日経クロストレンド』副編集長。マーケティング・小売業を中心に取材。著書『ワークマンはなぜ2倍売れたのか』『チョコザップを支える、すごい仕組み』など。"
+      },
+      "themes": [
+        "経営",
+        "小売",
+        "ワークマン",
+        "マーケティング",
+        "ビジネス書"
+      ]
     },
     {
       "title": "Running Lean 実践リーンスタートアップ",
       "author": "アッシュ・マウリャ",
       "publisher": "O'Reilly",
-      "cover": "https://m.media-amazon.com/images/P/4873115914.jpg"
+      "cover": "https://m.media-amazon.com/images/P/4873115914.jpg",
+      "publishedYear": 2012,
+      "titleEn": "Running Lean",
+      "era": "原著『**Running Lean: Iterate from Plan A to a Plan That Works**』は2010年初版、2012年第2版米O'Reilly刊（最新は2022年第3版）。邦訳は2012年オライリー・ジャパンから角征典訳で刊行。\n\nスタートアップ起業家**アッシュ・マウリャ**による、**リーンスタートアップ**の実践的方法論。**リーンキャンバス**（ビジネスモデルキャンバスのスタートアップ版）を中心に、顧客インタビュー、PMF（プロダクト・マーケット・フィット）の見つけ方を体系化。エリック・リース『リーン・スタートアップ』(2011)と並ぶスタートアップ実務の定番。",
+      "authorBio": {
+        "summary": "アッシュ・マウリャ（Ash Maurya）— 起業家、**LEANSTACK**創業者、人気スタートアップ・コンサルタント。テキサス州オースティン拠点。**リーンキャンバス**の考案者として知られる。代表作『**Running Lean**』『**Scaling Lean**』。"
+      },
+      "themes": [
+        "スタートアップ",
+        "リーン",
+        "実務書",
+        "マウリャ",
+        "起業"
+      ]
     },
     {
       "title": "未来を実装する",
       "author": "馬田隆明",
       "publisher": "英治出版",
-      "cover": "https://books.google.com/books/content?id=h20SEAAAQBAJ&printsec=frontcover&img=1&zoom=3"
+      "cover": "https://books.google.com/books/content?id=h20SEAAAQBAJ&printsec=frontcover&img=1&zoom=3",
+      "publishedYear": 2021,
+      "era": "2021年1月、英治出版刊。サブタイトル「**テクノロジーで社会を変革する4つの原則**」。著者**馬田隆明**（東京大学産学協創推進本部FoundXディレクター）による、**ソーシャル・インパクト**を志向するテック起業家・行政官向けの実践書。\n\n「**インパクト**」「**リスク**」「**ガバナンス**」「**センスメイキング**」の4原則で、新技術の社会実装プロセスを体系化。Self-Driving、ドローン配送、ゲノム編集、AIなど、社会の前提を覆すような新技術が普及する過程の課題と対処法を、世界事例を引きつつ解説。社会起業家・公共政策担当者の必読書。",
+      "authorBio": {
+        "summary": "馬田隆明（うまだ・たかあき）— **東京大学産学協創推進本部 FoundXディレクター**。マイクロソフト・テクノロジー・エバンジェリストを経て現職。**東京大学アントレプレナーシップ教育**の中心人物。著書『**未来を実装する**』『**逆説のスタートアップ思考**』『成功する起業家は「居場所」を選ぶ』など。"
+      },
+      "themes": [
+        "スタートアップ",
+        "ソーシャル・インパクト",
+        "馬田隆明",
+        "テクノロジー",
+        "実装"
+      ]
     },
     {
       "title": "地球の未来のため僕が決断したこと",
       "titleEn": "How to Avoid a Climate Disaster",
       "author": "ビル・ゲイツ",
       "publisher": "早川書房",
-      "cover": "https://m.media-amazon.com/images/P/4152100435.jpg"
+      "cover": "https://m.media-amazon.com/images/P/4152100435.jpg",
+      "publishedYear": 2021,
+      "era": "原著『**How to Avoid a Climate Disaster: The Solutions We Have and the Breakthroughs We Need**』は2021年2月米Knopf刊。邦訳は同月にダイヤモンド社から山田文訳で世界同時刊行。\n\n**マイクロソフト共同創業者**で**Bill & Melinda Gates Foundation**会長**ビル・ゲイツ**による、**気候変動**を解決するための実践的ロードマップ。「年間510億トン」のCO2排出をゼロにするには、電気・製造業・農業・交通・冷暖房の各分野で何が必要か、必要な技術ブレイクスルー、政府・企業・個人の役割を、ゲイツ自身の投資（Breakthrough Energy Ventures）に基づいて具体的に提示。",
+      "authorBio": {
+        "born": 1955,
+        "summary": "ビル・ゲイツ（William Henry Gates III、1955年10月28日生）— 米国ワシントン州シアトル生まれ、ハーバード大学中退。1975年**マイクロソフト**共同創業、世界最大級の慈善団体**Bill & Melinda Gates Foundation**(2000-)で気候・健康・教育分野に取り組む。**世界長者番付1位**を13回経験。代表作『**The Road Ahead**』『**ビジネス @ 思考スピード**』『**地球の未来のため僕が決断したこと**』『**Source Code**』(2025、自伝)。"
+      },
+      "themes": [
+        "気候変動",
+        "ビル・ゲイツ",
+        "環境",
+        "テクノロジー",
+        "未来"
+      ]
     },
     {
       "title": "FINAL FANTASY XVの人工知能",
       "author": "三宅陽一郎",
-      "cover": "https://m.media-amazon.com/images/P/B0D2N3MRCN.jpg"
+      "cover": "https://m.media-amazon.com/images/P/B0D2N3MRCN.jpg",
+      "publishedYear": 2019,
+      "era": "2019年8月、ボーンデジタル刊。**スクウェア・エニックス**AI研究者・**三宅陽一郎**による、**ファイナルファンタジーXV**(2016年発売)の**ゲームAI**設計を体系的に解説した技術書。\n\nオープンワールドにおけるNPCの自律行動、メタAI、キャラクターAI、ナビゲーションAIなど、最先端のゲームAI技術を理論と実装の両面から詳細に解説。ゲーム開発者だけでなく、AI研究者・技術者にも読まれる**日本のゲームAI研究の到達点**を示す一冊。",
+      "authorBio": {
+        "summary": "三宅陽一郎（みやけ・よういちろう）— **スクウェア・エニックス**ゲームAI研究者。日本の**ゲームAI**研究の第一人者。京都大学物理学科卒。著書『**人工知能のための哲学塾**』『**FINAL FANTASY XVの人工知能**』『**ゲームAI技術入門**』など多数。日本デジタルゲーム学会理事。"
+      },
+      "themes": [
+        "AI",
+        "ゲーム",
+        "ファイナルファンタジー",
+        "三宅陽一郎",
+        "技術書"
+      ]
     },
     {
       "title": "LIFESPAN 老いなき世界",
       "author": "デイヴィッド・A・シンクレア, マシュー・D・ラプラント",
-      "cover": "https://books.google.com/books/content?id=nhv5DwAAQBAJ&printsec=frontcover&img=1&zoom=3"
+      "cover": "https://books.google.com/books/content?id=nhv5DwAAQBAJ&printsec=frontcover&img=1&zoom=3",
+      "publishedYear": 2020,
+      "titleEn": "Lifespan",
+      "era": "原著『**Lifespan: Why We Age—and Why We Don't Have To**』は2019年9月米Atria Books刊。邦訳は2020年9月東洋経済新報社から梶山あゆみ訳で刊行。\n\n**ハーバード大学医学大学院遺伝学教授**・**デイヴィッド・シンクレア**による、**老化は治療可能な疾患**であるという衝撃的なテーゼを科学的根拠で展開する。**サーチュイン遺伝子**、**NAD+**、**ヤマナカ因子**、**メトホルミン**、**レスベラトロール**など、抗老化の最新研究を一般読者向けに解説。**世界100万部超**、日本でも累計30万部のベストセラー。",
+      "authorBio": {
+        "born": 1969,
+        "summary": "**デイヴィッド・A・シンクレア**（David A. Sinclair、1969年6月26日生）— オーストラリア生まれ、ニューサウスウェールズ大学博士。**ハーバード大学医学大学院遺伝学教授**、**ポール・F・グレン老化研究センター**共同所長。**抗老化研究の世界的権威**。Time誌「世界で最も影響力のある100人」(2014)、Time誌「医療における最も影響力のある50人」(2018)。\n**マシュー・ラプラント**（Matthew D. LaPlante）— ジャーナリスト、ユタ州立大学准教授。共著者。"
+      },
+      "themes": [
+        "医学",
+        "老化",
+        "長寿",
+        "シンクレア",
+        "サイエンス書"
+      ]
     },
     {
       "title": "人類とイノベーション",
       "titleEn": "How Innovation Works",
       "author": "マット・リドレー",
       "publisher": "NewsPicksパブリッシング",
-      "cover": "https://books.google.com/books/content?id=b9UfEAAAQBAJ&printsec=frontcover&img=1&zoom=3"
+      "cover": "https://books.google.com/books/content?id=b9UfEAAAQBAJ&printsec=frontcover&img=1&zoom=3",
+      "publishedYear": 2021,
+      "era": "原著『**How Innovation Works: And Why It Flourishes in Freedom**』は2020年米Harper刊。邦訳は2021年ニューズピックス（NewsPicksパブリッシング）から大田直子訳で刊行。\n\n英国のサイエンス・ライター・**マット・リドレー**（『繁栄』『**赤の女王**』著者）による、**イノベーションがいかに起こるか**を歴史的事例で解明する一冊。蒸気機関、ワクチン、フラッキング、原子力、インターネットなど数十のイノベーションを取り上げ、「**イノベーションは個人の天才ではなく、自由市場と大量試行錯誤の産物**」というテーゼを論証。**自由・分散・実験**を擁護するリバタリアン的視点。",
+      "authorBio": {
+        "born": 1958,
+        "summary": "マット・リドレー（Matt Ridley、1958年2月7日生、第5代リドレー子爵）— 英国ノーザンバーランド生まれ、オックスフォード大学博士。元The Economist特派員、英国上院議員（保守党）。代表作『**赤の女王**』『**やわらかな遺伝子**』『**繁栄**』『**人類とイノベーション**』など。サイエンス・ライティングと自由市場経済論を融合した独自の視点で世界的に著名。"
+      },
+      "themes": [
+        "イノベーション",
+        "歴史",
+        "科学",
+        "リドレー",
+        "自由市場"
+      ]
     },
     {
       "title": "ジェンダーについて大学生が真剣に考えてみた",
       "author": "佐藤文香 監修",
       "publisher": "明石書店",
-      "cover": "https://books.google.com/books/content?id=FIWjEQAAQBAJ&printsec=frontcover&img=1&zoom=3"
+      "cover": "https://books.google.com/books/content?id=FIWjEQAAQBAJ&printsec=frontcover&img=1&zoom=3",
+      "publishedYear": 2019,
+      "era": "2019年1月、明石書店刊。**一橋大学社会学部佐藤文香ゼミ**生が共同執筆した、**現代日本社会のジェンダー問題**を学生視点で平易に解説する入門書。\n\n「ジェンダーって何？」「**フェミニズム**は怖い？」「LGBT・SOGI」「結婚・家族」「労働とお金」など、若い世代が抱える疑問に、ゼミで議論された結論をベースに答える。**SNSで話題**となり累計5万部超、ジェンダー教育の入門書として高校・大学のテキストにも採用。",
+      "authorBio": {
+        "summary": "**監修 佐藤文香**（さとう・ふみか）— **一橋大学大学院社会学研究科教授**、社会学者。専門はジェンダー研究。著書『軍事組織とジェンダー』『ジェンダーで学ぶ社会学』(共編)など。\n\n**執筆 一橋大学社会学部佐藤文香ゼミ生** — 編著として一冊にまとめた。"
+      },
+      "themes": [
+        "ジェンダー",
+        "フェミニズム",
+        "教養",
+        "社会学",
+        "佐藤文香"
+      ]
     },
     {
       "title": "2040年の未来予測",
       "author": "成毛眞",
       "publisher": "日経BP",
-      "cover": "https://m.media-amazon.com/images/P/4296121669.jpg"
+      "cover": "https://m.media-amazon.com/images/P/4296121669.jpg",
+      "publishedYear": 2021,
+      "era": "2021年1月、日経BP刊。元**マイクロソフト日本法人社長**・**成毛眞**による、**2040年の世界**を見通す未来予測本。\n\nテクノロジー（AI、量子コンピューター、5G/6G、ロボティクス、ゲノム編集）、人口動態、エネルギー、地政学、超高齢社会、災害（南海トラフ地震・首都直下地震）など、2040年に向けて確実に起こる変化を、最新データと著者独自の視点で展開。**累計40万部超のメガセラー**として2021年経済書ベストセラー。",
+      "authorBio": {
+        "born": 1955,
+        "summary": "成毛眞（なるけ・まこと、1955年7月29日生）— 北海道千歳市生まれ、中央大学商学部卒。日本電気システム建設、アスキー、マイクロソフトを経て、1991年マイクロソフト日本法人代表取締役社長就任。2000年退任後は**インスパイア**を起業、現在書評メディア『**HONZ**』代表、サメ研究家としても活動。著書『2040年の未来予測』『嫌われた監督』『**MAKERS**』『お金の整理学』など多数。"
+      },
+      "themes": [
+        "未来予測",
+        "テクノロジー",
+        "成毛眞",
+        "ベストセラー",
+        "2040年"
+      ]
     },
     {
       "title": "生命科学的思考",
       "author": "高橋祥子",
       "publisher": "NewsPicksパブリッシング",
-      "cover": "https://m.media-amazon.com/images/P/4910063145.jpg"
+      "cover": "https://m.media-amazon.com/images/P/4910063145.jpg",
+      "publishedYear": 2021,
+      "era": "2021年4月、NewsPicksパブリッシング刊。**ジーンクエスト創業者**・**高橋祥子**による、**生命科学を経営・人生に応用する思考法**の解説書。\n\n生命の38億年の進化が「**多様性・適応・選択・複製**」というメカニズムで動いてきたことを、企業経営や個人の意思決定に転用する独自の思考フレームワーク。**コスト最小・サスティナブル・適応的**な選択をする「生物的合理性」を、現代資本主義の合理性と対比させて論じる。",
+      "authorBio": {
+        "born": 1988,
+        "summary": "高橋祥子（たかはし・しょうこ、1988年生）— 京都府生まれ、京都大学農学部卒、東京大学農学生命科学研究科博士。2013年大学院在学中に**ジーンクエスト**創業（パーソナルゲノム解析サービス）。2018年ユーグレナグループに参画、現在ジーンクエスト代表取締役。日本のヘルステック・ゲノミクスの第一人者の一人。著書『**生命科学的思考**』。"
+      },
+      "themes": [
+        "生命科学",
+        "ビジネス",
+        "思考法",
+        "高橋祥子",
+        "進化"
+      ]
     },
     {
       "title": "約束の地 (上)",
       "titleEn": "A Promised Land",
       "author": "バラク・オバマ",
-      "cover": "https://m.media-amazon.com/images/P/4087861333.jpg"
+      "cover": "https://m.media-amazon.com/images/P/4087861333.jpg",
+      "publishedYear": 2021,
+      "era": "原著『**A Promised Land**』は2020年11月17日米Crown刊。**バラク・オバマ第44代米大統領**による回顧録第1巻（全2巻予定の上巻）。邦訳は2021年2月集英社から山田文訳で同時刊行。\n\n**2008年大統領選**の決断、リーマン・ショック対応、医療保険改革（オバマケア）、ビン・ラディン暗殺作戦などを、約700ページにわたり詳細に記述。原著発売当日に**89万部**を売り上げ、2020年米国出版史上最大の初日売上を記録した世界的ベストセラー。米Amazon・NYT等で年間ベストブック多数。",
+      "authorBio": {
+        "born": 1961,
+        "summary": "バラク・オバマ（Barack Hussein Obama II、1961年8月4日生）— 米国第44代大統領（2009-2017）。ハワイ州ホノルル生まれ、ハーバード・ロー・スクール卒（学長）。コミュニティ・オーガナイザー、シカゴ大ロースクール講師、イリノイ州上院議員、合衆国上院議員を経て2008年大統領選で初の**アフリカ系アメリカ人大統領**に。**2009年ノーベル平和賞**。代表作『**Dreams from My Father**』『**The Audacity of Hope**』『**A Promised Land**(約束の地)』。"
+      },
+      "themes": [
+        "回顧録",
+        "オバマ",
+        "アメリカ政治",
+        "大統領",
+        "現代史"
+      ]
     },
     {
       "title": "約束の地 (下)",
       "author": "バラク・オバマ",
       "publisher": "",
       "cover": "https://m.media-amazon.com/images/P/4087861341.jpg",
-      "titleEn": "A Promised Land"
+      "titleEn": "A Promised Land",
+      "publishedYear": 2021,
+      "era": "原著『**A Promised Land**』は2020年11月17日米Crown刊。**バラク・オバマ第44代米大統領**による回顧録（邦訳上下分割の下巻）。邦訳は2021年2月集英社から山田文訳で同時刊行。\n\n医療保険改革(ACA)成立、2010年中間選挙敗北、湾岸戦争・アラブの春への対応、対中戦略など、第1期政権の主要な意思決定を本人視点で語る。原著発売当日に**89万部**を売り上げ、2020年米国出版史上最大の初日売上を記録した世界的ベストセラー。",
+      "authorBio": {
+        "born": 1961,
+        "summary": "バラク・オバマ（Barack Hussein Obama II、1961年8月4日生）— 米国第44代大統領（2009-2017）。ハワイ州ホノルル生まれ、ハーバード・ロー・スクール卒（学長）。コミュニティ・オーガナイザー、シカゴ大ロースクール講師、イリノイ州上院議員、合衆国上院議員を経て2008年大統領選で初の**アフリカ系アメリカ人大統領**に。**2009年ノーベル平和賞**。代表作『**Dreams from My Father**』『**The Audacity of Hope**』『**A Promised Land**(約束の地)』。"
+      },
+      "themes": [
+        "回顧録",
+        "オバマ",
+        "アメリカ政治",
+        "大統領",
+        "現代史"
+      ]
     },
     {
       "title": "監督不行届",
       "author": "安野モヨコ",
-      "cover": "https://books.google.com/books/content?id=cjumBQAAQBAJ&printsec=frontcover&img=1&zoom=3"
+      "cover": "https://books.google.com/books/content?id=cjumBQAAQBAJ&printsec=frontcover&img=1&zoom=3",
+      "publishedYear": 2002,
+      "era": "2002年6月、祥伝社『**FEEL YOUNG**』連載開始、2005年単行本（祥伝社）。漫画家**安野モヨコ**が、夫である**エヴァンゲリオン**監督・**庵野秀明**との結婚生活を**「オタク濃度100%」**のエッセイ漫画として描いた一冊。\n\n「**朝起きるとパジャマのまま部屋から出ない夫**」「**ジオラマと模型に囲まれる家**」「**仕事中のカントクの妙な集中**」など、オタク監督との奇妙でいて深い愛情のある日常を、安野モヨコの繊細な絵柄と機知で描く。2014年に夫婦の素顔を描いたNHK BSドキュメンタリー、2024年TVアニメ化（2024年7月）など長期にわたって愛読される名作。",
+      "authorBio": {
+        "born": 1971,
+        "summary": "安野モヨコ（あんの・もよこ、1971年3月26日生）— 東京都生まれ。1989年デビュー、代表作『**ハッピー・マニア**』『**シュガシュガルーン**』『**働きマン**』『**さくらん**』『**鼻下長紳士回顧録**』など、女性視点の社会観察と斬新なファッションセンスで知られる。1989年`漫画家**庵野秀明**(エヴァンゲリオン監督)と結婚。著書『**監督不行届**』『美人画報』など。"
+      },
+      "themes": [
+        "漫画",
+        "エッセイ",
+        "結婚",
+        "オタク",
+        "安野モヨコ"
+      ]
     },
     {
       "title": "ネット興亡記 敗れざる者たち",
       "author": "杉本貴司",
       "publisher": "日本経済新聞出版",
-      "cover": "https://m.media-amazon.com/images/P/B08GJWJ5B2.jpg"
+      "cover": "https://m.media-amazon.com/images/P/B08GJWJ5B2.jpg",
+      "publishedYear": 2020,
+      "era": "2020年3月、日本経済新聞出版社刊。**日経新聞**記者**杉本貴司**による、**日本のインターネット業界**の黎明期から第1次ITバブル崩壊までを、**サイバーエージェント・三木谷浩史・前澤友作・堀江貴文・南場智子・笠原健治・川邊健太郎ら**主要起業家への徹底取材で再構築した群像劇ノンフィクション。\n\n第2弾『ネット興亡記2 知の渇望者たち』(2024)とともに、**日本のIT産業の戦後史**を語る決定版として高評価。続編は孫正義、堀江貴文、藤田晋ら同世代起業家の意思決定を、より深い心理レベルで描く。",
+      "authorBio": {
+        "summary": "杉本貴司（すぎもと・たかし）— 元日本経済新聞編集委員、現フリージャーナリスト。**日本のテック・スタートアップ界の20年取材**を活かしたノンフィクションの第一人者。代表作『**ネット興亡記**』(2020)『**ZOZO**』『**ユニクロ**』『ネット興亡記2』など。"
+      },
+      "themes": [
+        "IT史",
+        "起業家",
+        "杉本貴司",
+        "ネット",
+        "ノンフィクション"
+      ]
     },
     {
       "title": "爆速成長マネジメント",
       "titleEn": "High Growth Handbook",
       "author": "イラッド・ギル",
       "publisher": "日経BP",
-      "cover": "https://books.google.com/books/content?id=U-ojEAAAQBAJ&printsec=frontcover&img=1&zoom=3"
+      "cover": "https://books.google.com/books/content?id=U-ojEAAAQBAJ&printsec=frontcover&img=1&zoom=3",
+      "publishedYear": 2019,
+      "era": "原著『**High Growth Handbook: Scaling Startups from 10 to 10,000 People**』は2018年米Stripe Press刊。邦訳は2019年に日経BPから飯野将和監訳・井口耕二訳で刊行。\n\n**Twitter初期エンジニア・Color CEO**を経て、**著名エンジェル投資家・スタートアップアドバイザー**となった**イラッド・ギル**による、**社員10人から10000人規模**の成長段階のスタートアップが直面する課題（CEOの時間管理、取締役会、上場、M&A、組織設計、上級採用）の実践書。Sam Altman、Reid Hoffman、Patrick CollisonほかCEOへのインタビュー多数。",
+      "authorBio": {
+        "summary": "イラッド・ギル（Elad Gil）— **Twitter**初期メンバー、**Color Genomics**共同創業者・元CEO、**Mixer Labs**創業者。**Airbnb・Stripe・Coinbase・Pinterest・Square・Wish**など30社以上のスタートアップに投資・アドバイスする著名エンジェル投資家。スタンフォード大学MBA。代表作『**High Growth Handbook**』。"
+      },
+      "themes": [
+        "スタートアップ",
+        "経営",
+        "成長",
+        "イラッド・ギル",
+        "実務書"
+      ]
     },
     {
       "title": "魔王 奸智と暴力のサイバー犯罪帝国を築いた男",
       "titleEn": "The Mastermind",
       "author": "エヴァン・ラトリフ",
-      "cover": "https://m.media-amazon.com/images/P/B07YYCBVH5.jpg"
+      "cover": "https://m.media-amazon.com/images/P/B07YYCBVH5.jpg",
+      "publishedYear": 2020,
+      "era": "原著『**The Mastermind: Drugs, Empire, Murder, Betrayal**』は2019年米Random House刊。邦訳は2020年早川書房から竹内要江訳で刊行。\n\nWired記者**エヴァン・ラトリフ**による、**RX Limited**（オンライン薬局を装った世界規模の犯罪帝国）を率い、麻薬密売・武器密輸・殺人請負まで手を広げた**ポール・ル・ルー**の実話を描いたルポノンフィクション。100人以上への取材と捜査資料に基づく緊迫の犯罪史。",
+      "authorBio": {
+        "summary": "エヴァン・ラトリフ（Evan Ratliff）— 米国ジャーナリスト、Wired誌寄稿エディター。代表作『**The Mastermind**』『**The Lifters**』など、緻密な調査とテック・犯罪界の融合した視点で知られる。"
+      },
+      "themes": [
+        "ノンフィクション",
+        "犯罪",
+        "ル・ルー",
+        "ラトリフ",
+        "サイバー犯罪"
+      ]
     },
     {
       "title": "SXの時代",
       "author": "坂野俊哉, 磯貝友紀",
-      "cover": "https://m.media-amazon.com/images/P/4296000209.jpg"
+      "cover": "https://m.media-amazon.com/images/P/4296000209.jpg",
+      "publishedYear": 2021,
+      "era": "2021年7月、日経BP刊。サブタイトル「**サステナビリティ経営**実践」。**PwCコンサルティング**・**坂野俊哉**と**磯貝友紀**による、**サステナビリティ・トランスフォーメーション(SX)**を企業経営にどう実装するかの実践書。\n\nESG投資、TCFD、SBT、CDP、Scope3排出量、人権デュー・ディリジェンス、ステークホルダー・エンゲージメントなど、2020年代に企業経営の主流となったサステナ要素を、コンサルティング実践例で解説。SDGs時代の経営者・サステナ担当者の入門書。",
+      "authorBio": {
+        "summary": "**坂野俊哉**（ばんの・としや）・**磯貝友紀**（いそがい・ゆき）— 共に**PwCサステナビリティ合同会社**でサステナビリティ・コンサルティングを率いる実務家。共著『**SXの時代**』『パーパス経営』など。"
+      },
+      "themes": [
+        "経営",
+        "サステナビリティ",
+        "ESG",
+        "SX",
+        "PwC"
+      ]
     },
     {
       "title": "BAD BLOOD シリコンバレー最大の捏造スキャンダル 全真相",
       "author": "ジョン・キャリールー",
-      "cover": "https://m.media-amazon.com/images/P/4087861260.jpg"
+      "cover": "https://m.media-amazon.com/images/P/4087861260.jpg",
+      "publishedYear": 2021,
+      "titleEn": "Bad Blood",
+      "era": "原著『**Bad Blood: Secrets and Lies in a Silicon Valley Startup**』は2018年米Knopf刊。邦訳は2021年集英社から関美和訳で刊行。\n\nWSJ記者**ジョン・キャリールー**（**ピューリッツァー賞**受賞）による、**Theranos**(セラノス、2003年創業の血液検査スタートアップ)の壮大な詐欺事件を解明した調査報道ノンフィクション。スタンフォード大学中退の若き創業者**エリザベス・ホームズ**(1984-)が、機能しない血液検査装置で90億ドルの企業価値を築き、転落するまでをWSJ調査の内幕とともに描く。エリザベスは2022年詐欺罪で禁錮11年判決。",
+      "authorBio": {
+        "summary": "ジョン・キャリールー（John Carreyrou）— **ウォール・ストリート・ジャーナル**記者、**ピューリッツァー賞2回受賞**(2003、2015)。フランス・パリ生まれ、デューク大学卒。Theranos調査報道で世界的に著名。代表作『**Bad Blood**』(2018)。"
+      },
+      "themes": [
+        "ノンフィクション",
+        "Theranos",
+        "スキャンダル",
+        "ホームズ",
+        "シリコンバレー"
+      ]
     },
     {
       "title": "なぜ今、仏教なのか",
-      "titleEn": "Why Buddhism Is True",
+      "titleEn": "Why Buddhism is True",
       "author": "ロバート・ライト",
       "publisher": "早川書房",
-      "cover": "https://m.media-amazon.com/images/P/4152097868.jpg"
+      "cover": "https://m.media-amazon.com/images/P/4152097868.jpg",
+      "publishedYear": 2018,
+      "era": "原著『**Why Buddhism is True: The Science and Philosophy of Meditation and Enlightenment**』は2017年米Simon & Schuster刊。邦訳は2018年早川書房から熊谷淳子訳で刊行。\n\nプリンストン大学講師・人気サイエンスライター**ロバート・ライト**による、**仏教（特にヴィパッサナー瞑想）と進化心理学・神経科学**の最新知見の融合。「**自我は幻想**」「**苦しみは執着から生まれる**」など仏教の核心思想が、現代脳科学と整合的であることを論証。NYTベストセラー、世界中の合理主義者・科学者・テック起業家に読まれる現代マインドフルネスの古典。",
+      "authorBio": {
+        "born": 1957,
+        "summary": "ロバート・ライト（Robert Wright、1957年生）— 米国ジャーナリスト・著述家。プリンストン大学講師、Time誌・The Atlantic・The New Yorker等に寄稿。代表作『**The Moral Animal**』(1994、進化心理学の啓蒙書)『**Nonzero**』(2000)『**The Evolution of God**』(2009)『**Why Buddhism is True**』(2017)。"
+      },
+      "themes": [
+        "仏教",
+        "瞑想",
+        "進化心理学",
+        "ライト",
+        "マインドフルネス"
+      ]
     },
     {
       "title": "探究する精神",
       "author": "大栗博司",
-      "cover": "https://m.media-amazon.com/images/P/4344986148.jpg"
+      "cover": "https://m.media-amazon.com/images/P/4344986148.jpg",
+      "publishedYear": 2021,
+      "era": "2021年6月、幻冬舎新書刊。サブタイトル「**職業としての基礎科学**」。著者**大栗博司**（**カリフォルニア工科大学教授**、**カブリ数物連携宇宙研究機構（IPMU）主任研究者**）による、自身の研究人生と数学・物理学の魅力を語った教養エッセイ。\n\n超弦理論研究の最前線にいる著者が、子ども時代の科学への目覚めから、京都大学博士、UCバークレー、Caltech教授に至る道のりと、基礎科学研究の意義（「**役に立たない**」とされる研究こそが文明を支える）を、平易で熱量ある文体で語る。",
+      "authorBio": {
+        "born": 1962,
+        "summary": "大栗博司（おおぐり・ひろし、1962年生）— 岐阜県岐阜市生まれ、京都大学理学部博士。カリフォルニア大学バークレー校、シカゴ大学を経て、**カリフォルニア工科大学（Caltech）**理論物理学教授、**IPMU（東京大学カブリ数物連携宇宙研究機構）**主任研究者・機構長。**超弦理論**の世界的権威。代表作『大栗先生の超弦理論入門』『重力とは何か』『**探究する精神**』『数学者は宇宙を統一できるか』など。"
+      },
+      "themes": [
+        "科学",
+        "物理学",
+        "探究",
+        "大栗博司",
+        "教養"
+      ]
     },
     {
       "title": "ケインとアベル (上)",
       "titleEn": "Kane and Abel",
       "author": "ジェフリー・アーチャー",
       "publisher": "新潮文庫",
-      "cover": "https://m.media-amazon.com/images/P/4102161031.jpg"
+      "cover": "https://m.media-amazon.com/images/P/4102161031.jpg",
+      "publishedYear": 1979,
+      "era": "原著『**Kane and Abel**』は1979年米Simon & Schuster刊。**世界6500万部超、現代英米文学の古典的ベストセラー**。\n\nアーチャーの代表作で、第一次大戦前夜の同じ日（1906年4月18日）に生まれた**ボストンの大富豪の息子ウィリアム・ケイン**と**ポーランド貧農の私生児アベル・ロスノフスキ**が、それぞれ銀行家とホテル王として頂点を目指し、運命的に対立していく60年の物語。第二次大戦・大恐慌・冷戦という20世紀史を背景に、ライバル関係の壮大なドラマを描く。日本語訳は新潮文庫から永井淳訳で上下2巻。",
+      "authorBio": {
+        "born": 1940,
+        "summary": "ジェフリー・アーチャー（Jeffrey Archer、1940年4月15日生）— 英国ロンドン生まれ、オックスフォード大学卒。**保守党下院議員**、**党副総裁**を歴任した政治家でもある作家。代表作『**百万ドルをとり返せ!**』『**ケインとアベル**』『大統領に知らせますか？』『**運命の息子**』『嘘ばっかり』『誇り高き王女』など、緻密なプロット構成で世界的に高い人気を誇る。"
+      },
+      "themes": [
+        "小説",
+        "ライバル",
+        "20世紀",
+        "アーチャー",
+        "古典"
+      ]
     },
     {
       "title": "ケインとアベル (下)",
       "author": "ジェフリー・アーチャー",
       "publisher": "新潮文庫",
       "cover": "https://m.media-amazon.com/images/P/410216104X.jpg",
-      "titleEn": "Kane and Abel"
+      "titleEn": "Kane and Abel",
+      "publishedYear": 1979,
+      "era": "原著『**Kane and Abel**』は1979年米Simon & Schuster刊。**世界6500万部超**の代表作。下巻は二人の壮大な対立から最終的な和解（次世代の物語）までを描く。日本語訳は新潮文庫から永井淳訳。",
+      "authorBio": {
+        "born": 1940,
+        "summary": "ジェフリー・アーチャー（Jeffrey Archer、1940年4月15日生）— 英国ロンドン生まれ、オックスフォード大学卒。**保守党下院議員**、**党副総裁**を歴任した政治家でもある作家。代表作『**百万ドルをとり返せ!**』『**ケインとアベル**』『大統領に知らせますか？』『**運命の息子**』『嘘ばっかり』『誇り高き王女』など、緻密なプロット構成で世界的に高い人気を誇る。"
+      },
+      "themes": [
+        "小説",
+        "ライバル",
+        "20世紀",
+        "アーチャー",
+        "古典"
+      ]
     },
     {
       "title": "中国オンラインビジネスモデル図鑑",
       "author": "王沁",
       "publisher": "かんき出版",
-      "cover": "https://books.google.com/books/content?id=sAUdEAAAQBAJ&printsec=frontcover&img=1&zoom=3"
+      "cover": "https://books.google.com/books/content?id=sAUdEAAAQBAJ&printsec=frontcover&img=1&zoom=3",
+      "publishedYear": 2020,
+      "era": "2020年7月、KADOKAWA刊。**王沁**（ワン・チン、中国出身のビジネスコンサルタント）による、**中国の新興オンラインビジネスモデル50事例**を図解で解説する一冊。\n\nアリババ、テンセント、バイトダンス、美団、シーイン、ピンドゥオドゥオなど、中国独特の進化を遂げた**スーパーアプリ・コミュニティEC・ライブコマース・KOL経済**などのビジネスモデルを、ビジュアル中心に整理。日本のビジネスパーソンが中国市場の現状を素早く理解できる入門書。",
+      "authorBio": {
+        "summary": "王沁（おう・しん、ワン・チン）— 中国出身、**ビジネスコンサルタント**。中国・日本・米国のテック業界に精通。著書『**中国オンラインビジネスモデル図鑑**』。"
+      },
+      "themes": [
+        "中国",
+        "ビジネス",
+        "EC",
+        "図解",
+        "テック"
+      ]
     },
     {
       "title": "クオンタム思考",
       "titleEn": "Quantum Thinking",
       "author": "村上憲郎",
       "publisher": "日経BP",
-      "cover": "https://books.google.com/books/content?id=5wwuEAAAQBAJ&printsec=frontcover&img=1&zoom=3"
+      "cover": "https://books.google.com/books/content?id=5wwuEAAAQBAJ&printsec=frontcover&img=1&zoom=3",
+      "publishedYear": 2021,
+      "era": "2021年5月、日経BP刊。**元Google日本法人社長**・**村上憲郎**による、**量子コンピューター時代に必要な思考法**「**量子（クオンタム）思考**」の解説書。\n\n0か1かではなく、両方が同時に存在する**量子的な発想**で問題を捉えることの重要性を、量子コンピュータ・量子インターネット・量子センシングなど最新の量子技術を解説しつつ提示。AI・機械学習を超えた次世代テクノロジー時代の概念を、ビジネスパーソン向けに整理。",
+      "authorBio": {
+        "born": 1947,
+        "summary": "村上憲郎（むらかみ・のりお、1947年生）— 大分県出身、京都大学工学部卒。日立電子・日本DEC・米Northern Telecomを経て、**2003年Google日本法人代表取締役社長**就任、2009年退任。現在大学院大学至善館特命教授、エナリス取締役会長。代表作『**村上式シンプル英語勉強法**』『**村上憲郎の「人工知能」「IoT」「ビッグデータ」がわかる本**』『**クオンタム思考**』。"
+      },
+      "themes": [
+        "量子コンピューター",
+        "Google",
+        "村上憲郎",
+        "テクノロジー",
+        "思考法"
+      ]
     },
     {
       "title": "官邸VS携帯大手 値下げを巡る1000日戦争",
       "author": "堀越功",
       "publisher": "日経BP",
-      "cover": "https://m.media-amazon.com/images/P/4296107348.jpg"
+      "cover": "https://m.media-amazon.com/images/P/4296107348.jpg",
+      "publishedYear": 2021,
+      "era": "2021年4月、日経BP刊。**日経クロステック**ジャーナリスト**堀越功**による、**菅義偉政権**による**携帯電話料金値下げ**政策と通信3社（**NTTドコモ・KDDI・ソフトバンク**）の攻防の内幕を描いたノンフィクション。\n\n2018年の菅官房長官「**料金は4割下げられる**」発言以降、楽天モバイル新規参入、ahamo・povo・LINEMO登場、政府の規制強化、菅首相の電撃的な値下げ要求などを、政治と通信業界の現場取材で再構築。",
+      "authorBio": {
+        "summary": "堀越功（ほりこし・いさお）— 日本経済新聞社『日経クロステック』編集者・ジャーナリスト。通信業界・モバイル業界を中心に取材。著書『**官邸VS携帯大手**』など。"
+      },
+      "themes": [
+        "通信",
+        "規制",
+        "菅政権",
+        "携帯料金",
+        "ノンフィクション"
+      ]
     },
     {
       "title": "失敗を語ろう。「わからないことだらけ」を突き進んだ僕らが学んだこと",
       "author": "辻庸介",
-      "cover": "https://books.google.com/books/content?id=2yU0EAAAQBAJ&printsec=frontcover&img=1&zoom=3"
+      "cover": "https://books.google.com/books/content?id=2yU0EAAAQBAJ&printsec=frontcover&img=1&zoom=3",
+      "publishedYear": 2021,
+      "era": "2021年8月、日経BP刊。**マネーフォワード**創業者・代表取締役社長CEO**辻庸介**による、自身の起業・経営の**失敗体験**を率直に語った経営エッセイ。\n\n2012年マネーフォワード創業以降、IPO、SaaS事業の組織化、海外進出、人材採用、システム障害など、決して華やかではない**起業家の苦悩と決断の現場**を、著者ならではの誠実な筆致で描く。スタートアップ経営者やリーダー候補のメンタルケアの書。",
+      "authorBio": {
+        "born": 1976,
+        "summary": "辻庸介（つじ・ようすけ、1976年生）— 京都府生まれ、京都大学農学部卒、ペンシルベニア大学ウォートン校MBA。ソニー、マネックス証券を経て、2012年**マネーフォワード**創業、2017年マザーズ上場（家計簿アプリ・クラウド会計の最大手）、2024年プライム上場、時価総額3000億円規模に成長。著書『**失敗を語ろう**』『お金の話を、しよう。』。"
+      },
+      "themes": [
+        "起業",
+        "経営",
+        "マネーフォワード",
+        "辻庸介",
+        "失敗論"
+      ]
     },
     {
       "title": "WHO YOU ARE 君の真の言葉と行動こそが困難を生き抜くチームをつくる",
       "titleEn": "What You Do Is Who You Are",
       "author": "ベン・ホロウィッツ",
-      "cover": "https://m.media-amazon.com/images/P/4822288811.jpg"
+      "cover": "https://m.media-amazon.com/images/P/4822288811.jpg",
+      "publishedYear": 2020,
+      "era": "原著『**What You Do Is Who You Are: How to Create Your Business Culture**』は2019年米Harper Business刊。邦訳は2020年に日経BPから浅枝大志・関美和訳で刊行。\n\n**Andreessen Horowitz共同創業者**・**ベン・ホロウィッツ**（前作『**ハード・シングス**』も大ヒット）による**企業文化論**。トゥーサン・ルーヴェルチュール（ハイチ独立革命の指導者）、ジンギス・カン、武士道、刑務所ギャングの掟など、歴史上の組織文化のリーダーシップから、現代スタートアップの文化形成を学ぶ独創的な経営書。",
+      "authorBio": {
+        "born": 1966,
+        "summary": "ベン・ホロウィッツ（Ben Horowitz、1966年6月13日生）— 米国ロンドン生まれ、コロンビア大学卒、UCLA修士。Netscape、Loudcloud（後のOpsware）創業・CEO、HP副社長を経て、2009年**Marc Andreessen**と共に**Andreessen Horowitz**設立、シリコンバレー最重要VCの一つに育成。代表作『**The Hard Thing About Hard Things**』(2014、累計100万部超)『**What You Do Is Who You Are**』(2019)。"
+      },
+      "themes": [
+        "経営",
+        "企業文化",
+        "ホロウィッツ",
+        "スタートアップ",
+        "リーダーシップ"
+      ]
     },
     {
       "title": "買い物ゼロ秒時代の未来地図",
       "author": "望月智之",
       "publisher": "クロスメディア・パブリッシング",
-      "cover": "https://books.google.com/books/content?id=OPwWEAAAQBAJ&printsec=frontcover&img=1&zoom=3"
+      "cover": "https://books.google.com/books/content?id=OPwWEAAAQBAJ&printsec=frontcover&img=1&zoom=3",
+      "publishedYear": 2021,
+      "era": "2021年8月、プレジデント社刊。**いつも.**（ECコンサルティング会社）副社長・**望月智之**による、**EC・小売・物流革命**の未来予測ビジネス書。\n\nAmazon・楽天・Shopify・Alibabaの最新動向、**サブスクリプションコマース・ライブコマース・D2C**の実態、**ロボット倉庫・自動運転配送・ドローン配送**による物流革命などを総合的に分析。「**買い物に時間を使わない**」未来の消費スタイルがもたらす社会変化を、商社・小売業・メーカーの視点で整理。",
+      "authorBio": {
+        "summary": "望月智之（もちづき・ともゆき）— 株式会社いつも代表取締役副社長。ECコンサルティング業界の第一人者として、累計1000社以上のEC支援。著書『**買い物ゼロ秒時代の未来地図**』『2025年、人は『買い物』をしなくなる』など。"
+      },
+      "themes": [
+        "EC",
+        "小売",
+        "未来予測",
+        "望月智之",
+        "物流"
+      ]
     },
     {
       "title": "意思決定のための分析の技術",
       "author": "後正武",
       "publisher": "ダイヤモンド社",
-      "cover": "https://books.google.com/books/content?id=vVNKAAAAQBAJ&printsec=frontcover&img=1&zoom=3"
+      "cover": "https://books.google.com/books/content?id=vVNKAAAAQBAJ&printsec=frontcover&img=1&zoom=3",
+      "publishedYear": 1998,
+      "era": "1998年ダイヤモンド社刊。サブタイトル「**最適な選択をするための新しい分析」。元**マッキンゼー・アンド・カンパニー**コンサルタント・**後正武**による、**ビジネス上の意思決定における定量・定性分析の体系**を解説した実務書。\n\n問題解決ステップ、フレームワーク思考、意思決定マトリクス、感度分析、リスク評価などを、コンサル時代の実例で解説。ビジネススクールでも参考書として使われる**意思決定論の現代古典**として、出版から四半世紀以上経っても読み継がれる。",
+      "authorBio": {
+        "summary": "後正武（うしろ・まさたけ）— 経営コンサルタント。**マッキンゼー・アンド・カンパニー**東京オフィス・パートナー、独立後はビジネスコンサルタントとして活躍。著書『**意思決定のための分析の技術**』『経営参謀としての企画・分析の技術』など。"
+      },
+      "themes": [
+        "経営",
+        "意思決定",
+        "分析",
+        "コンサルティング",
+        "後正武"
+      ]
     },
     {
       "title": "ソニー再生 変革を成し遂げた異端のリーダーシップ",
       "author": "平井一夫",
       "publisher": "日本経済新聞出版",
-      "cover": "https://books.google.com/books/content?id=bdM3EAAAQBAJ&printsec=frontcover&img=1&zoom=3"
+      "cover": "https://books.google.com/books/content?id=bdM3EAAAQBAJ&printsec=frontcover&img=1&zoom=3",
+      "publishedYear": 2021,
+      "era": "2021年7月、日本経済新聞出版社刊。**ソニーグループ前社長兼会長**・**平井一夫**による、2012年〜2018年の**ソニー大変革**の経営回顧録。\n\nウォークマン以来の旧体質に陥り、TV事業大赤字に苦しんだソニーを、リストラ・事業ポートフォリオ再編・PlayStation/イメージセンサー/エンタメへのシフトで**V字回復**させた本人の意思決定を率直に語る。「**異質**」と呼ばれた米国・SCEA出身の社長による組織改革の現場記録。**累計15万部超**。",
+      "authorBio": {
+        "born": 1960,
+        "summary": "平井一夫（ひらい・かずお、1960年12月22日生）— 東京都出身、上智大学外国語学部卒。ソニー入社後、CBSソニー・SCEA（米PlayStation部門）社長を歴任、2009年ソニー副社長、**2012年ソニー社長兼CEO**就任、テレビ事業赤字の整理とエンタメ・センサー事業の強化でV字回復を実現。2018年退任、2019年会長退任。著書『**ソニー再生**』。"
+      },
+      "themes": [
+        "経営",
+        "ソニー",
+        "経営再建",
+        "平井一夫",
+        "リーダーシップ"
+      ]
     },
     {
       "title": "インスタグラム 野望の果てに",
       "titleEn": "No Filter",
       "author": "サラ・フライヤー",
       "publisher": "NewsPicksパブリッシング",
-      "cover": "https://m.media-amazon.com/images/P/4910063188.jpg"
+      "cover": "https://m.media-amazon.com/images/P/4910063188.jpg",
+      "publishedYear": 2021,
+      "era": "原著『**No Filter: The Inside Story of Instagram**』は2020年米Simon & Schuster刊。邦訳は2021年ニューズピックスから井口耕二訳で刊行。\n\nBloomberg記者**サラ・フライヤー**による、**Instagram**創業から**Facebook買収（2012年、10億ドル）**を経て、創業者**ケビン・シストロム**・**マイク・クリーガー**が2018年に退社するまでの内幕を描いた調査ノンフィクション。**マーク・ザッカーバーグ**との関係、Snapchat買収交渉決裂、フィルターアプリから世界的SNSへの成長、Instagramの社会的影響などを徹底取材で再構築。",
+      "authorBio": {
+        "summary": "サラ・フライヤー（Sarah Frier）— **Bloomberg**記者、シリコンバレーのソーシャルメディア・テック業界専門。代表作『**No Filter**』(2020、Financial Times Business Book of the Year 2020受賞)。"
+      },
+      "themes": [
+        "Instagram",
+        "SNS",
+        "Facebook",
+        "シリコンバレー",
+        "ノンフィクション"
+      ]
     },
     {
       "title": "ビジョナリー・カンパニー ZERO",
-      "titleEn": "Beyond Entrepreneurship 2.0",
+      "titleEn": "BE 2.0",
       "author": "ジム・コリンズ, ビル・ラジアー",
       "publisher": "日経BP",
-      "cover": "https://books.google.com/books/content?id=dVo-EAAAQBAJ&printsec=frontcover&img=1&zoom=3"
+      "cover": "https://books.google.com/books/content?id=dVo-EAAAQBAJ&printsec=frontcover&img=1&zoom=3",
+      "publishedYear": 2021,
+      "era": "原著『**BE 2.0 (Beyond Entrepreneurship 2.0): Turning Your Business into an Enduring Great Company**』は2020年米Portfolio刊。**ジム・コリンズ**(『ビジョナリー・カンパニー』『ビジョナリー・カンパニー2』『**Good to Great**』)と師である故**ビル・ラジアー**(スタンフォード大教授)の1992年の共著の改訂版。\n\n**ジム・コリンズ**の代表作『ビジョナリー・カンパニー』シリーズの**起源にあたる「**ZERO**」(原点)**として位置づけられる。スタートアップから永続する偉大な企業へと成長させるための、リーダーシップ・人事・経営戦略の本質を再定義。邦訳は2021年8月日経BPから土方奈美訳で刊行。",
+      "authorBio": {
+        "born": 1958,
+        "summary": "ジム・コリンズ（Jim Collins、1958年1月25日生）— 米国コロラド州ボルダー在住、スタンフォード大学卒・MBA、HP・McKinsey出身、スタンフォード・ビジネススクール元教授。代表作『**ビジョナリー・カンパニー**』(1994)『**ビジョナリー・カンパニー2 飛躍の法則**』(2001)『**ビジョナリー・カンパニー3 衰退の五段階**』『**ビジョナリー・カンパニー4**』『**Great by Choice**』。経営学のロングセラー作家。"
+      },
+      "themes": [
+        "経営",
+        "ビジョナリー・カンパニー",
+        "コリンズ",
+        "リーダーシップ",
+        "永続"
+      ]
     },
     {
       "title": "BRAIN DRIVEN パフォーマンスが高まる脳の状態とは",
       "author": "青砥瑞人",
       "publisher": "ディスカヴァー",
-      "cover": "https://books.google.com/books/content?id=fff5DwAAQBAJ&printsec=frontcover&img=1&zoom=3"
+      "cover": "https://books.google.com/books/content?id=fff5DwAAQBAJ&printsec=frontcover&img=1&zoom=3",
+      "publishedYear": 2020,
+      "era": "2020年9月、ディスカヴァー・トゥエンティワン刊。著者**青砥瑞人**（DAncing Einstein創業者、米国UCLA神経科学卒）による、**脳科学に基づくパフォーマンス向上術**の解説書。\n\n**モチベーション、ストレス、創造性**を脳科学のエビデンスに基づいて分析、最高のパフォーマンス状態に入るためのコンディショニング技法を体系化。スポーツ選手・経営者・教育者向けの実践書として注目。",
+      "authorBio": {
+        "summary": "青砥瑞人（あおと・みずと）— **DAncing Einstein**創業者・CEO。米**UCLA**神経科学部卒（神経科学・哲学）。日本における**応用神経科学**の第一人者として、教育・ビジネス・スポーツ分野での脳科学コンサルティングを展開。著書『**BRAIN DRIVEN**』『**HAPPY STRESS**』。"
+      },
+      "themes": [
+        "脳科学",
+        "パフォーマンス",
+        "青砥瑞人",
+        "ビジネス書",
+        "BRAIN"
+      ]
     },
     {
       "title": "AI・データ分析プロジェクトのすべて",
       "author": "大城信晃 ほか",
       "publisher": "技術評論社",
-      "cover": "https://m.media-amazon.com/images/P/4297117584.jpg"
+      "cover": "https://m.media-amazon.com/images/P/4297117584.jpg",
+      "publishedYear": 2021,
+      "era": "2021年技術評論社刊。著者**大城信晃**ほか共著者による、**企業のAI・データ分析プロジェクトの企画から運用まで**を網羅した実務書。\n\nプロジェクト推進、データサイエンティストの組織配置、分析環境構築、PoC、本番デプロイ、運用、評価KPIなど、AI/MLプロジェクトの実務全体像を解説。AI実装現場の課題と解決策に焦点。",
+      "authorBio": {
+        "summary": "大城信晃（おおしろ・のぶあき）ほか— **NOB DATA**代表、データサイエンティスト・コンサルタント。共著者多数、日本のAI実装現場の知見を集約。"
+      },
+      "themes": [
+        "AI",
+        "データ分析",
+        "実務書",
+        "プロジェクト",
+        "DX"
+      ]
     },
     {
       "title": "誰のためのデザイン？",
       "titleEn": "The Design of Everyday Things",
       "author": "D.A.ノーマン",
-      "cover": "https://m.media-amazon.com/images/P/4788514346.jpg"
+      "cover": "https://m.media-amazon.com/images/P/4788514346.jpg",
+      "publishedYear": 1990,
+      "era": "原著『**The Psychology of Everyday Things**』(後に『**The Design of Everyday Things**』)は1988年米Basic Books刊。邦訳は1990年新曜社から野島久雄訳で刊行（**増補・改訂版**は2015年）。\n\n**認知科学者**・**ドナルド・ノーマン**（Don Norman、Apple元User Experience Architect、Nielsen Norman Group共同創業者）による、**ユーザビリティ・デザイン**の現代古典。「**アフォーダンス**」「**シグニファイア**」「**メンタル・モデル**」など、現在のUX/UIデザインの基本概念がここで提唱された。世界中のデザインスクール・ビジネススクールで必読書として読み継がれる。",
+      "authorBio": {
+        "born": 1935,
+        "summary": "ドナルド・A・ノーマン（Donald Arthur Norman、1935年12月25日生）— 米国認知科学者・ユーザビリティ研究者。MIT電気工学博士、ペンシルベニア大学心理学博士。**Apple Computer元バイス・プレジデント**(1993-98、User Experience Architect命名者)、**Nielsen Norman Group**共同創業者。代表作『**誰のためのデザイン？**』『**エモーショナル・デザイン**』『**未来のモノのデザイン**』など。"
+      },
+      "themes": [
+        "デザイン",
+        "UX",
+        "認知科学",
+        "ノーマン",
+        "古典"
+      ]
     },
     {
       "title": "中国デジタル・イノベーション ネット飽和時代の競争地図",
       "author": "岡野寿彦",
-      "cover": "https://m.media-amazon.com/images/P/4532323584.jpg"
+      "cover": "https://m.media-amazon.com/images/P/4532323584.jpg",
+      "publishedYear": 2020,
+      "era": "2020年12月、日本経済新聞出版社刊。NTTデータ経営研究所**岡野寿彦**による、**中国デジタル経済**の最新動向を体系的に分析した一冊。\n\nアリババ、テンセント、バイトダンス、美団、ピンドゥオドゥオなど中国メガテック企業の競争戦略、ネット飽和時代における新たなビジネスモデル、地方都市・農村への展開、米中デカップリング下の動向などを、現地取材と公開資料分析で整理。",
+      "authorBio": {
+        "summary": "岡野寿彦（おかの・としひこ）— **NTTデータ経営研究所**シニアスペシャリスト、中国デジタル経済の研究者。著書『**中国デジタル・イノベーション**』『**中国の力を読み解く**』など。"
+      },
+      "themes": [
+        "中国",
+        "デジタル",
+        "テック",
+        "岡野寿彦",
+        "競争戦略"
+      ]
     },
     {
       "title": "進化思考 生き残るコンセプトをつくる「変異と適応」",
       "author": "太刀川英輔",
       "publisher": "海士の風",
-      "cover": "https://books.google.com/books/content?id=WsMiEAAAQBAJ&printsec=frontcover&img=1&zoom=3"
+      "cover": "https://books.google.com/books/content?id=WsMiEAAAQBAJ&printsec=frontcover&img=1&zoom=3",
+      "publishedYear": 2021,
+      "era": "2021年4月、海士の風刊。著者**太刀川英輔**（NOSIGNER代表、デザイナー・思想家）による、**生物進化のメカニズムをイノベーションに応用する思考法**「**進化思考**」を体系化した著作。\n\n約500ページの大著で、生物の進化（**変異・適応**）の25のパターンを、デザインや経営における新しいコンセプト創造の手法として再構築。**第30回（2021年）山本七平賞**受賞、デザイン業界・スタートアップ業界に大きな影響を与えた。",
+      "authorBio": {
+        "born": 1981,
+        "summary": "太刀川英輔（たちかわ・えいすけ、1981年生）— **NOSIGNER**代表、デザイナー・思想家。慶應義塾大学卒、慶應義塾大学SFC特別招聘教授。**進化思考**を提唱し、デザイン界で独自のポジションを確立。**JIDA Design Year 2021**理事長、**東京防災**などのデザインを手がける。著書『**進化思考**』(2021、山本七平賞)『**進化思考[増補改訂版]**』(2023)。"
+      },
+      "themes": [
+        "進化",
+        "デザイン",
+        "イノベーション",
+        "太刀川",
+        "思考法"
+      ]
     },
     {
       "title": "DIE WITH ZERO 人生が豊かになりすぎる究極のルール",
-      "titleEn": "Die With Zero",
+      "titleEn": "Die with Zero",
       "author": "ビル・パーキンス",
       "publisher": "ダイヤモンド社",
-      "cover": "https://m.media-amazon.com/images/P/4478109680.jpg"
+      "cover": "https://m.media-amazon.com/images/P/4478109680.jpg",
+      "publishedYear": 2020,
+      "era": "原著『**Die with Zero: Getting All You Can from Your Money and Your Life**』は2020年9月米Mariner Books刊。邦訳は2020年9月ダイヤモンド社から児島修訳で同時刊行。\n\n**プロのポーカープレーヤー**(WSOP優勝経験あり)から**ヘッジファンドマネージャー**に転身した**ビル・パーキンス**による、「**人生で経験できる時間と金は限りがある**」という前提に立った、お金の使い方・人生設計論。「**遺産はゼロを目指せ**」「**経験への投資は若いほど高利回り**」「**思い出貯金**」など、従来の貯蓄一辺倒の人生観を覆すアジテーションが世界中で話題に。**累計15万部超**。",
+      "authorBio": {
+        "born": 1969,
+        "summary": "ビル・パーキンス（Bill Perkins、1969年6月18日生）— 米国エンジニア出身のヘッジファンドマネージャー、Skylar Capital創業者。**世界ポーカートーナメント**で複数優勝、**プロギャンブラー**としても著名。代表作『**Die with Zero**』(2020)。"
+      },
+      "themes": [
+        "お金",
+        "人生論",
+        "DIE WITH ZERO",
+        "パーキンス",
+        "投資"
+      ]
     },
     {
       "title": "マチネの終わりに",
       "author": "平野啓一郎",
       "publisher": "文春文庫",
-      "cover": "https://books.google.com/books/content?id=RYibDwAAQBAJ&printsec=frontcover&img=1&zoom=3"
+      "cover": "https://books.google.com/books/content?id=RYibDwAAQBAJ&printsec=frontcover&img=1&zoom=3",
+      "publishedYear": 2016,
+      "era": "2016年4月、毎日新聞出版刊。**平野啓一郎**による恋愛長編小説。**累計60万部超のベストセラー**、2019年福山雅治・石田ゆり子主演で映画化。\n\nクラシック・ギタリストの**蒔野聡史**(38歳)とジャーナリストの**小峰洋子**(40歳)が、ある夜パリのコンサート会場で出会い、運命に翻弄される大人の恋愛を、3度の出会いと別れで描く。「**未来は常に過去を変える**」という記憶論を軸に、9.11テロ後の現代社会を背景にした成熟した文体が特徴。",
+      "authorBio": {
+        "born": 1975,
+        "summary": "平野啓一郎（ひらの・けいいちろう、1975年6月22日生）— 福岡県北九州市生まれ、京都大学法学部卒。1999年『**日蝕**』(全出版社『新潮』掲載)で**第120回芥川賞最年少受賞**(23歳、史上3人目)。代表作『日蝕』『**ある男**』(2018、第70回読売文学賞)『**マチネの終わりに**』『**本心**』(2021)『**三島由紀夫論**』(2023)など。「**分人主義**」(複数のアイデンティティの共存)を提唱する独自の文学観で著名。"
+      },
+      "themes": [
+        "現代日本文学",
+        "恋愛",
+        "平野啓一郎",
+        "音楽",
+        "成熟"
+      ]
     },
     {
       "title": "突き抜けるまで問い続けろ 巨大スタートアップ「ビジョナル」挫折と奮闘、成長の軌跡",
       "author": "蛯谷敏",
-      "cover": "https://m.media-amazon.com/images/P/4478113076.jpg"
+      "cover": "https://m.media-amazon.com/images/P/4478113076.jpg",
+      "publishedYear": 2021,
+      "era": "2021年4月、ダイヤモンド社刊。**蛯谷敏**（元日経BPジャーナリスト）による、**ビジョナル**（**ビズリーチ**運営、HRテック大手）創業者**南壮一郎**の評伝。\n\n2009年ビズリーチ立ち上げ、ターゲット顧客の見極め失敗、リブランディング、上場までの**12年間の苦闘**を、社員・顧客・投資家の証言を交えて描く。「**会社で何を成し遂げるか**」を軸に組織を作る独特の経営哲学を本人と関係者の言葉で解明。",
+      "authorBio": {
+        "summary": "蛯谷敏（えびたに・さとし）— 元**日経BP**記者、現フリージャーナリスト。経営者インタビューと企業ノンフィクションを得意とする。代表作『**突き抜けるまで問い続けろ**』(2021)『**小澤隆生 凡人の事業論**』(2025)。"
+      },
+      "themes": [
+        "評伝",
+        "起業",
+        "ビジョナル",
+        "南壮一郎",
+        "蛯谷敏"
+      ]
     },
     {
       "title": "この国のかたち 一",
       "author": "司馬遼太郎",
       "publisher": "文春文庫",
-      "cover": "https://m.media-amazon.com/images/P/B01M4NDMJ2.jpg"
+      "cover": "https://m.media-amazon.com/images/P/B01M4NDMJ2.jpg",
+      "publishedYear": 1990,
+      "era": "**司馬遼太郎**による日本論・歴史エッセイの集大成。1986年から1996年までの10年間、文藝春秋『**文藝春秋**』に**長期連載**された人気コラムをまとめた**全6巻**シリーズ（連載中に司馬は1996年急逝）。\n\n司馬の独自の「**司馬史観**」を、聖徳太子から戦後の日本まで自由に行き来しながら、「日本という国はいかにして形づくられたか」「日本人とは何か」を、エッセイ形式で多面的に問う。司馬の最晩年の到達点であり、日本人の歴史観・国民観に最も影響を与えたシリーズの一つ。\n\n第1巻は1986-89年連載分（『文藝春秋』掲載分）をまとめた1990年刊。司馬の「**この国のかたち**」シリーズの起点となる初期エッセイ。",
+      "authorBio": {
+        "born": 1923,
+        "died": 1996,
+        "summary": "司馬遼太郎（1923年8月7日 – 1996年2月12日、72歳没、本名 福田定一）— 大阪市生まれ、大阪外国語学校蒙古語部卒。産経新聞記者を経て1960年『梟の城』で**直木賞**、1961年に専業作家。代表作『竜馬がゆく』『坂の上の雲』『燃えよ剣』『国盗り物語』『翔ぶが如く』『街道をゆく』など。**1993年文化勲章**。「**司馬史観**」と呼ばれる独自の歴史観で日本人の歴史観に多大な影響を与えた。"
+      },
+      "themes": [
+        "日本論",
+        "歴史エッセイ",
+        "司馬遼太郎",
+        "日本人論",
+        "司馬史観"
+      ]
     },
     {
       "title": "この国のかたち 二",
       "author": "司馬遼太郎",
       "publisher": "文春文庫",
-      "cover": "https://m.media-amazon.com/images/P/B01M28RMWA.jpg"
+      "cover": "https://m.media-amazon.com/images/P/B01M28RMWA.jpg",
+      "publishedYear": 1992,
+      "era": "**司馬遼太郎**による日本論・歴史エッセイの集大成。1986年から1996年までの10年間、文藝春秋『**文藝春秋**』に**長期連載**された人気コラムをまとめた**全6巻**シリーズ（連載中に司馬は1996年急逝）。\n\n司馬の独自の「**司馬史観**」を、聖徳太子から戦後の日本まで自由に行き来しながら、「日本という国はいかにして形づくられたか」「日本人とは何か」を、エッセイ形式で多面的に問う。司馬の最晩年の到達点であり、日本人の歴史観・国民観に最も影響を与えたシリーズの一つ。\n\n第2巻は1990-91年連載分をまとめた1992年刊。第1巻の続編として、より深い日本の精神史的考察を展開。",
+      "authorBio": {
+        "born": 1923,
+        "died": 1996,
+        "summary": "司馬遼太郎（1923年8月7日 – 1996年2月12日、72歳没、本名 福田定一）— 大阪市生まれ、大阪外国語学校蒙古語部卒。産経新聞記者を経て1960年『梟の城』で**直木賞**、1961年に専業作家。代表作『竜馬がゆく』『坂の上の雲』『燃えよ剣』『国盗り物語』『翔ぶが如く』『街道をゆく』など。**1993年文化勲章**。「**司馬史観**」と呼ばれる独自の歴史観で日本人の歴史観に多大な影響を与えた。"
+      },
+      "themes": [
+        "日本論",
+        "歴史エッセイ",
+        "司馬遼太郎",
+        "日本人論",
+        "司馬史観"
+      ]
     },
     {
       "title": "SHOE DOG 靴にすべてを。",
       "titleEn": "Shoe Dog",
       "author": "フィル・ナイト",
       "publisher": "東洋経済新報社",
-      "cover": "https://books.google.com/books/content?id=z3Q6DwAAQBAJ&printsec=frontcover&img=1&zoom=3"
+      "cover": "https://books.google.com/books/content?id=z3Q6DwAAQBAJ&printsec=frontcover&img=1&zoom=3",
+      "publishedYear": 2017,
+      "era": "原著『**Shoe Dog: A Memoir by the Creator of Nike**』は2016年米Scribner刊。邦訳は2017年東洋経済新報社から大田黒奉之訳で刊行。\n\n**Nike**創業者・**フィル・ナイト**(1938-)による、**1962年に日本のオニツカ（後のアシックス）の米国ディストリビューターとしてBlue Ribbon Sportsを始めてから、Nikeブランドを立ち上げ世界的スポーツ用品企業に育てるまで**の自伝。**Bill Gates「読書人生最高の本の一つ」と絶賛**、世界中の起業家のバイブル。500ページを超える大著で、ナイトの率直な失敗・成功・人間関係を文学的に綴る。",
+      "authorBio": {
+        "born": 1938,
+        "summary": "フィル・ナイト（Phil Knight、1938年2月24日生）— 米国オレゴン州ポートランド生まれ、オレゴン大学卒、スタンフォード大学MBA。1962年に**Blue Ribbon Sports**(日本のオニツカ販売代理店)創業、1971年**Nike**ブランド立ち上げ、世界最大のスポーツ用品企業に育てる。Nike名誉会長。資産400億ドル超(Forbes)。代表作『**SHOE DOG**』(2016)。"
+      },
+      "themes": [
+        "自伝",
+        "Nike",
+        "起業",
+        "ナイト",
+        "靴"
+      ]
     },
     {
       "title": "組織デザイン",
       "author": "沼上幹",
       "publisher": "日本経済新聞出版",
-      "cover": "https://m.media-amazon.com/images/P/4532110238.jpg"
+      "cover": "https://m.media-amazon.com/images/P/4532110238.jpg",
+      "publishedYear": 2003,
+      "era": "2003年、日本経済新聞出版社（日経文庫）刊。**一橋大学大学院教授**・**沼上幹**による、**組織論の入門書として最も読まれている定番テキスト**。日経文庫の200ページ程度のコンパクトな解説書ながら、累計20万部超のロングセラー。\n\n**機能別組織・事業部制・マトリクス・ネットワーク組織**といった組織構造の基本パターンと、**分業・調整・権限・責任・モチベーション**などの本質要素を、戦略との関連で平明に解説。組織論を学ぶ者の必読書。",
+      "authorBio": {
+        "born": 1960,
+        "summary": "沼上幹（ぬまがみ・つよし、1960年生）— 一橋大学博士。**早稲田大学商学部教授**、元一橋大学大学院商学研究科教授。経営戦略論・組織論の研究者。代表作『**組織戦略の考え方**』『**組織デザイン**』『**経営戦略の思考法**』『**液晶ディスプレイの技術革新史**』など。"
+      },
+      "themes": [
+        "経営",
+        "組織論",
+        "実務書",
+        "沼上幹",
+        "日経文庫"
+      ]
     },
     {
       "title": "フラッシュ・ボーイズ 10億分の1秒の男たち",
       "titleEn": "Flash Boys",
       "author": "マイケル・ルイス",
-      "cover": "https://m.media-amazon.com/images/P/4167913402.jpg"
+      "cover": "https://m.media-amazon.com/images/P/4167913402.jpg",
+      "publishedYear": 2014,
+      "era": "原著『**Flash Boys: A Wall Street Revolt**』は2014年4月米W. W. Norton刊。邦訳は2014年9月文藝春秋から渡会圭子訳で刊行。\n\n**マイケル・ルイス**による、**HFT(高頻度取引)**がウォール街の市場構造を歪めている実態を暴いた衝撃の調査ノンフィクション。**ロイヤル・バンク・オブ・カナダ(RBC)**の電子取引部門に勤めるブラッド・カツヤマが、市場の異常な値動きの謎を追って、HFT業者がミリ秒単位で個人投資家から利益を吸い上げている仕組みを発見、**IEX**(独自の取引所)を立ち上げるまでを描く。発売直後に米証券取引委員会(SEC)・FBIの捜査開始、ウォール街に激震を走らせた。",
+      "authorBio": {
+        "born": 1960,
+        "summary": "マイケル・ルイス（Michael Lewis、1960年10月15日生）— 米国ルイジアナ州ニューオーリンズ生まれ、プリンストン大学卒、LSE博士。Salomon Brothers債券セールスマン経験を綴った『**ライアーズ・ポーカー**』(1989)で世界的にデビュー。代表作『**マネー・ボール**』『**世紀の空売り**』『**フラッシュ・ボーイズ**』『**The Undoing Project**』『**Going Infinite**』など、現代金融の第一級ノンフィクション作家。"
+      },
+      "themes": [
+        "金融",
+        "HFT",
+        "ウォール街",
+        "ルイス",
+        "ノンフィクション"
+      ]
     },
     {
       "title": "Invent & Wander",
-      "titleEn": "Invent & Wander",
+      "titleEn": "Invent and Wander",
       "author": "ジェフ・ベゾス",
-      "cover": "https://m.media-amazon.com/images/P/4478112134.jpg"
+      "cover": "https://m.media-amazon.com/images/P/4478112134.jpg",
+      "publishedYear": 2021,
+      "era": "原著『**Invent and Wander: The Collected Writings of Jeff Bezos**』は2020年11月米Harvard Business Review Press刊。邦訳は2021年に文響社からBezos講演・株主への手紙集として『**ジェフ・ベゾス 発明と彷徨**』として刊行。\n\n**Amazon**創業者・**ジェフ・ベゾス**の1997年からの**毎年の株主への手紙**全文と、**講演・インタビュー**を集成した一冊。「**Day 1**」「**働く後悔最小化フレームワーク**」「**Two-Pizza Team**」「**長期思考**」「**カスタマー・オブセッション**」「**ハードな決断**」など、ベゾス哲学のすべてが詰まった必読書。**ウォルター・アイザックソン**の長文序文付き。",
+      "authorBio": {
+        "born": 1964,
+        "summary": "ジェフ・ベゾス（Jeffrey Preston Bezos、1964年1月12日生）— 米国ニューメキシコ州アルバカーキ生まれ、プリンストン大学卒。D. E. Shaw副社長を経て、**1994年Amazon創業**、当初オンライン書店から世界最大の総合EC・クラウド(AWS)企業へ育成。2021年Amazon CEO退任、**Blue Origin**(宇宙開発)・**Bezos Earth Fund**(気候変動)などに専念。資産2000億ドル超で世界長者番付トップ常連。"
+      },
+      "themes": [
+        "経営",
+        "Amazon",
+        "ベゾス",
+        "イノベーション",
+        "経営哲学"
+      ]
     }
   ]
 }
