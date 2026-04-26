@@ -1,6 +1,6 @@
 ---
 name: enrich-book
-description: 指定した本について Wikipedia / Google Books / Web Search を総合調査し、時代背景・著者プロフィール・テーマタグの下書きを提示。承認分のみ books-data.json に反映 + notes/{KEY}.md 雛形を作成
+description: 指定した本について Wikipedia / Google Books / Web Search を総合調査し、時代背景・著者プロフィール・テーマタグの下書きを提示。承認分のみ books-data.json に反映（メモ雛形は作らない）
 user_invocable: true
 arg: 本のタイトル（部分一致可）。複数ヒット時は著者・年で絞り込み確認
 ---
@@ -110,19 +110,7 @@ D) 全部却下
 
 - `books-data.json` 該当 entry に採用分のフィールドを追加
 - JSON 妥当性検証（`python3 -m json.tool`）
-- `notes/{KEY}.md` がなければ以下のテンプレで新規作成:
-
-```markdown
-# {タイトル}
-
-## 印象に残った箇所
-
-> 引用文
-
-## 自分の考え
-
-## 関連する他の本
-```
+- **`notes/{KEY}.md` は作成しない**（雛形は作らず、メモは `/memo` で書くまで「まだメモなし」表示）
 
 ### 6. ブラウザで動作確認
 
