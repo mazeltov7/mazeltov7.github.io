@@ -198,6 +198,9 @@
       flex-shrink: 0;
       cursor: pointer;
       outline: none;
+      text-decoration: none;
+      color: inherit;
+      display: block;
     }
 
     .spine {
@@ -337,97 +340,6 @@
       font-size: 0.85rem;
     }
 
-    /* Cover Modal */
-    .modal-overlay {
-      position: fixed;
-      inset: 0;
-      background: rgba(0,0,0,0.6);
-      backdrop-filter: blur(4px);
-      -webkit-backdrop-filter: blur(4px);
-      z-index: 1000;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      opacity: 0;
-      pointer-events: none;
-      transition: opacity 0.2s ease;
-      padding: 1.5rem;
-    }
-
-    .modal-overlay.visible {
-      opacity: 1;
-      pointer-events: auto;
-    }
-
-    .modal-card {
-      background: #fff;
-      border-radius: 1rem;
-      max-width: 300px;
-      width: 100%;
-      overflow: hidden;
-      transform: translateY(12px) scale(0.97);
-      transition: transform 0.2s ease;
-      box-shadow: 0 20px 60px rgba(0,0,0,0.3);
-    }
-
-    .modal-overlay.visible .modal-card {
-      transform: translateY(0) scale(1);
-    }
-
-    .modal-cover {
-      width: 100%;
-      aspect-ratio: 2 / 3;
-      background: #e7e5e4;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      overflow: hidden;
-    }
-
-    .modal-cover img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-
-    .modal-cover .no-cover {
-      color: #a8a29e;
-      font-size: 0.8rem;
-      text-align: center;
-      padding: 1rem;
-      line-height: 1.5;
-    }
-
-    .modal-info {
-      padding: 1rem 1.25rem 1.25rem;
-    }
-
-    .modal-title {
-      font-size: 0.9rem;
-      font-weight: 700;
-      line-height: 1.4;
-      color: #1c1917;
-    }
-
-    .modal-en {
-      font-size: 0.75rem;
-      color: #78716c;
-      font-style: italic;
-      margin-top: 0.15rem;
-    }
-
-    .modal-author {
-      font-size: 0.75rem;
-      color: #78716c;
-      margin-top: 0.4rem;
-    }
-
-    .modal-publisher {
-      font-size: 0.68rem;
-      color: #a8a29e;
-      margin-top: 0.15rem;
-    }
-
     /* Responsive */
     @media (max-width: 480px) {
       body { padding: 1.5rem 0.75rem; }
@@ -436,7 +348,6 @@
       .spine { width: 26px; }
       .spine-title { font-size: 0.5rem; }
       .shelf-detail.visible { padding: 0.5rem 0.75rem; }
-      .modal-card { max-width: 260px; }
       .view-grid .books { grid-template-columns: repeat(3, minmax(0, 1fr)); }
     }
   </style>
@@ -464,18 +375,6 @@
     </div>
   </div>
 
-  <div class="modal-overlay" id="modal">
-    <div class="modal-card">
-      <div class="modal-cover" id="modal-cover"></div>
-      <div class="modal-info">
-        <div class="modal-title" id="modal-title"></div>
-        <div class="modal-en" id="modal-en"></div>
-        <div class="modal-author" id="modal-author"></div>
-        <div class="modal-publisher" id="modal-pub"></div>
-      </div>
-    </div>
-  </div>
-
   <script>
     var COLORS = [
       '#7c6f5e', '#5e7c6b', '#7c5e6b', '#5e6a7c',
@@ -496,6 +395,14 @@
       var d = document.createElement('div');
       d.textContent = s;
       return d.innerHTML;
+    }
+
+    function bookKey(book) {
+      if (book.cover) {
+        var m = book.cover.match(/m\.media-amazon\.com\/images\/P\/([A-Z0-9]{10})/);
+        if (m) return m[1];
+      }
+      return book.title.replace(/[\/\\?#&%]+/g, '-');
     }
 
     function render(data) {
@@ -521,7 +428,8 @@
             ? '<img src="' + esc(book.cover) + '" alt="' + esc(book.title) + '" loading="lazy">'
             : '<span class="tile-fallback">' + esc(book.title) + '</span>';
 
-          return '<div class="book" tabindex="0"' +
+          var key = bookKey(book);
+          return '<a class="book" href="book.html?id=' + encodeURIComponent(key) + '" tabindex="0"' +
             ' data-title="' + esc(book.title) + '"' +
             ' data-author="' + esc(book.author) + '"' +
             (book.titleEn ? ' data-en="' + esc(book.titleEn) + '"' : '') +
@@ -536,7 +444,7 @@
               '<div class="tile-title">' + esc(book.title) + '</div>' +
               '<div class="tile-author">' + esc(book.author) + '</div>' +
             '</div>' +
-          '</div>';
+          '</a>';
         }).join('');
 
         section.innerHTML =
@@ -558,47 +466,6 @@
 
     function initInteractions() {
       var activeBook = null;
-      var modal = document.getElementById('modal');
-      var modalCover = document.getElementById('modal-cover');
-      var modalTitle = document.getElementById('modal-title');
-      var modalEn = document.getElementById('modal-en');
-      var modalAuthor = document.getElementById('modal-author');
-      var modalPub = document.getElementById('modal-pub');
-
-      function openModal(book) {
-        var cover = book.dataset.cover;
-        var t = book.dataset.title;
-        var en = book.dataset.en || '';
-        var a = book.dataset.author || '';
-        var pub = book.dataset.pub || '';
-
-        if (cover) {
-          modalCover.innerHTML = '<img src="' + cover + '" alt="' + t + '">';
-        } else {
-          modalCover.innerHTML = '<span class="no-cover">' + t + '</span>';
-        }
-        modalTitle.textContent = t;
-        modalEn.textContent = en;
-        modalEn.style.display = en ? '' : 'none';
-        modalAuthor.textContent = a;
-        modalAuthor.style.display = a ? '' : 'none';
-        modalPub.textContent = pub;
-        modalPub.style.display = pub ? '' : 'none';
-
-        modal.classList.add('visible');
-      }
-
-      function closeModal() {
-        modal.classList.remove('visible');
-      }
-
-      modal.addEventListener('click', function(e) {
-        if (e.target === modal) closeModal();
-      });
-
-      document.addEventListener('keydown', function(e) {
-        if (e.key === 'Escape') closeModal();
-      });
 
       document.querySelectorAll('.book').forEach(function(book) {
         function show() {
@@ -635,7 +502,6 @@
         book.addEventListener('mouseleave', hide);
         book.addEventListener('focus', show);
         book.addEventListener('blur', hide);
-        book.addEventListener('click', function() { openModal(book); });
       });
     }
 
