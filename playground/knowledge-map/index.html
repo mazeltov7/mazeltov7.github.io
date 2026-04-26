@@ -1,0 +1,833 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>人類知マップ - 石川 佑樹</title>
+  <meta name="description" content="地理（地域）×時間（西暦）の二軸で人類の発見・思想・芸術・史実をマッピング">
+  <link rel="icon" href="../../images/favicon.jpg" type="image/jpeg">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Hiragino Sans', sans-serif;
+      background: #f5f5f4;
+      color: #1c1917;
+      min-height: 100vh;
+      padding: 1.5rem 1rem 4rem;
+    }
+
+    .container {
+      max-width: 1280px;
+      margin: 0 auto;
+    }
+
+    .header { margin-bottom: 1.5rem; }
+
+    .back-link {
+      font-size: 0.8rem;
+      color: #a8a29e;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.3rem;
+      transition: color 0.15s;
+    }
+    .back-link:hover { color: #57534e; }
+
+    .page-title {
+      font-size: 1.6rem;
+      font-weight: 700;
+      margin-top: 1rem;
+      letter-spacing: 0.02em;
+    }
+    .page-description {
+      font-size: 0.85rem;
+      color: #78716c;
+      margin-top: 0.4rem;
+      line-height: 1.6;
+    }
+
+    /* filters */
+    .filters {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 0.5rem 0.75rem;
+      margin-bottom: 1rem;
+    }
+    .cat-pills { display: flex; flex-wrap: wrap; gap: 0.35rem; }
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.25rem;
+      font-size: 0.7rem;
+      font-weight: 600;
+      padding: 0.3rem 0.7rem;
+      border-radius: 9999px;
+      letter-spacing: 0.02em;
+      white-space: nowrap;
+      border: 1px solid #e7e5e4;
+      background: #fff;
+      color: #a8a29e;
+      cursor: pointer;
+      transition: all 0.12s;
+      font-family: inherit;
+    }
+    .pill:hover { border-color: #d6d3d1; }
+    .pill.active {
+      background: var(--cat-color);
+      color: #fff;
+      border-color: var(--cat-color);
+    }
+    .search-input {
+      flex: 1;
+      min-width: 200px;
+      max-width: 320px;
+      font-size: 0.8rem;
+      padding: 0.45rem 0.75rem;
+      border: 1px solid #e7e5e4;
+      border-radius: 9999px;
+      background: #fff;
+      color: #1c1917;
+      font-family: inherit;
+      outline: none;
+      transition: border-color 0.12s;
+    }
+    .search-input:focus { border-color: #a8a29e; }
+    .stats {
+      font-size: 0.7rem;
+      color: #a8a29e;
+      margin-left: auto;
+    }
+
+    /* map */
+    .map {
+      display: flex;
+      background: #fff;
+      border-radius: 0.75rem;
+      overflow: hidden;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+    }
+    .region-labels {
+      width: 130px;
+      flex-shrink: 0;
+      border-right: 1px solid #e7e5e4;
+      background: #fafaf9;
+    }
+    .region-labels .corner { height: 48px; border-bottom: 1px solid #e7e5e4; }
+    .region-labels .label {
+      height: 60px;
+      display: flex;
+      align-items: center;
+      padding: 0 0.75rem;
+      font-size: 0.72rem;
+      color: #57534e;
+      font-weight: 600;
+      border-bottom: 1px solid #f5f5f4;
+      letter-spacing: 0.02em;
+      line-height: 1.3;
+    }
+    .region-labels .label:last-child { border-bottom: none; }
+
+    .map-scroll {
+      flex: 1;
+      overflow-x: auto;
+      overflow-y: hidden;
+    }
+    .map-track {
+      min-width: 2400px;
+      position: relative;
+    }
+    .era-header {
+      display: flex;
+      height: 48px;
+      border-bottom: 1px solid #e7e5e4;
+      background: #fafaf9;
+    }
+    .era {
+      border-right: 1px dashed #e7e5e4;
+      padding: 0.4rem 0.5rem;
+      text-align: center;
+      flex-shrink: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .era:last-child { border-right: none; }
+    .era-name {
+      font-size: 0.78rem;
+      font-weight: 700;
+      color: #44403c;
+    }
+    .era-range {
+      font-size: 0.6rem;
+      color: #a8a29e;
+      margin-top: 1px;
+    }
+
+    .track-rows { }
+    .track-row {
+      height: 60px;
+      position: relative;
+      border-bottom: 1px solid #f5f5f4;
+    }
+    .track-row:last-child { border-bottom: none; }
+    .track-row:nth-child(even) { background: #fcfcfc; }
+    .track-row .era-guide {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: 1px;
+      background: #e7e5e4;
+      pointer-events: none;
+    }
+    .dot {
+      position: absolute;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      cursor: pointer;
+      border: 2px solid #fff;
+      box-shadow: 0 0 0 1px rgba(0,0,0,0.06), 0 1px 3px rgba(0,0,0,0.08);
+      transition: transform 0.12s, box-shadow 0.12s;
+      z-index: 1;
+      padding: 0;
+    }
+    .dot:hover {
+      transform: translate(-50%, -50%) scale(1.5);
+      z-index: 20;
+      box-shadow: 0 0 0 1px rgba(0,0,0,0.08), 0 4px 12px rgba(0,0,0,0.18);
+    }
+    .dot.pinned {
+      transform: translate(-50%, -50%) scale(1.5);
+      z-index: 25;
+      box-shadow: 0 0 0 2px #1c1917, 0 4px 12px rgba(0,0,0,0.2);
+    }
+    .dot.hidden { display: none; }
+
+    /* labels */
+    .entry-label {
+      position: absolute;
+      bottom: calc(100% + 4px);
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 9.5px;
+      font-weight: 600;
+      color: #44403c;
+      white-space: nowrap;
+      background: rgba(255,255,255,0.92);
+      padding: 1px 5px;
+      border-radius: 3px;
+      pointer-events: none;
+      letter-spacing: 0.02em;
+      z-index: 5;
+      transition: opacity 0.12s;
+      border: 1px solid rgba(0,0,0,0.04);
+    }
+    /* default: hidden, only revealed when entry is in active time-column */
+    .dot:not(.cat-event) .entry-label { opacity: 0; }
+    .dot:not(.cat-event).in-active-column .entry-label {
+      opacity: 0.96;
+      z-index: 22;
+    }
+    .dot.cat-event .entry-label { opacity: 1; }
+    .dot:hover .entry-label { opacity: 1; z-index: 30; }
+
+    .column-overlay {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      background: rgba(28,25,23,0.04);
+      pointer-events: none;
+      z-index: 0;
+      display: none;
+    }
+    .hover-year-indicator {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      background: rgba(28,25,23,0.92);
+      color: #fff;
+      font-size: 0.78rem;
+      font-weight: 700;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      pointer-events: none;
+      z-index: 10;
+      font-variant-numeric: tabular-nums;
+      white-space: nowrap;
+      letter-spacing: 0.02em;
+    }
+    .era-header { position: relative; }
+
+    .legend-note {
+      font-size: 0.7rem;
+      color: #a8a29e;
+      margin-top: 0.6rem;
+      text-align: right;
+    }
+
+    /* hover popover */
+    .popover {
+      position: fixed;
+      width: 320px;
+      background: #fff;
+      border-radius: 0.6rem;
+      padding: 1rem 1.1rem;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+      border: 1px solid #e7e5e4;
+      z-index: 200;
+      pointer-events: auto;
+      opacity: 0;
+      transform: translateY(-4px);
+      transition: opacity 0.12s ease, transform 0.12s ease;
+    }
+    .popover.show { opacity: 1; transform: translateY(0); }
+    .popover[hidden] { display: none; }
+    .pop-title {
+      font-size: 0.95rem;
+      font-weight: 700;
+      line-height: 1.4;
+      margin-bottom: 0.5rem;
+    }
+    .pop-meta {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 0.35rem 0.5rem;
+      margin-bottom: 0.5rem;
+    }
+    .meta-pill {
+      display: inline-block;
+      font-size: 0.62rem;
+      font-weight: 700;
+      padding: 0.18rem 0.5rem;
+      border-radius: 9999px;
+      color: #fff;
+      letter-spacing: 0.02em;
+    }
+    .meta-year {
+      font-size: 0.78rem;
+      font-weight: 700;
+      color: #1c1917;
+      font-variant-numeric: tabular-nums;
+    }
+    .meta-region { font-size: 0.68rem; color: #78716c; }
+    .meta-where {
+      width: 100%;
+      font-size: 0.7rem;
+      color: #78716c;
+      margin-top: 0.05rem;
+    }
+    .pop-summary {
+      font-size: 0.78rem;
+      line-height: 1.65;
+      color: #292524;
+      margin-top: 0.5rem;
+    }
+
+    .mini-map {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: repeat(3, 36px);
+      gap: 3px;
+      max-width: 280px;
+      margin: 0.6rem 0 0;
+    }
+    .mini-cell {
+      background: #f5f5f4;
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.6rem;
+      color: #a8a29e;
+      text-align: center;
+      padding: 0.2rem;
+      line-height: 1.15;
+      transition: background 0.12s, color 0.12s;
+    }
+    .mini-cell.empty { background: transparent; }
+    .mini-cell.active {
+      background: var(--cat-color, #57534e);
+      color: #fff;
+      font-weight: 700;
+    }
+    .mini-map-caption {
+      font-size: 0.65rem;
+      color: #a8a29e;
+      margin-top: 0.4rem;
+    }
+
+    /* periods section */
+    .periods-section { margin-bottom: 1.25rem; }
+    .periods-title {
+      font-size: 0.7rem;
+      color: #78716c;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      margin-bottom: 0.5rem;
+      text-transform: uppercase;
+    }
+    .period-cards { display: flex; flex-wrap: wrap; gap: 0.6rem; }
+    .period-card {
+      display: block;
+      background: #fff;
+      border: 1px solid #e7e5e4;
+      border-radius: 0.6rem;
+      padding: 0.7rem 0.95rem;
+      text-decoration: none;
+      color: inherit;
+      transition: all 0.14s;
+      flex: 1;
+      min-width: 240px;
+      max-width: 360px;
+    }
+    .period-card:hover {
+      border-color: #d6d3d1;
+      transform: translateY(-1px);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    }
+    .pc-title { font-size: 0.88rem; font-weight: 700; }
+    .pc-meta { font-size: 0.7rem; color: #78716c; margin-top: 0.2rem; font-variant-numeric: tabular-nums; }
+    .pc-subtitle { font-size: 0.7rem; color: #a8a29e; margin-top: 0.25rem; line-height: 1.5; }
+
+    @media (max-width: 600px) {
+      body { padding: 1rem 0.5rem 3rem; }
+      .page-title { font-size: 1.3rem; }
+      .region-labels { width: 96px; }
+      .region-labels .label { font-size: 0.65rem; padding: 0 0.5rem; }
+      .map-track { min-width: 1800px; }
+      .modal { padding: 1.25rem; border-radius: 0.75rem; }
+      .stats { width: 100%; margin-left: 0; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <a href="../" class="back-link">&larr; Playground</a>
+      <h1 class="page-title">人類知マップ</h1>
+      <p class="page-description">地理（地域）×時間（西暦）の二軸で、人類の発見・思想・芸術・史実をマッピング。史実は名前を常時表示、他はマップ上にホバーするとその時代の項目が一覧／クリックで詳細。</p>
+    </div>
+
+    <div class="periods-section" id="periodsSection" hidden>
+      <div class="periods-title">フォーカス時代（詳細ビュー）</div>
+      <div class="period-cards" id="periodCards"></div>
+    </div>
+
+    <div class="filters">
+      <div class="cat-pills" id="catPills"></div>
+      <input type="search" class="search-input" id="search" placeholder="検索（タイトル・場所・概要）">
+      <div class="stats" id="stats"></div>
+    </div>
+
+    <div class="map">
+      <div class="region-labels" id="regionLabels"></div>
+      <div class="map-scroll">
+        <div class="map-track">
+          <div class="era-header" id="eraHeader"></div>
+          <div class="track-rows" id="trackRows"></div>
+        </div>
+      </div>
+    </div>
+    <div class="legend-note">時代区分は均等幅ではなく、現代に近いほど広く取っています（warped scale）。</div>
+  </div>
+
+  <div class="popover" id="popover" hidden>
+    <h2 class="pop-title" id="popTitle"></h2>
+    <div class="pop-meta" id="popMeta"></div>
+    <div class="mini-map" id="miniMap"></div>
+    <div class="mini-map-caption">▲ 大まかな地理上の位置</div>
+    <div class="pop-summary" id="popSummary"></div>
+  </div>
+
+  <script>
+    const state = {
+      data: null,
+      activeCategories: null,
+      search: '',
+      catMap: {},
+      regionMap: {},
+    };
+
+    fetch('data.json')
+      .then(r => r.json())
+      .then(init)
+      .catch(err => {
+        document.body.innerHTML = '<p style="padding:2rem;color:#dc2626">データ読み込みに失敗しました: ' + err.message + '</p>';
+      });
+
+    fetch('periods/manifest.json')
+      .then(r => r.ok ? r.json() : null)
+      .then(m => {
+        if (!m || !m.periods || m.periods.length === 0) return;
+        const sec = document.getElementById('periodsSection');
+        const c = document.getElementById('periodCards');
+        m.periods.forEach(p => {
+          const card = document.createElement('a');
+          card.className = 'period-card';
+          card.href = `period.html?id=${encodeURIComponent(p.id)}`;
+          card.innerHTML = `
+            <div class="pc-title">${p.label}</div>
+            <div class="pc-meta">${p.start} – ${p.end}　·　focus: ${p.focusLabel || p.focus || ''}</div>
+            <div class="pc-subtitle">${p.subtitle || ''}</div>
+          `;
+          c.appendChild(card);
+        });
+        sec.hidden = false;
+      })
+      .catch(() => {});
+
+    function init(data) {
+      state.data = data;
+      state.activeCategories = new Set(data.categories.map(c => c.id));
+      state.catMap = Object.fromEntries(data.categories.map(c => [c.id, c]));
+      state.regionMap = Object.fromEntries(data.regions.map(r => [r.id, r]));
+
+      buildFilters(data);
+      buildLabels(data);
+      buildEraHeader(data);
+      buildRows(data);
+      buildDots(data);
+      updateVisibility();
+      bindPopover();
+      bindSearch();
+      bindColumnHover();
+    }
+
+    function buildFilters(data) {
+      const container = document.getElementById('catPills');
+      data.categories.forEach(cat => {
+        const pill = document.createElement('button');
+        pill.className = 'pill active';
+        pill.style.setProperty('--cat-color', cat.color);
+        pill.textContent = `${cat.icon} ${cat.label}`;
+        pill.dataset.cat = cat.id;
+        pill.addEventListener('click', () => {
+          if (state.activeCategories.has(cat.id)) {
+            state.activeCategories.delete(cat.id);
+            pill.classList.remove('active');
+          } else {
+            state.activeCategories.add(cat.id);
+            pill.classList.add('active');
+          }
+          updateVisibility();
+        });
+        container.appendChild(pill);
+      });
+    }
+
+    function bindSearch() {
+      document.getElementById('search').addEventListener('input', e => {
+        state.search = e.target.value.trim().toLowerCase();
+        updateVisibility();
+      });
+    }
+
+    function buildLabels(data) {
+      const container = document.getElementById('regionLabels');
+      const corner = document.createElement('div');
+      corner.className = 'corner';
+      container.appendChild(corner);
+      data.regions.forEach(r => {
+        const label = document.createElement('div');
+        label.className = 'label';
+        label.textContent = r.label;
+        container.appendChild(label);
+      });
+    }
+
+    function buildEraHeader(data) {
+      const container = document.getElementById('eraHeader');
+      data.eras.forEach(era => {
+        const cell = document.createElement('div');
+        cell.className = 'era';
+        cell.style.width = era.width + '%';
+        cell.innerHTML = `<div class="era-name">${era.label}</div><div class="era-range">${formatYear(era.start)} – ${formatYear(era.end)}</div>`;
+        container.appendChild(cell);
+      });
+    }
+
+    function buildRows(data) {
+      const container = document.getElementById('trackRows');
+      data.regions.forEach(region => {
+        const row = document.createElement('div');
+        row.className = 'track-row';
+        row.dataset.region = region.id;
+        let cum = 0;
+        data.eras.forEach((era, i) => {
+          if (i > 0) {
+            const guide = document.createElement('div');
+            guide.className = 'era-guide';
+            guide.style.left = cum + '%';
+            row.appendChild(guide);
+          }
+          cum += era.width;
+        });
+        container.appendChild(row);
+      });
+    }
+
+    function buildDots(data) {
+      const rowMap = {};
+      document.querySelectorAll('.track-row').forEach(r => rowMap[r.dataset.region] = r);
+
+      data.entries.forEach(entry => {
+        const row = rowMap[entry.region];
+        if (!row) return;
+        const x = computeX(entry.year, data.eras);
+        if (x === null) {
+          console.warn('Year out of era range:', entry);
+          return;
+        }
+        const cat = state.catMap[entry.category];
+        const dot = document.createElement('button');
+        dot.className = 'dot cat-' + entry.category;
+        dot.style.left = x + '%';
+        dot.style.background = cat ? cat.color : '#888';
+        dot.dataset.id = entry.id;
+        const labelEl = document.createElement('span');
+        labelEl.className = 'entry-label';
+        labelEl.textContent = entry.title;
+        dot.appendChild(labelEl);
+        dot.addEventListener('click', (ev) => {
+          ev.stopPropagation();
+          togglePopover(entry, dot);
+        });
+        row.appendChild(dot);
+      });
+    }
+
+    function computeX(year, eras) {
+      let cum = 0;
+      for (const era of eras) {
+        if (year >= era.start && year <= era.end) {
+          const frac = (year - era.start) / (era.end - era.start);
+          return cum + frac * era.width;
+        }
+        cum += era.width;
+      }
+      return null;
+    }
+
+    function formatYear(y) {
+      if (y === 0) return '0';
+      return y < 0 ? `BC ${-y}` : `${y}`;
+    }
+
+    function formatYearLabel(entry) {
+      const y = formatYear(entry.year);
+      const p = entry.yearPrecision;
+      if (p === 'century') return y + ' 頃';
+      if (p === 'decade') return y + '年代';
+      if (p === 'millennium') return y + ' 頃';
+      return y;
+    }
+
+    function updateVisibility() {
+      const search = state.search;
+      const catActive = state.activeCategories;
+      let visible = 0;
+      state.data.entries.forEach(entry => {
+        const dot = document.querySelector(`.dot[data-id="${CSS.escape(entry.id)}"]`);
+        if (!dot) return;
+        let show = catActive.has(entry.category);
+        if (show && search) {
+          const t = (entry.title + ' ' + (entry.where || '') + ' ' + (entry.summary || '')).toLowerCase();
+          if (!t.includes(search)) show = false;
+        }
+        dot.classList.toggle('hidden', !show);
+        if (show) visible++;
+      });
+      document.getElementById('stats').textContent = `${visible} / ${state.data.entries.length} 件表示`;
+    }
+
+    let pinnedId = null;
+    const popoverEl = () => document.getElementById('popover');
+
+    function bindPopover() {
+      document.addEventListener('keydown', e => { if (e.key === 'Escape') hidePopover(); });
+      document.addEventListener('click', (e) => {
+        if (pinnedId === null) return;
+        if (popoverEl().contains(e.target)) return;
+        if (e.target.closest('.dot')) return;
+        hidePopover();
+      });
+    }
+
+    function togglePopover(entry, anchorEl) {
+      if (pinnedId === entry.id) {
+        hidePopover();
+      } else {
+        pinnedId = entry.id;
+        renderPopover(entry);
+        const pop = popoverEl();
+        pop.hidden = false;
+        pop.classList.remove('show');
+        requestAnimationFrame(() => {
+          positionPopover(anchorEl);
+          pop.classList.add('show');
+        });
+        markPinned(entry.id);
+      }
+    }
+
+    function renderPopover(entry) {
+      const cat = state.catMap[entry.category];
+      const region = state.regionMap[entry.region];
+
+      document.getElementById('popTitle').textContent = entry.title;
+      document.getElementById('popMeta').innerHTML = `
+        <span class="meta-pill" style="background:${cat.color}">${cat.icon} ${cat.label}</span>
+        <span class="meta-year">${formatYearLabel(entry)}</span>
+        <span class="meta-region">${region.label}</span>
+        <div class="meta-where">📍 ${escapeHtml(entry.where || '')}</div>
+      `;
+      document.getElementById('popSummary').textContent = entry.summary || '';
+      buildMiniMap(entry, cat);
+    }
+
+    function positionPopover(anchorEl) {
+      const pop = popoverEl();
+      const rect = anchorEl.getBoundingClientRect();
+      const popW = pop.offsetWidth || 320;
+      const popH = pop.offsetHeight || 240;
+      let left = rect.left + rect.width / 2 - popW / 2;
+      let top = rect.top - popH - 12;
+      if (top < 12) top = rect.bottom + 12;
+      if (left < 12) left = 12;
+      if (left + popW > window.innerWidth - 12) left = window.innerWidth - popW - 12;
+      pop.style.left = left + 'px';
+      pop.style.top = top + 'px';
+    }
+
+    function hidePopover() {
+      pinnedId = null;
+      const pop = popoverEl();
+      pop.classList.remove('show');
+      setTimeout(() => { pop.hidden = true; }, 150);
+      markPinned(null);
+    }
+
+    function markPinned(id) {
+      document.querySelectorAll('.dot.pinned').forEach(el => el.classList.remove('pinned'));
+      if (id) {
+        const el = document.querySelector(`.dot[data-id="${CSS.escape(id)}"]`);
+        if (el) el.classList.add('pinned');
+      }
+    }
+
+    const COLUMN_HALF_WIDTH_PX = 60;
+    const columnOverlays = [];
+    let yearIndicator = null;
+
+    function bindColumnHover() {
+      document.querySelectorAll('.track-row').forEach(row => {
+        const ov = document.createElement('div');
+        ov.className = 'column-overlay';
+        row.appendChild(ov);
+        columnOverlays.push(ov);
+      });
+      yearIndicator = document.createElement('div');
+      yearIndicator.className = 'hover-year-indicator';
+      document.getElementById('eraHeader').appendChild(yearIndicator);
+
+      const track = document.querySelector('.map-track');
+      track.addEventListener('mousemove', onColumnMove);
+      track.addEventListener('mouseleave', clearColumn);
+    }
+
+    function onColumnMove(ev) {
+      const rowsEl = document.getElementById('trackRows');
+      const rect = rowsEl.getBoundingClientRect();
+      const x = ev.clientX - rect.left;
+      if (x < 0 || x > rect.width) return clearColumn();
+      const half = COLUMN_HALF_WIDTH_PX;
+      const leftPct = Math.max(0, (x - half) / rect.width * 100);
+      const widthPct = Math.min(100 - leftPct, (half * 2) / rect.width * 100);
+      columnOverlays.forEach(o => {
+        o.style.display = 'block';
+        o.style.left = leftPct + '%';
+        o.style.width = widthPct + '%';
+      });
+      // year indicator (warped: reverse via eras)
+      const startYear = yearFromXPercent(leftPct, state.data.eras);
+      const endYear = yearFromXPercent(leftPct + widthPct, state.data.eras);
+      yearIndicator.style.display = 'flex';
+      yearIndicator.style.left = leftPct + '%';
+      yearIndicator.style.width = widthPct + '%';
+      yearIndicator.textContent = startYear === endYear ? formatYear(startYear) : `${formatYear(startYear)} – ${formatYear(endYear)}`;
+
+      document.querySelectorAll('.dot').forEach(el => {
+        const r = el.getBoundingClientRect();
+        const cx = r.left - rect.left + r.width / 2;
+        if (cx >= x - half && cx <= x + half) el.classList.add('in-active-column');
+        else el.classList.remove('in-active-column');
+      });
+    }
+
+    function yearFromXPercent(xPct, eras) {
+      let cum = 0;
+      for (const era of eras) {
+        if (xPct <= cum + era.width) {
+          const frac = Math.max(0, Math.min(1, (xPct - cum) / era.width));
+          return Math.round(era.start + frac * (era.end - era.start));
+        }
+        cum += era.width;
+      }
+      return eras[eras.length - 1].end;
+    }
+
+    function clearColumn() {
+      columnOverlays.forEach(o => { o.style.display = 'none'; });
+      document.querySelectorAll('.in-active-column').forEach(el => el.classList.remove('in-active-column'));
+      if (yearIndicator) yearIndicator.style.display = 'none';
+    }
+
+    function buildMiniMap(entry, cat) {
+      const container = document.getElementById('miniMap');
+      container.innerHTML = '';
+      const grid = [];
+      for (let r = 0; r < 3; r++) grid.push([null, null, null, null]);
+      state.data.regions.forEach(reg => {
+        if (reg.noMapCell) return;
+        if (reg.mapRow != null && reg.mapCol != null) {
+          grid[reg.mapRow][reg.mapCol] = reg;
+        }
+      });
+      const isGlobal = entry.region === 'global';
+      for (let r = 0; r < 3; r++) {
+        for (let c = 0; c < 4; c++) {
+          const reg = grid[r][c];
+          const cell = document.createElement('div');
+          cell.className = 'mini-cell';
+          if (!reg) {
+            cell.classList.add('empty');
+          } else {
+            cell.textContent = reg.label;
+            if (isGlobal || reg.id === entry.region) {
+              cell.classList.add('active');
+              cell.style.setProperty('--cat-color', cat.color);
+            }
+          }
+          container.appendChild(cell);
+        }
+      }
+    }
+
+    function escapeHtml(s) {
+      return String(s).replace(/[&<>"']/g, ch => ({
+        '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
+      }[ch]));
+    }
+  </script>
+<!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "822f6925e2b64a45928c584854ac19a2"}'></script><!-- End Cloudflare Web Analytics -->
+</body>
+</html>

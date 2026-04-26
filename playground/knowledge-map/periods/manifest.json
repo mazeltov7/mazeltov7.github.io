@@ -1,0 +1,14 @@
+{
+  "periods": [
+    {
+      "id": "meiji-ww2",
+      "label": "開国から世界大戦へ",
+      "subtitle": "ペリー来航から太平洋戦争終結まで（日本視点）",
+      "start": 1850,
+      "end": 1945,
+      "focus": "japan",
+      "focusLabel": "日本",
+      "peripheryLabel": "世界"
+    }
+  ]
+}

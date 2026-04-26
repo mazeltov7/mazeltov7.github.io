@@ -1,0 +1,772 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Period - 人類知マップ</title>
+  <link rel="icon" href="../../images/favicon.jpg" type="image/jpeg">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Hiragino Sans', sans-serif;
+      background: #f5f5f4;
+      color: #1c1917;
+      min-height: 100vh;
+      padding: 1.5rem 1rem 4rem;
+    }
+    .container { max-width: 1280px; margin: 0 auto; }
+
+    .header { margin-bottom: 1.25rem; }
+    .back-link {
+      font-size: 0.8rem;
+      color: #a8a29e;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.3rem;
+      transition: color 0.15s;
+    }
+    .back-link:hover { color: #57534e; }
+    .page-title {
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-top: 0.9rem;
+      letter-spacing: 0.02em;
+    }
+    .period-subtitle {
+      font-size: 0.85rem;
+      color: #78716c;
+      margin-top: 0.4rem;
+      line-height: 1.6;
+    }
+
+    .filters {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 0.5rem 0.75rem;
+      margin-bottom: 0.9rem;
+    }
+    .cat-pills { display: flex; flex-wrap: wrap; gap: 0.35rem; }
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.25rem;
+      font-size: 0.7rem;
+      font-weight: 600;
+      padding: 0.3rem 0.7rem;
+      border-radius: 9999px;
+      letter-spacing: 0.02em;
+      white-space: nowrap;
+      border: 1px solid #e7e5e4;
+      background: #fff;
+      color: #a8a29e;
+      cursor: pointer;
+      transition: all 0.12s;
+      font-family: inherit;
+    }
+    .pill:hover { border-color: #d6d3d1; }
+    .pill.active {
+      background: var(--cat-color);
+      color: #fff;
+      border-color: var(--cat-color);
+    }
+    .search-input {
+      flex: 1;
+      min-width: 200px;
+      max-width: 320px;
+      font-size: 0.8rem;
+      padding: 0.45rem 0.75rem;
+      border: 1px solid #e7e5e4;
+      border-radius: 9999px;
+      background: #fff;
+      color: #1c1917;
+      font-family: inherit;
+      outline: none;
+      transition: border-color 0.12s;
+    }
+    .search-input:focus { border-color: #a8a29e; }
+    .stats { font-size: 0.7rem; color: #a8a29e; margin-left: auto; }
+
+    /* map */
+    .map {
+      display: flex;
+      background: #fff;
+      border-radius: 0.75rem;
+      overflow: hidden;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+    }
+    .lane-labels {
+      width: 130px;
+      flex-shrink: 0;
+      border-right: 1px solid #e7e5e4;
+      background: #fafaf9;
+    }
+    .lane-corner { height: 56px; border-bottom: 1px solid #e7e5e4; }
+    .lane-label {
+      display: flex;
+      align-items: center;
+      padding: 0 0.75rem;
+      font-size: 0.78rem;
+      font-weight: 700;
+      color: #44403c;
+      border-bottom: 1px solid #f5f5f4;
+      letter-spacing: 0.02em;
+    }
+    .lane-label:last-child { border-bottom: none; }
+    .lane-label.tall {
+      background: #fffbeb;
+      color: #78350f;
+    }
+
+    .map-scroll { flex: 1; overflow-x: auto; overflow-y: hidden; }
+    .map-track { min-width: 4800px; position: relative; }
+
+    .year-header {
+      height: 56px;
+      border-bottom: 1px solid #e7e5e4;
+      background: #fafaf9;
+      position: relative;
+    }
+    .year-tick {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: 0;
+    }
+    .year-tick.major::before {
+      content: '';
+      position: absolute;
+      right: 0;
+      top: 18px;
+      bottom: 0;
+      width: 1px;
+      background: #d6d3d1;
+    }
+    .year-tick.major span {
+      font-size: 0.66rem;
+      color: #57534e;
+      position: absolute;
+      right: 4px;
+      top: 4px;
+      font-variant-numeric: tabular-nums;
+      font-weight: 600;
+    }
+    .year-tick.minor::before {
+      content: '';
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      height: 12px;
+      width: 1px;
+      background: #e7e5e4;
+    }
+
+    .lane { position: relative; border-bottom: 1px solid #f5f5f4; }
+    .lane:last-child { border-bottom: none; }
+    .lane.tall { background: #fffdf5; }
+    .lane .year-guide {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: 1px;
+      background: #f5f5f4;
+      pointer-events: none;
+    }
+
+    .point {
+      position: absolute;
+      transform: translate(-50%, -50%);
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      cursor: pointer;
+      border: 2px solid #fff;
+      box-shadow: 0 0 0 1px rgba(0,0,0,0.06), 0 1px 3px rgba(0,0,0,0.08);
+      transition: transform 0.12s, box-shadow 0.12s;
+      z-index: 1;
+      padding: 0;
+    }
+    .point:hover {
+      transform: translate(-50%, -50%) scale(1.7);
+      z-index: 30;
+      box-shadow: 0 0 0 1px rgba(0,0,0,0.1), 0 4px 12px rgba(0,0,0,0.2);
+    }
+    .point.pinned {
+      transform: translate(-50%, -50%) scale(1.7);
+      z-index: 30;
+      box-shadow: 0 0 0 2px #1c1917, 0 4px 12px rgba(0,0,0,0.2);
+    }
+
+    .span {
+      position: absolute;
+      border-radius: 4px;
+      cursor: pointer;
+      color: #fff;
+      font-size: 0.66rem;
+      font-weight: 700;
+      padding: 0 6px;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+      white-space: nowrap;
+      transition: filter 0.12s, transform 0.12s, box-shadow 0.12s;
+      z-index: 2;
+      box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+      letter-spacing: 0.01em;
+    }
+    .span:hover {
+      filter: brightness(1.08);
+      z-index: 30;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.18);
+    }
+    .span.pinned {
+      filter: brightness(1.08);
+      z-index: 30;
+      box-shadow: 0 0 0 2px #1c1917, 0 4px 12px rgba(0,0,0,0.18);
+    }
+    .span.no-text { overflow: visible; }
+
+    .point.hidden, .span.hidden { display: none; }
+
+    /* labels */
+    .entry-label {
+      position: absolute;
+      bottom: calc(100% + 4px);
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 9.5px;
+      font-weight: 600;
+      color: #44403c;
+      white-space: nowrap;
+      background: rgba(255,255,255,0.92);
+      padding: 1px 5px;
+      border-radius: 3px;
+      pointer-events: none;
+      letter-spacing: 0.02em;
+      z-index: 5;
+      transition: opacity 0.12s, z-index 0.12s;
+      border: 1px solid rgba(0,0,0,0.04);
+    }
+    /* default: hidden, only revealed when entry is in active time-column */
+    .lane:not(.tall) .entry-label { opacity: 0; }
+    .lane:not(.tall) .point.in-active-column .entry-label,
+    .lane:not(.tall) .span.in-active-column .entry-label {
+      opacity: 0.96;
+      z-index: 25;
+    }
+    .lane.tall .entry-label { opacity: 1; }
+    .point:hover .entry-label,
+    .span:hover .entry-label { opacity: 1; z-index: 35; }
+
+    .column-overlay {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      background: rgba(28,25,23,0.04);
+      pointer-events: none;
+      z-index: 0;
+      display: none;
+    }
+    .hover-year-indicator {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      background: rgba(28,25,23,0.92);
+      color: #fff;
+      font-size: 0.78rem;
+      font-weight: 700;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      pointer-events: none;
+      z-index: 10;
+      font-variant-numeric: tabular-nums;
+      white-space: nowrap;
+      letter-spacing: 0.02em;
+    }
+
+    .legend-note {
+      font-size: 0.7rem;
+      color: #a8a29e;
+      margin-top: 0.6rem;
+      text-align: right;
+    }
+
+    /* hover popover */
+    .popover {
+      position: fixed;
+      width: 320px;
+      background: #fff;
+      border-radius: 0.6rem;
+      padding: 1rem 1.1rem;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+      border: 1px solid #e7e5e4;
+      z-index: 200;
+      pointer-events: auto;
+      opacity: 0;
+      transform: translateY(-4px);
+      transition: opacity 0.12s ease, transform 0.12s ease;
+    }
+    .popover.show { opacity: 1; transform: translateY(0); }
+    .popover[hidden] { display: none; }
+    .pop-title {
+      font-size: 0.95rem;
+      font-weight: 700;
+      line-height: 1.4;
+      margin-bottom: 0.5rem;
+    }
+    .pop-meta {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 0.35rem 0.5rem;
+      margin-bottom: 0.5rem;
+    }
+    .meta-pill {
+      display: inline-block;
+      font-size: 0.62rem;
+      font-weight: 700;
+      padding: 0.18rem 0.5rem;
+      border-radius: 9999px;
+      color: #fff;
+      letter-spacing: 0.02em;
+    }
+    .meta-year {
+      font-size: 0.78rem;
+      font-weight: 700;
+      color: #1c1917;
+      font-variant-numeric: tabular-nums;
+    }
+    .meta-lane { font-size: 0.68rem; color: #78716c; }
+    .meta-where {
+      width: 100%;
+      font-size: 0.7rem;
+      color: #78716c;
+      margin-top: 0.05rem;
+    }
+    .pop-summary {
+      font-size: 0.78rem;
+      line-height: 1.65;
+      color: #292524;
+    }
+
+    @media (max-width: 600px) {
+      body { padding: 1rem 0.5rem 3rem; }
+      .page-title { font-size: 1.25rem; }
+      .lane-labels { width: 96px; }
+      .lane-label { font-size: 0.7rem; padding: 0 0.5rem; }
+      .map-track { min-width: 3600px; }
+      .modal { padding: 1.25rem; border-radius: 0.75rem; }
+      .stats { width: 100%; margin-left: 0; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <a href="./" class="back-link">&larr; 知マップ目次</a>
+      <h1 class="page-title" id="periodLabel">読み込み中…</h1>
+      <p class="period-subtitle" id="periodSubtitle"></p>
+    </div>
+
+    <div class="filters">
+      <div class="cat-pills" id="catPills"></div>
+      <input type="search" class="search-input" id="search" placeholder="検索（タイトル・場所・概要）">
+      <div class="stats" id="stats"></div>
+    </div>
+
+    <div class="map">
+      <div class="lane-labels" id="laneLabels"></div>
+      <div class="map-scroll">
+        <div class="map-track" id="mapTrack">
+          <div class="year-header" id="yearHeader"></div>
+          <div class="lanes" id="lanes"></div>
+        </div>
+      </div>
+    </div>
+    <div class="legend-note">▶ 横スクロールで全期間を一望　·　史実は名前を常時表示、他はマップ上にホバーするとその時代の項目が一覧／クリックで詳細</div>
+  </div>
+
+  <div class="popover" id="popover" hidden>
+    <h2 class="pop-title" id="popTitle"></h2>
+    <div class="pop-meta" id="popMeta"></div>
+    <div class="pop-summary" id="popSummary"></div>
+  </div>
+
+  <script>
+    const params = new URLSearchParams(location.search);
+    const periodId = params.get('id') || 'meiji-ww2';
+
+    const state = {
+      data: null,
+      activeCategories: null,
+      search: '',
+      catMap: {},
+      laneMap: {},
+    };
+
+    fetch(`periods/${periodId}.json`)
+      .then(r => { if (!r.ok) throw new Error('Period not found: ' + periodId); return r.json(); })
+      .then(init)
+      .catch(err => {
+        document.getElementById('periodLabel').textContent = 'エラー';
+        document.getElementById('periodSubtitle').textContent = err.message;
+      });
+
+    function init(data) {
+      state.data = data;
+      document.title = `${data.label} - 人類知マップ`;
+      document.getElementById('periodLabel').textContent = data.label;
+      document.getElementById('periodSubtitle').textContent =
+        `${data.subtitle ? data.subtitle + '　' : ''}${data.start}–${data.end}`;
+
+      state.catMap = Object.fromEntries(data.categories.map(c => [c.id, c]));
+      state.laneMap = Object.fromEntries(data.lanes.map(l => [l.id, l]));
+      state.activeCategories = new Set(data.categories.map(c => c.id));
+
+      buildFilters();
+      buildLabels();
+      buildYearHeader();
+      buildLanes();
+      placeEntries();
+      updateVisibility();
+      bindPopover();
+      bindSearch();
+      bindColumnHover();
+    }
+
+    function buildFilters() {
+      const c = document.getElementById('catPills');
+      state.data.categories.forEach(cat => {
+        const pill = document.createElement('button');
+        pill.className = 'pill active';
+        pill.style.setProperty('--cat-color', cat.color);
+        pill.textContent = `${cat.icon} ${cat.label}`;
+        pill.dataset.cat = cat.id;
+        pill.addEventListener('click', () => {
+          if (state.activeCategories.has(cat.id)) {
+            state.activeCategories.delete(cat.id);
+            pill.classList.remove('active');
+          } else {
+            state.activeCategories.add(cat.id);
+            pill.classList.add('active');
+          }
+          updateVisibility();
+        });
+        c.appendChild(pill);
+      });
+    }
+
+    function bindSearch() {
+      document.getElementById('search').addEventListener('input', e => {
+        state.search = e.target.value.trim().toLowerCase();
+        updateVisibility();
+      });
+    }
+
+    function buildLabels() {
+      const c = document.getElementById('laneLabels');
+      const corner = document.createElement('div');
+      corner.className = 'lane-corner';
+      c.appendChild(corner);
+      state.data.lanes.forEach(lane => {
+        const el = document.createElement('div');
+        el.className = 'lane-label' + (lane.tall ? ' tall' : '');
+        el.style.height = (lane.tall ? 110 : 80) + 'px';
+        el.textContent = lane.label;
+        c.appendChild(el);
+      });
+    }
+
+    function buildYearHeader() {
+      const c = document.getElementById('yearHeader');
+      const { start, end } = state.data;
+      const total = end - start;
+      for (let y = Math.ceil(start / 5) * 5; y <= end; y += 5) {
+        const left = (y - start) / total * 100;
+        const major = (y % 10 === 0);
+        const tick = document.createElement('div');
+        tick.className = 'year-tick' + (major ? ' major' : ' minor');
+        tick.style.left = left + '%';
+        if (major) {
+          const sp = document.createElement('span');
+          sp.textContent = y;
+          tick.appendChild(sp);
+        }
+        c.appendChild(tick);
+      }
+    }
+
+    function buildLanes() {
+      const c = document.getElementById('lanes');
+      const { start, end } = state.data;
+      state.data.lanes.forEach(lane => {
+        const el = document.createElement('div');
+        el.className = 'lane' + (lane.tall ? ' tall' : '');
+        el.dataset.lane = lane.id;
+        el.style.height = (lane.tall ? 110 : 80) + 'px';
+        for (let y = Math.ceil(start / 10) * 10; y <= end; y += 10) {
+          const left = (y - start) / (end - start) * 100;
+          const guide = document.createElement('div');
+          guide.className = 'year-guide';
+          guide.style.left = left + '%';
+          el.appendChild(guide);
+        }
+        c.appendChild(el);
+      });
+    }
+
+    function xPercent(year) {
+      const { start, end } = state.data;
+      return Math.max(0, Math.min(100, (year - start) / (end - start) * 100));
+    }
+
+    function placeEntries() {
+      const laneEls = {};
+      document.querySelectorAll('.lane').forEach(l => laneEls[l.dataset.lane] = l);
+      const trackWidthPx = document.getElementById('mapTrack').offsetWidth || 2400;
+
+      const byLane = {};
+      state.data.lanes.forEach(l => byLane[l.id] = []);
+      state.data.entries.forEach(e => { if (byLane[e.lane]) byLane[e.lane].push(e); });
+
+      Object.entries(byLane).forEach(([laneId, entries]) => {
+        const laneEl = laneEls[laneId];
+        if (!laneEl) return;
+        const lane = state.laneMap[laneId];
+        const laneHeight = lane.tall ? 110 : 80;
+
+        const spans = entries.filter(e => e.yearEnd != null);
+        const points = entries.filter(e => e.yearEnd == null);
+
+        // greedy stack assignment for spans
+        spans.sort((a, b) => a.year - b.year);
+        const levelEnds = [];
+        const spanLevels = new Map();
+        spans.forEach(s => {
+          let lvl = 0;
+          while (lvl < levelEnds.length && levelEnds[lvl] >= s.year) lvl++;
+          levelEnds[lvl] = s.yearEnd;
+          spanLevels.set(s, lvl);
+        });
+
+        const spanH = 22, spanGap = 4, spanTopMargin = 10;
+        spans.forEach(e => {
+          const cat = state.catMap[e.category];
+          const left = xPercent(e.year);
+          const right = xPercent(e.yearEnd);
+          const lvl = spanLevels.get(e);
+          const widthPct = Math.max(right - left, 0.4);
+          const widthPx = (right - left) / 100 * trackWidthPx;
+          const el = document.createElement('div');
+          el.className = 'span';
+          el.dataset.id = e.id;
+          el.style.left = left + '%';
+          el.style.width = widthPct + '%';
+          el.style.background = cat ? cat.color : '#888';
+          el.style.top = (spanTopMargin + lvl * (spanH + spanGap)) + 'px';
+          el.style.height = spanH + 'px';
+          if (widthPx >= 60) {
+            el.textContent = e.title;
+          } else {
+            el.classList.add('no-text');
+            const labelEl = document.createElement('span');
+            labelEl.className = 'entry-label';
+            labelEl.textContent = e.title;
+            el.appendChild(labelEl);
+          }
+          attachClick(el, e);
+          laneEl.appendChild(el);
+        });
+
+        const hasSpans = spans.length > 0;
+        const pointY = hasSpans ? (laneHeight - 14) : (laneHeight / 2);
+        points.forEach(e => {
+          const cat = state.catMap[e.category];
+          const left = xPercent(e.year);
+          const el = document.createElement('button');
+          el.className = 'point';
+          el.dataset.id = e.id;
+          el.style.left = left + '%';
+          el.style.top = pointY + 'px';
+          el.style.background = cat ? cat.color : '#888';
+          const labelEl = document.createElement('span');
+          labelEl.className = 'entry-label';
+          labelEl.textContent = e.title;
+          el.appendChild(labelEl);
+          attachClick(el, e);
+          laneEl.appendChild(el);
+        });
+      });
+    }
+
+    function attachClick(el, entry) {
+      el.addEventListener('click', (ev) => {
+        ev.stopPropagation();
+        togglePopover(entry, el);
+      });
+    }
+
+    const COLUMN_HALF_WIDTH_PX = 60;
+    const columnOverlays = [];
+    let yearIndicator = null;
+
+    function bindColumnHover() {
+      // create a translucent column overlay per lane
+      document.querySelectorAll('.lane').forEach(lane => {
+        const ov = document.createElement('div');
+        ov.className = 'column-overlay';
+        lane.appendChild(ov);
+        columnOverlays.push(ov);
+      });
+      // year indicator inside year-header
+      yearIndicator = document.createElement('div');
+      yearIndicator.className = 'hover-year-indicator';
+      document.getElementById('yearHeader').appendChild(yearIndicator);
+
+      const track = document.getElementById('mapTrack');
+      track.addEventListener('mousemove', onColumnMove);
+      track.addEventListener('mouseleave', clearColumn);
+    }
+
+    function onColumnMove(ev) {
+      const lanesEl = document.getElementById('lanes');
+      const rect = lanesEl.getBoundingClientRect();
+      const x = ev.clientX - rect.left;
+      if (x < 0 || x > rect.width) return clearColumn();
+      const half = COLUMN_HALF_WIDTH_PX;
+      const leftPct = Math.max(0, (x - half) / rect.width * 100);
+      const widthPct = Math.min(100 - leftPct, (half * 2) / rect.width * 100);
+      columnOverlays.forEach(o => {
+        o.style.display = 'block';
+        o.style.left = leftPct + '%';
+        o.style.width = widthPct + '%';
+      });
+      // year indicator
+      const total = state.data.end - state.data.start;
+      const startYear = Math.round(state.data.start + (leftPct / 100) * total);
+      const endYear = Math.round(state.data.start + ((leftPct + widthPct) / 100) * total);
+      yearIndicator.style.display = 'flex';
+      yearIndicator.style.left = leftPct + '%';
+      yearIndicator.style.width = widthPct + '%';
+      yearIndicator.textContent = startYear === endYear ? `${startYear}` : `${startYear} – ${endYear}`;
+
+      // mark entries whose center x falls in [x-half, x+half]
+      document.querySelectorAll('.point, .span').forEach(el => {
+        const r = el.getBoundingClientRect();
+        const cx = r.left - rect.left + r.width / 2;
+        if (cx >= x - half && cx <= x + half) el.classList.add('in-active-column');
+        else el.classList.remove('in-active-column');
+      });
+    }
+
+    function clearColumn() {
+      columnOverlays.forEach(o => { o.style.display = 'none'; });
+      document.querySelectorAll('.in-active-column').forEach(el => el.classList.remove('in-active-column'));
+      if (yearIndicator) yearIndicator.style.display = 'none';
+    }
+
+    function updateVisibility() {
+      const search = state.search;
+      const catActive = state.activeCategories;
+      let visible = 0;
+      state.data.entries.forEach(e => {
+        const el = document.querySelector(`[data-id="${CSS.escape(e.id)}"]`);
+        if (!el) return;
+        let show = catActive.has(e.category);
+        if (show && search) {
+          const t = (e.title + ' ' + (e.where || '') + ' ' + (e.summary || '')).toLowerCase();
+          if (!t.includes(search)) show = false;
+        }
+        el.classList.toggle('hidden', !show);
+        if (show) visible++;
+      });
+      document.getElementById('stats').textContent = `${visible} / ${state.data.entries.length} 件表示`;
+    }
+
+    let pinnedId = null;
+    const popoverEl = () => document.getElementById('popover');
+
+    function bindPopover() {
+      document.addEventListener('keydown', e => { if (e.key === 'Escape') hidePopover(); });
+      // close when clicking outside any entry / popover
+      document.addEventListener('click', (e) => {
+        if (pinnedId === null) return;
+        if (popoverEl().contains(e.target)) return;
+        if (e.target.closest('.point') || e.target.closest('.span')) return;
+        hidePopover();
+      });
+    }
+
+    function togglePopover(entry, anchorEl) {
+      if (pinnedId === entry.id) {
+        hidePopover();
+      } else {
+        pinnedId = entry.id;
+        renderPopover(entry);
+        const pop = popoverEl();
+        pop.hidden = false;
+        pop.classList.remove('show');
+        requestAnimationFrame(() => {
+          positionPopover(anchorEl);
+          pop.classList.add('show');
+        });
+        markPinned(entry.id);
+      }
+    }
+
+    function renderPopover(entry) {
+      const cat = state.catMap[entry.category];
+      const lane = state.laneMap[entry.lane];
+      const yearText = entry.yearEnd != null ? `${entry.year} – ${entry.yearEnd}` : `${entry.year}`;
+      document.getElementById('popTitle').textContent = entry.title;
+      document.getElementById('popMeta').innerHTML = `
+        <span class="meta-pill" style="background:${cat.color}">${cat.icon} ${cat.label}</span>
+        <span class="meta-year">${yearText}</span>
+        <span class="meta-lane">${lane ? lane.label : ''}</span>
+        <div class="meta-where">📍 ${escapeHtml(entry.where || '')}</div>
+      `;
+      document.getElementById('popSummary').textContent = entry.summary || '';
+    }
+
+    function positionPopover(anchorEl) {
+      const pop = popoverEl();
+      const rect = anchorEl.getBoundingClientRect();
+      const popW = pop.offsetWidth || 320;
+      const popH = pop.offsetHeight || 200;
+      let left = rect.left + rect.width / 2 - popW / 2;
+      let top = rect.top - popH - 12;
+      if (top < 12) top = rect.bottom + 12;
+      if (left < 12) left = 12;
+      if (left + popW > window.innerWidth - 12) left = window.innerWidth - popW - 12;
+      pop.style.left = left + 'px';
+      pop.style.top = top + 'px';
+    }
+
+    function hidePopover() {
+      pinnedId = null;
+      const pop = popoverEl();
+      pop.classList.remove('show');
+      setTimeout(() => { pop.hidden = true; }, 150);
+      markPinned(null);
+    }
+
+    function markPinned(id) {
+      document.querySelectorAll('.point.pinned, .span.pinned').forEach(el => el.classList.remove('pinned'));
+      if (id) {
+        const el = document.querySelector(`[data-id="${CSS.escape(id)}"]`);
+        if (el) el.classList.add('pinned');
+      }
+    }
+
+    function escapeHtml(s) {
+      return String(s).replace(/[&<>"']/g, ch => ({
+        '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
+      }[ch]));
+    }
+  </script>
+<!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "822f6925e2b64a45928c584854ac19a2"}'></script><!-- End Cloudflare Web Analytics -->
+</body>
+</html>
