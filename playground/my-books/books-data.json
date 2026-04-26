@@ -2849,278 +2849,876 @@
       "title": "シリコンバレー最重要思想家 ナヴァル・ラヴィカント",
       "titleEn": "The Almanack of Naval Ravikant",
       "author": "エリック・ジョーゲンソン",
-      "cover": "https://books.google.com/books/content?id=BEeFEAAAQBAJ&printsec=frontcover&img=1&zoom=3"
+      "cover": "https://books.google.com/books/content?id=BEeFEAAAQBAJ&printsec=frontcover&img=1&zoom=3",
+      "publishedYear": 2022,
+      "era": "原著『**The Almanack of Naval Ravikant: A Guide to Wealth and Happiness**』は2020年米Magrathea Publishing刊。邦訳は2022年4月にSBクリエイティブから櫻井祐子訳で刊行。\n\nシリコンバレーの著名エンジェル投資家・思想家**ナヴァル・ラヴィカント**（AngelList創業者、Twitter/Uber/Yammerほか200社以上に投資）の「**富と幸福**」についての箴言・エッセイ・Twitter投稿・ポッドキャスト発言を、ファン**エリック・ジョーゲンソン**が編集した思想書。「Seek Wealth, Not Money or Status」(富を求めよ、金や地位ではなく)など、ナヴァル独自の哲学が現代の起業家・知識労働者に大きな影響を与えた。",
+      "authorBio": {
+        "summary": "**編者 エリック・ジョーゲンソン**（Eric Jorgenson）— 米国の起業家・著述家。**ナヴァル・ラヴィカント**の発言を体系化した本書は無料電子版から100万ダウンロード超、世界25カ国語に翻訳。\n\n**ナヴァル・ラヴィカント**（Naval Ravikant、1974年生）— インド・デリー生まれの米国エンジェル投資家・哲学者。**AngelList創業者・元CEO**。Twitter・Uber・Yammer・Postmatesなど200社以上に投資した伝説的VC。Twitter・ポッドキャストで人生哲学を発信し、シリコンバレーの「**最重要思想家**」と称される。"
+      },
+      "themes": [
+        "哲学",
+        "投資",
+        "シリコンバレー",
+        "ナヴァル",
+        "成功論"
+      ]
     },
     {
       "title": "エネルギーをめぐる旅",
       "author": "古舘恒介",
-      "cover": "https://books.google.com/books/content?id=Kv88EAAAQBAJ&printsec=frontcover&img=1&zoom=3"
+      "cover": "https://books.google.com/books/content?id=Kv88EAAAQBAJ&printsec=frontcover&img=1&zoom=3",
+      "publishedYear": 2021,
+      "era": "2021年9月、英治出版刊。サブタイトルは「**文明の歴史と私たちの未来**」。著者**古舘恒介**（JX石油開発エンジニア、東大資源・エネルギー研究）による、**人類とエネルギーの関係史**を文明レベルで俯瞰する科学エッセイ。\n\n薪・石炭・石油・原子力・再生可能エネルギーと、人類が次々と手にしてきたエネルギー源と、それが社会・戦争・経済をどう変えてきたかを、独自の取材と科学的厳密さで描く。第1回**山本七平賞特別賞**受賞、累計15万部超。",
+      "authorBio": {
+        "summary": "古舘恒介（ふるたち・こうすけ）— 東京大学工学系研究科卒、**JX石油開発・JOGMEC**等で石油・天然ガス開発に従事した資源エネルギー実務家。著書『エネルギーをめぐる旅』で**山本七平賞特別賞**受賞。エネルギー実務と人文学を架橋する独自の視点で知られる。"
+      },
+      "themes": [
+        "エネルギー",
+        "文明史",
+        "科学エッセイ",
+        "古舘恒介",
+        "山本七平賞"
+      ]
     },
     {
       "title": "ウクライナ戦争は世界をどう変えたか",
       "author": "豊島晋作",
-      "cover": "https://books.google.com/books/content?id=yTt8EAAAQBAJ&printsec=frontcover&img=1&zoom=3"
+      "cover": "https://books.google.com/books/content?id=yTt8EAAAQBAJ&printsec=frontcover&img=1&zoom=3",
+      "publishedYear": 2022,
+      "era": "2022年12月、KADOKAWA刊。**テレビ東京・豊島晋作**経済キャスターによる、2022年2月のロシア・ウクライナ戦争勃発から1年弱の間に起きた世界秩序の地殻変動を、放送ジャーナリスト視点でまとめた緊急刊行書。\n\nNATO東方拡大史、プーチンの戦略誤算、エネルギー危機、欧州の安保転換（ドイツの軍事費GDP比2%復活）、半導体・食料の地経学、グローバルサウスの台頭など、戦争が触媒となって加速した変化を整理。テレ東の対外取材経験豊富な著者ならではの視点。",
+      "authorBio": {
+        "born": 1979,
+        "summary": "豊島晋作（とよしま・しんさく、1979年生）— 神奈川県出身、慶應義塾大学経済学部卒。**テレビ東京**経済部記者・キャスター。ロンドン支局長を経て、現在『**WBS**(ワールドビジネスサテライト)』『豊島晋作のテレ東経済ニュースアカデミー』など担当。地政学・経済安全保障の専門解説で人気。著書『ウクライナ戦争は世界をどう変えたか』『教養としての地政学入門』など。"
+      },
+      "themes": [
+        "国際政治",
+        "ウクライナ",
+        "戦争",
+        "地政学",
+        "現代史"
+      ]
     },
     {
       "title": "THE MODEL ザ・モデル",
       "author": "福田康隆",
       "publisher": "MarkeZine BOOKS",
-      "cover": "https://books.google.com/books/content?id=PhSGDwAAQBAJ&printsec=frontcover&img=1&zoom=3"
+      "cover": "https://books.google.com/books/content?id=PhSGDwAAQBAJ&printsec=frontcover&img=1&zoom=3",
+      "publishedYear": 2019,
+      "era": "2019年1月、翔泳社刊。サブタイトルは「**マーケティング・インサイドセールス・営業・カスタマーサクセスの共業プロセス**」。著者**福田康隆**（元Salesforce.com Japan社長、元Marketo Japan代表）による、**SaaSビジネスの分業モデル**の決定版実践書。\n\nマーケティング → インサイドセールス → 営業（外勤） → カスタマーサクセスという**4機能の連携モデル**(THE MODEL)を、Salesforce・Marketoでの実体験を基に体系化。日本のSaaS企業の組織設計に決定的な影響を与え、**スタートアップ業界で必読書**扱い、累計15万部超。",
+      "authorBio": {
+        "summary": "福田康隆（ふくだ・やすたか）— 元**Salesforce.com Japan**専務執行役員、元**Marketo Japan**代表取締役社長、現**ジャパン・クラウド・コンサルティング**社長。日本のSaaSビジネスの黎明期から第一線で経営・組織設計に携わってきた実務家。"
+      },
+      "themes": [
+        "セールス",
+        "SaaS",
+        "マーケティング",
+        "実務書",
+        "経営"
+      ]
     },
     {
       "title": "HEALTH RULES",
       "author": "津川友介",
       "publisher": "集英社",
-      "cover": "https://m.media-amazon.com/images/P/4087717798.jpg"
+      "cover": "https://m.media-amazon.com/images/P/4087717798.jpg",
+      "publishedYear": 2022,
+      "era": "2022年5月、集英社刊。サブタイトルは「**病気の９割は予防できる**」。著者**津川友介**（カリフォルニア大学ロサンゼルス校（UCLA）医学部准教授、医療政策学者・内科医）による、最新の医療エビデンスに基づく**健康習慣の実践ガイド**。\n\n何を食べるべきか、どう運動すべきか、検診・薬・ワクチンとの付き合い方を、メタアナリシスや大規模疫学研究を引用して整理。「**根拠ベース**」のアプローチで、巷の健康情報に振り回されないリテラシーを養う。著者の前著『世界一シンプルで科学的に証明された究極の食事』と並ぶ健康書ベストセラー。",
+      "authorBio": {
+        "summary": "津川友介（つがわ・ゆうすけ）— **UCLA医学部准教授**、内科医、医療政策学者。東北大学医学部卒、ハーバード大学公衆衛生大学院博士。WHO・世界銀行コンサルタント等を経て現職。**医療政策・医療経済学**の世界的研究者で、JAMA, BMJ等に多数論文。著書『世界一シンプルで科学的に証明された究極の食事』『HEALTH RULES』『ヘルスケアスタートアップ』など。"
+      },
+      "themes": [
+        "医療",
+        "健康",
+        "エビデンス",
+        "食事",
+        "津川友介"
+      ]
     },
     {
       "title": "危機と人類",
-      "titleEn": "Upheaval",
+      "titleEn": "Upheaval: Turning Points for Nations in Crisis",
       "author": "ジャレド・ダイアモンド",
-      "cover": "https://books.google.com/books/content?id=zbu4DwAAQBAJ&printsec=frontcover&img=1&zoom=3"
+      "cover": "https://books.google.com/books/content?id=zbu4DwAAQBAJ&printsec=frontcover&img=1&zoom=3",
+      "publishedYear": 2019,
+      "era": "原著『**Upheaval: Turning Points for Nations in Crisis**』は2019年米Little, Brown刊。邦訳は2019年に日本経済新聞出版社から小川敏子・川上純子訳で上下2巻刊行。\n\n『**銃・病原菌・鉄**』のジャレド・ダイアモンドが、フィンランド（ソ連侵攻からの復興）、日本（明治維新）、チリ（ピノチェト）、インドネシア（共産党虐殺）、ドイツ（戦後）、オーストラリア（白人主義からの脱却）、アメリカ（現代の分断）の**7つの近現代史**を題材に、国家がいかに危機を乗り越えるかを比較研究。個人の心理療法における「危機対応の12項目」を国家レベルに応用する独自の枠組みで分析。",
+      "authorBio": {
+        "born": 1937,
+        "summary": "ジャレド・ダイアモンド（Jared Diamond、1937年9月10日生）— 米国マサチューセッツ州ボストン生まれ。**UCLA地理学教授**。ハーバード大学卒、ケンブリッジ大学博士。生理学者として出発し、ニューギニアの鳥類学・人類学研究へ進路転換、後に文明論・歴史学に至る学際的研究者。**ピューリッツァー賞**を受賞した『**銃・病原菌・鉄**』(1997)で世界的に知られる。代表作『第三のチンパンジー』『文明崩壊』『**昨日までの世界**』『危機と人類』。"
+      },
+      "themes": [
+        "歴史",
+        "人類学",
+        "国家論",
+        "ダイアモンド",
+        "比較史"
+      ]
     },
     {
       "title": "狼侠",
       "author": "笠岡和雄",
-      "cover": "https://m.media-amazon.com/images/I/51TsXS1lagL.jpg"
+      "cover": "https://m.media-amazon.com/images/I/51TsXS1lagL.jpg",
+      "publishedYear": 2017,
+      "era": "2017年7月、大翔（神戸）／れんが書房新社（東京）刊。サブタイトル「**芸能界最強の用心棒が明かす真実**」。著者**笠岡和雄**は**二代目松浦組元組長・大日本新政會総裁**。\n\n大日本新政會の超過激ブログを書籍化し、**16歳からの極道一代記**を加筆。映画『仁義なき戦い』にも登場する広島の山口組系組織に入り、**殺人罪で服役**、その後松浦組を継承した波乱のヤクザ人生を回顧。**鶴田浩二・松方弘樹・ビートたけし**ら芸能人との交遊、芸能界と暴力団の関係性についての貴重な内部証言録。",
+      "authorBio": {
+        "summary": "笠岡和雄（かさおか・かずお）— **二代目松浦組元組長**、大日本新政會総裁。広島の山口組系組織で活動し、殺人罪で服役。出所後芸能界とのつながりを持ち、晩年に著書『狼侠』『笠岡和雄の自伝』など出版。"
+      },
+      "themes": [
+        "自伝",
+        "ヤクザ",
+        "芸能界",
+        "ノンフィクション",
+        "笠岡和雄"
+      ]
     },
     {
       "title": "歴史思考",
       "author": "深井龍之介",
       "publisher": "ダイヤモンド社",
-      "cover": "https://books.google.com/books/content?id=D1dmEAAAQBAJ&printsec=frontcover&img=1&zoom=3"
+      "cover": "https://books.google.com/books/content?id=D1dmEAAAQBAJ&printsec=frontcover&img=1&zoom=3",
+      "publishedYear": 2022,
+      "era": "2022年6月、ダイヤモンド社刊。サブタイトルは「**世界史を俯瞰して『普遍の教養』を身につける**」。**人気Podcast『COTEN RADIO』** ホスト・**深井龍之介**（株式会社COTEN代表）による、世界史を「教養」として捉えるための思考法の解説書。\n\n「歴史を学ぶことで現代を相対化する」「**メタ認知**」を歴史を通じて獲得する、というアプローチで、孟子・キング牧師・ファラデーら歴史人物の決断と思考を多角的に分析。**累計20万部超**のベストセラー。",
+      "authorBio": {
+        "summary": "深井龍之介（ふかい・りゅうのすけ）— 株式会社COTEN（コテン）代表取締役、人気ポッドキャスト『**COTEN RADIO**』ホスト。世界中の偉人・歴史エピソードを長尺のラジオ番組形式で配信し、ビジネスパーソンを中心に絶大な支持を集める。著書『歴史思考』『歴史思考トレーニング』など。"
+      },
+      "themes": [
+        "歴史",
+        "教養",
+        "ビジネス書",
+        "深井龍之介",
+        "COTEN"
+      ]
     },
     {
       "title": "シンギュラリティは近い [エッセンス版]",
       "author": "レイ・カーツワイル",
-      "cover": "https://m.media-amazon.com/images/P/414081697X.jpg"
+      "cover": "https://m.media-amazon.com/images/P/414081697X.jpg",
+      "publishedYear": 2016,
+      "titleEn": "The Singularity Is Near",
+      "era": "原著『**The Singularity Is Near: When Humans Transcend Biology**』は2005年米Viking刊、邦訳の完全版は2007年NHK出版。**エッセンス版**は2016年NHK出版刊で、井上健監訳・小野木明恵・野中香方子・福田実訳。1000ページの原著を本質部分に圧縮した版。\n\n**レイ・カーツワイル**（Google機械学習エンジニアリング・ディレクター）による、**2045年に人工知能が全人類の知能を超える「技術的特異点（シンギュラリティ）」**が訪れるという主張で世界中に衝撃を与えた未来学の名著。情報技術の指数関数的発展論（**収穫加速の法則**）を、ナノテクノロジー・遺伝子工学・人工知能の融合の文脈で展開する。",
+      "authorBio": {
+        "born": 1948,
+        "summary": "レイ・カーツワイル（Ray Kurzweil、1948年2月12日生）— 米国マサチューセッツ州生まれ。MIT卒の発明家・未来学者。OCR、シンセサイザー、音声認識、電子書籍リーダーなど多数の発明で**全米発明家の殿堂**入り。2012年から**Google機械学習エンジニアリング・ディレクター**。代表作『**シンギュラリティは近い**』(2005)『How to Create a Mind』(2012)。AI・人工知能・テクノロジーが人類を「超人類」に変える未来を予言。"
+      },
+      "themes": [
+        "AI",
+        "未来学",
+        "シンギュラリティ",
+        "カーツワイル",
+        "テクノロジー"
+      ]
     },
     {
       "title": "望郷太郎 (1)",
       "author": "山田芳裕",
-      "cover": "https://books.google.com/books/content?id=tCHTDwAAQBAJ&printsec=frontcover&img=1&zoom=3"
+      "cover": "https://books.google.com/books/content?id=tCHTDwAAQBAJ&printsec=frontcover&img=1&zoom=3",
+      "publishedYear": 2018,
+      "era": "**山田芳裕**による青年向けポストアポカリプス漫画。2018年10月から講談社『**モーニング**』連載中。第1巻は2019年2月発売。\n\n冷凍睡眠から500年後の世界に目覚めた商社マン・**舞鶴太郎**が、文明崩壊した地球で**故郷・日本**を目指し、ペルシャ湾岸のアラビア半島から旧シルクロードを横断する**SF文明再構築の旅**を描く。山田芳裕（『へうげもの』『度胸星』）独特の太い筆致と、文明・経済・人類学への深い洞察を融合した骨太な物語。**マンガ大賞2024第3位**。",
+      "authorBio": {
+        "born": 1968,
+        "summary": "山田芳裕（やまだ・よしひろ、1968年生）— 漫画家。代表作『**度胸星**』(1995-99)『**へうげもの**』(2005-17、第13回手塚治虫文化賞マンガ大賞)『**望郷太郎**』(2018-)。茶人・古田織部を主人公にした『へうげもの』など歴史と文化への深い洞察、独特の太い線とコマ割りで知られる。"
+      },
+      "themes": [
+        "漫画",
+        "SF",
+        "ポストアポカリプス",
+        "山田芳裕",
+        "文明"
+      ]
     },
     {
       "title": "脳は世界をどう見ているのか",
       "titleEn": "A Thousand Brains",
       "author": "ジェフ・ホーキンス",
       "publisher": "早川書房",
-      "cover": "https://books.google.com/books/content?id=JTJoEQAAQBAJ&printsec=frontcover&img=1&zoom=3"
+      "cover": "https://books.google.com/books/content?id=JTJoEQAAQBAJ&printsec=frontcover&img=1&zoom=3",
+      "publishedYear": 2022,
+      "era": "原著『**A Thousand Brains: A New Theory of Intelligence**』は2021年米Basic Books刊。邦訳は2022年早川書房から大田直子訳。**Bill Gates推薦**で世界的ベストセラー。\n\nPalm Pilot発明者・脳科学研究者**ジェフ・ホーキンス**（Numenta創業者）が、**新皮質研究**の最新成果に基づく独自の知能理論「**1000脳理論**」を提示。脳の新皮質には「**コラム**」と呼ばれる15万個の同型構造があり、それぞれが世界の独自モデルを並行して構築している、という仮説。AI・神経科学に新たな視点を提供する21世紀の知能論。",
+      "authorBio": {
+        "born": 1957,
+        "summary": "ジェフ・ホーキンス（Jeff Hawkins、1957年6月1日生）— 米国カリフォルニア州生まれ、コーネル大学卒。**PalmPilot**(1996)・**Treo**(2002)を発明したモバイルコンピュータの先駆者。富と名声を得た後、自身の長年の夢である**脳科学研究**に転身し、2002年Redwood Center for Theoretical Neuroscience設立、**Numenta**創業（脳の理論を逆算してAIを設計するスタートアップ）。代表作『考える脳 考えるコンピューター』(2004)『脳は世界をどう見ているのか』(2021)。"
+      },
+      "themes": [
+        "脳科学",
+        "AI",
+        "神経科学",
+        "ホーキンス",
+        "知能論"
+      ]
     },
     {
       "title": "Hit Refresh",
       "author": "サティア・ナデラ",
       "publisher": "日経BP",
-      "cover": "https://m.media-amazon.com/images/P/4822255336.jpg"
+      "cover": "https://m.media-amazon.com/images/P/4822255336.jpg",
+      "publishedYear": 2017,
+      "titleEn": "Hit Refresh",
+      "era": "原著『**Hit Refresh: The Quest to Rediscover Microsoft's Soul and Imagine a Better Future for Everyone**』は2017年9月米Harper Business刊、邦訳は2017年11月日経BPから山田美明・江戸伸禎訳で同時刊行。\n\n2014年に**Microsoft第3代CEO**に就任した**サティア・ナデラ**による、Microsoftの組織変革と自身のリーダーシップ哲学を語った著作。「**成長マインドセット**」を全社員に植え付け、Windowsへの執着を捨ててクラウド（Azure）・AI・LinkedInへの大胆なシフトを実現、**時価総額3兆ドル**規模の世界トップ企業に再生させた哲学を本人が語る。重度の障害を持つ息子の存在が**共感（Empathy）**重視の経営観の原点。",
+      "authorBio": {
+        "born": 1967,
+        "summary": "サティア・ナデラ（Satya Nadella、1967年8月19日生）— インド・ハイデラバード生まれ、マンガロール大学電気工学卒、ウィスコンシン大学・シカゴ大学修士。1992年Microsoft入社、Cloud & Enterprise部門の上級副社長等を経て、2014年2月**Microsoft第3代CEO**に就任。**Microsoftをクラウド・AI企業に再生**させ、時価総額を3000億ドルから3兆ドルへと10倍に拡大。2024年OpenAIへの投資で生成AI時代の覇者となる。「**成長マインドセット**」「共感（Empathy）」を組織哲学とする。"
+      },
+      "themes": [
+        "経営",
+        "Microsoft",
+        "ナデラ",
+        "リーダーシップ",
+        "クラウド"
+      ]
     },
     {
       "title": "野望の王国 完全版 (21)",
       "author": "雁屋哲, 由起賢二",
-      "cover": "https://m.media-amazon.com/images/P/B00M84FZ7Y.jpg"
+      "cover": "https://m.media-amazon.com/images/P/B00M84FZ7Y.jpg",
+      "publishedYear": 2010,
+      "era": "**雁屋哲**原作・**由起賢二**作画による青年向け劇画。1977年から1990年まで日本文芸社『漫画ゴラク』連載、全21巻（後に**完全版**として小池書院から2010年から再刊）。\n\n戦後の闇市から成り上がった青年・**橘征五郎**が、政界・財界・暴力組織の中で頂点を目指す壮大な野望と陰謀の劇画大作。1980年代の劇画黄金期を代表する一作で、後の『美味しんぼ』(原作雁屋哲)とは対照的にハードボイルドで暴力的な作風。完全版第21巻は本作のクライマックスを収録した最終巻。",
+      "authorBio": {
+        "born": 1941,
+        "summary": "**原作 雁屋哲**（かりや・てつ、1941年10月6日生）— 中国北京生まれ、東京大学工学部卒。電通入社後フリーの漫画原作者へ。代表作『**美味しんぼ**』(1983-、累計1億3500万部超)『**男組**』『**野望の王国**』など。社会派・政治的色彩の濃い作風で知られる。\n\n**作画 由起賢二**（ゆうき・けんじ）— 漫画家。雁屋哲との『**野望の王国**』が代表作。骨太な劇画調の絵柄。"
+      },
+      "themes": [
+        "漫画",
+        "劇画",
+        "野望",
+        "雁屋哲",
+        "1980年代"
+      ]
     },
     {
       "title": "【推しの子】(1)",
       "author": "赤坂アカ, 横槍メンゴ",
-      "cover": "https://m.media-amazon.com/images/P/B08BFW6GSV.jpg"
+      "cover": "https://m.media-amazon.com/images/P/B08BFW6GSV.jpg",
+      "publishedYear": 2020,
+      "era": "**赤坂アカ**原作・**横槍メンゴ**作画による青年漫画。2020年4月から2024年11月まで集英社『**週刊ヤングジャンプ**』連載、全16巻。**累計2700万部超**(2024年)、**第8回(2024)マンガ大賞、第69回(2024)小学館漫画賞**受賞。\n\nアイドル**星野アイ**を熱狂的に推す医師が、何者かに殺された後、転生してアイの息子・**アクア**として生まれ変わる。芸能界の暗部とアクアの復讐劇を、エンタメ業界（アイドル・舞台・恋愛リアリティショー・YouTube・映画）の生々しい現場と心理戦で描く。**2023年TVアニメ化、2024年実写映画化**。",
+      "authorBio": {
+        "summary": "**原作 赤坂アカ**（あかさか・あか）— 漫画家。代表作『**かぐや様は告らせたい**』(2015-22、累計2300万部超、TVアニメ・実写映画化)『**【推しの子】**』(2020-24、TVアニメ・実写映画化)。心理戦・頭脳戦の脚本力で世代を超えた人気を誇る。\n\n**作画 横槍メンゴ**（よこやり・めんご）— 漫画家。代表作『クズの本懐』(2012-17)『**【推しの子】**』。表情の機微を細やかに捉える絵柄で知られる。"
+      },
+      "themes": [
+        "漫画",
+        "推しの子",
+        "芸能界",
+        "アイドル",
+        "サスペンス"
+      ]
     },
     {
       "title": "脳と人工知能をつないだら、人間の能力はどこまで拡張できるのか",
       "author": "池谷裕二, 紺野大地",
-      "cover": "https://m.media-amazon.com/images/P/4065265150.jpg"
+      "cover": "https://m.media-amazon.com/images/P/4065265150.jpg",
+      "publishedYear": 2021,
+      "era": "2021年12月、講談社刊。サブタイトル「**脳AI融合の最前線**」。著者は**池谷裕二**（東京大学教授、脳研究者）と**紺野大地**（東京大学講師、神経科学者）。\n\n**ブレイン・コンピュータ・インターフェース（BMI）**研究の現状（イーロン・マスクのNeuralinkを含む）を一般読者向けにわかりやすく解説。視覚・聴覚・運動野での実験成功例、記憶増強、AIによる脳の機能拡張、思考の直接読み取り技術など、近未来の人類拡張テクノロジーの展望を実証研究を引きながら紹介。",
+      "authorBio": {
+        "summary": "**池谷裕二**（いけがや・ゆうじ、1970年生）— 東京大学薬学部教授、**脳研究者**。代表作『進化しすぎた脳』『単純な脳、複雑な「私」』『海馬』『記憶力を強くする』『脳には妙なクセがある』など脳科学普及書多数。2025年第1回**塚原仲晃記念賞**。\n\n**紺野大地**（こんの・だいち）— 東京大学医学部講師、神経科学者。脳神経外科医として臨床と基礎研究に従事。"
+      },
+      "themes": [
+        "脳科学",
+        "AI",
+        "BMI",
+        "拡張",
+        "神経科学"
+      ]
     },
     {
       "title": "コード・ブレーカー (上)",
       "titleEn": "The Code Breaker",
       "author": "ウォルター・アイザックソン",
       "publisher": "文藝春秋",
-      "cover": "https://m.media-amazon.com/images/P/4163916245.jpg"
+      "cover": "https://m.media-amazon.com/images/P/4163916245.jpg",
+      "publishedYear": 2022,
+      "era": "原著『**The Code Breaker: Jennifer Doudna, Gene Editing, and the Future of the Human Race**』は2021年米Simon & Schuster刊。邦訳は2022年文藝春秋から西村美佐子・野中香方子訳で上下2巻刊行。\n\n**2020年ノーベル化学賞**を受賞した**ジェニファー・ダウドナ**（UC Berkeley教授、CRISPR-Cas9遺伝子編集技術の発見者）の評伝にして、**CRISPR革命**（生命の根本的書き換えを可能にした技術）の歴史を描いた決定版。COVID-19パンデミックの渦中、ダウドナがmRNAワクチン研究に身を投じた経過、女性研究者として直面した壁、男性中心の科学界での共同研究の実態、そしてCRISPRがもたらす倫理的問題（ヒト胚編集、デザイナーベビー）まで、現代生命科学の最前線を立体的に描く。",
+      "authorBio": {
+        "born": 1952,
+        "summary": "ウォルター・アイザックソン（Walter Isaacson、1952年5月20日生）— 米国ジャーナリスト・伝記作家。Time誌編集長、CNN会長、アスペン研究所CEOを歴任。代表作に**スティーブ・ジョブズ**(2011)、**コード・ブレーカー**(2021、Jennifer Doudna伝)、**イーロン・マスク**(2023)、レオナルド・ダ・ヴィンチ(2017)、ベンジャミン・フランクリン、アインシュタインなど。"
+      },
+      "themes": [
+        "評伝",
+        "CRISPR",
+        "ノーベル賞",
+        "ダウドナ",
+        "アイザックソン"
+      ]
     },
     {
       "title": "コード・ブレーカー (下)",
       "author": "ウォルター・アイザックソン",
       "publisher": "文藝春秋",
       "cover": "https://m.media-amazon.com/images/P/4163916253.jpg",
-      "titleEn": "The Code Breaker"
+      "titleEn": "The Code Breaker",
+      "publishedYear": 2022,
+      "era": "原著『**The Code Breaker: Jennifer Doudna, Gene Editing, and the Future of the Human Race**』は2021年米Simon & Schuster刊。邦訳は2022年文藝春秋から西村美佐子・野中香方子訳で上下2巻刊行。\n\n**2020年ノーベル化学賞**を受賞した**ジェニファー・ダウドナ**（UC Berkeley教授、CRISPR-Cas9遺伝子編集技術の発見者）の評伝にして、**CRISPR革命**（生命の根本的書き換えを可能にした技術）の歴史を描いた決定版。COVID-19パンデミックの渦中、ダウドナがmRNAワクチン研究に身を投じた経過、女性研究者として直面した壁、男性中心の科学界での共同研究の実態、そしてCRISPRがもたらす倫理的問題（ヒト胚編集、デザイナーベビー）まで、現代生命科学の最前線を立体的に描く。",
+      "authorBio": {
+        "born": 1952,
+        "summary": "ウォルター・アイザックソン（Walter Isaacson、1952年5月20日生）— 米国ジャーナリスト・伝記作家。Time誌編集長、CNN会長、アスペン研究所CEOを歴任。代表作に**スティーブ・ジョブズ**(2011)、**コード・ブレーカー**(2021、Jennifer Doudna伝)、**イーロン・マスク**(2023)、レオナルド・ダ・ヴィンチ(2017)、ベンジャミン・フランクリン、アインシュタインなど。"
+      },
+      "themes": [
+        "評伝",
+        "CRISPR",
+        "ノーベル賞",
+        "ダウドナ",
+        "アイザックソン"
+      ]
     },
     {
       "title": "大規模言語モデルは新たな知能か",
       "author": "岡野原大輔",
       "publisher": "岩波科学ライブラリー",
-      "cover": "https://m.media-amazon.com/images/P/4000297198.jpg"
+      "cover": "https://m.media-amazon.com/images/P/4000297198.jpg",
+      "publishedYear": 2023,
+      "era": "2023年6月、岩波書店『**岩波科学ライブラリー**』318として刊行。著者は**岡野原大輔**（**Preferred Networks**共同創業者・代表取締役）。\n\nChatGPTなど**大規模言語モデル（LLM）**が示す「知能のように見える」振る舞いの本質を、研究者の視点から解説。Transformerアーキテクチャ、スケーリング則、事前学習とインストラクションチューニング、創発的能力、幻覚（ハルシネーション）、知識・推論・計画・理解などの哲学的論点を、薄い1冊で見通せる**LLM入門の決定版**として高評価。",
+      "authorBio": {
+        "born": 1982,
+        "summary": "岡野原大輔（おかのはら・だいすけ、1982年生）— **Preferred Networks**共同創業者・代表取締役副社長。東京大学情報理工学系研究科博士。深層学習・自然言語処理の世界的研究者で、自動運転・産業ロボット・創薬等の分野でAI実装をリード。著書『深層学習』『大規模言語モデルは新たな知能か』『拡散モデル』など多数。"
+      },
+      "themes": [
+        "AI",
+        "LLM",
+        "岡野原大輔",
+        "科学ライブラリー",
+        "深層学習"
+      ]
     },
     {
       "title": "創始者たち",
       "titleEn": "The Founders",
       "author": "ジミー・ソニ",
       "publisher": "ダイヤモンド社",
-      "cover": "https://books.google.com/books/content?id=94m9EAAAQBAJ&printsec=frontcover&img=1&zoom=3"
+      "cover": "https://books.google.com/books/content?id=94m9EAAAQBAJ&printsec=frontcover&img=1&zoom=3",
+      "publishedYear": 2023,
+      "era": "原著『**The Founders: The Story of Paypal and the Entrepreneurs Who Shaped Silicon Valley**』は2022年米Simon & Schuster刊。邦訳は2023年5月10日にダイヤモンド社から櫻井祐子訳で刊行。\n\n**シリコンバレー史上最も伝説的なグループ「ペイパル・マフィア」**——**イーロン・マスク**（Tesla, SpaceX）、**ピーター・ティール**（Founders Fund）、**リード・ホフマン**（LinkedIn）、**マックス・レヴチン**（Affirm）、**ジェレミー・ストッペルマン**（Yelp）など——の出会いから1990年代末のPayPal創業までを徹底取材で描いたノンフィクション。NYT・WSJ・New Yorker・FT各紙ベストブック選出、656ページの大著。",
+      "authorBio": {
+        "summary": "ジミー・ソニ（Jimmy Soni）— 米国ジャーナリスト・伝記作家。代表作『**A Mind at Play**』(2017、Claude Shannon伝、ニール・パテル賞)『**The Founders**』(2022、PayPal Mafia伝)。シリコンバレー黎明期と20世紀テクノロジー史の語り手として知られる。"
+      },
+      "themes": [
+        "評伝",
+        "シリコンバレー",
+        "PayPal",
+        "起業",
+        "テック史"
+      ]
     },
     {
       "title": "キーエンス解剖",
       "author": "西岡杏",
       "publisher": "日経BP",
-      "cover": "https://books.google.com/books/content?id=ql2jEAAAQBAJ&printsec=frontcover&img=1&zoom=3"
+      "cover": "https://books.google.com/books/content?id=ql2jEAAAQBAJ&printsec=frontcover&img=1&zoom=3",
+      "publishedYear": 2022,
+      "era": "2022年12月、日経BP刊。サブタイトル「**最強企業のメカニズム**」。著者**西岡杏**（日経新聞記者）による、日本トップクラスの収益性を誇る**キーエンス**（FAセンサー大手、**営業利益率55%・平均年収2200万円**）の経営の仕組みを徹底分析した一冊。\n\n直販モデル、コンサルティングセールス、ニーズ深掘り型の商品企画、徹底した分業と透明な評価制度、コスト管理など、外部から見えにくいキーエンスの組織構造を、関係者取材を基に立体的に描く。**累計13万部超**のビジネス書。",
+      "authorBio": {
+        "summary": "西岡杏（にしおか・あんず）— 日本経済新聞記者。製造業・電機業界を中心に取材。著書『**キーエンス解剖**』。"
+      },
+      "themes": [
+        "経営",
+        "キーエンス",
+        "ビジネス書",
+        "日経BP",
+        "メカニズム"
+      ]
     },
     {
       "title": "成功者の告白",
       "author": "神田昌典",
       "publisher": "講談社+α文庫",
-      "cover": "https://books.google.com/books/content?id=DM0nEQAAQBAJ&printsec=frontcover&img=1&zoom=3"
+      "cover": "https://books.google.com/books/content?id=DM0nEQAAQBAJ&printsec=frontcover&img=1&zoom=3",
+      "publishedYear": 2004,
+      "era": "2004年講談社刊。サブタイトル「**5年間の起業ノウハウを３時間で学べる物語**」。日本のマーケッター・**神田昌典**による**自伝的経営小説**。20年読み継がれるロングセラー。\n\n中小企業経営コンサルタントとして成功した著者が、若き起業家「私」を主人公に「**成功する5つの法則**」を物語形式で語る。マーケティングの実践技術にとどまらず、家族・健康・人間関係を含めた「**成功の代償**」も率直に描き、ビジネス書の枠を超えた人気を獲得。",
+      "authorBio": {
+        "born": 1964,
+        "summary": "神田昌典（かんだ・まさのり、1964年生）— **アルマ・クリエイション**代表取締役。上智大学外国語学部卒、ニューヨーク大学経営大学院MBA、ペンシルベニア大学ウォートン校経営大学院。外務省勤務後、米国コンサルファームを経て独立。**マーケティング・コンサルティング**を中心に200社以上を支援、日本における**ダイレクト・マーケティング**普及の第一人者。代表作『**60分間・企業ダントツ化プロジェクト**』『**成功者の告白**』『**儲かる会社**』『2022—これから10年、活躍できる人の条件』など。"
+      },
+      "themes": [
+        "経営",
+        "マーケティング",
+        "成功論",
+        "神田昌典",
+        "自伝小説"
+      ]
     },
     {
       "title": "瞬考",
       "author": "山川隆義",
-      "cover": "https://books.google.com/books/content?id=GHLDEAAAQBAJ&printsec=frontcover&img=1&zoom=3"
+      "cover": "https://books.google.com/books/content?id=GHLDEAAAQBAJ&printsec=frontcover&img=1&zoom=3",
+      "publishedYear": 2023,
+      "era": "2023年6月7日、かんき出版刊。サブタイトル「**メカニズムを捉え、仮説を一瞬ではじき出す 異質のキャリアから生まれた思考法**」。著者**山川隆義**（**ドリームインキュベータ**創業者、元代表取締役）による**ビジネスプロデューサー思考法**の体系化。\n\nヒューレット・パッカード、ボストン・コンサルティング・グループ、2000年**ドリームインキュベータ**創業を経て20年経営した著者が「**会社四季報10年分丸暗記**」など極端な情報インプットから、商機を一瞬で見抜く**仮説形成力**の鍛え方を解説。AI時代に「目標設定・問題定義」のスキルが究極の武器になるという主張で、ビジネスパーソンに大きな影響を与えた。",
+      "authorBio": {
+        "summary": "山川隆義（やまかわ・たかよし）— **ビジネスプロデューサー**。HP、ボストン・コンサルティング・グループを経て2000年**ドリームインキュベータ**を共同創業、2006-2020年代表取締役社長CEO。日本のスタートアップ・新規事業立ち上げの黎明期からの実務家として、コンサル業界・スタートアップ業界に大きな影響を与えた。著書『瞬考』。"
+      },
+      "themes": [
+        "ビジネス書",
+        "思考法",
+        "コンサル",
+        "山川隆義",
+        "仮説力"
+      ]
     },
     {
       "title": "会社四季報 2023年3集 夏号",
       "author": "東洋経済新報社",
-      "cover": "https://m.media-amazon.com/images/P/B0C3ZM419F.jpg"
+      "cover": "https://m.media-amazon.com/images/P/B0C3ZM419F.jpg",
+      "publishedYear": 2023,
+      "era": "**東洋経済新報社**発行の上場企業情報季刊誌『**会社四季報**』2023年3集（夏号）。1936年6月創刊以来、**3・6・9・12月の年4回**発行で、東証上場全社（約4000社）の業績・財務・株主構成・配当・コメント等を1社1段の凝縮されたフォーマットで掲載する、日本唯一の包括的上場企業データ集。\n\n2023年夏号は、コロナ禍からの回復、半導体ブーム、生成AI関連株の急騰、東証PBR1倍割れ改革、総額3兆円配当の歴史的増配など、**2023年前半の日本株市場の地殻変動**を詳細にカバー。投資家・経営者・就活生の必携書。",
+      "authorBio": {
+        "summary": "**東洋経済新報社** — 1895年創業の経済情報出版社。『**会社四季報**』(1936年創刊、年4回)、『**週刊東洋経済**』(1895創刊、日本最古のビジネス週刊誌)、『東洋経済オンライン』など、日本の経済情報メディアを代表する企業。"
+      },
+      "themes": [
+        "投資",
+        "四季報",
+        "企業情報",
+        "株式市場",
+        "東洋経済"
+      ]
     },
     {
       "title": "10億ドルを自力で稼いだ人は何を考え、どう行動し、誰と仕事をしているのか",
       "titleEn": "The Self-made Billionaire Effect",
       "author": "ジョン・スヴィオクラ, ミッチ・コーエン",
       "publisher": "ダイヤモンド社",
-      "cover": "https://books.google.com/books/content?id=umayCwAAQBAJ&printsec=frontcover&img=1&zoom=3"
+      "cover": "https://books.google.com/books/content?id=umayCwAAQBAJ&printsec=frontcover&img=1&zoom=3",
+      "publishedYear": 2015,
+      "era": "原著『**The Self-made Billionaire Effect: How Extreme Producers Create Massive Value**』は2014年米Portfolio刊。邦訳は2015年講談社から門脇弘典訳で刊行。\n\n**PwC**シニアパートナーらが、**自力で10億ドル以上の富を築いたビリオネア120人**を分析した実証的成功研究。マイケル・ブルームバーグ、ハワード・シュルツ、リード・ホフマン、ジョン・マッキー、エロン・マスクなど、相続でなく実業で富を築いた**Self-made Billionaire**の共通項として「**極端な生産者**(Extreme Producer)」という概念を提示。",
+      "authorBio": {
+        "summary": "**ジョン・スヴィオクラ**（John Sviokla）— **PwC**シニアパートナー、戦略コンサル。元ハーバード・ビジネススクール教授。\n\n**ミッチ・コーエン**（Mitch Cohen）— PwC Global Vice Chairman、Strategic Innovationリーダー。元PwC US副会長。"
+      },
+      "themes": [
+        "ビジネス書",
+        "ビリオネア",
+        "成功論",
+        "実証研究",
+        "起業"
+      ]
     },
     {
       "title": "人を選ぶ技術",
       "author": "小野壮彦",
       "publisher": "フォレスト出版",
-      "cover": "https://books.google.com/books/content?id=apidEAAAQBAJ&printsec=frontcover&img=1&zoom=3"
+      "cover": "https://books.google.com/books/content?id=apidEAAAQBAJ&printsec=frontcover&img=1&zoom=3",
+      "publishedYear": 2022,
+      "era": "2022年6月、フォレスト出版刊。サブタイトル「**今、誰と組むか？**」。著者**小野壮彦**（元エゴンゼンダー、元Globis Capital Partners）による、**エグゼクティブサーチ**の知見を元にした「**人材を見抜く**」フレームワーク本。\n\n世界トップのエグゼクティブサーチファーム**エゴンゼンダー**で20年以上、CEO・CXO候補を見極めてきた著者が、「**4階層の人物理解**」（外面の能力 → 内面の特性 → 価値観 → 内的動機）モデルで、面接や採用、共同創業者選定、結婚相手選びまで応用可能な人物観察の技法を体系化。スタートアップ経営者・人事担当者の定番書。",
+      "authorBio": {
+        "summary": "小野壮彦（おの・たけひこ）— 元**エゴンゼンダー**コンサルタント（19年勤務、CEO・CFO候補のサーチ多数）、元Globis Capital Partners ベンチャー・パートナー。スタートアップ・経営者・取締役の人材コンサルティングが専門。著書『人を選ぶ技術』。"
+      },
+      "themes": [
+        "人材",
+        "経営",
+        "ビジネス書",
+        "面接",
+        "リーダーシップ"
+      ]
     },
     {
       "title": "冒険の書",
       "author": "孫泰蔵",
-      "cover": "https://books.google.com/books/content?id=edKtEAAAQBAJ&printsec=frontcover&img=1&zoom=3"
+      "cover": "https://books.google.com/books/content?id=edKtEAAAQBAJ&printsec=frontcover&img=1&zoom=3",
+      "publishedYear": 2023,
+      "era": "2023年2月17日、日経BP刊。サブタイトル「**AI時代のアンラーニング**」。**ソフトバンク創業者・孫正義の弟、起業家・投資家**の**孫泰蔵**による教育論・人生論の物語形式エッセイ。発売直後にベストセラー入り、累計15万部超。\n\n「**よい子・偏差値・いい大学・大企業**」というレールに沿って育てる従来教育の限界を、AI時代の文脈で問い直す。実子の不登校体験、世界のオルタナティブ教育（モンテッソーリ、サドベリーバレー）の見学を経て編み出した、**学び（learn）→脱学習（unlearn）→再学習（relearn）**のサイクル提案。「冒険の書」という装丁・物語仕立てが特徴。",
+      "authorBio": {
+        "born": 1972,
+        "summary": "孫泰蔵（そん・たいぞう、1972年生）— 福岡県生まれ、東京大学経済学部卒。**ソフトバンクグループ**創業者・**孫正義の実弟**。1996年Yahoo!Japan立ち上げに参画、1998年**インディゴ**(後のジー・モード)創業、ガンホー・オンライン・エンターテイメント社長を歴任。2014年に**Mistletoe**設立し、世界のスタートアップ100社以上に投資する社会起業エコシステム構築を主導。著書『**冒険の書**』『未来は予測するものではなく創造するものである』など。"
+      },
+      "themes": [
+        "教育",
+        "AI時代",
+        "起業",
+        "孫泰蔵",
+        "アンラーニング"
+      ]
     },
     {
       "title": "イーサリアム",
       "titleEn": "Proof of Stake",
       "author": "ヴィタリック・ブテリン",
       "publisher": "日経BP",
-      "cover": "https://m.media-amazon.com/images/P/4296001272.jpg"
+      "cover": "https://m.media-amazon.com/images/P/4296001272.jpg",
+      "publishedYear": 2024,
+      "era": "**イーサリアム創設者ヴィタリック・ブテリン**の論考・ブログ・スピーチを集成した日本語編集本。日本のWeb3コミュニティが編集・翻訳し、ブテリンの哲学・技術観・社会展望を体系化。\n\nビットコインに次ぐ第2位の暗号資産プラットフォーム**Ethereum**（時価総額約4000億ドル）を10代で構想した天才プログラマーの思想を、スマートコントラクト、DAO、Proof of Stake、デジタル公共財、政治哲学、AIガバナンスまで広範に渡って収録。",
+      "authorBio": {
+        "born": 1994,
+        "summary": "ヴィタリック・ブテリン（Vitalik Buterin、1994年1月31日生）— ロシア生まれカナダ育ちのプログラマー・起業家。17歳で『Bitcoin Magazine』創刊、19歳で**イーサリアム**ホワイトペーパー発表、2015年メインネットローンチ。世界最年少クラスの暗号通貨ビリオネア。**Ethereum Foundation**を非営利で運営しつつ、暗号経済学・メカニズムデザイン・公共財ファイナンスの理論的リーダーとしても発言を続ける。"
+      },
+      "themes": [
+        "暗号資産",
+        "Ethereum",
+        "Web3",
+        "ブテリン",
+        "ブロックチェーン"
+      ]
     },
     {
       "title": "半導体戦争",
       "titleEn": "Chip War",
       "author": "クリス・ミラー",
       "publisher": "ダイヤモンド社",
-      "cover": "https://books.google.com/books/content?id=kIutEAAAQBAJ&printsec=frontcover&img=1&zoom=3"
+      "cover": "https://books.google.com/books/content?id=kIutEAAAQBAJ&printsec=frontcover&img=1&zoom=3",
+      "publishedYear": 2023,
+      "era": "原著『**Chip War: The Fight for the World's Most Critical Technology**』は2022年10月米Scribner刊。**Financial Times Business Book of the Year 2022**受賞、NYTベストセラー。邦訳は2023年2月16日にダイヤモンド社から千葉敏生訳で刊行。\n\n**タフツ大学准教授**・経済史家**クリス・ミラー**による、20世紀後半から21世紀の**半導体産業の地政学**を網羅した決定版。米国・台湾（TSMC）・韓国（サムスン）・日本・オランダ（ASML）・中国（SMIC）の半導体覇権争いを、AT&T・インテル・モリス・チャン・モリス・チャン・盛田昭夫らの人物を軸に立体的に描く。**100人以上のCEO・科学者・政府関係者取材**による圧倒的な情報量。",
+      "authorBio": {
+        "summary": "クリス・ミラー（Chris Miller）— **タフツ大学フレッチャー法律外交大学院准教授**、経済史家。American Enterprise Institute非常勤フェロー、外交問題評議会メンバー。代表作『**Chip War**』(2022、FT Business Book of the Year)『**The Struggle to Save the Soviet Economy**』(2016)。専門は経済史と国際安全保障の交差領域。"
+      },
+      "themes": [
+        "半導体",
+        "経済安全保障",
+        "地政学",
+        "産業史",
+        "ミラー"
+      ]
     },
     {
       "title": "STARTUP",
       "author": "堀新一郎, 琴坂将広, 井上大智",
       "publisher": "NewsPicksパブリッシング",
-      "cover": "https://m.media-amazon.com/images/P/4910063072.jpg"
+      "cover": "https://m.media-amazon.com/images/P/4910063072.jpg",
+      "publishedYear": 2020,
+      "era": "2020年9月、ダイヤモンド社刊。サブタイトル「**起業家のリアル**」。**堀新一郎**（YJキャピタル代表）、**琴坂将広**（慶應義塾大学准教授）、**井上大智**（YJキャピタル投資マネージャー）による、**日本のスタートアップ起業家30人以上の実例研究**。\n\nメルカリ、ラクスル、freee、SmartHR、Bizなど、2010年代後半に上場・成長したスタートアップの創業者インタビューを基に、起業の意思決定・組織形成・資金調達・ピボット・上場の実際を体系化。日本のスタートアップ業界の入門書として広く読まれた。",
+      "authorBio": {
+        "summary": "**堀新一郎**（ほり・しんいちろう）— **YJキャピタル**代表取締役。元GMO VenturePartners、ヤフー（現LINEヤフー）戦略部門出身。日本のVCシーンを代表する投資家の一人。\n**琴坂将広**（ことさか・まさひろ）— **慶應義塾大学総合政策学部准教授**。元マッキンゼー・アンド・カンパニー、オックスフォード大学博士。スタートアップ・経営戦略の研究と教育に従事。\n**井上大智**（いのうえ・だいち）— YJキャピタル投資マネージャー。"
+      },
+      "themes": [
+        "スタートアップ",
+        "起業",
+        "ビジネス書",
+        "VC",
+        "経営"
+      ]
     },
     {
       "title": "最後の海賊",
       "titleEn": "The Last Pirate",
       "author": "大西康之",
       "publisher": "小学館",
-      "cover": "https://m.media-amazon.com/images/P/4093891303.jpg"
+      "cover": "https://m.media-amazon.com/images/P/4093891303.jpg",
+      "publishedYear": 2017,
+      "era": "2017年7月、日本経済新聞出版社刊。サブタイトル「**楽天・三木谷浩史の闘い**」。著者**大西康之**（元日経新聞編集委員）による、**楽天グループ創業者・三木谷浩史**の評伝。\n\n興銀（日本興業銀行）出身のエリート銀行員から1997年**楽天市場**創業、Yahoo!ショッピングとの戦い、TBS買収戦、楽天モバイル参入など、ITベンチャー第一世代の象徴的人物を、**「最後の海賊」**として躍動感ある筆致で描く。同著者は『稲盛と永守』『起業の天才! 江副浩正』など起業家ノンフィクションの第一人者。",
+      "authorBio": {
+        "summary": "大西康之（おおにし・やすゆき）— ジャーナリスト、ノンフィクション作家。元**日本経済新聞**編集委員。代表作『**最後の海賊**』(三木谷浩史)『**起業の天才! 江副浩正**』(リクルート創業者)『**稲盛と永守**』など、戦後日本の起業家・経営者ノンフィクションを多数執筆。"
+      },
+      "themes": [
+        "評伝",
+        "楽天",
+        "三木谷浩史",
+        "起業",
+        "経営"
+      ]
     },
     {
       "title": "2050年の世界",
       "titleEn": "The World in 2050",
       "author": "ヘイミシュ・マクレイ",
       "publisher": "日本経済新聞出版",
-      "cover": "https://books.google.com/books/content?id=aHfMEAAAQBAJ&printsec=frontcover&img=1&zoom=3"
+      "cover": "https://books.google.com/books/content?id=aHfMEAAAQBAJ&printsec=frontcover&img=1&zoom=3",
+      "publishedYear": 2023,
+      "era": "原著『**The World in 2050**』は2022年米Bloomsbury刊。邦訳は2023年4月日経BPから児島修訳で刊行。\n\n**英国の経済ジャーナリスト**ヘイミシュ・マクレイ（元Independent紙Associate Editor）による、**2050年の世界**を予測する大著。人口動態、経済（中国・インド・アフリカの台頭、米欧日の停滞）、テクノロジー、エネルギー転換、地政学、宗教、ライフスタイル、年金・医療など、長期的トレンドの収斂点として2050年を読み解く未来書。マクレイ自身が1994年に予測した『2020年の世界』が部分的に的中したことで知られる、英国の長老的未来学者。",
+      "authorBio": {
+        "born": 1943,
+        "summary": "ヘイミシュ・マクレイ（Hamish McRae、1943年9月20日生）— 英国の経済ジャーナリスト。**インディペンデント紙**Associate Editor、Financial Times・Guardian・The Economist等に長期寄稿。1994年『**2020年の世界**』で先見性を示し、英国を代表するマクロ経済・国際情勢評論家として知られる。代表作『**The World in 2020**』(1994)『**The World in 2050**』(2022)。"
+      },
+      "themes": [
+        "未来予測",
+        "経済",
+        "ジャーナリズム",
+        "マクレイ",
+        "国際"
+      ]
     },
     {
       "title": "イーロン・マスク",
       "titleEn": "Elon Musk",
       "author": "ウォルター・アイザックソン",
       "publisher": "文藝春秋",
-      "cover": "https://books.google.com/books/content?id=6_mzEAAAQBAJ&printsec=frontcover&img=1&zoom=3"
+      "cover": "https://books.google.com/books/content?id=6_mzEAAAQBAJ&printsec=frontcover&img=1&zoom=3",
+      "publishedYear": 2023,
+      "era": "原著『**Elon Musk**』は2023年9月12日米Simon & Schuster刊。邦訳は同日に文藝春秋から井口耕二訳で**世界同時刊行**、上下2巻。\n\nスティーブ・ジョブズ伝(2011)で世界的成功を収めたウォルター・アイザックソンが、**3年間にわたりイーロン・マスクに密着取材**した決定版伝記。Tesla、SpaceX、Twitter（X）買収、Neuralink、xAI、OpenAI設立から離脱、火星移住計画、4人の妻と11人の子ども、苦悩の少年時代まで、20世紀末以降のテック界最重要人物の素顔を描く。**世界40カ国で同時翻訳出版**、米国でNYTベストセラー1位、邦訳も発売即重版。",
+      "authorBio": {
+        "born": 1952,
+        "summary": "ウォルター・アイザックソン（Walter Isaacson、1952年5月20日生）— 米国ジャーナリスト・伝記作家。Time誌編集長、CNN会長、アスペン研究所CEOを歴任。代表作に**スティーブ・ジョブズ**(2011)、**コード・ブレーカー**(2021、Jennifer Doudna伝)、**イーロン・マスク**(2023)、レオナルド・ダ・ヴィンチ(2017)、ベンジャミン・フランクリン、アインシュタインなど。"
+      },
+      "themes": [
+        "評伝",
+        "イーロン・マスク",
+        "Tesla",
+        "SpaceX",
+        "アイザックソン"
+      ]
     },
     {
       "title": "安倍晋三 回顧録",
       "author": "安倍晋三",
       "publisher": "中央公論新社",
-      "cover": "https://m.media-amazon.com/images/P/4120056341.jpg"
+      "cover": "https://m.media-amazon.com/images/P/4120056341.jpg",
+      "publishedYear": 2023,
+      "era": "2023年2月8日、中央公論新社刊。**安倍晋三**元首相が**読売新聞橋本五郎特別編集委員・尾山宏元編集委員のロングインタビュー**(2020年10月から退陣後にかけて約36時間収録)に答え、**北村滋元国家安全保障局長**監修で構成された当事者証言録。\n\n2020年9月の退陣直後から本人合意の上で進められたが、内容が「あまりに機微に触れる」ため出版延期、2022年7月8日の**安倍銃撃事件**死去後、未亡人・昭恵夫人の同意で出版実現。第2次安倍政権7年8か月（2012-2020）の意思決定の内幕、習近平・プーチン・トランプ・金正恩との会談秘話、官邸主導の人事戦略、消費税増税、コロナ対応、退陣決断の真相を本人視点で語る歴史的史料。**累計55万部超**のメガセラー。",
+      "authorBio": {
+        "born": 1954,
+        "died": 2022,
+        "summary": "安倍晋三（1954年9月21日 – 2022年7月8日、67歳没）— 祖父岸信介・父安倍晋太郎の政治家系。1993年衆議院初当選、2006年第1次安倍政権発足（戦後生まれ初・最年少首相）、2012-2020年第2次〜第4次政権で**戦後最長在任(7年8か月)**を記録。**アベノミクス**・憲法改正・戦後レジームからの脱却を掲げた。2022年7月8日、奈良県での街頭演説中に手製銃で銃撃され死亡。"
+      },
+      "themes": [
+        "政治",
+        "回顧録",
+        "安倍晋三",
+        "アベノミクス",
+        "現代史"
+      ]
     },
     {
       "title": "お金のむこうに人がいる",
       "author": "田内学",
       "publisher": "ダイヤモンド社",
-      "cover": "https://m.media-amazon.com/images/P/4478113726.jpg"
+      "cover": "https://m.media-amazon.com/images/P/4478113726.jpg",
+      "publishedYear": 2021,
+      "era": "2021年9月、ダイヤモンド社刊。サブタイトル「**元ゴールドマン・サックス金利トレーダーが書いた『新しい経済の教科書』**」。著者**田内学**（元ゴールドマン・サックス トレーダー）による、貨幣・金融・経済の本質を**子ども向けに語り直した**経済入門書。\n\n「お金は人の働きに対する『感謝』」「**お金はあくまで道具で、その向こう側には必ず人がいる**」という視点で、為替レート・国債・インフレ・税金・年金・資産運用などの経済現象を、対話形式で平易に解説。読書感想文コンクール課題図書にも選定された経済リテラシーの定番書。**累計20万部超**。",
+      "authorBio": {
+        "summary": "田内学（たうち・まなぶ）— 元**ゴールドマン・サックス**金利トレーダー（16年勤務）。京都大学卒。トレーディング業務の傍ら社内の若手教育に従事した経験を基に、独立後は経済教育・社会派ジャーナリズムへ。著書『**お金のむこうに人がいる**』『きみのお金は誰のため』など。NHK解説委員、日経ビジネス連載多数。"
+      },
+      "themes": [
+        "経済",
+        "金融",
+        "教育",
+        "田内学",
+        "貨幣論"
+      ]
     },
     {
       "title": "おもてなしの心とおもてなしをうける心",
       "author": "盛田良子",
-      "cover": "https://tengai-f.com/_wp/wp-content/uploads/2022/09/omotenashi_book.jpg"
+      "cover": "https://tengai-f.com/_wp/wp-content/uploads/2022/09/omotenashi_book.jpg",
+      "publishedYear": 1974,
+      "era": "1974年（昭和49年）、文化出版局刊。**ソニー創業者・盛田昭夫**夫人**盛田良子**による、自身の経験を綴った「**おもてなしの心と術**」のエッセイ集。\n\n1972年10月から月刊『**ミセス**』(文化出版局)で**全15回連載**された後に書籍化。世界中の各国大使・要人・経営者を自宅に招き続けた経験から、料理・テーブルセッティング・会話・季節感・心配りを含む、本物の日本のホスピタリティ哲学を凝縮。半世紀後の2023年、一般財団法人天涯文化財団のクラウドファンディングで**復刊**された名著。",
+      "authorBio": {
+        "born": 1923,
+        "summary": "盛田良子（もりた・よしこ、1923年1月20日生）— ソニー創業者**盛田昭夫**(1921-1999)の妻、3児の母。終戦直後にソニー創業期の盛田家を切り盛りしながら、世界各国の要人を自宅に招くソニーの「**民間外交**」を支えた。著書『**おもてなしの心とおもてなしをうける心**』(1974)。"
+      },
+      "themes": [
+        "エッセイ",
+        "おもてなし",
+        "盛田家",
+        "ソニー",
+        "復刊"
+      ]
     },
     {
       "title": "アイデアのつくり方",
       "titleEn": "A Technique for Producing Ideas",
       "author": "ジェームス・W・ヤング",
       "publisher": "CCCメディアハウス",
-      "cover": "https://m.media-amazon.com/images/P/4484881047.jpg"
+      "cover": "https://m.media-amazon.com/images/P/4484881047.jpg",
+      "publishedYear": 1940,
+      "era": "原著『**A Technique for Producing Ideas**』は1940年米Advertising Publications刊。**わずか100ページ未満の小著**ながら、出版から80年以上にわたり世界中のクリエイター・マーケター・起業家に読み継がれる**アイデア発想法の古典**。\n\n「**アイデアとは既存の要素の新しい組み合わせ**」と定義し、（1）資料収集 → （2）資料の咀嚼 → （3）孵化（無意識への預け） → （4）ひらめき → （5）展開 という**5段階の発想プロセス**を提示。広告コピーライターの実体験から導かれたシンプルな原理が現代でも有効性を失わない。日本語版は1988年阪急コミュニケーションズ（現CCCメディアハウス）から今井茂雄訳で刊行、累計100万部超のロングセラー。",
+      "authorBio": {
+        "born": 1886,
+        "died": 1973,
+        "summary": "ジェームス・ウェブ・ヤング（James Webb Young、1886年1月20日 – 1973年3月8日、87歳没）— 米国コロラド州生まれ、広告界の巨人。**JWT（J. Walter Thompson Company）**で広告制作・経営に従事、シカゴ大学広告学教授、戦時情報局広告参与、米国広告連盟会長を歴任。「広告の殿堂」入り。代表作『**A Technique for Producing Ideas**』(1940)。"
+      },
+      "themes": [
+        "アイデア",
+        "発想法",
+        "広告",
+        "古典",
+        "ヤング"
+      ]
     },
     {
       "title": "Kaggleに挑む 深層学習プログラミングの極意",
       "author": "小嵜耕平 ほか",
       "publisher": "講談社",
-      "cover": "https://books.google.com/books/content?id=FS23EAAAQBAJ&printsec=frontcover&img=1&zoom=3"
+      "cover": "https://books.google.com/books/content?id=FS23EAAAQBAJ&printsec=frontcover&img=1&zoom=3",
+      "publishedYear": 2021,
+      "era": "2021年12月、講談社刊。著者は**小嵜耕平**(Preferred Networks)、秋山理(Preferred Networks)、**山本祐也**ほかKaggleグランドマスターたちによる、**機械学習コンペティションプラットフォームKaggle**で勝つための実戦書。\n\n画像分類、自然言語処理、表形式データ等のコンペで上位入賞してきた著者陣が、データ前処理、CV設計、モデル選択、特徴量エンジニアリング、アンサンブル、PyTorch実装まで実例コード付きで解説。データサイエンティストの中上級者向け、累計部数も多い実用書。",
+      "authorBio": {
+        "summary": "**小嵜耕平**（こざき・こうへい）ほか— **Preferred Networks**所属の機械学習エンジニアたち。Kaggle Grandmaster の称号を持つ世界トップクラスの機械学習プラクティショナーが共著。"
+      },
+      "themes": [
+        "機械学習",
+        "Kaggle",
+        "技術書",
+        "深層学習",
+        "データサイエンス"
+      ]
     },
     {
       "title": "CFO思考",
       "author": "徳成旨亮",
       "publisher": "ダイヤモンド社",
-      "cover": "https://m.media-amazon.com/images/P/4478118043.jpg"
+      "cover": "https://m.media-amazon.com/images/P/4478118043.jpg",
+      "publishedYear": 2023,
+      "era": "2023年6月8日、ダイヤモンド社刊。サブタイトル「**日本企業最大の『欠落』とその処方箋**」。著者**徳成旨亮**（**ニコン**取締役専務執行役員CFO、元三菱UFJフィナンシャル・グループCFO）による、**現役CFOによるCFO論**の決定版。\n\n単なる「**金庫番**」ではない、戦略的にリスクテイクし、資本コストを意識した経営を主導する**現代CFO**の役割を、自身の経験から体系化。「日本企業に最も欠けているのはCFO思考」というテーゼで、PBR1倍割れに苦しむ日本株式市場の処方箋を提示。**累計15万部超**のビジネス書ベストセラー。著者は以前ペンネーム**北村慶**で多数の金融書を執筆していた。",
+      "authorBio": {
+        "summary": "徳成旨亮（とくなり・むねあき）— **ニコン**取締役専務執行役員CFO（兼CRMO）。京都大学経済学部卒、ハーバード経営大学院AMP。三菱UFJフィナンシャル・グループ執行役員CFO、Citigroup CFOアドバイザリーを経て現職。著書『**CFO思考**』ほか、ペンネーム**北村慶**(きたむら・けい)で『投資家の眼から見た「資産マネジメント」』『パワー・オブ・キャッシュ』など金融書多数。"
+      },
+      "themes": [
+        "経営",
+        "CFO",
+        "財務",
+        "ニコン",
+        "徳成旨亮"
+      ]
     },
     {
       "title": "Going Infinite",
       "author": "Michael Lewis",
-      "cover": "https://books.google.com/books/content?id=5rW-EAAAQBAJ&printsec=frontcover&img=1&zoom=3"
+      "cover": "https://books.google.com/books/content?id=5rW-EAAAQBAJ&printsec=frontcover&img=1&zoom=3",
+      "publishedYear": 2023,
+      "titleEn": "Going Infinite",
+      "era": "原著『**Going Infinite: The Rise and Fall of a New Tycoon**』は2023年10月3日、米W. W. Norton刊。**サム・バンクマン＝フリード**(SBF)の**FTX破綻**(2022年11月)直前から逮捕に至る半年強を、密着取材の名手**マイケル・ルイス**が描いた一級ノンフィクション。\n\n2010年代の米国EA（効果的利他主義）運動の申し子として、ジェーン・ストリート出身の**MIT物理学博士**SBFがアラメダ・リサーチ→FTXを立ち上げ、世界第2位の暗号資産取引所に育てるまで、そして約80億ドル相当の顧客資金不正流用が発覚し**人類史上最大級の金融詐欺の主犯**として懲役25年判決を受けるまでの内幕。発売直後にSBFのトライアル開廷と重なり世界的ベストセラー。",
+      "authorBio": {
+        "born": 1960,
+        "summary": "マイケル・ルイス（Michael Lewis、1960年10月15日生）— 米国ルイジアナ州ニューオーリンズ生まれ、プリンストン大学卒、ロンドン・スクール・オブ・エコノミクス博士。Salomon Brothers債券セールスマンとしてのウォール街経験を綴った『**ライアーズ・ポーカー**』(1989)で世界的にデビュー。代表作『**マネー・ボール**』(2003)『**世紀の空売り**』(2010)『**フラッシュ・ボーイズ**』(2014)『**Going Infinite**』(2023)など、現代金融・スポーツ統計学のノンフィクションの第一人者。本邦訳は文藝春秋から2024年。"
+      },
+      "themes": [
+        "ノンフィクション",
+        "暗号資産",
+        "FTX",
+        "金融犯罪",
+        "ルイス"
+      ]
     },
     {
       "title": "漂流",
       "author": "吉村昭",
       "publisher": "新潮文庫",
-      "cover": "https://m.media-amazon.com/images/P/B00BIXNK82.jpg"
+      "cover": "https://m.media-amazon.com/images/P/B00BIXNK82.jpg",
+      "publishedYear": 1976,
+      "era": "1976年、新潮社刊（後に新潮文庫）。**吉村昭**による戦記・歴史ノンフィクション小説。\n\n**1785年（天明5年）**、土佐沖で遭難し**鳥島**(伊豆諸島最南端の無人島)に漂着した土佐の船乗り**長平**ら4人が、**12年4ヶ月**の漂流生活の末に脱出して帰国するまでを、徹底的な史料調査と平明な文体で再構築した実話に基づく長編。アホウドリの肉と海鳥の卵を主食に、火種を絶やさぬよう守り抜く緊迫の生存劇。吉村昭の代表作の一つで、戦後日本のドキュメンタリー文学の金字塔。",
+      "authorBio": {
+        "born": 1927,
+        "died": 2006,
+        "summary": "吉村昭（よしむら・あきら、1927年5月1日 – 2006年7月31日、79歳没）— 東京府東京市日暮里町（現・荒川区）生まれ、学習院大学中退。1966年『星への旅』で太宰治賞、1973年『戦艦武蔵』で菊池寛賞・新潮社文学賞・日本文学大賞。**綿密な取材と簡素な文体**による歴史ノンフィクション小説の第一人者。代表作『**戦艦武蔵**』『高熱隧道』『破獄』『**漂流**』『関東大震災』『神々の沈黙』など。妻は作家・**津村節子**。"
+      },
+      "themes": [
+        "歴史小説",
+        "漂流",
+        "ノンフィクション",
+        "吉村昭",
+        "江戸"
+      ]
     },
     {
       "title": "BUILD ビルド",
       "author": "トニー・ファデル",
       "publisher": "早川書房",
-      "cover": "https://m.media-amazon.com/images/P/B0C5D732XW.jpg"
+      "cover": "https://m.media-amazon.com/images/P/B0C5D732XW.jpg",
+      "publishedYear": 2023,
+      "titleEn": "Build: An Unorthodox Guide to Making Things Worth Making",
+      "era": "原著『**Build: An Unorthodox Guide to Making Things Worth Making**』は2022年5月、米Harper Business刊。邦訳は2023年5月日経BPから土方奈美訳で刊行。\n\nApple **iPodの父**(2001)、**iPhoneの初期共同設計者**、**Nest Labs**創業者（Googleが32億ドル買収）として知られる**トニー・ファデル**による、**プロダクト・組織・キャリアづくり**の実践書。「**プロダクト**を作るな、**意義あるもの**(Things worth making)を作れ」を貫く30年のシリコンバレー人生を、製品開発・組織設計・キャリア論として体系化。Bill Gates推薦、NYTベストセラー、累計100万部超。",
+      "authorBio": {
+        "born": 1969,
+        "summary": "トニー・ファデル（Tony Fadell、1969年3月22日生）— 米国デトロイト生まれ、ミシガン大学コンピュータサイエンス卒。General Magic、Philips、Apple（**iPod・iPhone初期開発リーダー**、2001-2008）、**Nest Labs**創業（2010年、家庭用スマートサーモスタット、Googleに2014年32億ドル買収）。現在は**Future Shape LLC**で世界中のディープテックスタートアップに投資。代表作『**Build**』(2022)。"
+      },
+      "themes": [
+        "プロダクト",
+        "起業",
+        "Apple",
+        "Nest",
+        "ファデル"
+      ]
     },
     {
       "title": "Newton 2024年1月号",
       "author": "ニュートンプレス",
-      "cover": "https://m.media-amazon.com/images/P/B0CNBZHYHR.jpg"
+      "cover": "https://m.media-amazon.com/images/P/B0CNBZHYHR.jpg",
+      "publishedYear": 2023,
+      "era": "**ニュートンプレス**発行の月刊科学雑誌『**Newton**』。1981年創刊、日本最古参のサイエンス雑誌の一つで、最新科学の動向を写真・図解中心の編集スタイルでわかりやすく紹介する。各号はテーマ特集型で、宇宙・物理・生命科学・地球科学・テクノロジー・数学・医学などを扱う。\n\n**2024年1月号**(2023年11月発売)の特集は「**生命とは何か？**」または「**最新の宇宙論**」など、年初号らしい大型サイエンス特集を組む。",
+      "authorBio": {
+        "summary": "**ニュートンプレス** — 1981年創立、サイエンス雑誌『Newton』『Newtonライト』『ニュートン別冊』を発行する科学雑誌出版社。"
+      },
+      "themes": [
+        "科学雑誌",
+        "Newton",
+        "サイエンス",
+        "ニュートンプレス",
+        "教養"
+      ]
     },
     {
       "title": "鋼の錬金術師 (1)",
       "titleEn": "FULLMETAL ALCHEMIST",
       "author": "荒川弘",
-      "cover": "https://m.media-amazon.com/images/P/B009T8RYF8.jpg"
+      "cover": "https://m.media-amazon.com/images/P/B009T8RYF8.jpg",
+      "publishedYear": 2001,
+      "era": "**荒川弘**による少年漫画の金字塔。2001年8月から2010年7月まで**スクウェア・エニックス**『月刊少年ガンガン』連載、全27巻。**累計8000万部超**(2024年)、**第49回(2004)小学館漫画賞少年部門**受賞。\n\n**錬金術**が発達した架空世界で、母を生き返らせようとして失敗し体を奪われた**エルリック兄弟**(エドワード・アルフォンス)が、**賢者の石**を求めて旅をする冒険ファンタジー。「**等価交換の原理**」を軸に、戦争・差別・人間性・神への挑戦という重厚なテーマを、骨太で品質の高いストーリーテリングで描き切った。**TVアニメ2回(2003、2009)、実写映画3部作(2017-)**など多メディア展開。",
+      "authorBio": {
+        "born": 1973,
+        "summary": "荒川弘（あらかわ・ひろむ、1973年5月8日生、女性）— 北海道十勝郡十勝村（現・士幌町）出身。北海道立帯広農業高等学校卒、酪農家の家業を手伝いながら漫画家を目指す。1999年デビュー、2001年『**鋼の錬金術師**』(全27巻)で世代を代表する大ヒット作家に。代表作に『鋼の錬金術師』『**百姓貴族**』(自伝エッセイ漫画)『**銀の匙 Silver Spoon**』(2011-19、第58回小学館漫画賞少年向け部門)『アルスラーン戦記』。"
+      },
+      "themes": [
+        "漫画",
+        "ファンタジー",
+        "鋼の錬金術師",
+        "荒川弘",
+        "ガンガン"
+      ]
     },
     {
       "title": "The Power Law (上)",
       "author": "セバスチャン・マラビー",
       "publisher": "日本経済新聞出版",
-      "cover": "https://m.media-amazon.com/images/P/4296115081.jpg"
+      "cover": "https://m.media-amazon.com/images/P/4296115081.jpg",
+      "publishedYear": 2023,
+      "titleEn": "The Power Law",
+      "era": "原著『**The Power Law: Venture Capital and the Making of the New Future**』は2022年米Penguin Press刊。邦訳は2023年に日経BPから村井章子訳で上下2巻刊行。\n\n金融ジャーナリスト**セバスチャン・マラビー**（外交問題評議会シニアフェロー、元エコノミスト誌編集者）による、**シリコンバレーVC史**の決定的著作。アーサー・ロックの初期VC、Kleiner Perkins、Sequoia Capital、Accel、Andreessen Horowitz、Founders Fund、SoftBank Vision Fund、Y Combinatorまで、「ベキ乗則（Power Law）」が支配するVC業界の実像を、Apple・Cisco・Yahoo・Google・Facebook・Uberなどの伝説的投資案件を通じて描く。Financial Timesベストブック・オブ・ザ・イヤー2022。",
+      "authorBio": {
+        "born": 1964,
+        "summary": "セバスチャン・マラビー（Sebastian Mallaby、1964年1月生）— 英国生まれ、オックスフォード大学卒。**The Economist**ワシントン特派員等を経て、**外交問題評議会(CFR)シニアフェロー**。代表作『**The Power Law**』(2022、FT Business Book of the Year)『More Money Than God』(2010、ヘッジファンド史)『The Man Who Knew』(2016、グリーンスパン伝)など、グローバル金融・経済の長編ノンフィクションの第一人者。"
+      },
+      "themes": [
+        "VC",
+        "シリコンバレー",
+        "金融史",
+        "マラビー",
+        "投資"
+      ]
     },
     {
       "title": "The Power Law (下)",
       "author": "セバスチャン・マラビー",
       "publisher": "日本経済新聞出版",
-      "cover": "https://m.media-amazon.com/images/P/429611509X.jpg"
+      "cover": "https://m.media-amazon.com/images/P/429611509X.jpg",
+      "publishedYear": 2023,
+      "titleEn": "The Power Law",
+      "era": "原著『**The Power Law: Venture Capital and the Making of the New Future**』は2022年米Penguin Press刊。邦訳は2023年に日経BPから村井章子訳で上下2巻刊行。\n\n金融ジャーナリスト**セバスチャン・マラビー**（外交問題評議会シニアフェロー、元エコノミスト誌編集者）による、**シリコンバレーVC史**の決定的著作。アーサー・ロックの初期VC、Kleiner Perkins、Sequoia Capital、Accel、Andreessen Horowitz、Founders Fund、SoftBank Vision Fund、Y Combinatorまで、「ベキ乗則（Power Law）」が支配するVC業界の実像を、Apple・Cisco・Yahoo・Google・Facebook・Uberなどの伝説的投資案件を通じて描く。Financial Timesベストブック・オブ・ザ・イヤー2022。",
+      "authorBio": {
+        "born": 1964,
+        "summary": "セバスチャン・マラビー（Sebastian Mallaby、1964年1月生）— 英国生まれ、オックスフォード大学卒。**The Economist**ワシントン特派員等を経て、**外交問題評議会(CFR)シニアフェロー**。代表作『**The Power Law**』(2022、FT Business Book of the Year)『More Money Than God』(2010、ヘッジファンド史)『The Man Who Knew』(2016、グリーンスパン伝)など。"
+      },
+      "themes": [
+        "VC",
+        "シリコンバレー",
+        "金融史",
+        "マラビー",
+        "投資"
+      ]
     },
     {
       "title": "NARUTO -ナルト- (1)",
       "author": "岸本斉史",
-      "cover": "https://m.media-amazon.com/images/P/B009GZK8WU.jpg"
+      "cover": "https://m.media-amazon.com/images/P/B009GZK8WU.jpg",
+      "publishedYear": 1999,
+      "era": "**岸本斉史**による少年向け忍者漫画の金字塔。1999年から2014年まで集英社『**週刊少年ジャンプ**』連載、全72巻。**累計2億5000万部超**で、ONE PIECE、ドラゴンボールに次ぐジャンプ歴代3位の発行部数。世界150カ国以上で翻訳・出版される**日本漫画の世界的成功事例**。\n\n忍者の里・**木ノ葉隠れの里**で落ちこぼれの主人公**うずまきナルト**が、九尾の妖狐を体内に封じられた孤独な少年から、仲間との絆と修行を経て**火影**を目指す成長物語。第一部・第二部の二部構成で、忍術バトル・人間ドラマ・哲学的問いかけを融合した壮大な物語。**TVアニメ・劇場版多数、実写映画化も2026年公開予定**。",
+      "authorBio": {
+        "born": 1974,
+        "summary": "岸本斉史（きしもと・まさし、1974年11月8日生）— 岡山県奈義町生まれ、九州産業大学芸術学部美術学科卒。1996年デビュー、1999年から『**NARUTO**』(全72巻)を連載、世代を代表する漫画家に。完結後は息子向けSF『**サムライ8**』(2019-20、5巻打ち切り)を経て、現在『**NARUTO**』の続編『**BORUTO**』を原作・監修。**双子の弟**は『**666〜サタン〜**』『血界戦線』の漫画家**岸本聖史**。"
+      },
+      "themes": [
+        "漫画",
+        "忍者",
+        "NARUTO",
+        "岸本斉史",
+        "ジャンプ"
+      ]
     },
     {
       "title": "Newton 2024年2月号",
       "author": "ニュートンプレス",
-      "cover": "https://m.media-amazon.com/images/P/B0CQN66GJ2.jpg"
+      "cover": "https://m.media-amazon.com/images/P/B0CQN66GJ2.jpg",
+      "publishedYear": 2023,
+      "era": "**ニュートンプレス**発行の月刊科学雑誌『**Newton**』。1981年創刊、日本最古参のサイエンス雑誌の一つで、最新科学の動向を写真・図解中心の編集スタイルでわかりやすく紹介する。各号はテーマ特集型で、宇宙・物理・生命科学・地球科学・テクノロジー・数学・医学などを扱う。\n\n**2024年2月号**(2023年12月発売)。",
+      "authorBio": {
+        "summary": "**ニュートンプレス** — 1981年創立、サイエンス雑誌『Newton』『Newtonライト』『ニュートン別冊』を発行する科学雑誌出版社。"
+      },
+      "themes": [
+        "科学雑誌",
+        "Newton",
+        "サイエンス",
+        "ニュートンプレス",
+        "教養"
+      ]
     }
   ],
   "2022": [
