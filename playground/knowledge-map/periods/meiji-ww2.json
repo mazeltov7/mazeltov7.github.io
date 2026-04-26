@@ -157,6 +157,25 @@
     {"id":"ph-dewey-democracy","title":"デューイ『民主主義と教育』","year":1916,"category":"philosophy","lane":"philosophy","region":"north_america","where":"米国","summary":"プラグマティズムに基づく経験主義教育論。戦後の日本教育改革にも大きな影響。"},
     {"id":"ph-wittgenstein","title":"ヴィトゲンシュタイン『論理哲学論考』","year":1921,"category":"philosophy","lane":"philosophy","region":"western_europe","where":"ウィーン・ケンブリッジ","summary":"「語りえぬものについては沈黙せねばならない」で結ぶ簡潔な命題集。20世紀分析哲学の金字塔。"},
     {"id":"ph-heidegger","title":"ハイデガー『存在と時間』","year":1927,"category":"philosophy","lane":"philosophy","region":"western_europe","where":"マールブルク（独）","summary":"「存在」の意味を問い直す現存在分析。実存主義と後の現代哲学に決定的な影響を残す。"},
-    {"id":"ph-gandhi-salt","title":"ガンジー 塩の行進","year":1930,"category":"philosophy","lane":"philosophy","region":"south_asia","where":"グジャラート→ダンディ","summary":"英国の塩税に抗議する非暴力不服従の象徴的行進。サティヤーグラハ思想を世界に知らしめる。"}
+    {"id":"ph-gandhi-salt","title":"ガンジー 塩の行進","year":1930,"category":"philosophy","lane":"philosophy","region":"south_asia","where":"グジャラート→ダンディ","summary":"英国の塩税に抗議する非暴力不服従の象徴的行進。サティヤーグラハ思想を世界に知らしめる。"},
+
+    {"id":"jp-kaihourei","title":"解放令（賤民廃止令）","year":1871,"category":"event","lane":"focus","region":"east_asia","where":"太政官（東京）","summary":"えた・非人など江戸期身分制下の賤民身分を廃止し、平民に編入する太政官布告。実態の差別解消は遠く後の解放運動の出発点。"},
+    {"id":"jp-choheirei","title":"徴兵令","year":1873,"category":"event","lane":"focus","region":"east_asia","where":"太政官（東京）","summary":"満20歳男子に兵役義務を課し国民皆兵制を確立。武士階級独占の軍事を解体し近代国家への決定的転換となる。"},
+    {"id":"jp-seikan-ron","title":"征韓論政変","year":1873,"category":"event","lane":"focus","region":"east_asia","where":"東京","summary":"朝鮮への強硬使節派遣を主張する西郷隆盛・板垣退助らと内治優先派が対立。西郷・板垣ら下野し、自由民権運動と士族反乱の火種となる。"},
+    {"id":"jp-21demands","title":"対華21ヶ条要求","year":1915,"category":"event","lane":"focus","region":"east_asia","where":"北京","summary":"大隈内閣が大戦の混乱に乗じ袁世凱政権に提出した利権要求。中国民族主義を激化させ五・四運動の遠因となる。"},
+    {"id":"jp-siberia","title":"シベリア出兵","year":1917,"yearEnd":1922,"category":"event","lane":"focus","region":"east_asia","where":"シベリア・沿海州","summary":"ロシア革命への干渉戦争として日米英仏が出兵。日本は最大規模で最も長く居座り、軍部の独走と国際的孤立の伏線となる。"},
+    {"id":"jp-1920recession","title":"戦後恐慌","year":1920,"category":"event","lane":"focus","region":"east_asia","where":"日本","summary":"大戦景気の反動として株価暴落・銀行取付。以後関東大震災・金融恐慌・昭和恐慌へと連鎖する慢性不況の起点。"},
+
+    {"id":"li-aguranabe","title":"仮名垣魯文『安愚楽鍋』","year":1871,"category":"literature","lane":"literature","region":"east_asia","where":"東京","summary":"牛鍋屋に集う客の口吻で文明開化の世相を活写した戯作。江戸戯作と近代小説の架け橋となる風俗観察。"},
+    {"id":"li-keikoku-bidan","title":"矢野龍渓『経国美談』","year":1883,"yearEnd":1884,"category":"literature","lane":"literature","region":"east_asia","where":"東京","summary":"古代ギリシャ・テーベの民主革命を翻案した政治小説。自由民権期の青年に絶大な影響を与えた啓蒙的ベストセラー。"},
+    {"id":"li-kajin-no-kigu","title":"東海散士『佳人之奇遇』","year":1885,"category":"literature","lane":"literature","region":"east_asia","where":"東京","summary":"亡国の佳人たちと出会う遊学青年を主人公にした政治小説。漢文調で世界の独立運動を描き明治期に広く読まれる。"},
+    {"id":"li-tousei-shosei","title":"坪内逍遥『当世書生気質』","year":1885,"category":"literature","lane":"literature","region":"east_asia","where":"東京","summary":"『小説神髄』と並行して書かれた写実主義の試作。明治学生の生態を客観的に描き近代日本小説の出発点となる。"},
+    {"id":"li-setsuchu-ume","title":"末広鉄腸『雪中梅』","year":1886,"category":"literature","lane":"literature","region":"east_asia","where":"東京","summary":"国会開設運動を背景に若き志士と佳人の恋を描く政治小説の代表作。明治政治小説のピークを示す。"},
+    {"id":"li-ougai-utakata","title":"森鴎外『うたかたの記』","year":1890,"category":"literature","lane":"literature","region":"east_asia","where":"東京","summary":"ミュンヘンを舞台に画学生と薄幸の少女を描く浪漫的短篇。『舞姫』と並ぶ「ドイツ三部作」の一つ。"},
+    {"id":"li-gojunoto","title":"幸田露伴『五重塔』","year":1891,"category":"literature","lane":"literature","region":"east_asia","where":"東京","summary":"五重塔建立に己を賭ける大工・のっそり十兵衛を描いた職人気質の傑作。雅俗折衷の名文で擬古典派を代表。"},
+    {"id":"li-midaregami","title":"与謝野晶子『みだれ髪』","year":1901,"category":"literature","lane":"literature","region":"east_asia","where":"東京","summary":"「やは肌のあつき血汐にふれも見でさびしからずや道を説く君」など官能と自我を解き放った歌集。明治浪漫主義短歌の金字塔。"},
+
+    {"id":"mu-taki-hana","title":"滝廉太郎『花』","year":1900,"category":"music","lane":"art","region":"east_asia","where":"東京","summary":"組歌『四季』第1曲。隅田川の春を歌う「春のうららの隅田川」で知られる西洋音楽様式による初期の日本歌曲名作。"},
+    {"id":"mu-taki-kojo","title":"滝廉太郎『荒城の月』","year":1901,"category":"music","lane":"art","region":"east_asia","where":"東京","summary":"中学唱歌として土井晩翠の詞に作曲。短い生涯（享年23）の代表作で日本人作曲家による西洋音楽の到達点を示す。"}
   ]
 }
