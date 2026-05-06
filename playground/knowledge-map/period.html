@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Period - 人類知マップ</title>
+  <title>Period - 人類知マップ（WIP）</title>
   <link rel="icon" href="../../images/favicon.jpg" type="image/jpeg">
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -417,7 +417,7 @@
 
     function init(data) {
       state.data = data;
-      document.title = `${data.label} - 人類知マップ`;
+      document.title = `${data.label} - 人類知マップ（WIP）`;
       document.getElementById('periodLabel').textContent = data.label;
       document.getElementById('periodSubtitle').textContent =
         `${data.subtitle ? data.subtitle + '　' : ''}${data.start}–${data.end}`;
