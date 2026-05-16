@@ -325,9 +325,6 @@ def cmd_debug() -> None:
     query($since: Date!, $until: Date!) {
       viewer {
         accounts {
-          ... on Account {
-            name
-          }
           sites: rumPageloadEventsAdaptiveGroups(
             limit: 20
             filter: {date_geq: $since, date_leq: $until}
