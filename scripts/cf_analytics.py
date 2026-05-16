@@ -360,7 +360,7 @@ def cmd_debug() -> None:
     }
     """
     data2 = cf_graphql(q_bots, {
-        "accountTag": account_id,
+        "accountTag": env("CLOUDFLARE_ACCOUNT_ID"),
         "siteTag": env("CLOUDFLARE_SITE_TAG"),
         "since": since7.isoformat(),
         "until": until.isoformat(),
