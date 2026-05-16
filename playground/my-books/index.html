@@ -359,10 +359,10 @@
       <div class="header-row">
         <h1 class="page-title">My Books</h1>
         <div class="view-toggle" id="viewToggle">
-          <button id="btn-shelf" class="active" title="Shelf view">
+          <button id="btn-shelf" title="Shelf view">
             <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="1" y1="14" x2="15" y2="14"/><rect x="2" y="3" width="3" height="11" rx="0.5"/><rect x="6" y="5" width="3" height="9" rx="0.5"/><rect x="10" y="4" width="3" height="10" rx="0.5"/></svg>
           </button>
-          <button id="btn-grid" title="Grid view">
+          <button id="btn-grid" class="active" title="Grid view">
             <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="1" y="1" width="6" height="6" rx="1"/><rect x="9" y="1" width="6" height="6" rx="1"/><rect x="1" y="9" width="6" height="6" rx="1"/><rect x="9" y="9" width="6" height="6" rx="1"/></svg>
           </button>
         </div>
@@ -510,10 +510,14 @@
       var btnShelf = document.getElementById('btn-shelf');
       var btnGrid = document.getElementById('btn-grid');
       var saved = localStorage.getItem('mybooks-view');
-      if (saved === 'grid') {
+      if (saved === 'shelf') {
+        document.body.classList.remove('view-grid');
+        btnShelf.classList.add('active');
+        btnGrid.classList.remove('active');
+      } else {
         document.body.classList.add('view-grid');
-        btnShelf.classList.remove('active');
         btnGrid.classList.add('active');
+        btnShelf.classList.remove('active');
       }
       btnShelf.addEventListener('click', function() {
         document.body.classList.remove('view-grid');
