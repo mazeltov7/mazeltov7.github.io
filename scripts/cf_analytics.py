@@ -315,27 +315,41 @@ def cmd_anomaly() -> None:
 
 
 def cmd_debug() -> None:
-    """site_tag と最近のデータ件数を確認する一時コマンド."""
+    """site_tag と最近のデータ件数を GraphQL 経由で確認する."""
     account_id = env("CLOUDFLARE_ACCOUNT_ID")
-    req = urllib.request.Request(
-        f"https://api.cloudflare.com/client/v4/accounts/{account_id}/rum/site_info/list",
-        headers={
-            "Authorization": f"Bearer {env('CLOUDFLARE_API_TOKEN')}",
-            "Content-Type": "application/json",
-        },
-    )
-    with urllib.request.urlopen(req, timeout=30) as resp:
-        sites = json.loads(resp.read())
-    print("=== sites ===")
-    for s in sites.get("result", []):
-        print(f"  site_tag={s.get('site_tag')}  host={s.get('ruleset', {}).get('zone_name') or s.get('site_token')}  created={s.get('created')}")
-
-    print(f"\n=== current site_tag env = {env('CLOUDFLARE_SITE_TAG')} ===")
-
-    # 直近7日 (bot フィルタなし)
     today = datetime.now(timezone.utc).date()
-    since = today - timedelta(days=7)
-    q = """
+    since = today - timedelta(days=30)
+    until = today - timedelta(days=1)
+
+    # 1) すべての site_tag を group by で抽出 (フィルタ siteTag 無し)
+    q_sites = """
+    query($accountTag: string!, $since: Date!, $until: Date!) {
+      viewer {
+        accounts(filter: {accountTag: $accountTag}) {
+          sites: rumPageloadEventsAdaptiveGroups(
+            limit: 20
+            filter: {date_geq: $since, date_leq: $until}
+            orderBy: [count_DESC]
+          ) {
+            count
+            sum { visits }
+            dimensions { siteTag }
+          }
+        }
+      }
+    }
+    """
+    data = cf_graphql(q_sites, {
+        "accountTag": account_id,
+        "since": since.isoformat(),
+        "until": until.isoformat(),
+    })
+    print(f"=== 過去30日に観測された site_tag (現在 env CLOUDFLARE_SITE_TAG = {env('CLOUDFLARE_SITE_TAG')}) ===")
+    print(json.dumps(data, indent=2))
+
+    # 2) bot 別 PV (env の site_tag で 7d)
+    since7 = today - timedelta(days=7)
+    q_bots = """
     query($accountTag: string!, $siteTag: string!, $since: Date!, $until: Date!) {
       viewer {
         accounts(filter: {accountTag: $accountTag}) {
@@ -346,14 +360,14 @@ def cmd_debug() -> None:
       }
     }
     """
-    data = cf_graphql(q, {
+    data2 = cf_graphql(q_bots, {
         "accountTag": account_id,
         "siteTag": env("CLOUDFLARE_SITE_TAG"),
-        "since": since.isoformat(),
-        "until": (today - timedelta(days=1)).isoformat(),
+        "since": since7.isoformat(),
+        "until": until.isoformat(),
     })
-    print(f"\n=== last 7d (env site_tag) ===")
-    print(json.dumps(data, indent=2))
+    print(f"\n=== 過去7日 bot 別 (env site_tag) ===")
+    print(json.dumps(data2, indent=2))
 
 
 def main() -> None:
