@@ -322,9 +322,9 @@ def cmd_debug() -> None:
 
     # 1) Token で見える全アカウント + 各アカウントの site_tag 別 PV
     q_all = """
-    query($since: Date!, $until: Date!) {
+    query($accountTag: string!, $since: Date!, $until: Date!) {
       viewer {
-        accounts {
+        accounts(filter: {accountTag: $accountTag}) {
           sites: rumPageloadEventsAdaptiveGroups(
             limit: 20
             filter: {date_geq: $since, date_leq: $until}
@@ -339,6 +339,7 @@ def cmd_debug() -> None:
     }
     """
     data = cf_graphql(q_all, {
+        "accountTag": env("CLOUDFLARE_ACCOUNT_ID"),
         "since": since.isoformat(),
         "until": until.isoformat(),
     })
