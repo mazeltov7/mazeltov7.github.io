@@ -314,14 +314,58 @@ def cmd_anomaly() -> None:
     print(f"alert sent: pv_now={pv_now} median={med_pv}")
 
 
+def cmd_debug() -> None:
+    """site_tag と最近のデータ件数を確認する一時コマンド."""
+    account_id = env("CLOUDFLARE_ACCOUNT_ID")
+    req = urllib.request.Request(
+        f"https://api.cloudflare.com/client/v4/accounts/{account_id}/rum/site_info/list",
+        headers={
+            "Authorization": f"Bearer {env('CLOUDFLARE_API_TOKEN')}",
+            "Content-Type": "application/json",
+        },
+    )
+    with urllib.request.urlopen(req, timeout=30) as resp:
+        sites = json.loads(resp.read())
+    print("=== sites ===")
+    for s in sites.get("result", []):
+        print(f"  site_tag={s.get('site_tag')}  host={s.get('ruleset', {}).get('zone_name') or s.get('site_token')}  created={s.get('created')}")
+
+    print(f"\n=== current site_tag env = {env('CLOUDFLARE_SITE_TAG')} ===")
+
+    # 直近7日 (bot フィルタなし)
+    today = datetime.now(timezone.utc).date()
+    since = today - timedelta(days=7)
+    q = """
+    query($accountTag: string!, $siteTag: string!, $since: Date!, $until: Date!) {
+      viewer {
+        accounts(filter: {accountTag: $accountTag}) {
+          all: rumPageloadEventsAdaptiveGroups(limit: 1, filter: {siteTag: $siteTag, date_geq: $since, date_leq: $until}) { count sum { visits } }
+          humans: rumPageloadEventsAdaptiveGroups(limit: 1, filter: {siteTag: $siteTag, date_geq: $since, date_leq: $until, bot: 0}) { count sum { visits } }
+          bots: rumPageloadEventsAdaptiveGroups(limit: 1, filter: {siteTag: $siteTag, date_geq: $since, date_leq: $until, bot: 1}) { count sum { visits } }
+        }
+      }
+    }
+    """
+    data = cf_graphql(q, {
+        "accountTag": account_id,
+        "siteTag": env("CLOUDFLARE_SITE_TAG"),
+        "since": since.isoformat(),
+        "until": (today - timedelta(days=1)).isoformat(),
+    })
+    print(f"\n=== last 7d (env site_tag) ===")
+    print(json.dumps(data, indent=2))
+
+
 def main() -> None:
     p = argparse.ArgumentParser()
-    p.add_argument("cmd", choices=["weekly", "anomaly"])
+    p.add_argument("cmd", choices=["weekly", "anomaly", "debug"])
     args = p.parse_args()
     if args.cmd == "weekly":
         cmd_weekly()
-    else:
+    elif args.cmd == "anomaly":
         cmd_anomaly()
+    else:
+        cmd_debug()
 
 
 if __name__ == "__main__":
