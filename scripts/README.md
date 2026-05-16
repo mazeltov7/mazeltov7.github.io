@@ -16,7 +16,7 @@ GitHub Secrets に以下 5 つを登録する。
 |---|---|
 | `CLOUDFLARE_API_TOKEN` | 後述の「CF API Token 発行」 |
 | `CLOUDFLARE_ACCOUNT_ID` | Cloudflare Dashboard 右下 "Account ID" |
-| `CLOUDFLARE_SITE_TAG` | `822f6925e2b64a45928c584854ac19a2` (各 HTML の `data-cf-beacon` と同値) |
+| `CLOUDFLARE_SITE_TAG` | `e0c5e914f911409b9ac700d18df8bec4` (GraphQL の siteTag。HTML の `data-cf-beacon` token とは別物なので注意) |
 | `TELEGRAM_BOT_TOKEN` | `~/.claude/channels/telegram/access.json` の `botToken` |
 | `TELEGRAM_CHAT_ID` | `7627377223` (現状の allowFrom と同じ) |
 

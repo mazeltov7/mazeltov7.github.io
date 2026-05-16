@@ -314,71 +314,14 @@ def cmd_anomaly() -> None:
     print(f"alert sent: pv_now={pv_now} median={med_pv}")
 
 
-def cmd_debug() -> None:
-    """全アカウントと site_tag を GraphQL 経由で確認する."""
-    today = datetime.now(timezone.utc).date()
-    since = today - timedelta(days=30)
-    until = today - timedelta(days=1)
-
-    # 1) Token で見える全アカウント + 各アカウントの site_tag 別 PV
-    q_all = """
-    query($accountTag: string!, $since: Date!, $until: Date!) {
-      viewer {
-        accounts(filter: {accountTag: $accountTag}) {
-          sites: rumPageloadEventsAdaptiveGroups(
-            limit: 20
-            filter: {date_geq: $since, date_leq: $until}
-            orderBy: [count_DESC]
-          ) {
-            count
-            sum { visits }
-            dimensions { siteTag }
-          }
-        }
-      }
-    }
-    """
-    data = cf_graphql(q_all, {
-        "accountTag": env("CLOUDFLARE_ACCOUNT_ID"),
-        "since": since.isoformat(),
-        "until": until.isoformat(),
-    })
-    print(f"=== Token で見えるアカウントと過去30日の site_tag (env ACCOUNT_ID={env('CLOUDFLARE_ACCOUNT_ID')}, SITE_TAG={env('CLOUDFLARE_SITE_TAG')}) ===")
-    print(json.dumps(data, indent=2))
-
-    # 2) bot 別 PV (env の site_tag で 7d)
-    since7 = today - timedelta(days=7)
-    q_bots = """
-    query($accountTag: string!, $siteTag: string!, $since: Date!, $until: Date!) {
-      viewer {
-        accounts(filter: {accountTag: $accountTag}) {
-          all: rumPageloadEventsAdaptiveGroups(limit: 1, filter: {siteTag: $siteTag, date_geq: $since, date_leq: $until}) { count sum { visits } }
-          humans: rumPageloadEventsAdaptiveGroups(limit: 1, filter: {siteTag: $siteTag, date_geq: $since, date_leq: $until, bot: 0}) { count sum { visits } }
-          bots: rumPageloadEventsAdaptiveGroups(limit: 1, filter: {siteTag: $siteTag, date_geq: $since, date_leq: $until, bot: 1}) { count sum { visits } }
-        }
-      }
-    }
-    """
-    data2 = cf_graphql(q_bots, {
-        "accountTag": env("CLOUDFLARE_ACCOUNT_ID"),
-        "siteTag": env("CLOUDFLARE_SITE_TAG"),
-        "since": since7.isoformat(),
-        "until": until.isoformat(),
-    })
-    print(f"\n=== 過去7日 bot 別 (env site_tag) ===")
-    print(json.dumps(data2, indent=2))
-
-
 def main() -> None:
     p = argparse.ArgumentParser()
-    p.add_argument("cmd", choices=["weekly", "anomaly", "debug"])
+    p.add_argument("cmd", choices=["weekly", "anomaly"])
     args = p.parse_args()
     if args.cmd == "weekly":
         cmd_weekly()
-    elif args.cmd == "anomaly":
-        cmd_anomaly()
     else:
-        cmd_debug()
+        cmd_anomaly()
 
 
 if __name__ == "__main__":
