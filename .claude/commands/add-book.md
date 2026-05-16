@@ -31,8 +31,8 @@ arg: 省略可。指定があれば「Amazon URL [年]」を直接追加する�
 6. JSON 妥当性検証
 7. ローカルサーバ (port 8765) が起動していなければ起動して、Claude in Chrome で読み込み確認
 8. 結果サマリ提示 → ユーザー確認
-9. **enrich チェーン**: 「追加した N 冊について `/enrich-book` を実行しますか？ (A) 全部 / (B) 個別選択 / (C) スキップ」と問う。A/B 選択時は対象本ごとに enrich-book の調査→提示→承認フローを回し、採用された本だけ books-data.json と notes/{KEY}.md を更新
-10. enrich の有無に関わらず最後に **1 つのコミット** にまとめて commit & push
+9. **enrich は自動実行**（ユーザーへ問わない）: 追加した全冊について `/enrich-book` のフロー（多角調査→反映）を **自動で実行** する。enrich-book 側のユーザー確認スキップ設計に従い、複数ソースで裏付けの取れた情報のみ books-data.json に書き込む（`notes/{KEY}.md` は作らない）
+10. 追加 + enrich の変更をまとめて **1 つのコミット** にして commit & push（push 直前のユーザー確認は維持）
 
 ### モード2: Instagram 自動検出（引数なし）
 
@@ -74,15 +74,14 @@ arg: 省略可。指定があれば「Amazon URL [年]」を直接追加する�
    - JSON 妥当性検証
    - ローカルブラウザで loaded 確認
 
-8. **enrich チェーン（必須確認）**
-   - 「追加した N 冊について `/enrich-book` を実行しますか？ (A) 全部 / (B) 個別選択 / (C) スキップ」と問う
-   - A/B 選択時: 対象本ごとに `/enrich-book` の調査→出典付き下書き提示→承認フローを回す。承認分のみ books-data.json と notes/{KEY}.md に反映
-   - C 選択時: スキップ
+8. **enrich は自動実行**（ユーザーへ問わない）
+   - 追加した全冊について `/enrich-book` のフロー（多角調査→反映）を **自動で実行** する
+   - enrich-book 側の設計（出典に複数ソースの裏付けがある情報のみ書き込む / `notes/{KEY}.md` は作らない）に従う
 
 9. **commit & push**
    - 追加 + enrich の変更をまとめて 1 コミット
-   - commit メッセージ例: `MyBooks: {N}冊追加 ({titles...})` あるいは enrich があれば `MyBooks: {N}冊追加 + enrich ({titles...})`
-   - push して `mazeltov7.github.io` 本番へ反映
+   - commit メッセージ例: `MyBooks: {N}冊追加 + enrich ({titles...})`
+   - push して `mazeltov7.github.io` 本番へ反映（push 直前のユーザー確認は維持）
 
 ## entry のスキーマ
 
@@ -103,6 +102,7 @@ arg: 省略可。指定があれば「Amazon URL [年]」を直接追加する�
 - **同じ本でも複数版がある場合**: Kindle (B0...) を優先。理由: 装丁の帯がない綺麗な表紙が多いため。ただし司馬遼太郎シリーズなど、シリーズ全巻 Kindle で揃えられるかを確認
 - **メモリーファイル参照**: `/Users/yukiishikawa/.claude/projects/-Users-yukiishikawa-Products-mazeltov7/memory/project_book_covers.md` に過去の知見（プレースホルダー対応・bookmeter経由フォールバック等）が蓄積されているので、表紙取得で詰まったら参照
 - **commit & push の前に必ずユーザー確認**を取る（自動 push しない）
+- **enrich は add-book と同時に自動実行**する（A/B/C 等の毎回確認は不要）。enrich-book 側で複数ソース突き合わせ → 反映 → サマリ提示の流れに任せる
 
 ## ローカルサーバ起動コマンド
 
