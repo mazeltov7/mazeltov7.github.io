@@ -135,7 +135,7 @@ query Weekly($accountTag: string!, $siteTag: string!, $since: Date!, $until: Dat
         orderBy: [count_DESC]
       ) {
         count
-        dimensions { metric: browserName }
+        dimensions { metric: userAgentBrowser }
       }
     }
   }
