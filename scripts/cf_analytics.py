@@ -315,17 +315,19 @@ def cmd_anomaly() -> None:
 
 
 def cmd_debug() -> None:
-    """site_tag と最近のデータ件数を GraphQL 経由で確認する."""
-    account_id = env("CLOUDFLARE_ACCOUNT_ID")
+    """全アカウントと site_tag を GraphQL 経由で確認する."""
     today = datetime.now(timezone.utc).date()
     since = today - timedelta(days=30)
     until = today - timedelta(days=1)
 
-    # 1) すべての site_tag を group by で抽出 (フィルタ siteTag 無し)
-    q_sites = """
-    query($accountTag: string!, $since: Date!, $until: Date!) {
+    # 1) Token で見える全アカウント + 各アカウントの site_tag 別 PV
+    q_all = """
+    query($since: Date!, $until: Date!) {
       viewer {
-        accounts(filter: {accountTag: $accountTag}) {
+        accounts {
+          ... on Account {
+            name
+          }
           sites: rumPageloadEventsAdaptiveGroups(
             limit: 20
             filter: {date_geq: $since, date_leq: $until}
@@ -339,12 +341,11 @@ def cmd_debug() -> None:
       }
     }
     """
-    data = cf_graphql(q_sites, {
-        "accountTag": account_id,
+    data = cf_graphql(q_all, {
         "since": since.isoformat(),
         "until": until.isoformat(),
     })
-    print(f"=== 過去30日に観測された site_tag (現在 env CLOUDFLARE_SITE_TAG = {env('CLOUDFLARE_SITE_TAG')}) ===")
+    print(f"=== Token で見えるアカウントと過去30日の site_tag (env ACCOUNT_ID={env('CLOUDFLARE_ACCOUNT_ID')}, SITE_TAG={env('CLOUDFLARE_SITE_TAG')}) ===")
     print(json.dumps(data, indent=2))
 
     # 2) bot 別 PV (env の site_tag で 7d)
