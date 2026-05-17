@@ -60,6 +60,29 @@
 
     .view-toggle svg { width: 14px; height: 14px; }
 
+    .header-actions {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .lock-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 30px;
+      height: 30px;
+      border: none;
+      background: transparent;
+      border-radius: 6px;
+      cursor: pointer;
+      color: #a8a29e;
+      transition: background 0.15s, color 0.15s;
+    }
+    .lock-btn:hover { background: #e7e5e4; color: #57534e; }
+    .lock-btn svg { width: 16px; height: 16px; }
+    .lock-btn.unlocked { color: #65a30d; }
+
     .back-link {
       font-size: 0.8rem;
       color: #a8a29e;
@@ -358,12 +381,18 @@
       <a href="/playground/" class="back-link">&larr; Playground</a>
       <div class="header-row">
         <h1 class="page-title">My Books</h1>
-        <div class="view-toggle" id="viewToggle">
-          <button id="btn-shelf" title="Shelf view">
-            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="1" y1="14" x2="15" y2="14"/><rect x="2" y="3" width="3" height="11" rx="0.5"/><rect x="6" y="5" width="3" height="9" rx="0.5"/><rect x="10" y="4" width="3" height="10" rx="0.5"/></svg>
-          </button>
-          <button id="btn-grid" class="active" title="Grid view">
-            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="1" y="1" width="6" height="6" rx="1"/><rect x="9" y="1" width="6" height="6" rx="1"/><rect x="1" y="9" width="6" height="6" rx="1"/><rect x="9" y="9" width="6" height="6" rx="1"/></svg>
+        <div class="header-actions">
+          <div class="view-toggle" id="viewToggle">
+            <button id="btn-shelf" title="Shelf view">
+              <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="1" y1="14" x2="15" y2="14"/><rect x="2" y="3" width="3" height="11" rx="0.5"/><rect x="6" y="5" width="3" height="9" rx="0.5"/><rect x="10" y="4" width="3" height="10" rx="0.5"/></svg>
+            </button>
+            <button id="btn-grid" class="active" title="Grid view">
+              <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="1" y="1" width="6" height="6" rx="1"/><rect x="9" y="1" width="6" height="6" rx="1"/><rect x="1" y="9" width="6" height="6" rx="1"/><rect x="9" y="9" width="6" height="6" rx="1"/></svg>
+            </button>
+          </div>
+          <button id="btn-lock" class="lock-btn" title="メモのロック">
+            <svg id="lock-icon-locked" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="7" width="10" height="7" rx="1"/><path d="M5 7V4.5a3 3 0 0 1 6 0V7"/></svg>
+            <svg id="lock-icon-unlocked" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" style="display:none"><rect x="3" y="7" width="10" height="7" rx="1"/><path d="M5 7V4.5a3 3 0 0 1 6 0"/></svg>
           </button>
         </div>
       </div>
@@ -531,6 +560,50 @@
         btnShelf.classList.remove('active');
         localStorage.setItem('mybooks-view', 'grid');
       });
+    })();
+
+    // Notes lock
+    (function() {
+      var NOTE_HASH = '0d0e43874f1d4aa9486cf2ada9c4c57f88c13f9390687dbf314b0ede57262fbf';
+      var STORAGE_KEY = 'mybooks-unlocked';
+      var btn = document.getElementById('btn-lock');
+      var iconLocked = document.getElementById('lock-icon-locked');
+      var iconUnlocked = document.getElementById('lock-icon-unlocked');
+
+      function applyState() {
+        var unlocked = localStorage.getItem(STORAGE_KEY) === '1';
+        iconLocked.style.display = unlocked ? 'none' : '';
+        iconUnlocked.style.display = unlocked ? '' : 'none';
+        btn.classList.toggle('unlocked', unlocked);
+        btn.title = unlocked ? 'メモ表示中（クリックでロック）' : 'メモのロック解除';
+      }
+
+      btn.addEventListener('click', async function() {
+        if (localStorage.getItem(STORAGE_KEY) === '1') {
+          localStorage.removeItem(STORAGE_KEY);
+          applyState();
+          return;
+        }
+        var input = prompt('合言葉を入力');
+        if (!input) return;
+        try {
+          var buf = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(input));
+          var hex = Array.from(new Uint8Array(buf))
+            .map(function(b) { return b.toString(16).padStart(2, '0'); })
+            .join('');
+          if (hex !== NOTE_HASH) {
+            alert('合言葉が違います');
+            return;
+          }
+          localStorage.setItem(STORAGE_KEY, '1');
+          applyState();
+        } catch (e) {
+          console.error(e);
+          alert('エラーが発生しました');
+        }
+      });
+
+      applyState();
     })();
 
     fetch('./books-data.json')

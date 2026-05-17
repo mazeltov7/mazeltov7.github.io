@@ -192,19 +192,6 @@
       font-size: 0.7rem;
     }
 
-    .unlock-btn {
-      margin-left: 0.5rem;
-      padding: 0.25rem 0.7rem;
-      font-size: 0.75rem;
-      border: 1px solid #d6d3d1;
-      background: #fff;
-      border-radius: 0.3rem;
-      cursor: pointer;
-      color: #57534e;
-      font-family: inherit;
-    }
-    .unlock-btn:hover { background: #f5f5f4; }
-
     .loading, .not-found {
       text-align: center;
       padding: 4rem 1rem;
@@ -337,7 +324,6 @@
       '</div>';
     }
 
-    var NOTE_HASH = '0d0e43874f1d4aa9486cf2ada9c4c57f88c13f9390687dbf314b0ede57262fbf';
     var UNLOCK_STORAGE_KEY = 'mybooks-unlocked';
 
     function isNotesUnlocked() {
@@ -346,53 +332,18 @@
     }
 
     function renderNotes(noteText) {
-      if (!isNotesUnlocked()) {
-        return '<div class="section" id="notes-section">' +
-          '<h2 class="section-title">📝 自分のメモ</h2>' +
-          '<div class="section-body">' +
-            '<span class="placeholder">🔒 ロック中</span>' +
-            '<button type="button" class="unlock-btn" onclick="unlockNotes()">合言葉を入力</button>' +
-          '</div>' +
-        '</div>';
-      }
+      if (!isNotesUnlocked()) return '';
       if (noteText === null) {
-        return '<div class="section" id="notes-section">' +
+        return '<div class="section">' +
           '<h2 class="section-title">📝 自分のメモ</h2>' +
           '<div class="section-body"><span class="placeholder">まだメモなし</span></div>' +
         '</div>';
       }
-      return '<div class="section" id="notes-section">' +
+      return '<div class="section">' +
         '<h2 class="section-title">📝 自分のメモ</h2>' +
         '<div class="section-body">' + marked.parse(noteText) + '</div>' +
       '</div>';
     }
-
-    window.unlockNotes = async function() {
-      var input = prompt('合言葉を入力');
-      if (!input) return;
-      try {
-        var buf = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(input));
-        var hex = Array.from(new Uint8Array(buf))
-          .map(function(b) { return b.toString(16).padStart(2, '0'); })
-          .join('');
-        if (hex !== NOTE_HASH) {
-          alert('合言葉が違います');
-          return;
-        }
-        localStorage.setItem(UNLOCK_STORAGE_KEY, '1');
-        var bookId = getQueryParam('id');
-        var noteText = await loadNote(bookId);
-        var section = document.getElementById('notes-section');
-        if (section) {
-          var wrap = document.createElement('div');
-          wrap.innerHTML = renderNotes(noteText);
-          section.replaceWith(wrap.firstChild);
-        }
-      } catch (e) {
-        console.error(e);
-        alert('エラーが発生しました');
-      }
-    };
 
     function notFound(id) {
       return '<div class="not-found">指定された本が見つかりません<br><small>id: ' + esc(id || '(なし)') + '</small></div>';
