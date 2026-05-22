@@ -179,6 +179,28 @@
     {"id":"li-midaregami","title":"与謝野晶子『みだれ髪』","year":1901,"category":"literature","lane":"li_jp","region":"east_asia","where":"東京","summary":"「やは肌のあつき血汐にふれも見でさびしからずや道を説く君」など官能と自我を解き放った歌集。明治浪漫主義短歌の金字塔。"},
 
     {"id":"mu-taki-hana","title":"滝廉太郎『花』","year":1900,"category":"music","lane":"art_jp","region":"east_asia","where":"東京","summary":"組歌『四季』第1曲。隅田川の春を歌う「春のうららの隅田川」で知られる西洋音楽様式による初期の日本歌曲名作。"},
-    {"id":"mu-taki-kojo","title":"滝廉太郎『荒城の月』","year":1901,"category":"music","lane":"art_jp","region":"east_asia","where":"東京","summary":"中学唱歌として土井晩翠の詞に作曲。短い生涯（享年23）の代表作で日本人作曲家による西洋音楽の到達点を示す。"}
+    {"id":"mu-taki-kojo","title":"滝廉太郎『荒城の月』","year":1901,"category":"music","lane":"art_jp","region":"east_asia","where":"東京","summary":"中学唱歌として土井晩翠の詞に作曲。短い生涯（享年23）の代表作で日本人作曲家による西洋音楽の到達点を示す。"},
+
+    {"id":"li-bocchan","title":"夏目漱石『坊っちゃん』","year":1906,"category":"literature","lane":"li_jp","region":"east_asia","where":"日本","summary":"四国・松山の中学校に赴任した江戸っ子青年教師の痛快な活躍を描く中編。漱石作品で最も親しまれた国民的代表作。"},
+    {"id":"li-kusamakura","title":"夏目漱石『草枕』","year":1906,"category":"literature","lane":"li_jp","region":"east_asia","where":"日本","summary":"山中の温泉宿に逗留する画工が「非人情」の境地を求める漢詩的小説。「智に働けば角が立つ」の冒頭で知られる芸術論的作品。"},
+    {"id":"li-futon","title":"田山花袋『蒲団』","year":1907,"category":"literature","lane":"li_jp","region":"east_asia","where":"日本","summary":"弟子の女学生に懐く中年作家の煩悶と、彼女が去った後にその蒲団に顔を埋める告白。日本自然主義私小説の起点。"},
+    {"id":"li-amerika","title":"永井荷風『あめりか物語』","year":1908,"category":"literature","lane":"li_jp","region":"east_asia","where":"日本","summary":"米国留学体験をもとに書いた連作短編集。耽美派・荷風の出発点で『ふらんす物語』とともに留学文学の傑作。"},
+    {"id":"li-ichiaku","title":"石川啄木『一握の砂』","year":1910,"category":"literature","lane":"li_jp","region":"east_asia","where":"日本","summary":"551首を三行書きで収めた歌集。「東海の小島の磯の白砂に…」など生活感情を平易な言葉で詠み近代短歌を一変させた。"},
+    {"id":"li-shisei","title":"谷崎潤一郎『刺青』","year":1910,"category":"literature","lane":"li_jp","region":"east_asia","where":"日本","summary":"背に女郎蜘蛛を彫られた美しい娘が悪女へと覚醒する官能的短編。谷崎の出世作で耽美派文学の出発点。"},
+    {"id":"li-gan","title":"森鴎外『雁』","year":1911,"yearEnd":1913,"category":"literature","lane":"li_jp","region":"east_asia","where":"日本","summary":"高利貸の妾となった女と医学生の淡い恋を、不忍池の雁の死で象徴的に閉じる中編。鴎外晩年の代表的恋愛小説。"},
+    {"id":"li-kirinohana","title":"北原白秋『桐の花』","year":1913,"category":"literature","lane":"li_jp","region":"east_asia","where":"日本","summary":"「春の鳥な鳴きそ鳴きそあかあかと…」など官能と色彩に満ちた短歌349首を収める。大正歌壇のモダンな感性を示す歌集。"},
+    {"id":"li-kojin","title":"夏目漱石『行人』","year":1913,"category":"literature","lane":"li_jp","region":"east_asia","where":"日本","summary":"妻と弟の関係に苦悩する主人公一郎の精神を描く後期三部作の中核。「死ぬか、気が違ふか、夫でなければ宗教に入るか」。"},
+    {"id":"li-doutei","title":"高村光太郎『道程』","year":1914,"category":"literature","lane":"li_jp","region":"east_asia","where":"日本","summary":"「僕の前に道はない 僕の後ろに道は出来る」の冒頭で知られる詩集。口語自由詩を本格的に文学として確立、後の『智恵子抄』への前史。"},
+    {"id":"li-sansho","title":"森鴎外『山椒大夫』","year":1915,"category":"literature","lane":"li_jp","region":"east_asia","where":"日本","summary":"人買いに売られ離散する母子四人「安寿と厨子王」の悲劇。中世説経節を再話した鴎外晩年の歴史小説の代表作。"},
+    {"id":"li-kinosaki","title":"志賀直哉『城の崎にて』","year":1917,"category":"literature","lane":"li_jp","region":"east_asia","where":"日本","summary":"怪我の養生中に蜂・鼠・蠑螈の死を凝視する心境を淡々と綴る短編。志賀の心境小説、白樺派の到達点。"},
+    {"id":"li-tsukini-hoeru","title":"萩原朔太郎『月に吠える』","year":1917,"category":"literature","lane":"li_jp","region":"east_asia","where":"日本","summary":"病的な感性と口語自由詩のリズムで近代詩を一変させた詩集。「竹」「蛙よ」など、朔太郎の代表作。"},
+    {"id":"li-jigokuhen","title":"芥川龍之介『地獄変』","year":1918,"category":"literature","lane":"li_jp","region":"east_asia","where":"日本","summary":"娘を業火に焼かれながら傑作の地獄変屏風を完成させる絵師良秀の物語。芸術至上主義のグロテスクを描く芥川中期の傑作。"},
+    {"id":"li-aruonna","title":"有島武郎『或る女』","year":1919,"category":"literature","lane":"li_jp","region":"east_asia","where":"日本","summary":"婚約者を捨て船上で見知らぬ男と恋に落ちる早月葉子の破滅を描く長編。大正期の自由な女性像を象徴する有島の代表作。"},
+    {"id":"li-shinju-fujin","title":"菊池寛『真珠夫人』","year":1920,"category":"literature","lane":"li_jp","region":"east_asia","where":"日本","summary":"夫の死後に多くの男を翻弄する瑠璃子を描く新聞連載小説。通俗小説の本格的成立と「真珠夫人」型ヒロインを生む。"},
+    {"id":"li-yabunonaka","title":"芥川龍之介『藪の中』","year":1922,"category":"literature","lane":"li_jp","region":"east_asia","where":"日本","summary":"山中で起きた武士殺害事件を七人の証言で語り、真相が永久に判明しない。後の黒澤明『羅生門』の原案、語りの相対性を確立。"},
+    {"id":"li-niseni-doka","title":"江戸川乱歩『二銭銅貨』","year":1923,"category":"literature","lane":"li_jp","region":"east_asia","where":"日本","summary":"暗号解読により真相が明かされる本格推理短編。江戸川乱歩のデビュー作で日本探偵小説の本格的出発点となる。"},
+    {"id":"li-haru-to-shura","title":"宮沢賢治『春と修羅』","year":1924,"category":"literature","lane":"li_jp","region":"east_asia","where":"日本","summary":"「わたくしといふ現象は…」で始まる心象スケッチ集。自費出版の詩集で、独自の科学・宗教・宇宙観により日本詩の最果てを示す。"},
+    {"id":"li-chumon-no-oi","title":"宮沢賢治『注文の多い料理店』","year":1924,"category":"literature","lane":"li_jp","region":"east_asia","where":"日本","summary":"猟師2人が山猫の料理店に逆に食われそうになる表題作他9編の童話集。賢治存命中唯一の童話集、独創的童話文学の出発。"},
+    {"id":"li-bungei-jidai","title":"『文芸時代』創刊（新感覚派）","year":1924,"category":"literature","lane":"li_jp","region":"east_asia","where":"東京","summary":"横光利一・川端康成らがモダニズム雑誌『文芸時代』を創刊。「新感覚派」と命名され、プロレタリア文学と並ぶ大正末モダニズムの旗手となる。"}
   ]
 }
