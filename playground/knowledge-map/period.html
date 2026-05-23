@@ -351,6 +351,115 @@
       line-height: 1.65;
       color: #292524;
     }
+    .popover-action {
+      display: inline-block;
+      margin-top: 0.7rem;
+      font-size: 0.74rem;
+      font-weight: 700;
+      color: #1c1917;
+      background: #fafaf9;
+      border: 1px solid #e7e5e4;
+      padding: 0.35rem 0.75rem;
+      border-radius: 9999px;
+      cursor: pointer;
+      transition: background 0.12s, border-color 0.12s;
+      font-family: inherit;
+    }
+    .popover-action:hover { background: #fff; border-color: #1c1917; }
+
+    /* modal for full detail */
+    .modal-overlay {
+      position: fixed; inset: 0;
+      background: rgba(0,0,0,0.45);
+      z-index: 300;
+      display: none;
+      align-items: flex-start;
+      justify-content: center;
+      padding: 3rem 1rem;
+      overflow-y: auto;
+    }
+    .modal-overlay.show { display: flex; }
+    .modal {
+      background: #fff;
+      border-radius: 1rem;
+      max-width: 640px;
+      width: 100%;
+      padding: 1.75rem 1.75rem 1.5rem;
+      box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+      position: relative;
+    }
+    .modal-close {
+      position: absolute;
+      top: 0.75rem; right: 0.9rem;
+      width: 32px; height: 32px;
+      border: none;
+      background: transparent;
+      font-size: 1.4rem;
+      line-height: 1;
+      color: #78716c;
+      cursor: pointer;
+      border-radius: 9999px;
+      transition: background 0.12s, color 0.12s;
+    }
+    .modal-close:hover { background: #f5f5f4; color: #1c1917; }
+    .modal-title {
+      font-size: 1.3rem;
+      font-weight: 700;
+      line-height: 1.4;
+      margin-bottom: 0.6rem;
+      padding-right: 2rem;
+    }
+    .modal-meta {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 0.4rem 0.6rem;
+      margin-bottom: 1.3rem;
+      font-size: 0.78rem;
+      color: #57534e;
+    }
+    .modal-section { margin-bottom: 1.3rem; }
+    .modal-section h3 {
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      color: #78716c;
+      margin-bottom: 0.55rem;
+    }
+    .modal-era p,
+    .modal-bio p {
+      font-size: 0.88rem;
+      line-height: 1.85;
+      color: #1c1917;
+      margin-bottom: 0.7rem;
+    }
+    .modal-era p:last-child,
+    .modal-bio p:last-child { margin-bottom: 0; }
+    .modal-era strong,
+    .modal-bio strong {
+      background: linear-gradient(transparent 60%, #fde68a 60%);
+      font-weight: 700;
+    }
+    .modal-bio-meta {
+      font-size: 0.74rem;
+      color: #78716c;
+      margin-bottom: 0.4rem;
+      font-variant-numeric: tabular-nums;
+    }
+    .modal-themes {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.35rem;
+    }
+    .modal-theme-tag {
+      display: inline-block;
+      font-size: 0.7rem;
+      padding: 0.25rem 0.65rem;
+      border-radius: 9999px;
+      background: #f5f5f4;
+      color: #57534e;
+      border: 1px solid #e7e5e4;
+    }
 
     @media (max-width: 600px) {
       body { padding: 1rem 0.5rem 3rem; }
@@ -393,6 +502,28 @@
     <h2 class="pop-title" id="popTitle"></h2>
     <div class="pop-meta" id="popMeta"></div>
     <div class="pop-summary" id="popSummary"></div>
+    <button class="popover-action" id="popAction" type="button" hidden>詳しく見る →</button>
+  </div>
+
+  <div class="modal-overlay" id="modal" aria-hidden="true">
+    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <button class="modal-close" id="modalClose" aria-label="閉じる">×</button>
+      <h2 class="modal-title" id="modalTitle"></h2>
+      <div class="modal-meta" id="modalMeta"></div>
+      <div class="modal-section modal-era" id="modalEraSection" hidden>
+        <h3>時代背景</h3>
+        <div id="modalEra"></div>
+      </div>
+      <div class="modal-section modal-bio" id="modalBioSection" hidden>
+        <h3>著者プロフィール</h3>
+        <div class="modal-bio-meta" id="modalBioMeta"></div>
+        <div id="modalBio"></div>
+      </div>
+      <div class="modal-section" id="modalThemesSection" hidden>
+        <h3>テーマ</h3>
+        <div class="modal-themes" id="modalThemes"></div>
+      </div>
+    </div>
   </div>
 
   <script>
@@ -401,15 +532,21 @@
 
     const state = {
       data: null,
+      details: {},
       activeCategories: null,
       search: '',
       catMap: {},
       laneMap: {},
     };
 
-    fetch(`periods/${periodId}.json`)
-      .then(r => { if (!r.ok) throw new Error('Period not found: ' + periodId); return r.json(); })
-      .then(init)
+    Promise.all([
+      fetch(`periods/${periodId}.json`)
+        .then(r => { if (!r.ok) throw new Error('Period not found: ' + periodId); return r.json(); }),
+      fetch(`periods/${periodId}.details.json`)
+        .then(r => r.ok ? r.json() : {})
+        .catch(() => ({}))
+    ])
+      .then(([data, details]) => { state.details = details; init(data); })
       .catch(err => {
         document.getElementById('periodLabel').textContent = 'エラー';
         document.getElementById('periodSubtitle').textContent = err.message;
@@ -433,6 +570,7 @@
       placeEntries();
       updateVisibility();
       bindPopover();
+      bindModal();
       bindSearch();
       bindColumnHover();
     }
@@ -729,6 +867,15 @@
         <div class="meta-where">📍 ${escapeHtml(entry.where || '')}</div>
       `;
       document.getElementById('popSummary').textContent = entry.summary || '';
+      const action = document.getElementById('popAction');
+      const detail = state.details[entry.id];
+      if (detail) {
+        action.hidden = false;
+        action.onclick = (ev) => { ev.stopPropagation(); openModal(entry, detail); };
+      } else {
+        action.hidden = true;
+        action.onclick = null;
+      }
     }
 
     function positionPopover(anchorEl) {
@@ -765,6 +912,75 @@
       return String(s).replace(/[&<>"']/g, ch => ({
         '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
       }[ch]));
+    }
+
+    function mdToHTML(s) {
+      const escaped = escapeHtml(s);
+      return escaped
+        .split(/\n\n+/)
+        .map(p => '<p>' + p.replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>').replace(/\n/g, '<br>') + '</p>')
+        .join('');
+    }
+
+    function bindModal() {
+      document.getElementById('modalClose').addEventListener('click', closeModal);
+      document.getElementById('modal').addEventListener('click', (e) => {
+        if (e.target.id === 'modal') closeModal();
+      });
+      document.addEventListener('keydown', e => {
+        if (e.key === 'Escape' && document.getElementById('modal').classList.contains('show')) {
+          closeModal();
+        }
+      });
+    }
+
+    function openModal(entry, detail) {
+      const cat = state.catMap[entry.category];
+      const lane = state.laneMap[entry.lane];
+      const yearText = entry.yearEnd != null ? `${entry.year} – ${entry.yearEnd}` : `${entry.year}`;
+      document.getElementById('modalTitle').textContent = entry.title;
+      document.getElementById('modalMeta').innerHTML = `
+        <span class="meta-pill" style="background:${cat.color}">${cat.icon} ${cat.label}</span>
+        <span class="meta-year">${yearText}</span>
+        <span class="meta-lane">${lane ? lane.label : ''}</span>
+        <span>📍 ${escapeHtml(entry.where || '')}</span>
+      `;
+      const eraSec = document.getElementById('modalEraSection');
+      if (detail.era) {
+        document.getElementById('modalEra').innerHTML = mdToHTML(detail.era);
+        eraSec.hidden = false;
+      } else { eraSec.hidden = true; }
+      const bioSec = document.getElementById('modalBioSection');
+      if (detail.authorBio) {
+        const meta = [];
+        if (detail.authorBio.born != null) meta.push(`生年 ${detail.authorBio.born}`);
+        if (detail.authorBio.died != null) meta.push(`没年 ${detail.authorBio.died}`);
+        document.getElementById('modalBioMeta').textContent = meta.join(' · ');
+        document.getElementById('modalBio').innerHTML = detail.authorBio.summary ? mdToHTML(detail.authorBio.summary) : '';
+        bioSec.hidden = false;
+      } else { bioSec.hidden = true; }
+      const themesSec = document.getElementById('modalThemesSection');
+      if (Array.isArray(detail.themes) && detail.themes.length) {
+        const tc = document.getElementById('modalThemes');
+        tc.innerHTML = '';
+        detail.themes.forEach(t => {
+          const tag = document.createElement('span');
+          tag.className = 'modal-theme-tag';
+          tag.textContent = t;
+          tc.appendChild(tag);
+        });
+        themesSec.hidden = false;
+      } else { themesSec.hidden = true; }
+      const el = document.getElementById('modal');
+      el.classList.add('show');
+      el.setAttribute('aria-hidden', 'false');
+      el.scrollTop = 0;
+    }
+
+    function closeModal() {
+      const el = document.getElementById('modal');
+      el.classList.remove('show');
+      el.setAttribute('aria-hidden', 'true');
     }
   </script>
 <!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "822f6925e2b64a45928c584854ac19a2"}'></script><!-- End Cloudflare Web Analytics -->
