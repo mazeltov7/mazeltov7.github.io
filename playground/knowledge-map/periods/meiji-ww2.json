@@ -6,9 +6,9 @@
   "end": 1945,
   "focus": "japan",
   "lanes": [
-    {"id": "focus",      "label": "日本史",         "primary": true,  "tall": true},
-    {"id": "periphery",  "label": "世界史",         "primary": true,  "tall": true},
-    {"id": "li_jp",      "label": "日本文学"},
+    {"id": "focus",      "label": "日本史",         "primary": true,  "tall": true, "height": 130},
+    {"id": "periphery",  "label": "世界史",         "primary": true,  "tall": true, "height": 130},
+    {"id": "li_jp",      "label": "日本文学", "height": 120},
     {"id": "li_world",   "label": "世界文学"},
     {"id": "art_jp",     "label": "日本美術・音楽"},
     {"id": "art_world",  "label": "世界美術・音楽"},

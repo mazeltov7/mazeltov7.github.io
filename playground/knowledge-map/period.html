@@ -260,6 +260,140 @@
     .point:hover .entry-label,
     .span:hover .entry-label { opacity: 1; z-index: 35; }
 
+    /* point の entry-label は横向き（縦スタックと相性が良い） */
+    .point .entry-label {
+      bottom: auto;
+      left: calc(100% + 6px);
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    /* 同年クラスタ（2件以上）の年バッジ */
+    .year-cluster-label {
+      position: absolute;
+      transform: translateX(-50%);
+      font-size: 9px;
+      font-weight: 700;
+      color: #a8a29e;
+      background: rgba(255,255,255,0.92);
+      padding: 1px 5px;
+      border-radius: 3px;
+      letter-spacing: 0.04em;
+      pointer-events: none;
+      z-index: 4;
+      font-variant-numeric: tabular-nums;
+      border: 1px solid #f5f5f4;
+      white-space: nowrap;
+    }
+    .year-cluster-label.cluster-hot {
+      color: #92400e;
+      background: #fef3c7;
+      border-color: #fde68a;
+    }
+
+    /* スタッククラスタ sibling 連動ハイライト */
+    .point.cluster-sibling-hover:not(:hover) {
+      transform: translate(-50%, -50%) scale(1.4);
+      z-index: 28;
+      box-shadow: 0 0 0 2px #fbbf24, 0 1px 4px rgba(0,0,0,0.12);
+    }
+
+    /* オーバーフロー +N バッジ */
+    .cluster-overflow-badge {
+      position: absolute;
+      transform: translate(-50%, -50%);
+      min-width: 22px;
+      height: 18px;
+      padding: 0 6px;
+      border-radius: 9999px;
+      background: #1c1917;
+      color: #fff;
+      font-size: 10px;
+      font-weight: 800;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      border: 2px solid #fff;
+      box-shadow: 0 0 0 1px rgba(0,0,0,0.1), 0 1px 3px rgba(0,0,0,0.15);
+      z-index: 3;
+      font-variant-numeric: tabular-nums;
+      letter-spacing: 0.02em;
+      font-family: inherit;
+    }
+    .cluster-overflow-badge:hover {
+      transform: translate(-50%, -50%) scale(1.15);
+      z-index: 30;
+      box-shadow: 0 0 0 1px rgba(0,0,0,0.15), 0 4px 12px rgba(0,0,0,0.2);
+    }
+    .cluster-overflow-badge.hidden { display: none; }
+
+    /* クラスター展開 popover */
+    .cluster-popover {
+      position: fixed;
+      width: 280px;
+      max-height: 360px;
+      overflow-y: auto;
+      background: #fff;
+      border-radius: 0.6rem;
+      padding: 0.4rem 0;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.14);
+      border: 1px solid #e7e5e4;
+      z-index: 210;
+      opacity: 0;
+      transform: translateY(-4px);
+      transition: opacity 0.12s ease, transform 0.12s ease;
+    }
+    .cluster-popover.show { opacity: 1; transform: translateY(0); }
+    .cluster-popover[hidden] { display: none; }
+    .cluster-popover-header {
+      font-size: 0.7rem;
+      font-weight: 700;
+      color: #57534e;
+      padding: 0.5rem 0.9rem 0.55rem;
+      border-bottom: 1px solid #f5f5f4;
+      letter-spacing: 0.04em;
+      font-variant-numeric: tabular-nums;
+    }
+    .cluster-popover-list { display: flex; flex-direction: column; }
+    .cluster-popover-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.55rem;
+      padding: 0.55rem 0.9rem;
+      cursor: pointer;
+      transition: background 0.1s;
+      font-family: inherit;
+      background: none;
+      border: none;
+      text-align: left;
+      width: 100%;
+      border-bottom: 1px solid #fafaf9;
+    }
+    .cluster-popover-item:last-child { border-bottom: none; }
+    .cluster-popover-item:hover { background: #fafaf9; }
+    .cluster-popover-item .item-dot {
+      width: 10px; height: 10px;
+      border-radius: 50%;
+      flex-shrink: 0;
+      margin-top: 4px;
+      box-shadow: 0 0 0 1px rgba(0,0,0,0.05);
+    }
+    .cluster-popover-item .item-body { flex: 1; min-width: 0; }
+    .cluster-popover-item .item-title {
+      font-size: 0.78rem;
+      font-weight: 600;
+      color: #1c1917;
+      line-height: 1.4;
+      overflow-wrap: break-word;
+    }
+    .cluster-popover-item .item-meta {
+      font-size: 0.66rem;
+      color: #78716c;
+      margin-top: 0.15rem;
+      letter-spacing: 0.02em;
+    }
+
     .column-overlay {
       position: absolute;
       top: 0;
@@ -510,6 +644,11 @@
     <button class="popover-action" id="popAction" type="button" hidden>詳しく見る →</button>
   </div>
 
+  <div class="cluster-popover" id="clusterPopover" hidden>
+    <div class="cluster-popover-header" id="clusterPopoverHeader"></div>
+    <div class="cluster-popover-list" id="clusterPopoverList"></div>
+  </div>
+
   <div class="modal-overlay" id="modal" aria-hidden="true">
     <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
       <button class="modal-close" id="modalClose" aria-label="閉じる">×</button>
@@ -546,6 +685,8 @@
       search: '',
       catMap: {},
       laneMap: {},
+      clusterMembers: null,
+      clusterPopoverOpen: false,
     };
 
     Promise.all([
@@ -579,6 +720,7 @@
       placeEntries();
       updateVisibility();
       bindPopover();
+      bindClusterPopover();
       bindModal();
       bindSearch();
       bindColumnHover();
@@ -613,6 +755,10 @@
       });
     }
 
+    function laneHeight(lane) {
+      return lane.height || (lane.tall ? 110 : 80);
+    }
+
     function buildLabels() {
       const c = document.getElementById('laneLabels');
       const corner = document.createElement('div');
@@ -621,7 +767,7 @@
       state.data.lanes.forEach(lane => {
         const el = document.createElement('div');
         el.className = 'lane-label' + (lane.tall ? ' tall' : '');
-        el.style.height = (lane.tall ? 110 : 80) + 'px';
+        el.style.height = laneHeight(lane) + 'px';
         el.textContent = lane.label;
         c.appendChild(el);
       });
@@ -653,7 +799,7 @@
         const el = document.createElement('div');
         el.className = 'lane' + (lane.tall ? ' tall' : '');
         el.dataset.lane = lane.id;
-        el.style.height = (lane.tall ? 110 : 80) + 'px';
+        el.style.height = laneHeight(lane) + 'px';
         for (let y = Math.ceil(start / 10) * 10; y <= end; y += 10) {
           const left = (y - start) / (end - start) * 100;
           const guide = document.createElement('div');
@@ -673,29 +819,32 @@
     function placeEntries() {
       const laneEls = {};
       document.querySelectorAll('.lane').forEach(l => laneEls[l.dataset.lane] = l);
-      const trackWidthPx = document.getElementById('mapTrack').offsetWidth || 2400;
+      const trackWidthPx = document.getElementById('mapTrack').offsetWidth || 4800;
 
       const byLane = {};
       state.data.lanes.forEach(l => byLane[l.id] = []);
       state.data.entries.forEach(e => { if (byLane[e.lane]) byLane[e.lane].push(e); });
 
+      // clusterKey -> { entries, lane, year } を保持（overflow popover で参照）
+      state.clusterMembers = new Map();
+
       Object.entries(byLane).forEach(([laneId, entries]) => {
         const laneEl = laneEls[laneId];
         if (!laneEl) return;
         const lane = state.laneMap[laneId];
-        const laneHeight = lane.tall ? 110 : 80;
+        const hLane = laneHeight(lane);
 
         const spans = entries.filter(e => e.yearEnd != null);
         const points = entries.filter(e => e.yearEnd == null);
 
-        // greedy stack assignment for spans
+        // === spans: greedy stack（既存ロジック） ===
         spans.sort((a, b) => a.year - b.year);
-        const levelEnds = [];
+        const spanLevelEnds = [];
         const spanLevels = new Map();
         spans.forEach(s => {
           let lvl = 0;
-          while (lvl < levelEnds.length && levelEnds[lvl] >= s.year) lvl++;
-          levelEnds[lvl] = s.yearEnd;
+          while (lvl < spanLevelEnds.length && spanLevelEnds[lvl] >= s.year) lvl++;
+          spanLevelEnds[lvl] = s.yearEnd;
           spanLevels.set(s, lvl);
         });
 
@@ -728,23 +877,131 @@
           laneEl.appendChild(el);
         });
 
-        const hasSpans = spans.length > 0;
-        const pointY = hasSpans ? (laneHeight - 14) : (laneHeight / 2);
+        // === points: greedy stack + cluster ===
+        const POINT_SIZE = 14;
+        const POINT_H_GAP = 3;
+        const POINT_V_STEP = 18;
+        const POINT_BOTTOM_MARGIN = 6;
+        const POINT_TOP_MARGIN = 6;
+
+        const spanBottomY = spans.length > 0
+          ? spanTopMargin + spanLevelEnds.length * (spanH + spanGap)
+          : 0;
+        const pointTopBound = spanBottomY + (spans.length > 0 ? 6 : POINT_TOP_MARGIN);
+        const pointBottomBound = hLane - POINT_BOTTOM_MARGIN;
+        const availableV = Math.max(POINT_SIZE, pointBottomBound - pointTopBound);
+        const maxLevels = Math.max(1, Math.floor((availableV - POINT_SIZE) / POINT_V_STEP) + 1);
+
+        points.sort((a, b) => a.year - b.year);
+
+        const yearGroups = new Map();
+        points.forEach(p => {
+          if (!yearGroups.has(p.year)) yearGroups.set(p.year, []);
+          yearGroups.get(p.year).push(p);
+        });
+
+        const levelLastEdgeX = new Array(maxLevels).fill(-Infinity);
+        const pointLevels = new Map();
+        const yearOverflow = new Map();
+        points.forEach(p => {
+          const xPx = xPercent(p.year) / 100 * trackWidthPx;
+          const leftEdge = xPx - POINT_SIZE / 2;
+          let lvl = 0;
+          while (lvl < maxLevels && levelLastEdgeX[lvl] + POINT_H_GAP > leftEdge) lvl++;
+          if (lvl >= maxLevels) {
+            if (!yearOverflow.has(p.year)) yearOverflow.set(p.year, []);
+            yearOverflow.get(p.year).push(p);
+            pointLevels.set(p, -1);
+          } else {
+            levelLastEdgeX[lvl] = xPx + POINT_SIZE / 2;
+            pointLevels.set(p, lvl);
+          }
+        });
+
         points.forEach(e => {
+          const lvl = pointLevels.get(e);
+          if (lvl < 0) return;
           const cat = state.catMap[e.category];
           const left = xPercent(e.year);
+          const pointY = pointBottomBound - POINT_SIZE / 2 - lvl * POINT_V_STEP;
           const el = document.createElement('button');
           el.className = 'point';
           el.dataset.id = e.id;
+          el.dataset.year = e.year;
           el.style.left = left + '%';
           el.style.top = pointY + 'px';
           el.style.background = cat ? cat.color : '#888';
+          const siblings = yearGroups.get(e.year);
+          if (siblings && siblings.length > 1) {
+            el.dataset.clusterKey = laneId + ':' + e.year;
+            el.classList.add('clustered');
+          }
           const labelEl = document.createElement('span');
           labelEl.className = 'entry-label';
           labelEl.textContent = e.title;
           el.appendChild(labelEl);
           attachClick(el, e);
           laneEl.appendChild(el);
+        });
+
+        // 同年クラスタ年バッジ（2件以上、スタックに収まったもの）
+        yearGroups.forEach((siblings, year) => {
+          if (siblings.length < 2) return;
+          const visible = siblings.filter(s => pointLevels.get(s) >= 0);
+          if (!visible.length) return;
+          const topLvl = Math.max.apply(null, visible.map(s => pointLevels.get(s)));
+          const topY = pointBottomBound - POINT_SIZE / 2 - topLvl * POINT_V_STEP;
+          const badge = document.createElement('div');
+          badge.className = 'year-cluster-label';
+          if (siblings.length >= 4) badge.classList.add('cluster-hot');
+          badge.style.left = xPercent(year) + '%';
+          badge.style.top = (topY - POINT_SIZE / 2 - 12) + 'px';
+          badge.textContent = year + ' ×' + siblings.length;
+          badge.dataset.clusterKey = laneId + ':' + year;
+          laneEl.appendChild(badge);
+        });
+
+        // overflow +N バッジ
+        yearOverflow.forEach((overflowEntries, year) => {
+          const siblings = yearGroups.get(year) || [];
+          const visible = siblings.filter(s => pointLevels.get(s) >= 0);
+          const topLvl = visible.length ? Math.max.apply(null, visible.map(s => pointLevels.get(s))) : -1;
+          const badgeY = topLvl >= 0
+            ? pointBottomBound - POINT_SIZE / 2 - (topLvl + 1) * POINT_V_STEP
+            : pointBottomBound - POINT_SIZE / 2;
+          const badge = document.createElement('button');
+          badge.type = 'button';
+          badge.className = 'cluster-overflow-badge';
+          badge.style.left = xPercent(year) + '%';
+          badge.style.top = badgeY + 'px';
+          badge.textContent = '+' + overflowEntries.length;
+          const key = laneId + ':' + year;
+          badge.dataset.clusterKey = key;
+          state.clusterMembers.set(key, { entries: siblings.slice(), lane, year });
+          badge.addEventListener('click', (ev) => {
+            ev.stopPropagation();
+            openClusterPopover(key, badge);
+          });
+          laneEl.appendChild(badge);
+        });
+      });
+
+      bindClusterHover();
+    }
+
+    function bindClusterHover() {
+      document.querySelectorAll('.point.clustered').forEach(el => {
+        el.addEventListener('mouseenter', () => {
+          const key = el.dataset.clusterKey;
+          document.querySelectorAll('.point[data-cluster-key="' + CSS.escape(key) + '"]').forEach(s => {
+            s.classList.add('cluster-sibling-hover');
+          });
+        });
+        el.addEventListener('mouseleave', () => {
+          const key = el.dataset.clusterKey;
+          document.querySelectorAll('.point[data-cluster-key="' + CSS.escape(key) + '"]').forEach(s => {
+            s.classList.remove('cluster-sibling-hover');
+          });
         });
       });
     }
@@ -849,8 +1106,85 @@
         if (pinnedId === null) return;
         if (popoverEl().contains(e.target)) return;
         if (e.target.closest('.point') || e.target.closest('.span')) return;
+        if (e.target.closest('.cluster-popover')) return;
         hidePopover();
       });
+    }
+
+    function bindClusterPopover() {
+      document.addEventListener('keydown', e => {
+        if (e.key === 'Escape' && state.clusterPopoverOpen) hideClusterPopover();
+      });
+      document.addEventListener('click', (e) => {
+        if (!state.clusterPopoverOpen) return;
+        const pop = document.getElementById('clusterPopover');
+        if (pop.contains(e.target)) return;
+        if (e.target.closest('.cluster-overflow-badge')) return;
+        hideClusterPopover();
+      });
+    }
+
+    function openClusterPopover(key, anchorEl) {
+      const cluster = state.clusterMembers && state.clusterMembers.get(key);
+      if (!cluster) return;
+      const pop = document.getElementById('clusterPopover');
+      const header = document.getElementById('clusterPopoverHeader');
+      const list = document.getElementById('clusterPopoverList');
+      header.textContent = cluster.year + ' · ' + cluster.lane.label + ' · ' + cluster.entries.length + '件';
+      list.innerHTML = '';
+      cluster.entries.forEach(entry => {
+        const cat = state.catMap[entry.category];
+        const item = document.createElement('button');
+        item.className = 'cluster-popover-item';
+        item.type = 'button';
+        const meta = (cat ? cat.icon + ' ' + cat.label : '') + (entry.where ? ' · ' + escapeHtml(entry.where) : '');
+        item.innerHTML =
+          '<span class="item-dot" style="background:' + (cat ? cat.color : '#888') + '"></span>' +
+          '<span class="item-body">' +
+            '<span class="item-title">' + escapeHtml(entry.title) + '</span>' +
+            '<span class="item-meta">' + meta + '</span>' +
+          '</span>';
+        item.addEventListener('click', (ev) => {
+          ev.stopPropagation();
+          hideClusterPopover();
+          const detail = state.details[entry.id];
+          if (detail) {
+            openModal(entry, detail);
+            markPinned(entry.id);
+          } else {
+            togglePopover(entry, anchorEl);
+          }
+        });
+        list.appendChild(item);
+      });
+      pop.hidden = false;
+      pop.classList.remove('show');
+      requestAnimationFrame(() => {
+        positionClusterPopover(anchorEl);
+        pop.classList.add('show');
+      });
+      state.clusterPopoverOpen = true;
+    }
+
+    function positionClusterPopover(anchorEl) {
+      const pop = document.getElementById('clusterPopover');
+      const rect = anchorEl.getBoundingClientRect();
+      const popW = pop.offsetWidth || 280;
+      const popH = pop.offsetHeight || 200;
+      let left = rect.left + rect.width / 2 - popW / 2;
+      let top = rect.bottom + 8;
+      if (top + popH > window.innerHeight - 12) top = Math.max(12, rect.top - popH - 8);
+      if (left < 12) left = 12;
+      if (left + popW > window.innerWidth - 12) left = window.innerWidth - popW - 12;
+      pop.style.left = left + 'px';
+      pop.style.top = top + 'px';
+    }
+
+    function hideClusterPopover() {
+      const pop = document.getElementById('clusterPopover');
+      pop.classList.remove('show');
+      setTimeout(() => { pop.hidden = true; }, 150);
+      state.clusterPopoverOpen = false;
     }
 
     function togglePopover(entry, anchorEl) {
