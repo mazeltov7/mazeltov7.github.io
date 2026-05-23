@@ -249,19 +249,29 @@
       transition: opacity 0.12s, z-index 0.12s;
       border: 1px solid rgba(0,0,0,0.04);
     }
-    /* default: hidden, only revealed when entry is in active time-column */
-    .lane:not(.tall) .entry-label { opacity: 0; }
+    /* 常時表示: 独立 point は上ラベル / スタック内は横ラベル / tall lane は常時 */
+    .entry-label { opacity: 0.92; }
+    .lane.tall .entry-label { opacity: 1; }
+    .point.clustered .entry-label { opacity: 0.96; }
+    /* ホバー or active-column / cluster sibling hover で最前面でくっきり */
     .lane:not(.tall) .point.in-active-column .entry-label,
-    .lane:not(.tall) .span.in-active-column .entry-label {
-      opacity: 0.96;
+    .lane:not(.tall) .span.in-active-column .entry-label,
+    .point.cluster-sibling-hover .entry-label {
+      opacity: 1;
       z-index: 25;
     }
-    .lane.tall .entry-label { opacity: 1; }
     .point:hover .entry-label,
     .span:hover .entry-label { opacity: 1; z-index: 35; }
 
-    /* point の entry-label は横向き（縦スタックと相性が良い） */
+    /* デフォルト: 独立 point は上ラベル（密集回避） */
     .point .entry-label {
+      bottom: calc(100% + 4px);
+      left: 50%;
+      top: auto;
+      transform: translateX(-50%);
+    }
+    /* 縦スタック内は横ラベル（縦に並んでも読める） */
+    .point.clustered .entry-label {
       bottom: auto;
       left: calc(100% + 6px);
       top: 50%;
