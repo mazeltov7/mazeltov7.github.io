@@ -273,36 +273,6 @@
       text-align: right;
     }
 
-    /* hover popover */
-    .popover {
-      position: fixed;
-      width: 320px;
-      background: #fff;
-      border-radius: 0.6rem;
-      padding: 1rem 1.1rem;
-      box-shadow: 0 8px 24px rgba(0,0,0,0.12);
-      border: 1px solid #e7e5e4;
-      z-index: 200;
-      pointer-events: auto;
-      opacity: 0;
-      transform: translateY(-4px);
-      transition: opacity 0.12s ease, transform 0.12s ease;
-    }
-    .popover.show { opacity: 1; transform: translateY(0); }
-    .popover[hidden] { display: none; }
-    .pop-title {
-      font-size: 0.95rem;
-      font-weight: 700;
-      line-height: 1.4;
-      margin-bottom: 0.5rem;
-    }
-    .pop-meta {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      gap: 0.35rem 0.5rem;
-      margin-bottom: 0.5rem;
-    }
     .meta-pill {
       display: inline-block;
       font-size: 0.62rem;
@@ -324,12 +294,6 @@
       font-size: 0.7rem;
       color: #78716c;
       margin-top: 0.05rem;
-    }
-    .pop-summary {
-      font-size: 0.78rem;
-      line-height: 1.65;
-      color: #292524;
-      margin-top: 0.5rem;
     }
 
     .mini-map {
@@ -398,22 +362,6 @@
     .pc-meta { font-size: 0.7rem; color: #78716c; margin-top: 0.2rem; font-variant-numeric: tabular-nums; }
     .pc-subtitle { font-size: 0.7rem; color: #a8a29e; margin-top: 0.25rem; line-height: 1.5; }
 
-    .popover-action {
-      display: inline-block;
-      margin-top: 0.7rem;
-      font-size: 0.74rem;
-      font-weight: 700;
-      color: #1c1917;
-      background: #fafaf9;
-      border: 1px solid #e7e5e4;
-      padding: 0.35rem 0.75rem;
-      border-radius: 9999px;
-      cursor: pointer;
-      transition: background 0.12s, border-color 0.12s;
-      font-family: inherit;
-    }
-    .popover-action:hover { background: #fff; border-color: #1c1917; }
-    .popover-action[hidden] { display: none; }
 
     /* modal for full detail */
     .modal-overlay {
@@ -569,15 +517,6 @@
     <div class="legend-note">時代区分は均等幅ではなく、現代に近いほど広く取っています（warped scale）。</div>
   </div>
 
-  <div class="popover" id="popover" hidden>
-    <h2 class="pop-title" id="popTitle"></h2>
-    <div class="pop-meta" id="popMeta"></div>
-    <div class="mini-map" id="miniMap"></div>
-    <div class="mini-map-caption">▲ 大まかな地理上の位置</div>
-    <div class="pop-summary" id="popSummary"></div>
-    <button class="popover-action" id="popAction" type="button" hidden>詳しく見る →</button>
-  </div>
-
   <div class="modal-overlay" id="modal" aria-hidden="true">
     <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
       <button class="modal-close" id="modalClose" aria-label="閉じる">×</button>
@@ -586,6 +525,11 @@
       <div class="modal-section" id="modalSummarySection" hidden>
         <h3>概要</h3>
         <div class="modal-summary-body" id="modalSummary"></div>
+      </div>
+      <div class="modal-section" id="modalGeoSection">
+        <h3>地理</h3>
+        <div class="mini-map" id="miniMap"></div>
+        <div class="mini-map-caption">▲ 大まかな地理上の位置</div>
       </div>
       <div class="modal-section modal-era" id="modalEraSection" hidden>
         <h3>時代背景</h3>
@@ -659,7 +603,6 @@
       buildRows(data);
       buildDots(data);
       updateVisibility();
-      bindPopover();
       bindSearch();
       bindColumnHover();
       bindModal();
@@ -762,7 +705,7 @@
         dot.appendChild(labelEl);
         dot.addEventListener('click', (ev) => {
           ev.stopPropagation();
-          togglePopover(entry, dot);
+          openModal(entry);
         });
         row.appendChild(dot);
       });
@@ -810,91 +753,6 @@
         if (show) visible++;
       });
       document.getElementById('stats').textContent = `${visible} / ${state.data.entries.length} 件表示`;
-    }
-
-    let pinnedId = null;
-    const popoverEl = () => document.getElementById('popover');
-
-    function bindPopover() {
-      document.addEventListener('keydown', e => { if (e.key === 'Escape') hidePopover(); });
-      document.addEventListener('click', (e) => {
-        if (pinnedId === null) return;
-        if (popoverEl().contains(e.target)) return;
-        if (e.target.closest('.dot')) return;
-        hidePopover();
-      });
-    }
-
-    function togglePopover(entry, anchorEl) {
-      if (pinnedId === entry.id) {
-        hidePopover();
-      } else {
-        pinnedId = entry.id;
-        renderPopover(entry);
-        const pop = popoverEl();
-        pop.hidden = false;
-        pop.classList.remove('show');
-        requestAnimationFrame(() => {
-          positionPopover(anchorEl);
-          pop.classList.add('show');
-        });
-        markPinned(entry.id);
-      }
-    }
-
-    function renderPopover(entry) {
-      const cat = state.catMap[entry.category];
-      const region = state.regionMap[entry.region];
-
-      document.getElementById('popTitle').textContent = entry.title;
-      document.getElementById('popMeta').innerHTML = `
-        <span class="meta-pill" style="background:${cat.color}">${cat.icon} ${cat.label}</span>
-        <span class="meta-year">${formatYearLabel(entry)}</span>
-        <span class="meta-region">${region.label}</span>
-        <div class="meta-where">📍 ${escapeHtml(entry.where || '')}</div>
-      `;
-      document.getElementById('popSummary').textContent = entry.summary || '';
-      buildMiniMap(entry, cat);
-
-      const action = document.getElementById('popAction');
-      const detail = state.details[entry.id];
-      if (detail) {
-        action.hidden = false;
-        action.onclick = (ev) => { ev.stopPropagation(); openModal(entry, detail); };
-      } else {
-        action.hidden = true;
-        action.onclick = null;
-      }
-    }
-
-    function positionPopover(anchorEl) {
-      const pop = popoverEl();
-      const rect = anchorEl.getBoundingClientRect();
-      const popW = pop.offsetWidth || 320;
-      const popH = pop.offsetHeight || 240;
-      let left = rect.left + rect.width / 2 - popW / 2;
-      let top = rect.top - popH - 12;
-      if (top < 12) top = rect.bottom + 12;
-      if (left < 12) left = 12;
-      if (left + popW > window.innerWidth - 12) left = window.innerWidth - popW - 12;
-      pop.style.left = left + 'px';
-      pop.style.top = top + 'px';
-    }
-
-    function hidePopover() {
-      pinnedId = null;
-      const pop = popoverEl();
-      pop.classList.remove('show');
-      setTimeout(() => { pop.hidden = true; }, 150);
-      markPinned(null);
-    }
-
-    function markPinned(id) {
-      document.querySelectorAll('.dot.pinned').forEach(el => el.classList.remove('pinned'));
-      if (id) {
-        const el = document.querySelector(`.dot[data-id="${CSS.escape(id)}"]`);
-        if (el) el.classList.add('pinned');
-      }
     }
 
     const COLUMN_HALF_WIDTH_PX = 60;
@@ -1024,7 +882,8 @@
       });
     }
 
-    function openModal(entry, detail) {
+    function openModal(entry) {
+      const detail = state.details[entry.id] || {};
       const cat = state.catMap[entry.category];
       const region = state.regionMap[entry.region];
       document.getElementById('modalTitle').textContent = entry.title;
@@ -1067,6 +926,7 @@
           tc.appendChild(tag);
         });
       });
+      buildMiniMap(entry, cat);
       const el = document.getElementById('modal');
       el.classList.add('show');
       el.setAttribute('aria-hidden', 'false');
