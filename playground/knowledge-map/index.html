@@ -398,6 +398,135 @@
     .pc-meta { font-size: 0.7rem; color: #78716c; margin-top: 0.2rem; font-variant-numeric: tabular-nums; }
     .pc-subtitle { font-size: 0.7rem; color: #a8a29e; margin-top: 0.25rem; line-height: 1.5; }
 
+    .popover-action {
+      display: inline-block;
+      margin-top: 0.7rem;
+      font-size: 0.74rem;
+      font-weight: 700;
+      color: #1c1917;
+      background: #fafaf9;
+      border: 1px solid #e7e5e4;
+      padding: 0.35rem 0.75rem;
+      border-radius: 9999px;
+      cursor: pointer;
+      transition: background 0.12s, border-color 0.12s;
+      font-family: inherit;
+    }
+    .popover-action:hover { background: #fff; border-color: #1c1917; }
+    .popover-action[hidden] { display: none; }
+
+    /* modal for full detail */
+    .modal-overlay {
+      position: fixed; inset: 0;
+      background: rgba(0,0,0,0.45);
+      z-index: 300;
+      display: none;
+      align-items: flex-start;
+      justify-content: center;
+      padding: 3rem 1rem;
+      overflow-y: auto;
+    }
+    .modal-overlay.show { display: flex; }
+    .modal {
+      background: #fff;
+      border-radius: 1rem;
+      max-width: 640px;
+      width: 100%;
+      padding: 1.75rem 1.75rem 1.5rem;
+      box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+      position: relative;
+    }
+    .modal-close {
+      position: absolute;
+      top: 0.75rem; right: 0.9rem;
+      width: 32px; height: 32px;
+      border: none;
+      background: transparent;
+      font-size: 1.4rem;
+      line-height: 1;
+      color: #78716c;
+      cursor: pointer;
+      border-radius: 9999px;
+      transition: background 0.12s, color 0.12s;
+    }
+    .modal-close:hover { background: #f5f5f4; color: #1c1917; }
+    .modal-title {
+      font-size: 1.3rem;
+      font-weight: 700;
+      line-height: 1.4;
+      margin-bottom: 0.6rem;
+      padding-right: 2rem;
+    }
+    .modal-meta {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 0.4rem 0.6rem;
+      margin-bottom: 1.3rem;
+      font-size: 0.78rem;
+      color: #57534e;
+    }
+    .modal-section { margin-bottom: 1.3rem; }
+    .modal-section:last-child { margin-bottom: 0; }
+    .modal-section h3 {
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      color: #78716c;
+      margin-bottom: 0.55rem;
+    }
+    .modal-summary-body {
+      font-size: 0.88rem;
+      line-height: 1.85;
+      color: #1c1917;
+    }
+    .modal-era p,
+    .modal-bio p,
+    .person-card p {
+      font-size: 0.88rem;
+      line-height: 1.85;
+      color: #1c1917;
+      margin-bottom: 0.7rem;
+    }
+    .modal-era p:last-child,
+    .modal-bio p:last-child,
+    .person-card p:last-child { margin-bottom: 0; }
+    .modal-era strong,
+    .modal-bio strong,
+    .person-card strong {
+      background: linear-gradient(transparent 60%, #fde68a 60%);
+      font-weight: 700;
+    }
+    .modal-bio-meta {
+      font-size: 0.74rem;
+      color: #78716c;
+      margin-bottom: 0.4rem;
+      font-variant-numeric: tabular-nums;
+    }
+    .person-card {
+      background: #fafaf9;
+      border: 1px solid #f0efed;
+      border-radius: 0.6rem;
+      padding: 0.8rem 0.95rem;
+      margin-bottom: 0.6rem;
+    }
+    .person-card:last-child { margin-bottom: 0; }
+    .person-name { font-size: 0.85rem; font-weight: 700; color: #1c1917; margin-bottom: 0.15rem; }
+    .modal-themes {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.35rem;
+    }
+    .modal-theme-tag {
+      display: inline-block;
+      font-size: 0.7rem;
+      padding: 0.25rem 0.65rem;
+      border-radius: 9999px;
+      background: #f5f5f4;
+      color: #57534e;
+      border: 1px solid #e7e5e4;
+    }
+
     @media (max-width: 600px) {
       body { padding: 1rem 0.5rem 3rem; }
       .page-title { font-size: 1.3rem; }
@@ -446,20 +575,53 @@
     <div class="mini-map" id="miniMap"></div>
     <div class="mini-map-caption">▲ 大まかな地理上の位置</div>
     <div class="pop-summary" id="popSummary"></div>
+    <button class="popover-action" id="popAction" type="button" hidden>詳しく見る →</button>
+  </div>
+
+  <div class="modal-overlay" id="modal" aria-hidden="true">
+    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <button class="modal-close" id="modalClose" aria-label="閉じる">×</button>
+      <h2 class="modal-title" id="modalTitle"></h2>
+      <div class="modal-meta" id="modalMeta"></div>
+      <div class="modal-section" id="modalSummarySection" hidden>
+        <h3>概要</h3>
+        <div class="modal-summary-body" id="modalSummary"></div>
+      </div>
+      <div class="modal-section modal-era" id="modalEraSection" hidden>
+        <h3>時代背景</h3>
+        <div id="modalEra"></div>
+      </div>
+      <div class="modal-section modal-bio" id="modalBioSection" hidden>
+        <h3>著者</h3>
+        <div class="modal-bio-meta" id="modalBioMeta"></div>
+        <div id="modalBio"></div>
+      </div>
+      <div class="modal-section" id="modalPeopleSection" hidden>
+        <h3>キーパーソン</h3>
+        <div id="modalPeople"></div>
+      </div>
+      <div class="modal-section" id="modalThemesSection" hidden>
+        <h3>テーマ</h3>
+        <div class="modal-themes" id="modalThemes"></div>
+      </div>
+    </div>
   </div>
 
   <script>
     const state = {
       data: null,
+      details: {},
       activeCategories: null,
       search: '',
       catMap: {},
       regionMap: {},
     };
 
-    fetch('data.json')
-      .then(r => r.json())
-      .then(init)
+    Promise.all([
+      fetch('data.json').then(r => r.json()),
+      fetch('data.details.json').then(r => r.ok ? r.json() : {}).catch(() => ({})),
+    ])
+      .then(([data, details]) => { state.details = details; init(data); })
       .catch(err => {
         document.body.innerHTML = '<p style="padding:2rem;color:#dc2626">データ読み込みに失敗しました: ' + err.message + '</p>';
       });
@@ -500,6 +662,7 @@
       bindPopover();
       bindSearch();
       bindColumnHover();
+      bindModal();
     }
 
     function buildFilters(data) {
@@ -692,6 +855,16 @@
       `;
       document.getElementById('popSummary').textContent = entry.summary || '';
       buildMiniMap(entry, cat);
+
+      const action = document.getElementById('popAction');
+      const detail = state.details[entry.id];
+      if (detail) {
+        action.hidden = false;
+        action.onclick = (ev) => { ev.stopPropagation(); openModal(entry, detail); };
+      } else {
+        action.hidden = true;
+        action.onclick = null;
+      }
     }
 
     function positionPopover(anchorEl) {
@@ -826,6 +999,83 @@
       return String(s).replace(/[&<>"']/g, ch => ({
         '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
       }[ch]));
+    }
+
+    function mdToHTML(text) {
+      return String(text).split(/\n\n+/).map(p =>
+        '<p>' + escapeHtml(p).replace(/\n/g, '<br>').replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>') + '</p>'
+      ).join('');
+    }
+
+    function toggleSection(id, cond, fill) {
+      const sec = document.getElementById(id);
+      if (cond) { fill(); sec.hidden = false; } else { sec.hidden = true; }
+    }
+
+    function bindModal() {
+      document.getElementById('modalClose').addEventListener('click', closeModal);
+      document.getElementById('modal').addEventListener('click', (e) => {
+        if (e.target.id === 'modal') closeModal();
+      });
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && document.getElementById('modal').classList.contains('show')) {
+          closeModal();
+        }
+      });
+    }
+
+    function openModal(entry, detail) {
+      const cat = state.catMap[entry.category];
+      const region = state.regionMap[entry.region];
+      document.getElementById('modalTitle').textContent = entry.title;
+      document.getElementById('modalMeta').innerHTML = `
+        <span class="meta-pill" style="background:${cat.color}">${cat.icon} ${cat.label}</span>
+        <span class="meta-year">${formatYearLabel(entry)}</span>
+        ${region ? `<span class="meta-region">${region.label}</span>` : ''}
+        <span class="meta-where">📍 ${escapeHtml(entry.where || '')}</span>
+      `;
+      toggleSection('modalSummarySection', entry.summary, () => {
+        document.getElementById('modalSummary').textContent = entry.summary;
+      });
+      toggleSection('modalEraSection', detail.era, () => {
+        document.getElementById('modalEra').innerHTML = mdToHTML(detail.era);
+      });
+      const bio = detail.authorBio;
+      toggleSection('modalBioSection', bio, () => {
+        const meta = [];
+        if (bio.born != null) meta.push(`生年 ${bio.born}`);
+        if (bio.died != null) meta.push(`没年 ${bio.died}`);
+        document.getElementById('modalBioMeta').textContent = meta.join(' · ');
+        document.getElementById('modalBio').innerHTML = bio.summary ? mdToHTML(bio.summary) : '';
+      });
+      const people = Array.isArray(detail.keyPeople) ? detail.keyPeople : null;
+      toggleSection('modalPeopleSection', people && people.length, () => {
+        document.getElementById('modalPeople').innerHTML = people.map(p =>
+          `<div class="person-card"><div class="person-name">${escapeHtml(p.name || '')}</div>` +
+          `${p.meta ? `<div class="modal-bio-meta">${escapeHtml(p.meta)}</div>` : ''}` +
+          `${p.summary ? mdToHTML(p.summary) : ''}</div>`
+        ).join('');
+      });
+      const themes = Array.isArray(detail.themes) ? detail.themes : null;
+      toggleSection('modalThemesSection', themes && themes.length, () => {
+        const tc = document.getElementById('modalThemes');
+        tc.innerHTML = '';
+        themes.forEach(t => {
+          const tag = document.createElement('span');
+          tag.className = 'modal-theme-tag';
+          tag.textContent = t;
+          tc.appendChild(tag);
+        });
+      });
+      const el = document.getElementById('modal');
+      el.classList.add('show');
+      el.setAttribute('aria-hidden', 'false');
+    }
+
+    function closeModal() {
+      const el = document.getElementById('modal');
+      el.classList.remove('show');
+      el.setAttribute('aria-hidden', 'true');
     }
   </script>
 <!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "822f6925e2b64a45928c584854ac19a2"}'></script><!-- End Cloudflare Web Analytics -->
