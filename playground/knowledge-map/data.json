@@ -39,6 +39,7 @@
     {"id":"we-hamlet","title":"シェイクスピア『ハムレット』","year":1600,"category":"literature","region":"western_europe","where":"ロンドン（イングランド）","summary":"ルネサンス期英国を代表する悲劇。「生きるべきか死ぬべきか」が近代的自我の苦悩を象徴。"},
     {"id":"we-galileo","title":"ガリレオ『天文対話』","year":1632,"category":"science","region":"western_europe","where":"フィレンツェ（イタリア）","summary":"地動説を擁護し対話形式で説いた書。翌年ガリレオは異端審問にかけられた。"},
     {"id":"we-principia","title":"ニュートン『プリンキピア』","year":1687,"category":"science","region":"western_europe","where":"ケンブリッジ（イングランド）","summary":"古典力学と万有引力を体系化。科学革命の到達点であり、近代科学の出発点となる。"},
+    {"id":"we-glorious-revolution","title":"名誉革命","year":1688,"category":"event","region":"western_europe","where":"ロンドン（イングランド）","summary":"無血で国王ジェームズ2世を追放しウィリアム3世とメアリー2世を即位。翌年の権利章典で議会主権を確立し、立憲君主制と近代議会政治の礎に。ロック『統治二論』の思想的背景。"},
     {"id":"we-bach-passion","title":"バッハ『マタイ受難曲』","year":1727,"category":"music","region":"western_europe","where":"ライプツィヒ（ドイツ）","summary":"バロック音楽の頂点。新約聖書マタイ福音書のキリスト受難物語を壮大に描く。"},
     {"id":"we-kant-critique","title":"カント『純粋理性批判』","year":1781,"category":"philosophy","region":"western_europe","where":"ケーニヒスベルク（プロイセン）","summary":"「コペルニクス的転回」と呼ばれる認識論の革命。近代哲学の方向を決定づけた。"},
     {"id":"we-french-revolution","title":"フランス革命","year":1789,"category":"event","region":"western_europe","where":"パリ（フランス）","summary":"バスティーユ襲撃から始まる近代市民革命。自由・平等・友愛の理念は世界に波及した。"},
