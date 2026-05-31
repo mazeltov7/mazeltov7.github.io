@@ -36,6 +36,7 @@
   ],
   "entries": [
     {"id":"we-parthenon","title":"パルテノン神殿","year":-447,"category":"art","region":"western_europe","where":"アテネ（ギリシャ）","summary":"古代ギリシャ建築の最高傑作。アテナ女神を祀り、民主政アテネの繁栄を象徴する。"},
+    {"id":"we-gutenberg","title":"グーテンベルクの活版印刷","year":1450,"category":"tech","region":"western_europe","where":"マインツ（ドイツ）","summary":"金属活字による活版印刷術を実用化（1455年にグーテンベルク聖書を印刷）。書物の大量複製を可能にし、宗教改革・科学革命・知識の爆発的普及を支えた。"},
     {"id":"we-hamlet","title":"シェイクスピア『ハムレット』","year":1600,"category":"literature","region":"western_europe","where":"ロンドン（イングランド）","summary":"ルネサンス期英国を代表する悲劇。「生きるべきか死ぬべきか」が近代的自我の苦悩を象徴。"},
     {"id":"we-galileo","title":"ガリレオ『天文対話』","year":1632,"category":"science","region":"western_europe","where":"フィレンツェ（イタリア）","summary":"地動説を擁護し対話形式で説いた書。翌年ガリレオは異端審問にかけられた。"},
     {"id":"we-principia","title":"ニュートン『プリンキピア』","year":1687,"category":"science","region":"western_europe","where":"ケンブリッジ（イングランド）","summary":"古典力学と万有引力を体系化。科学革命の到達点であり、近代科学の出発点となる。"},
