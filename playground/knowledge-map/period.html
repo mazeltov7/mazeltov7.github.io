@@ -595,6 +595,18 @@
       margin-bottom: 0.4rem;
       font-variant-numeric: tabular-nums;
     }
+    .person-card {
+      background: #fafaf9;
+      border: 1px solid #f0efed;
+      border-radius: 0.6rem;
+      padding: 0.8rem 0.95rem;
+      margin-bottom: 0.6rem;
+    }
+    .person-card:last-child { margin-bottom: 0; }
+    .person-card p { font-size: 0.88rem; line-height: 1.85; color: #1c1917; margin-bottom: 0.7rem; }
+    .person-card p:last-child { margin-bottom: 0; }
+    .person-card strong { background: linear-gradient(transparent 60%, #fde68a 60%); font-weight: 700; }
+    .person-name { font-size: 0.85rem; font-weight: 700; color: #1c1917; margin-bottom: 0.15rem; }
     .modal-themes {
       display: flex;
       flex-wrap: wrap;
@@ -676,6 +688,10 @@
         <h3>著者プロフィール</h3>
         <div class="modal-bio-meta" id="modalBioMeta"></div>
         <div id="modalBio"></div>
+      </div>
+      <div class="modal-section" id="modalPeopleSection" hidden>
+        <h3>キーパーソン</h3>
+        <div id="modalPeople"></div>
       </div>
       <div class="modal-section" id="modalThemesSection" hidden>
         <h3>テーマ</h3>
@@ -1019,13 +1035,7 @@
     function attachClick(el, entry) {
       el.addEventListener('click', (ev) => {
         ev.stopPropagation();
-        const detail = state.details[entry.id];
-        if (detail) {
-          openModal(entry, detail);
-          markPinned(entry.id);
-        } else {
-          togglePopover(entry, el);
-        }
+        openModal(entry);
       });
     }
 
@@ -1157,13 +1167,7 @@
         item.addEventListener('click', (ev) => {
           ev.stopPropagation();
           hideClusterPopover();
-          const detail = state.details[entry.id];
-          if (detail) {
-            openModal(entry, detail);
-            markPinned(entry.id);
-          } else {
-            togglePopover(entry, anchorEl);
-          }
+          openModal(entry);
         });
         list.appendChild(item);
       });
@@ -1293,7 +1297,8 @@
       });
     }
 
-    function openModal(entry, detail) {
+    function openModal(entry) {
+      const detail = state.details[entry.id] || {};
       const cat = state.catMap[entry.category];
       const lane = state.laneMap[entry.lane];
       const yearText = entry.yearEnd != null ? `${entry.year} – ${entry.yearEnd}` : `${entry.year}`;
@@ -1323,7 +1328,17 @@
         document.getElementById('modalBio').innerHTML = detail.authorBio.summary ? mdToHTML(detail.authorBio.summary) : '';
         bioSec.hidden = false;
       } else { bioSec.hidden = true; }
-      const themesSec = document.getElementById('modalThemesSection');
+      const peopleSec = document.getElementById('modalPeopleSection');
+      const people = Array.isArray(detail.keyPeople) ? detail.keyPeople : null;
+      if (people && people.length) {
+        document.getElementById('modalPeople').innerHTML = people.map(p =>
+          `<div class="person-card"><div class="person-name">${escapeHtml(p.name || '')}</div>` +
+          `${p.meta ? `<div class="modal-bio-meta">${escapeHtml(p.meta)}</div>` : ''}` +
+          `${p.summary ? mdToHTML(p.summary) : ''}</div>`
+        ).join('');
+        peopleSec.hidden = false;
+      } else { peopleSec.hidden = true; }
+            const themesSec = document.getElementById('modalThemesSection');
       if (Array.isArray(detail.themes) && detail.themes.length) {
         const tc = document.getElementById('modalThemes');
         tc.innerHTML = '';
