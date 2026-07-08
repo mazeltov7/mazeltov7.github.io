@@ -62,6 +62,10 @@
     {"id":"jp-kinmon","title":"禁門の変（蛤御門の変）","year":1864,"category":"event","lane":"focus","region":"east_asia","where":"京都御所周辺","summary":"京を追われた長州が武力入京を図り会津・薩摩に敗退。朝敵となり第一次長州征討を招くが、これが討幕への路線転換の起点となる。"},
     {"id":"jp-satcho","title":"薩長同盟","year":1866,"category":"event","lane":"focus","region":"east_asia","where":"京都","summary":"坂本龍馬・中岡慎太郎の仲介で犬猿の仲だった薩摩と長州が軍事同盟を締結。討幕勢力が結集し、幕府崩壊への流れを決定づけた。"},
     {"id":"jp-osei-fukko","title":"王政復古の大号令","year":1867,"category":"event","lane":"focus","region":"east_asia","where":"京都・小御所","summary":"大政奉還を受け薩長らが幕府・摂関を廃して天皇親政を宣言。旧幕府勢力の排除を打ち出し、翌年の戊辰戦争へと向かう。"},
+    {"id":"jp-iwakura","title":"岩倉使節団","year":1871,"yearEnd":1873,"category":"event","lane":"focus","region":"east_asia","where":"欧米各国","summary":"岩倉具視を全権に大久保・木戸・伊藤ら政府首脳が欧米12カ国を歴訪。条約改正は果たせなかったが、先進国の制度と産業を実見し、内治優先・殖産興業の方針を固めた。"},
+    {"id":"jp-chiso","title":"地租改正","year":1873,"category":"event","lane":"focus","region":"east_asia","where":"全国","summary":"地価の3%を金納させる税制改革で、近代的な土地所有権と安定財源を確立。負担の重さは各地で地租改正反対一揆を招き、のちに2.5%へ引き下げられた。"},
+    {"id":"jp-minsen","title":"民撰議院設立建白書","year":1874,"category":"event","lane":"focus","region":"east_asia","where":"東京","summary":"板垣退助・後藤象二郎らが藩閥政府を批判し国会開設を要求。自由民権運動の出発点となり、のちの自由党結成・帝国憲法へとつながる。"},
+    {"id":"jp-cabinet","title":"内閣制度創設","year":1885,"category":"event","lane":"focus","region":"east_asia","where":"東京","summary":"太政官制を廃して内閣制度を発足させ、伊藤博文が初代内閣総理大臣に就任。憲法発布に備えた近代的な行政機構と官僚制を整えた。"},
 
     {"id":"wd-civil-war","title":"米南北戦争","year":1861,"yearEnd":1865,"category":"event","lane":"periphery","region":"north_america","where":"米国全土","summary":"奴隷制と連邦の維持を巡る大規模内戦。北軍勝利で奴隷解放と中央集権が確立、近代米国の基礎となる。"},
     {"id":"wd-lincoln-assassin","title":"リンカーン暗殺","year":1865,"category":"event","lane":"periphery","region":"north_america","where":"ワシントンD.C.","summary":"南北戦争終結直後にフォード劇場で銃撃される。再建期の困難と人種問題の長期化を予感させる事件。"},
@@ -91,6 +95,9 @@
     {"id":"wd-arrow-war","title":"アロー戦争（第2次アヘン戦争）","year":1856,"yearEnd":1860,"category":"event","lane":"periphery","region":"east_asia","where":"広州・北京","summary":"英仏連合が清に開戦、北京条約で開港と九龍割譲を認めさせ円明園を焼いた。隣国中国の半植民地化は幕末日本にも衝撃を与えた。"},
     {"id":"wd-indian-mutiny","title":"インド大反乱（セポイの乱）","year":1857,"yearEnd":1858,"category":"event","lane":"periphery","region":"south_asia","where":"デリー・北インド","summary":"東インド会社のインド人傭兵の蜂起が大反乱に発展。鎮圧後にムガル帝国は滅亡、会社も解散し、インドは英政府の直接統治下に入った。"},
     {"id":"wd-serf-emancipation","title":"ロシア農奴解放令","year":1861,"category":"event","lane":"periphery","region":"eastern_europe","where":"ロシア","summary":"クリミア戦争の敗北を受け皇帝アレクサンドル2世が約2300万の農奴を解放。ロシア近代化の起点となるが、土地分与は不十分で不満を残した。"},
+    {"id":"wd-suez","title":"スエズ運河開通","year":1869,"category":"event","lane":"periphery","region":"middle_east","where":"エジプト・スエズ","summary":"地中海と紅海を結ぶ運河がフランス主導で開通し、欧亜の航路を大幅に短縮。のちに英国が支配権を握り、インド航路の要衝＝帝国主義の大動脈となった。"},
+    {"id":"wd-berlin-africa","title":"ベルリン＝コンゴ会議（アフリカ分割）","year":1884,"yearEnd":1885,"category":"event","lane":"periphery","region":"africa","where":"ベルリン","summary":"ビスマルクが列強を招集し、コンゴ盆地の帰属とアフリカ分割の原則を取り決めた。「早い者勝ち」の植民地争奪を制度化し、アフリカはほぼ全土が欧州の支配下に置かれる。"},
+    {"id":"wd-inc","title":"インド国民会議 発足","year":1885,"category":"event","lane":"periphery","region":"south_asia","where":"ボンベイ（インド）","summary":"英領インドの知識人が結成した政治組織。当初は穏健な請願団体だったが、のちにガンディー・ネルーの下でインド独立運動の中核へと発展する。"},
 
     {"id":"li-tolstoy-anna","title":"トルストイ『アンナ・カレーニナ』","year":1877,"category":"literature","lane":"li_world","region":"eastern_europe","where":"ロシア","summary":"上流社会の人妻アンナの不倫と破滅を描く長編。19世紀リアリズム文学の金字塔。"},
     {"id":"li-zola-tavern","title":"ゾラ『居酒屋』","year":1877,"category":"literature","lane":"li_world","region":"western_europe","where":"フランス","summary":"パリ下層民の生活を冷徹に描く自然主義文学の代表作。ルーゴン＝マッカール叢書の一作。"},
