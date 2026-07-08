@@ -455,6 +455,123 @@
       text-align: right;
     }
 
+    /* mobile: decade selector + detail panel */
+    .mobile-hint {
+      display: none;
+      font-size: 0.72rem;
+      color: #78716c;
+      margin: 0.1rem 0 0.7rem;
+      align-items: center;
+      gap: 0.4rem;
+      line-height: 1.5;
+    }
+    .mobile-hint svg { width: 14px; height: 14px; flex-shrink: 0; color: #a8a29e; }
+
+    .decade-bar {
+      display: none;
+      flex-wrap: wrap;
+      gap: 0.35rem;
+      margin-bottom: 0.9rem;
+    }
+    .decade-chip {
+      font-size: 0.72rem;
+      font-weight: 700;
+      padding: 0.3rem 0.7rem;
+      border-radius: 9999px;
+      border: 1px solid #e7e5e4;
+      background: #fff;
+      color: #57534e;
+      cursor: pointer;
+      font-family: inherit;
+      font-variant-numeric: tabular-nums;
+      transition: all 0.12s;
+    }
+    .decade-chip:hover { border-color: #d6d3d1; }
+    .decade-chip.active { background: #1c1917; color: #fff; border-color: #1c1917; }
+
+    .pd-panel {
+      display: none;
+      background: #fff;
+      border-radius: 0.75rem;
+      margin-top: 0.9rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+      overflow: hidden;
+    }
+    .pd-head {
+      display: flex;
+      align-items: baseline;
+      gap: 0.5rem;
+      padding: 0.85rem 1rem 0.55rem;
+      border-bottom: 1px solid #f5f5f4;
+    }
+    .pd-title { font-size: 1rem; font-weight: 700; color: #1c1917; }
+    .pd-range { font-size: 0.68rem; color: #a8a29e; font-variant-numeric: tabular-nums; }
+    .pd-count { font-size: 0.68rem; color: #a8a29e; margin-left: auto; white-space: nowrap; }
+    .pd-close {
+      flex-shrink: 0;
+      width: 30px;
+      height: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: none;
+      background: transparent;
+      color: #78716c;
+      font-size: 1.3rem;
+      line-height: 1;
+      cursor: pointer;
+      border-radius: 9999px;
+      align-self: center;
+    }
+    .pd-close:hover { background: #f5f5f4; color: #1c1917; }
+    .pd-list { padding: 0.4rem; display: flex; flex-direction: column; gap: 2px; }
+    .pd-empty { padding: 1.5rem 1rem; text-align: center; color: #a8a29e; font-size: 0.78rem; line-height: 1.6; }
+    .pd-card {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.6rem;
+      width: 100%;
+      text-align: left;
+      background: transparent;
+      border: none;
+      border-radius: 0.5rem;
+      padding: 0.55rem 0.6rem;
+      cursor: pointer;
+      font-family: inherit;
+      transition: background 0.12s;
+    }
+    .pd-card:hover, .pd-card:focus { background: #fafaf9; outline: none; }
+    .pd-card-dot {
+      width: 11px;
+      height: 11px;
+      border-radius: 50%;
+      flex-shrink: 0;
+      margin-top: 0.3rem;
+      box-shadow: 0 0 0 1px rgba(0,0,0,0.05);
+    }
+    .pd-card-body { flex: 1; min-width: 0; display: block; }
+    .pd-card-title { display: block; font-size: 0.82rem; font-weight: 700; color: #1c1917; line-height: 1.45; }
+    .pd-card-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.3rem 0.5rem;
+      align-items: baseline;
+      font-size: 0.68rem;
+      color: #78716c;
+      margin-top: 0.15rem;
+      font-variant-numeric: tabular-nums;
+    }
+    .pd-card-summary {
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      font-size: 0.72rem;
+      color: #57534e;
+      line-height: 1.5;
+      margin-top: 0.25rem;
+    }
+
     /* hover popover */
     .meta-pill {
       display: inline-block;
@@ -592,6 +709,9 @@
       .map-track { min-width: 3600px; }
       .modal { padding: 1.25rem; border-radius: 0.75rem; }
       .stats { width: 100%; margin-left: 0; }
+      .mobile-hint { display: flex; }
+      .decade-bar { display: flex; }
+      .pd-panel.open { display: block; }
     }
   </style>
 </head>
@@ -609,6 +729,12 @@
       <div class="stats" id="stats"></div>
     </div>
 
+    <div class="mobile-hint" id="mobileHint">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11V6a2 2 0 0 1 4 0v5"/><path d="M9 11V9a2 2 0 0 0-4 0v3a7 7 0 0 0 7 7h1a6 6 0 0 0 6-6v-2a2 2 0 0 0-4 0"/><path d="M13 11V8a2 2 0 0 1 4 0v3"/></svg>
+      <span>年代を選ぶと、その10年間の項目が下に一覧表示されます。</span>
+    </div>
+    <div class="decade-bar" id="decadeBar"></div>
+
     <div class="map">
       <div class="lane-labels" id="laneLabels"></div>
       <div class="map-scroll">
@@ -619,6 +745,16 @@
       </div>
     </div>
     <div class="legend-note">▶ 横スクロールで全期間を一望　·　史実は名前を常時表示、他はマップ上にホバーするとその時代の項目が一覧／クリックで詳細</div>
+
+    <div class="pd-panel" id="pdPanel" aria-live="polite">
+      <div class="pd-head">
+        <span class="pd-title" id="pdTitle"></span>
+        <span class="pd-range" id="pdRange"></span>
+        <span class="pd-count" id="pdCount"></span>
+        <button class="pd-close" id="pdClose" aria-label="閉じる">×</button>
+      </div>
+      <div class="pd-list" id="pdList"></div>
+    </div>
   </div>
 
   <div class="cluster-popover" id="clusterPopover" hidden>
@@ -668,6 +804,7 @@
       laneMap: {},
       clusterMembers: null,
       clusterPopoverOpen: false,
+      selectedDecade: null,
     };
 
     Promise.all([
@@ -704,6 +841,8 @@
       bindModal();
       bindSearch();
       bindColumnHover();
+      buildDecadeBar();
+      bindPeriodDetail();
     }
 
     function buildFilters() {
@@ -1068,6 +1207,7 @@
         if (show) visible++;
       });
       document.getElementById('stats').textContent = `${visible} / ${state.data.entries.length} 件表示`;
+      if (state.selectedDecade != null && isMobile()) renderDecadePanel();
     }
 
     function bindClusterPopover() {
@@ -1229,6 +1369,114 @@
       const el = document.getElementById('modal');
       el.classList.remove('show');
       el.setAttribute('aria-hidden', 'true');
+    }
+
+    /* ---- mobile decade selector + detail panel ---- */
+    function isMobile() {
+      return window.matchMedia('(max-width: 600px)').matches;
+    }
+
+    function decadeList() {
+      const start = Math.floor(state.data.start / 10) * 10;
+      const end = Math.floor(state.data.end / 10) * 10;
+      const arr = [];
+      for (let d = start; d <= end; d += 10) arr.push(d);
+      return arr;
+    }
+
+    function buildDecadeBar() {
+      const bar = document.getElementById('decadeBar');
+      decadeList().forEach(d => {
+        const chip = document.createElement('button');
+        chip.className = 'decade-chip';
+        chip.type = 'button';
+        chip.dataset.decade = d;
+        chip.textContent = `${d}年代`;
+        chip.addEventListener('click', () => {
+          if (state.selectedDecade === d) closeDecade();
+          else openDecade(d);
+        });
+        bar.appendChild(chip);
+      });
+    }
+
+    function bindPeriodDetail() {
+      document.getElementById('pdClose').addEventListener('click', closeDecade);
+      const mq = window.matchMedia('(max-width: 600px)');
+      const onChange = () => { if (!mq.matches) closeDecade(); };
+      if (mq.addEventListener) mq.addEventListener('change', onChange);
+      else if (mq.addListener) mq.addListener(onChange);
+    }
+
+    function openDecade(d) {
+      state.selectedDecade = d;
+      document.querySelectorAll('.decade-chip').forEach(c => {
+        c.classList.toggle('active', Number(c.dataset.decade) === d);
+      });
+      renderDecadePanel();
+      const panel = document.getElementById('pdPanel');
+      panel.classList.add('open');
+      panel.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    }
+
+    function closeDecade() {
+      state.selectedDecade = null;
+      document.querySelectorAll('.decade-chip.active').forEach(c => c.classList.remove('active'));
+      document.getElementById('pdPanel').classList.remove('open');
+    }
+
+    function renderDecadePanel() {
+      const d = state.selectedDecade;
+      if (d == null) return;
+      const dStart = Math.max(d, state.data.start);
+      const dEnd = Math.min(d + 9, state.data.end);
+      const search = state.search;
+      const cats = state.activeCategories;
+      const items = state.data.entries.filter(e => {
+        const s = e.year;
+        const en = e.yearEnd != null ? e.yearEnd : e.year;
+        if (s > dEnd || en < dStart) return false; // overlap with decade
+        if (!cats.has(e.category)) return false;
+        if (search) {
+          const t = (e.title + ' ' + (e.where || '') + ' ' + (e.summary || '')).toLowerCase();
+          if (!t.includes(search)) return false;
+        }
+        return true;
+      }).sort((a, b) => a.year - b.year);
+
+      document.getElementById('pdTitle').textContent = `${d}年代`;
+      document.getElementById('pdRange').textContent = `${dStart} – ${dEnd}`;
+      document.getElementById('pdCount').textContent = `${items.length} 件`;
+
+      const list = document.getElementById('pdList');
+      if (items.length === 0) {
+        list.innerHTML = '<div class="pd-empty">この年代に表示できる項目がありません（フィルタ・検索を確認）</div>';
+        return;
+      }
+      list.innerHTML = '';
+      items.forEach(entry => {
+        const cat = state.catMap[entry.category];
+        const lane = state.laneMap[entry.lane];
+        const color = cat ? cat.color : '#888';
+        const yearText = entry.yearEnd != null ? `${entry.year}–${entry.yearEnd}` : `${entry.year}`;
+        const btn = document.createElement('button');
+        btn.className = 'pd-card';
+        btn.type = 'button';
+        btn.innerHTML =
+          `<span class="pd-card-dot" style="background:${color}"></span>` +
+          `<span class="pd-card-body">` +
+            `<span class="pd-card-title">${escapeHtml(entry.title)}</span>` +
+            `<span class="pd-card-meta">` +
+              (cat ? `<span style="color:${color};font-weight:700">${cat.icon} ${escapeHtml(cat.label)}</span>` : '') +
+              `<span>${escapeHtml(yearText)}</span>` +
+              (lane ? `<span>${escapeHtml(lane.label)}</span>` : '') +
+              (entry.where ? `<span>📍 ${escapeHtml(entry.where)}</span>` : '') +
+            `</span>` +
+            (entry.summary ? `<span class="pd-card-summary">${escapeHtml(entry.summary)}</span>` : '') +
+          `</span>`;
+        btn.addEventListener('click', () => openModal(entry));
+        list.appendChild(btn);
+      });
     }
   </script>
 <!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "822f6925e2b64a45928c584854ac19a2"}'></script><!-- End Cloudflare Web Analytics -->

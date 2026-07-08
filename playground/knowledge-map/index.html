@@ -289,6 +289,101 @@
       text-align: right;
     }
 
+    /* mobile: era-detail panel (tap an era header to list its entries) */
+    .era-hint {
+      display: none;
+      font-size: 0.72rem;
+      color: #78716c;
+      margin-top: 0.7rem;
+      align-items: center;
+      gap: 0.4rem;
+      line-height: 1.5;
+    }
+    .era-hint svg { width: 14px; height: 14px; flex-shrink: 0; color: #a8a29e; }
+
+    .era-detail {
+      display: none;
+      background: #fff;
+      border-radius: 0.75rem;
+      margin-top: 0.9rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+      overflow: hidden;
+    }
+    .era-detail-head {
+      display: flex;
+      align-items: baseline;
+      gap: 0.5rem;
+      padding: 0.85rem 1rem 0.55rem;
+      border-bottom: 1px solid #f5f5f4;
+    }
+    .era-detail-title { font-size: 1rem; font-weight: 700; color: #1c1917; }
+    .era-detail-range { font-size: 0.68rem; color: #a8a29e; font-variant-numeric: tabular-nums; }
+    .era-detail-count { font-size: 0.68rem; color: #a8a29e; margin-left: auto; white-space: nowrap; }
+    .era-detail-close {
+      flex-shrink: 0;
+      width: 30px;
+      height: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: none;
+      background: transparent;
+      color: #78716c;
+      font-size: 1.3rem;
+      line-height: 1;
+      cursor: pointer;
+      border-radius: 9999px;
+      align-self: center;
+    }
+    .era-detail-close:hover { background: #f5f5f4; color: #1c1917; }
+    .era-detail-list { padding: 0.4rem; display: flex; flex-direction: column; gap: 2px; }
+    .era-detail-empty { padding: 1.5rem 1rem; text-align: center; color: #a8a29e; font-size: 0.78rem; line-height: 1.6; }
+    .era-card {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.6rem;
+      width: 100%;
+      text-align: left;
+      background: transparent;
+      border: none;
+      border-radius: 0.5rem;
+      padding: 0.55rem 0.6rem;
+      cursor: pointer;
+      font-family: inherit;
+      transition: background 0.12s;
+    }
+    .era-card:hover, .era-card:focus { background: #fafaf9; outline: none; }
+    .era-card-dot {
+      width: 11px;
+      height: 11px;
+      border-radius: 50%;
+      flex-shrink: 0;
+      margin-top: 0.3rem;
+      box-shadow: 0 0 0 1px rgba(0,0,0,0.05);
+    }
+    .era-card-body { flex: 1; min-width: 0; display: block; }
+    .era-card-title { display: block; font-size: 0.82rem; font-weight: 700; color: #1c1917; line-height: 1.45; }
+    .era-card-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.3rem 0.5rem;
+      align-items: baseline;
+      font-size: 0.68rem;
+      color: #78716c;
+      margin-top: 0.15rem;
+      font-variant-numeric: tabular-nums;
+    }
+    .era-card-summary {
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      font-size: 0.72rem;
+      color: #57534e;
+      line-height: 1.5;
+      margin-top: 0.25rem;
+    }
+
     .meta-pill {
       display: inline-block;
       font-size: 0.62rem;
@@ -499,6 +594,10 @@
       .map-track { min-width: 1800px; }
       .modal { padding: 1.25rem; border-radius: 0.75rem; }
       .stats { width: 100%; margin-left: 0; }
+      .era-hint { display: flex; }
+      .era.tappable { cursor: pointer; }
+      .era-detail.open { display: block; }
+      .era.selected { background: #eef2ff; }
     }
   </style>
 </head>
@@ -521,6 +620,11 @@
       <div class="stats" id="stats"></div>
     </div>
 
+    <div class="era-hint" id="eraHint">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11V6a2 2 0 0 1 4 0v5"/><path d="M9 11V9a2 2 0 0 0-4 0v3a7 7 0 0 0 7 7h1a6 6 0 0 0 6-6v-2a2 2 0 0 0-4 0"/><path d="M13 11V8a2 2 0 0 1 4 0v3"/></svg>
+      <span>時代の見出し（先史・古代…）をタップすると、その時代の項目が下に一覧表示されます。</span>
+    </div>
+
     <div class="map">
       <div class="region-labels" id="regionLabels"></div>
       <div class="map-scroll">
@@ -531,6 +635,16 @@
       </div>
     </div>
     <div class="legend-note">時代区分は均等幅ではなく、現代に近いほど広く取っています（warped scale）。</div>
+
+    <div class="era-detail" id="eraDetailPanel" aria-live="polite">
+      <div class="era-detail-head">
+        <span class="era-detail-title" id="eraDetailTitle"></span>
+        <span class="era-detail-range" id="eraDetailRange"></span>
+        <span class="era-detail-count" id="eraDetailCount"></span>
+        <button class="era-detail-close" id="eraDetailClose" aria-label="閉じる">×</button>
+      </div>
+      <div class="era-detail-list" id="eraDetailList"></div>
+    </div>
   </div>
 
   <div class="modal-overlay" id="modal" aria-hidden="true">
@@ -575,6 +689,7 @@
       search: '',
       catMap: {},
       regionMap: {},
+      selectedEraIndex: null,
     };
 
     Promise.all([
@@ -622,6 +737,7 @@
       bindSearch();
       bindColumnHover();
       bindModal();
+      bindEraDetail();
     }
 
     function buildFilters(data) {
@@ -668,11 +784,17 @@
 
     function buildEraHeader(data) {
       const container = document.getElementById('eraHeader');
-      data.eras.forEach(era => {
+      data.eras.forEach((era, i) => {
         const cell = document.createElement('div');
-        cell.className = 'era';
+        cell.className = 'era tappable';
         cell.style.width = era.width + '%';
+        cell.dataset.index = i;
         cell.innerHTML = `<div class="era-name">${era.label}</div><div class="era-range">${formatYear(era.start)} – ${formatYear(era.end)}</div>`;
+        cell.addEventListener('click', () => {
+          if (!isMobile()) return;
+          if (state.selectedEraIndex === i) closeEraDetail();
+          else openEraDetail(i);
+        });
         container.appendChild(cell);
       });
     }
@@ -769,6 +891,7 @@
         if (show) visible++;
       });
       document.getElementById('stats').textContent = `${visible} / ${state.data.entries.length} 件表示`;
+      if (state.selectedEraIndex != null && isMobile()) renderEraDetail();
     }
 
     const COLUMN_HALF_WIDTH_PX = 60;
@@ -952,6 +1075,93 @@
       const el = document.getElementById('modal');
       el.classList.remove('show');
       el.setAttribute('aria-hidden', 'true');
+    }
+
+    /* ---- mobile era-detail panel ---- */
+    function isMobile() {
+      return window.matchMedia('(max-width: 600px)').matches;
+    }
+
+    function eraIndexOf(year) {
+      const eras = state.data.eras;
+      for (let i = 0; i < eras.length; i++) {
+        if (year >= eras[i].start && year <= eras[i].end) return i;
+      }
+      return -1;
+    }
+
+    function bindEraDetail() {
+      document.getElementById('eraDetailClose').addEventListener('click', closeEraDetail);
+      const mq = window.matchMedia('(max-width: 600px)');
+      const onChange = () => { if (!mq.matches) closeEraDetail(); };
+      if (mq.addEventListener) mq.addEventListener('change', onChange);
+      else if (mq.addListener) mq.addListener(onChange);
+    }
+
+    function openEraDetail(i) {
+      state.selectedEraIndex = i;
+      document.querySelectorAll('.era').forEach((el, idx) => {
+        el.classList.toggle('selected', idx === i);
+      });
+      renderEraDetail();
+      const panel = document.getElementById('eraDetailPanel');
+      panel.classList.add('open');
+      panel.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    }
+
+    function closeEraDetail() {
+      state.selectedEraIndex = null;
+      document.querySelectorAll('.era.selected').forEach(el => el.classList.remove('selected'));
+      document.getElementById('eraDetailPanel').classList.remove('open');
+    }
+
+    function renderEraDetail() {
+      const i = state.selectedEraIndex;
+      if (i == null) return;
+      const era = state.data.eras[i];
+      const search = state.search;
+      const cats = state.activeCategories;
+      const items = state.data.entries.filter(e => {
+        if (eraIndexOf(e.year) !== i) return false;
+        if (!cats.has(e.category)) return false;
+        if (search) {
+          const t = (e.title + ' ' + (e.where || '') + ' ' + (e.summary || '')).toLowerCase();
+          if (!t.includes(search)) return false;
+        }
+        return true;
+      }).sort((a, b) => a.year - b.year);
+
+      document.getElementById('eraDetailTitle').textContent = era.label;
+      document.getElementById('eraDetailRange').textContent = `${formatYear(era.start)} – ${formatYear(era.end)}`;
+      document.getElementById('eraDetailCount').textContent = `${items.length} 件`;
+
+      const list = document.getElementById('eraDetailList');
+      if (items.length === 0) {
+        list.innerHTML = '<div class="era-detail-empty">この時代に表示できる項目がありません（フィルタ・検索を確認）</div>';
+        return;
+      }
+      list.innerHTML = '';
+      items.forEach(entry => {
+        const cat = state.catMap[entry.category];
+        const region = state.regionMap[entry.region];
+        const color = cat ? cat.color : '#888';
+        const btn = document.createElement('button');
+        btn.className = 'era-card';
+        btn.innerHTML =
+          `<span class="era-card-dot" style="background:${color}"></span>` +
+          `<span class="era-card-body">` +
+            `<span class="era-card-title">${escapeHtml(entry.title)}</span>` +
+            `<span class="era-card-meta">` +
+              (cat ? `<span style="color:${color};font-weight:700">${cat.icon} ${escapeHtml(cat.label)}</span>` : '') +
+              `<span>${escapeHtml(formatYearLabel(entry))}</span>` +
+              (region ? `<span>${escapeHtml(region.label)}</span>` : '') +
+              (entry.where ? `<span>📍 ${escapeHtml(entry.where)}</span>` : '') +
+            `</span>` +
+            (entry.summary ? `<span class="era-card-summary">${escapeHtml(entry.summary)}</span>` : '') +
+          `</span>`;
+        btn.addEventListener('click', () => openModal(entry));
+        list.appendChild(btn);
+      });
     }
   </script>
 <!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "822f6925e2b64a45928c584854ac19a2"}'></script><!-- End Cloudflare Web Analytics -->
