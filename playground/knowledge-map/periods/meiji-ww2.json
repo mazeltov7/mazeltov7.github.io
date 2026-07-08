@@ -57,6 +57,11 @@
     {"id":"jp-tokyo-air-raid","title":"東京大空襲","year":1945,"category":"event","lane":"focus","region":"east_asia","where":"東京","summary":"3月10日未明の焼夷弾爆撃で約10万人が一夜で死亡。市街戦ではなく民間人の大量死を象徴する事件。"},
     {"id":"jp-atomic-bomb","title":"広島・長崎原爆投下","year":1945,"category":"event","lane":"focus","region":"east_asia","where":"広島・長崎","summary":"8月6日広島・9日長崎に原爆投下。核兵器の実戦使用は唯一無二で、その後の冷戦核体制を決定づける。"},
     {"id":"jp-potsdam","title":"ポツダム宣言受諾・終戦","year":1945,"category":"event","lane":"focus","region":"east_asia","where":"東京","summary":"8月15日玉音放送で終戦。明治以来の帝国体制が崩壊し、戦後の民主化と高度経済成長へとつながる。"},
+    {"id":"jp-ansei-purge","title":"安政の大獄","year":1858,"category":"event","lane":"focus","region":"east_asia","where":"江戸","summary":"大老・井伊直弼が条約の無勅許調印への反対派を弾圧し、吉田松陰・橋本左内らを処刑。反発はかえって尊王攘夷運動を先鋭化させ、桜田門外の変を招く。"},
+    {"id":"jp-namamugi","title":"生麦事件","year":1862,"category":"event","lane":"focus","region":"east_asia","where":"生麦（横浜）","summary":"薩摩藩・島津久光の行列を横切った英国人を藩士が殺傷。賠償交渉の決裂が翌年の薩英戦争を招き、攘夷の非現実性を薩摩に痛感させた。"},
+    {"id":"jp-kinmon","title":"禁門の変（蛤御門の変）","year":1864,"category":"event","lane":"focus","region":"east_asia","where":"京都御所周辺","summary":"京を追われた長州が武力入京を図り会津・薩摩に敗退。朝敵となり第一次長州征討を招くが、これが討幕への路線転換の起点となる。"},
+    {"id":"jp-satcho","title":"薩長同盟","year":1866,"category":"event","lane":"focus","region":"east_asia","where":"京都","summary":"坂本龍馬・中岡慎太郎の仲介で犬猿の仲だった薩摩と長州が軍事同盟を締結。討幕勢力が結集し、幕府崩壊への流れを決定づけた。"},
+    {"id":"jp-osei-fukko","title":"王政復古の大号令","year":1867,"category":"event","lane":"focus","region":"east_asia","where":"京都・小御所","summary":"大政奉還を受け薩長らが幕府・摂関を廃して天皇親政を宣言。旧幕府勢力の排除を打ち出し、翌年の戊辰戦争へと向かう。"},
 
     {"id":"wd-civil-war","title":"米南北戦争","year":1861,"yearEnd":1865,"category":"event","lane":"periphery","region":"north_america","where":"米国全土","summary":"奴隷制と連邦の維持を巡る大規模内戦。北軍勝利で奴隷解放と中央集権が確立、近代米国の基礎となる。"},
     {"id":"wd-lincoln-assassin","title":"リンカーン暗殺","year":1865,"category":"event","lane":"periphery","region":"north_america","where":"ワシントンD.C.","summary":"南北戦争終結直後にフォード劇場で銃撃される。再建期の困難と人種問題の長期化を予感させる事件。"},
@@ -81,6 +86,11 @@
     {"id":"wd-d-day","title":"ノルマンディー上陸作戦","year":1944,"category":"event","lane":"periphery","region":"western_europe","where":"ノルマンディー（仏）","summary":"連合軍が史上最大の上陸作戦を敢行。西部戦線が再開し独の崩壊を加速させる。"},
     {"id":"wd-yalta","title":"ヤルタ会談","year":1945,"category":"event","lane":"periphery","region":"eastern_europe","where":"クリミア半島","summary":"米英ソ首脳が戦後処理を協議。東欧の勢力圏分割と国連設立の枠組みが決まる。冷戦の起点。"},
     {"id":"wd-un","title":"国際連合 設立","year":1945,"category":"event","lane":"periphery","region":"global","where":"サンフランシスコ→NY","summary":"50ヶ国が国連憲章に署名し発足。第二次大戦の反省から国際協調の枠組みを築く。"},
+    {"id":"wd-taiping","title":"太平天国の乱","year":1851,"yearEnd":1864,"category":"event","lane":"periphery","region":"east_asia","where":"南京（天京）","summary":"洪秀全が「太平天国」を建て清朝打倒を掲げた大内乱。十数年に及び数千万が犠牲になったとされ、清朝の弱体化と列強の介入を招いた。"},
+    {"id":"wd-crimean","title":"クリミア戦争","year":1853,"yearEnd":1856,"category":"event","lane":"periphery","region":"eastern_europe","where":"クリミア半島・黒海","summary":"ロシアの南下に英・仏・オスマンが同盟して対抗。ナイチンゲールの従軍で知られ、敗れたロシアは農奴解放など内政改革を迫られた。"},
+    {"id":"wd-arrow-war","title":"アロー戦争（第2次アヘン戦争）","year":1856,"yearEnd":1860,"category":"event","lane":"periphery","region":"east_asia","where":"広州・北京","summary":"英仏連合が清に開戦、北京条約で開港と九龍割譲を認めさせ円明園を焼いた。隣国中国の半植民地化は幕末日本にも衝撃を与えた。"},
+    {"id":"wd-indian-mutiny","title":"インド大反乱（セポイの乱）","year":1857,"yearEnd":1858,"category":"event","lane":"periphery","region":"south_asia","where":"デリー・北インド","summary":"東インド会社のインド人傭兵の蜂起が大反乱に発展。鎮圧後にムガル帝国は滅亡、会社も解散し、インドは英政府の直接統治下に入った。"},
+    {"id":"wd-serf-emancipation","title":"ロシア農奴解放令","year":1861,"category":"event","lane":"periphery","region":"eastern_europe","where":"ロシア","summary":"クリミア戦争の敗北を受け皇帝アレクサンドル2世が約2300万の農奴を解放。ロシア近代化の起点となるが、土地分与は不十分で不満を残した。"},
 
     {"id":"li-tolstoy-anna","title":"トルストイ『アンナ・カレーニナ』","year":1877,"category":"literature","lane":"li_world","region":"eastern_europe","where":"ロシア","summary":"上流社会の人妻アンナの不倫と破滅を描く長編。19世紀リアリズム文学の金字塔。"},
     {"id":"li-zola-tavern","title":"ゾラ『居酒屋』","year":1877,"category":"literature","lane":"li_world","region":"western_europe","where":"フランス","summary":"パリ下層民の生活を冷徹に描く自然主義文学の代表作。ルーゴン＝マッカール叢書の一作。"},
