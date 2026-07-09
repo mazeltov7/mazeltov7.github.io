@@ -341,50 +341,16 @@
       '</div>';
     }
 
-    var UNLOCK_STORAGE_KEY = 'mybooks-unlocked';
-
-    function isNotesUnlocked() {
-      try { return localStorage.getItem(UNLOCK_STORAGE_KEY) === '1'; }
-      catch (e) { return false; }
-    }
-
-    function renderNotes(noteText) {
-      if (!isNotesUnlocked()) return '';
-      if (noteText === null) {
-        return '<div class="section">' +
-          '<h2 class="section-title">📝 自分のメモ</h2>' +
-          '<div class="section-body"><span class="placeholder">まだメモなし</span></div>' +
-        '</div>';
-      }
-      return '<div class="section">' +
-        '<h2 class="section-title">📝 自分のメモ</h2>' +
-        '<div class="section-body">' + marked.parse(noteText) + '</div>' +
-      '</div>';
-    }
-
     function notFound(id) {
       return '<div class="not-found">指定された本が見つかりません<br><small>id: ' + esc(id || '(なし)') + '</small></div>';
-    }
-
-    function loadNote(key) {
-      return fetch('./notes/' + encodeURIComponent(key) + '.md')
-        .then(function(r) {
-          if (!r.ok) return null;
-          return r.text();
-        })
-        .catch(function() { return null; });
     }
 
     var id = getQueryParam('id');
     if (!id) {
       document.getElementById('content').innerHTML = notFound(null);
     } else {
-      Promise.all([
-        fetch('./books-data.json').then(function(r) { return r.json(); }),
-        loadNote(id)
-      ]).then(function(results) {
-        var data = results[0];
-        var noteText = results[1];
+      fetch('./books-data.json').then(function(r) { return r.json(); })
+      .then(function(data) {
         var found = findBook(data, id);
         if (!found) {
           document.getElementById('content').innerHTML = notFound(id);
@@ -393,8 +359,7 @@
         document.title = found.book.title + ' - My Books';
         var html = renderHero(found.book, found.year) +
                    renderEra(found.book) +
-                   renderAuthorBio(found.book) +
-                   renderNotes(noteText);
+                   renderAuthorBio(found.book);
         document.getElementById('content').innerHTML = html;
       }).catch(function(err) {
         console.error(err);
