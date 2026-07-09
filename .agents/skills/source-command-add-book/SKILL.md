@@ -35,7 +35,7 @@ Use this skill when the user asks to run the migrated source command `add-book`.
 6. JSON 妥当性検証
 7. ローカルサーバ (port 8765) が起動していなければ起動して、Codex in Chrome で読み込み確認
 8. 結果サマリ提示 → ユーザー確認
-9. **enrich は自動実行**（ユーザーへ問わない）: 追加した全冊について `/enrich-book` のフロー（多角調査→反映）を **自動で実行** する。enrich-book 側のユーザー確認スキップ設計に従い、複数ソースで裏付けの取れた情報のみ books-data.json に書き込む（`notes/{KEY}.md` は作らない）
+9. **enrich は自動実行**（ユーザーへ問わない）: 追加した全冊について `/enrich-book` のフロー（多角調査→反映）を **自動で実行** する。enrich-book 側のユーザー確認スキップ設計に従い、複数ソースで裏付けの取れた情報のみ books-data.json に書き込む
 10. 追加 + enrich の変更をまとめて **1 つのコミット** にして commit & push（push 直前のユーザー確認は維持）
 
 ### モード2: Instagram 自動検出（引数なし）
@@ -80,7 +80,7 @@ Use this skill when the user asks to run the migrated source command `add-book`.
 
 8. **enrich は自動実行**（ユーザーへ問わない）
    - 追加した全冊について `/enrich-book` のフロー（多角調査→反映）を **自動で実行** する
-   - enrich-book 側の設計（出典に複数ソースの裏付けがある情報のみ書き込む / `notes/{KEY}.md` は作らない）に従う
+   - enrich-book 側の設計（出典に複数ソースの裏付けがある情報のみ書き込む）に従う
 
 9. **commit & push**
    - 追加 + enrich の変更をまとめて 1 コミット

@@ -1,6 +1,6 @@
 ---
 name: enrich-book
-description: 指定した本について Wikipedia / Google Books / Web Search を総合調査し、時代背景・著者プロフィール・テーマタグの下書きを提示。承認分のみ books-data.json に反映（メモ雛形は作らない）
+description: 指定した本について Wikipedia / Google Books / Web Search を総合調査し、時代背景・著者プロフィール・テーマタグの下書きを提示。承認分のみ books-data.json に反映
 user_invocable: true
 arg: 本のタイトル（部分一致可）。複数ヒット時は著者・年で絞り込み確認
 ---
@@ -26,8 +26,6 @@ MyBooks 詳細ビュー（`book.html?id=...`）に表示する周辺情報を「
   "themes": ["タグ1", "タグ2", "タグ3"]
 }
 ```
-
-**`notes/{KEY}.md` は作成しない**（雛形は不要。ユーザーが `/memo` 等で書くまで `book.html` 側の「まだメモなし」表示に任せる）。
 
 ## KEY 算出ルール
 
@@ -73,7 +71,6 @@ MyBooks 詳細ビュー（`book.html?id=...`）に表示する周辺情報を「
 
 - `books-data.json` 該当 entry に採用分のフィールドを追加
 - JSON 妥当性検証（`python3 -m json.tool`）
-- **`notes/{KEY}.md` は作成しない**（雛形は作らず、メモは `/memo` で書くまで「まだメモなし」表示）
 
 ### 5. 反映後にサマリ提示
 
@@ -85,11 +82,11 @@ MyBooks 詳細ビュー（`book.html?id=...`）に表示する周辺情報を「
 
 - localhost:8765 が動いてなければ起動: `cd playground/my-books && python3 -m http.server 8765`
 - Claude in Chrome で `http://localhost:8765/book.html?id={KEY}` を navigate して読み込み確認
-- スクリーンショットで時代背景 / 著者バイオ / メモ欄の表示を視覚確認
+- スクリーンショットで時代背景 / 著者バイオ の表示を視覚確認
 
 ### 7. commit & push（ユーザー確認後）
 
-- 変更ファイル: `playground/my-books/books-data.json` + `playground/my-books/notes/{KEY}.md`
+- 変更ファイル: `playground/my-books/books-data.json`
 - commit メッセージ例: `MyBooks: 「{タイトル}」に時代背景・著者情報を追加`
 - push して `mazeltov7.github.io` 本番反映
 
@@ -99,7 +96,6 @@ MyBooks 詳細ビュー（`book.html?id=...`）に表示する周辺情報を「
 - **不明な項目は無理に埋めない**: 例えば著者の生没年が不明なら born/died を省略して summary だけにする。捏造禁止
 - **既存フィールドの上書き**: すでに `era` などがある本を再 enrich する場合、必ず「既存値があります、上書きしますか？」と確認
 - **commit & push の前に必ずユーザー確認**を取る（自動 push しない）
-- **notes/{KEY}.md** は既存があれば一切上書きしない（ユーザーのメモを消さない）
 
 ## ローカルサーバ起動コマンド
 
