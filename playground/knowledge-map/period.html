@@ -156,19 +156,37 @@
       content: '';
       position: absolute;
       right: 0;
-      top: 18px;
+      top: 30px;
       bottom: 0;
       width: 1px;
       background: #d6d3d1;
     }
-    .year-tick.major span {
-      font-size: 0.66rem;
-      color: #57534e;
+    .year-tick-label {
       position: absolute;
       right: 4px;
       top: 4px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 2px;
+      line-height: 1.05;
+      white-space: nowrap;
       font-variant-numeric: tabular-nums;
-      font-weight: 600;
+    }
+    .year-tick.first-major .year-tick-label {
+      left: 4px;
+      right: auto;
+      align-items: flex-start;
+    }
+    .wareki-year {
+      font-size: 0.58rem;
+      color: #a8a29e;
+      font-weight: 700;
+    }
+    .gregorian-year {
+      font-size: 0.66rem;
+      color: #57534e;
+      font-weight: 700;
     }
     .year-tick.minor::before {
       content: '';
@@ -436,16 +454,26 @@
       bottom: 0;
       background: rgba(28,25,23,0.92);
       color: #fff;
-      font-size: 0.78rem;
-      font-weight: 700;
       display: none;
+      flex-direction: column;
       align-items: center;
       justify-content: center;
+      gap: 2px;
       pointer-events: none;
       z-index: 10;
       font-variant-numeric: tabular-nums;
       white-space: nowrap;
+      line-height: 1.05;
+    }
+    .hover-year-main {
+      font-size: 0.78rem;
+      font-weight: 700;
       letter-spacing: 0.02em;
+    }
+    .hover-year-sub {
+      font-size: 0.58rem;
+      font-weight: 700;
+      color: #d6d3d1;
     }
 
     .legend-note {
@@ -794,6 +822,17 @@
   <script>
     const params = new URLSearchParams(location.search);
     const periodId = params.get('id') || 'meiji-ww2';
+    const WAREKI_ERAS = [
+      { name: '嘉永', start: 1848 },
+      { name: '安政', start: 1854 },
+      { name: '万延', start: 1860 },
+      { name: '文久', start: 1861 },
+      { name: '元治', start: 1864 },
+      { name: '慶応', start: 1865 },
+      { name: '明治', start: 1868 },
+      { name: '大正', start: 1912 },
+      { name: '昭和', start: 1926 },
+    ];
 
     const state = {
       data: null,
@@ -878,6 +917,36 @@
       return lane.height || (lane.tall ? 110 : 80);
     }
 
+    function warekiParts(year) {
+      const y = Number(year);
+      if (!Number.isFinite(y)) return null;
+      let era = null;
+      for (const candidate of WAREKI_ERAS) {
+        if (y < candidate.start) break;
+        era = candidate;
+      }
+      if (!era) return null;
+      const eraYear = y - era.start + 1;
+      return { name: era.name, year: eraYear, yearText: eraYear === 1 ? '元' : String(eraYear) };
+    }
+
+    function formatWarekiYear(year) {
+      const parts = warekiParts(year);
+      return parts ? `${parts.name}${parts.yearText}年` : '';
+    }
+
+    function formatWarekiRange(startYear, endYear) {
+      const start = warekiParts(startYear);
+      const end = warekiParts(endYear);
+      if (!start || !end) return '';
+      if (start.name === end.name) {
+        return start.year === end.year
+          ? `${start.name}${start.yearText}年`
+          : `${start.name}${start.yearText}–${end.yearText}年`;
+      }
+      return `${start.name}${start.yearText}年 – ${end.name}${end.yearText}年`;
+    }
+
     function buildLabels() {
       const c = document.getElementById('laneLabels');
       const corner = document.createElement('div');
@@ -896,16 +965,25 @@
       const c = document.getElementById('yearHeader');
       const { start, end } = state.data;
       const total = end - start;
-      for (let y = Math.ceil(start / 5) * 5; y <= end; y += 5) {
+      const firstTick = Math.ceil(start / 5) * 5;
+      for (let y = firstTick; y <= end; y += 5) {
         const left = (y - start) / total * 100;
         const major = (y % 10 === 0);
         const tick = document.createElement('div');
-        tick.className = 'year-tick' + (major ? ' major' : ' minor');
+        tick.className = 'year-tick' + (major ? ' major' : ' minor') + (major && y === firstTick ? ' first-major' : '');
         tick.style.left = left + '%';
         if (major) {
-          const sp = document.createElement('span');
-          sp.textContent = y;
-          tick.appendChild(sp);
+          const label = document.createElement('span');
+          label.className = 'year-tick-label';
+          const wareki = document.createElement('span');
+          wareki.className = 'wareki-year';
+          wareki.textContent = formatWarekiYear(y);
+          const gregorian = document.createElement('span');
+          gregorian.className = 'gregorian-year';
+          gregorian.textContent = y;
+          if (wareki.textContent) label.appendChild(wareki);
+          label.appendChild(gregorian);
+          tick.appendChild(label);
         }
         c.appendChild(tick);
       }
@@ -1135,6 +1213,8 @@
     const COLUMN_HALF_WIDTH_PX = 60;
     const columnOverlays = [];
     let yearIndicator = null;
+    let yearIndicatorMain = null;
+    let yearIndicatorSub = null;
 
     function bindColumnHover() {
       // create a translucent column overlay per lane
@@ -1147,6 +1227,11 @@
       // year indicator inside year-header
       yearIndicator = document.createElement('div');
       yearIndicator.className = 'hover-year-indicator';
+      yearIndicatorMain = document.createElement('span');
+      yearIndicatorMain.className = 'hover-year-main';
+      yearIndicatorSub = document.createElement('span');
+      yearIndicatorSub.className = 'hover-year-sub';
+      yearIndicator.append(yearIndicatorMain, yearIndicatorSub);
       document.getElementById('yearHeader').appendChild(yearIndicator);
 
       const track = document.getElementById('mapTrack');
@@ -1174,7 +1259,10 @@
       yearIndicator.style.display = 'flex';
       yearIndicator.style.left = leftPct + '%';
       yearIndicator.style.width = widthPct + '%';
-      yearIndicator.textContent = startYear === endYear ? `${startYear}` : `${startYear} – ${endYear}`;
+      yearIndicatorMain.textContent = startYear === endYear ? `${startYear}` : `${startYear} – ${endYear}`;
+      const warekiText = formatWarekiRange(startYear, endYear);
+      yearIndicatorSub.textContent = warekiText;
+      yearIndicatorSub.hidden = !warekiText;
 
       // mark entries whose center x falls in [x-half, x+half]
       document.querySelectorAll('.point, .span').forEach(el => {
