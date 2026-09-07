@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>発明の年表 — 石川 佑樹</title>
+  <meta name="description" content="人類は、何ができるようになったのか。分野と年代から発明を眺め、その仕組みとつながりをたどる年表。">
+  <link rel="canonical" href="https://mazeltov7.com/playground/inventions/">
+  <meta property="og:title" content="発明の年表 — 人類は、何ができるようになったのか。">
+  <meta property="og:description" content="分野と年代から発明を眺め、その仕組みとつながりをたどる。">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://mazeltov7.com/playground/inventions/">
+  <meta property="og:image" content="https://mazeltov7.com/images/og-image.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="../../images/favicon.jpg" type="image/jpeg">
+  <link rel="stylesheet" href="styles.css?v=20260907-inline">
+  <script type="module" src="app.js?v=20260907-inline"></script>
+</head>
+<body>
+  <a class="skip-link" href="#explore">年表へ移動</a>
+  <main class="container">
+    <header class="page-header">
+      <a class="back-link" href="/playground/">← Playground</a>
+      <div class="heading-row">
+        <div><p class="eyebrow">道具から、次の可能性へ。</p><h1>発明の年表</h1></div>
+        <p class="intro">人類は、何ができるようになったのか。<br>時代を見渡し、ひとつの発明から次へ。</p>
+      </div>
+    </header>
+
+    <section class="explore" id="explore" aria-label="発明を探す">
+      <div class="toolbar">
+        <div class="view-switch" role="group" aria-label="表示形式">
+          <button type="button" data-view="map" aria-pressed="true">分野で眺める</button>
+          <button type="button" data-view="list" aria-pressed="false">年代順に読む</button>
+        </div>
+        <label class="search-label"><span class="sr-only">発明・人物・地域を検索</span><input id="search" type="search" placeholder="発明・人物・地域を検索" autocomplete="off"></label>
+      </div>
+      <div id="categories" class="category-filters" role="group" aria-label="分野を選ぶ"></div>
+      <div class="period-row"><label for="period">時代</label><select id="period"><option value="all">すべての時代</option></select><label class="all-entries"><input id="show-all" type="checkbox">代表的な発明以外も表示</label><button id="reset" class="text-button" type="button" hidden>条件をリセット</button></div>
+    </section>
+
+    <div class="results-heading"><p id="result-count" role="status" aria-live="polite">年表を読み込んでいます…</p><p id="scale-note" class="scale-note"></p></div>
+    <div class="workspace" id="workspace">
+      <section class="timeline-region" aria-label="発明の年表">
+        <div id="timeline"></div>
+        <div id="empty" class="empty" hidden><h2>一致する発明がありません</h2><p>別の言葉で探すか、時代・分野の条件を広げてみてください。</p><button id="empty-reset" type="button">すべての発明に戻る</button></div>
+        <div id="error" class="empty" role="alert" hidden><h2>年表を読み込めませんでした</h2><p>通信状況を確認して、もう一度お試しください。</p><button id="retry" type="button">もう一度読み込む</button></div>
+      </section>
+      <aside id="detail-slot" aria-label="選択した発明の詳細" hidden></aside>
+    </div>
+
+    <section class="reading-note">
+      <details><summary>この年表の読み方と、年号について</summary>
+        <div class="note-body">
+          <p>世界の発明から、暮らしや生産を変えたもの、次の技術の土台になったものを選んでいます。網羅的な発明数や、国・人物の優劣を示す年表ではありません。自然現象の発見そのものよりも、人が使える道具・方法にした段階を中心に収録しています。</p>
+          <p>年号には「遺物の年代」「文献の記録」「試作」「特許」「実用化」「公開」など、異なる意味があります。詳細にはその意味と留意点を記載しています。「頃」や年代幅は推定を表し、誰か一人の、ある一年の発明と断定するものではありません。</p>
+          <p>全体表示は時代ごとにまとめた年表です。列の幅は経過した年数と対応しません。期間を選ぶと、より細かな年代で表示します。先史の「年前」はおおよその年代で、紀元前の厳密な換算ではありません。</p>
+          <p>関連リンクは「改良」「部品・方法の利用」など、関係の内容を添えています。直接の系譜が確定していない項目は、同じ課題への取り組みとして区別しています。博物館・研究機関などの出典は、各発明の詳細から確認できます。</p>
+        </div>
+      </details>
+    </section>
+    <footer><span id="collection-note"></span><a href="/playground/knowledge-map/">人類知マップも見る ↗</a></footer>
+  </main>
+  <noscript><p class="noscript">この年表の探索にはJavaScriptが必要です。<a href="data.json">出典を含む発明データはこちら</a>から確認できます。</p></noscript>
+<!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "822f6925e2b64a45928c584854ac19a2"}'></script><!-- End Cloudflare Web Analytics -->
+</body>
+</html>

@@ -1,0 +1,2238 @@
+{
+  "meta": {
+    "title": "発明の年表",
+    "reviewedAt": "2026-09-06",
+    "version": 1
+  },
+  "categories": [
+    {
+      "id": "energy",
+      "label": "エネルギー・動力",
+      "shortLabel": "動力",
+      "color": "#a4712e"
+    },
+    {
+      "id": "materials",
+      "label": "材料・ものづくり",
+      "shortLabel": "材料",
+      "color": "#b26048"
+    },
+    {
+      "id": "transport",
+      "label": "移動・輸送",
+      "shortLabel": "移動",
+      "color": "#4c7b72"
+    },
+    {
+      "id": "communication",
+      "label": "情報・通信",
+      "shortLabel": "通信",
+      "color": "#507ba0"
+    },
+    {
+      "id": "computing",
+      "label": "計算・自動化",
+      "shortLabel": "計算",
+      "color": "#82709b"
+    },
+    {
+      "id": "life",
+      "label": "食・医療・暮らし",
+      "shortLabel": "暮らし",
+      "color": "#7a864b"
+    }
+  ],
+  "sources": {
+    "water": {
+      "label": "ガリレオ博物館：水車",
+      "url": "https://mostre.museogalileo.it/homofaber/en/technology/3-science-and-technology-of-water/3-3-water-wheel.html"
+    },
+    "newcomen": {
+      "label": "Science Museum：蒸気動力のはじまり",
+      "url": "https://blog.sciencemuseum.org.uk/a-new-age/"
+    },
+    "watt": {
+      "label": "Science Museum：ワットの分離凝縮器",
+      "url": "https://blog.sciencemuseum.org.uk/james-watt-and-the-separate-condenser/"
+    },
+    "volta": {
+      "label": "英国王立化学会：1800年の電池の発表",
+      "url": "https://edu.rsc.org/resources/on-this-day-mar-20--volta-revealed-the-battery/10320.article"
+    },
+    "motor": {
+      "label": "英国王立研究所：電気による回転",
+      "url": "https://www.rigb.org/explore-science/explore/blog/birth-electric-motion"
+    },
+    "generator": {
+      "label": "英国王立研究所：研究の歴史",
+      "url": "https://www.rigb.org/explore-science/explore/collection/history-research-ri"
+    },
+    "lead": {
+      "label": "英国王立化学会：電池の歴史",
+      "url": "https://edu.rsc.org/download?ac=519008"
+    },
+    "otto": {
+      "label": "DEUTZ：エンジン開発の歴史",
+      "url": "https://www.deutz.com/en/company/our-history/milestones/"
+    },
+    "turbine": {
+      "label": "Science Museum：1884年のタービン発電機",
+      "url": "https://collection.sciencemuseumgroup.org.uk/objects/co51109/parsons-steam-turbine-generator-1884"
+    },
+    "wind": {
+      "label": "米国物理学会：ブライスの風力発電（2022年7月号）",
+      "url": "https://print.aps.org/pdf/2022-07.pdf"
+    },
+    "nuclear": {
+      "label": "アルゴンヌ国立研究所：Chicago Pile 1",
+      "url": "https://www.ne.anl.gov/cp1-anniversary/"
+    },
+    "solar": {
+      "label": "米国物理学会：1954年のシリコン太陽電池",
+      "url": "https://www.aps.org/apsnews/2009/04/bell-labs-silicon-solar-cell"
+    },
+    "lithium": {
+      "label": "ノーベル財団：リチウムイオン電池の開発史",
+      "url": "https://www.nobelprize.org/uploads/2019/10/advanced-chemistryprize2019-2.pdf"
+    },
+    "led": {
+      "label": "ノーベル財団：青色発光ダイオード",
+      "url": "https://www.nobelprize.org/prizes/physics/2014/press-release/"
+    },
+    "stone": {
+      "label": "Nature：ロメクウィ3の330万年前の石器",
+      "url": "https://www.nature.com/articles/nature14464"
+    },
+    "pottery": {
+      "label": "Science論文（PubMed）：仙人洞の約2万年前の土器",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/22745428/"
+    },
+    "bronze": {
+      "label": "メトロポリタン美術館：青銅器時代の技術と交易",
+      "url": "https://resources.metmuseum.org/resources/metpublications/pdf/Art_of_the_Bronze_Age_Southeastern_Iran_Western_Central_Asia_and_the_Indus_Valley.pdf"
+    },
+    "glass": {
+      "label": "メトロポリタン美術館：古代オリエントの美術と技術",
+      "url": "https://www.metmuseum.org/-/media/files/learn/for-educators/publications-for-educators/art-of-the-ancient-near-east.pdf"
+    },
+    "concrete": {
+      "label": "MIT：ポンペイの建設現場とローマンコンクリート",
+      "url": "https://dmse.mit.edu/news/pompeii-offers-insights-into-ancient-roman-building-technology/"
+    },
+    "porcelain": {
+      "label": "V&A：青花磁器の技術",
+      "url": "https://www.vam.ac.uk/articles/chinese-blue-and-white-ceramics"
+    },
+    "jenny": {
+      "label": "Science Museum：ジェニー紡績機",
+      "url": "https://collection.sciencemuseumgroup.org.uk/objects/co44544"
+    },
+    "rubber": {
+      "label": "全米発明家殿堂：チャールズ・グッドイヤー",
+      "url": "https://www.invent.org/inductees/charles-goodyear"
+    },
+    "steel": {
+      "label": "米国化学会：送風製鋼法の開発",
+      "url": "https://www.acs.org/education/whatischemistry/landmarks/kelly-iron.html"
+    },
+    "bakelite": {
+      "label": "米国化学会：ベークライト",
+      "url": "https://www.acs.org/education/whatischemistry/landmarks/bakelite.html"
+    },
+    "nylon": {
+      "label": "米国化学会：カロザースとナイロン",
+      "url": "https://www.acs.org/education/whatischemistry/landmarks/carotherspolymers.html"
+    },
+    "printing3d": {
+      "label": "全米発明家殿堂：チャールズ・ハル",
+      "url": "https://www.invent.org/inductees/charles-hull"
+    },
+    "wheel": {
+      "label": "リュブリャナ市立博物館：5200年前の車輪",
+      "url": "https://mgml.si/sl/mestni-muzej/razstave/211/kolo-5200-let/"
+    },
+    "compass": {
+      "label": "日本水路協会「水路」169号：磁針の歴史",
+      "url": "https://www.jha.or.jp/jp/shop/products/suiro/pdf/suiro169.pdf"
+    },
+    "harrison": {
+      "label": "英国王立グリニッジ博物館：経度とハリソンの時計",
+      "url": "https://www.rmg.co.uk/stories/time/harrisons-clocks-longitude-problem"
+    },
+    "balloon": {
+      "label": "スミソニアン航空宇宙博物館：モンゴルフィエ",
+      "url": "https://airandspace.si.edu/collection-objects/montgolfier/nasm_A19820068000"
+    },
+    "locomotive": {
+      "label": "ウェールズ国立博物館：トレビシックの蒸気機関車",
+      "url": "https://museum.wales/blog/1012/Richard-Trevithickrsquos-steam-locomotive/"
+    },
+    "bicycle": {
+      "label": "スミソニアン：ドライジーネ",
+      "url": "https://www.si.edu/collections/snapshot/draisine"
+    },
+    "benz": {
+      "label": "メルセデス・ベンツ：1885〜1886年の自動車",
+      "url": "https://group.mercedes-benz.com/company/tradition/company-history/1885-1886.html"
+    },
+    "tyre": {
+      "label": "スコットランド国立博物館：ダンロップのタイヤ",
+      "url": "https://www.nms.ac.uk/discover-catalogue/dunlop-tyre-air-apparent"
+    },
+    "wright": {
+      "label": "スミソニアン航空宇宙博物館：1903年のフライヤー",
+      "url": "https://airandspace.si.edu/collection-objects/wright-1903-flyer/nasm_A19610048000"
+    },
+    "rocket": {
+      "label": "NASA：ゴダードの液体燃料ロケット",
+      "url": "https://www.nasa.gov/history/95-years-ago-goddards-first-liquid-fueled-rocket/"
+    },
+    "jet": {
+      "label": "NASA：航空機エンジンの歴史",
+      "url": "https://www.grc.nasa.gov/www/k-12/UEET/StudentSite/engines.html"
+    },
+    "shinkansen": {
+      "label": "JR東海：東海道新幹線の歴史（統合報告書）",
+      "url": "https://global.jr-central.co.jp/en/company/ir/annualreport/_pdf/annualreport2024-13.pdf"
+    },
+    "gps": {
+      "label": "米国政府：GPS標準測位サービス性能規定",
+      "url": "https://www.gps.gov/sites/default/files/2025-07/2008-SPS-performance-standard.pdf"
+    },
+    "writing": {
+      "label": "メトロポリタン美術館：文字の起源",
+      "url": "https://www.metmuseum.org/de/essays/the-origins-of-writing"
+    },
+    "paper": {
+      "label": "ケンブリッジ大学出版局：紙と印刷の比較史",
+      "url": "https://www.cambridge.org/core/services/aop-cambridge-core/content/view/F4EDF2184F186400C08920F227007F29/S1356186311000186a.pdf/the-woman-who-invented-notepaper-towards-a-comparative-historiography-of-paper-and-print.pdf"
+    },
+    "woodblock": {
+      "label": "大英図書館：868年の金剛般若経",
+      "url": "https://idp.bl.uk/discover/learning/buddhism-on-the-silk-roads/articles/buddhism-on-the-ground/buddhist-texts-the-diamond-sutra/"
+    },
+    "movable": {
+      "label": "UNESCO：活字印刷の伝統に関する審査資料",
+      "url": "https://ich.unesco.org/doc/src/ITH-10-5.COM-CONF.202-5-EN.pdf"
+    },
+    "gutenberg": {
+      "label": "米国議会図書館：グーテンベルク聖書",
+      "url": "https://www.loc.gov/exhibits/bibles/the-gutenberg-bible.html"
+    },
+    "telegraph": {
+      "label": "Science Museum：クックとホイートストンの電信機",
+      "url": "https://blog.sciencemuseum.org.uk/revealing-the-real-cooke-and-wheatstone-telegraph-dial/"
+    },
+    "photo": {
+      "label": "メトロポリタン美術館：写真の夜明け",
+      "url": "https://www.metmuseum.org/exhibitions/listings/2003/french-daguerreotypes"
+    },
+    "telephone": {
+      "label": "Science Museum：電話の特許と通信網",
+      "url": "https://blog.sciencemuseum.org.uk/information-age-10-years-on/"
+    },
+    "phone-credit": {
+      "label": "Science Museum：電話開発に関わった人々",
+      "url": "https://blog.sciencemuseum.org.uk/from-lightbulbs-to-space-a-black-history-month-tour-of-the-science-museum/"
+    },
+    "phonograph": {
+      "label": "米国国立公園局：エジソンと蓄音機",
+      "url": "https://www.nps.gov/edis/learn/historyculture/origins-of-sound-recording-edisons-path-to-the-phonograph.htm"
+    },
+    "radio": {
+      "label": "ノーベル財団：マルコーニの無線通信",
+      "url": "https://www.nobelprize.org/prizes/physics/1909/marconi/facts/"
+    },
+    "television": {
+      "label": "Science Museum：ベアードの実験用テレビ受信機",
+      "url": "https://collection.sciencemuseumgroup.org.uk/objects/co34789/experimental-television-receiver-used-by-jl-baird-in-demonstration-made-1925-1926"
+    },
+    "laser": {
+      "label": "全米発明家殿堂：セオドア・メイマン",
+      "url": "https://www.invent.org/inductees/theodore-harold-maiman"
+    },
+    "web": {
+      "label": "CERN：Webの誕生",
+      "url": "https://home.cern/science/computing/the-birth-of-the-web/"
+    },
+    "napier": {
+      "label": "スコットランド国立博物館：ネイピアの計算棒",
+      "url": "https://www.nms.ac.uk/discover-catalogue/napiers-bones-the-logarithmic-genius-who-revolutionised-calculations"
+    },
+    "pascal": {
+      "label": "Computer History Museum：パスカルの計算機",
+      "url": "https://tcm.computerhistory.org/CHMfiles/Pocket%20Computing%20Exhibit%201980-1984.pdf"
+    },
+    "jacquard": {
+      "label": "Computer History Museum：1801年のジャカード織機",
+      "url": "https://www.computerhistory.org/storageengine/punched-cards-control-jacquard-loom/"
+    },
+    "babbage": {
+      "label": "Computer History Museum：解析機関の歴史",
+      "url": "https://www.computerhistory.org/babbage/history/"
+    },
+    "hollerith": {
+      "label": "IBM：パンチカード集計機",
+      "url": "https://www.ibm.com/history/punched-card-tabulator"
+    },
+    "computers": {
+      "label": "Computer History Museum：コンピュータの年表",
+      "url": "https://www.computerhistory.org/timeline/computers/"
+    },
+    "transistor": {
+      "label": "Computer History Museum：1947年のトランジスタ",
+      "url": "https://www.computerhistory.org/siliconengine/invention-of-the-point-contact-transistor/"
+    },
+    "fortran": {
+      "label": "Computer History Museum：1957年のFORTRAN",
+      "url": "https://www.computerhistory.org/tdih/april/19/"
+    },
+    "ic": {
+      "label": "Computer History Museum：1958年の集積回路",
+      "url": "https://www.computerhistory.org/siliconengine/all-semiconductor-solid-circuit-is-demonstrated/"
+    },
+    "robot": {
+      "label": "Computer History Museum：UNIMATE",
+      "url": "https://www.computerhistory.org/timeline/ai-robotics/"
+    },
+    "mouse": {
+      "label": "Computer History Museum：1968年の公開実演",
+      "url": "https://www.computerhistory.org/timeline/1968/"
+    },
+    "arpanet": {
+      "label": "Computer History Museum：1960年代のインターネット史",
+      "url": "https://www.computerhistory.org/internethistory/1960s/"
+    },
+    "cpu": {
+      "label": "Computer History Museum：1971年のマイクロプロセッサ",
+      "url": "https://www.computerhistory.org/siliconengine/microprocessor-integrates-cpu-function-onto-a-single-chip/"
+    },
+    "transformer": {
+      "label": "Vaswaniら：Attention Is All You Need",
+      "url": "https://arxiv.org/abs/1706.03762"
+    },
+    "agriculture": {
+      "label": "スミソニアン：人類が環境を変える",
+      "url": "https://humanorigins.si.edu/human-characteristics/humans-change-world"
+    },
+    "maize": {
+      "label": "スミソニアン：トウモロコシ栽培化の証拠",
+      "url": "https://www.si.edu/newsdesk/releases/new-research-reveals-earliest-evidence-corn-new-world"
+    },
+    "glasses": {
+      "label": "英国検眼士協会・光学博物館：眼鏡の歴史",
+      "url": "https://www.college-optometrists.org/the-british-optical-association-museum/the-history-of-spectacles"
+    },
+    "flush": {
+      "label": "Wellcome Collection：1596年の水洗便所の記述",
+      "url": "https://wellcomecollection.org/works/tqgmjjxs"
+    },
+    "seed": {
+      "label": "レディング大学・農村生活博物館：種まき機",
+      "url": "https://www.reading.ac.uk/adlib/Details/collect/4446"
+    },
+    "vaccine": {
+      "label": "WHO：天然痘ワクチンの歴史",
+      "url": "https://www.who.int/news-room/spotlight/history-of-vaccination/history-of-smallpox-vaccination"
+    },
+    "canning": {
+      "label": "米国国立公文書館：缶詰と特許",
+      "url": "https://www.archives.gov/publications/prologue/2013/fall-winter/tin-cans-and-patents"
+    },
+    "refrigeration": {
+      "label": "スミソニアン：1834年のパーキンス製氷機",
+      "url": "https://americanhistory.si.edu/collections/object/nmah_846195"
+    },
+    "ether": {
+      "label": "マサチューセッツ総合病院：1846年のエーテル麻酔",
+      "url": "https://www.massgeneral.org/assets/mgh/pdf/omfs/etherinvogue.pdf"
+    },
+    "pasteur": {
+      "label": "パスツール研究所：1865年のワイン保存法の特許",
+      "url": "https://www.pasteur.fr/sites/default/files/rubrique_nous_soutenir/lip/lip90-institut-pasteur.pdf"
+    },
+    "insulin": {
+      "label": "トロント大学図書館：初期のインスリン治療",
+      "url": "https://fisherdigitus.library.utoronto.ca/exhibits/show/insulin100/early-patients/leonard-thompson"
+    },
+    "penicillin": {
+      "label": "米国化学会：ペニシリンの発見と開発",
+      "url": "https://www.acs.org/education/whatischemistry/landmarks/flemingpenicillin.html"
+    },
+    "ct": {
+      "label": "ノーベル財団：X線CTの臨床撮影と発展",
+      "url": "https://www.nobelprize.org/prizes/medicine/1979/perspectives/"
+    },
+    "mri": {
+      "label": "ノーベル財団：2003年生理学・医学賞の解説",
+      "url": "https://www.nobelprize.org/prizes/medicine/2003/press-release/"
+    },
+    "ivf": {
+      "label": "ノーベル財団：体外受精の開発史",
+      "url": "https://www.nobelprize.org/prizes/medicine/2010/advanced-information/"
+    },
+    "crispr": {
+      "label": "Jinekら（PubMed）：RNAで標的を指定するCas9",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/22745249/"
+    },
+    "rubber-date": {
+      "label": "アメリカ化学会：グッドイヤーと加硫ゴム",
+      "url": "https://cen.acs.org/acs-news/comment/Comment-Lessons-learned-Charles-Goodyear/102/i20"
+    },
+    "printing3d-patent": {
+      "label": "米国特許 US4575330A：光造形装置（1986年）",
+      "url": "https://patents.google.com/patent/US4575330A/en"
+    }
+  },
+  "entries": [
+    {
+      "id": "stone-tools",
+      "year": -3300000,
+      "dateLabel": "約330万年前",
+      "dateKind": "遺物の年代",
+      "title": "石を打ち欠く道具づくり",
+      "category": "materials",
+      "place": "東アフリカ・現在のケニア",
+      "people": "製作者は不明",
+      "outcome": "石の形を変え、使うための道具をつくる。",
+      "mechanism": "石を打ちつけて破片や加工面を生み出す。ロメクウィ3遺跡は非常に古い道具製作の証拠を残す。",
+      "caveat": "報告された遺跡の推定年代。道具づくりの開始日や、現生人類による発明を意味しない。",
+      "sources": [
+        "stone"
+      ],
+      "featured": true
+    },
+    {
+      "id": "pottery",
+      "year": -18000,
+      "dateLabel": "約2万年前",
+      "dateKind": "遺物の年代",
+      "title": "焼いてつくる土器",
+      "category": "materials",
+      "place": "東アジア・中国の仙人洞",
+      "people": "製作者は不明",
+      "outcome": "土を、形の残る容器へ変える。",
+      "mechanism": "粘土を成形して焼き固め、容器をつくる。仙人洞の土器は農耕が広がるより前の時代に遡る。",
+      "caveat": "出土層の推定年代であり、全世界で一度だけ発明されたという意味ではない。",
+      "sources": [
+        "pottery"
+      ],
+      "featured": true
+    },
+    {
+      "id": "agriculture",
+      "year": -10000,
+      "dateLabel": "約1万2000年前から",
+      "dateKind": "長期的な発展",
+      "title": "植物を育て、収穫する",
+      "category": "life",
+      "place": "西アジアなど／のちに各地で発展",
+      "people": "各地域の栽培の担い手",
+      "outcome": "食べ物を探すことに加え、自分たちで育てる。",
+      "mechanism": "種をまき、植物を管理し、収穫する営みを積み重ねる。選択と栽培が作物の性質も変えていった。",
+      "caveat": "農耕は長期の過程で、地域ごとに独立した展開がある。単独の発明者や開始日を持たない。",
+      "sources": [
+        "agriculture"
+      ],
+      "featured": true
+    },
+    {
+      "id": "maize",
+      "year": -6700,
+      "dateLabel": "約8700年前までに",
+      "dateKind": "遺物の年代",
+      "title": "トウモロコシの栽培化",
+      "category": "life",
+      "place": "現在のメキシコ・バルサス川流域",
+      "people": "地域の栽培の担い手",
+      "outcome": "野生の草を、収穫する作物へ変えていく。",
+      "mechanism": "野生の祖先植物に対する選択と栽培を重ねる。磨石などに残るデンプン粒が初期の利用を伝える。",
+      "caveat": "約8700年前の直接的な証拠を目印にする。栽培化は長い過程で、一度の完成を意味しない。",
+      "sources": [
+        "maize"
+      ],
+      "featured": false
+    },
+    {
+      "id": "cuneiform",
+      "year": -3200,
+      "dateLabel": "紀元前3200〜3000年頃",
+      "dateKind": "遺物の年代",
+      "title": "初期の文字による記録",
+      "category": "communication",
+      "place": "メソポタミア・ウルクなど",
+      "people": "記録を担った人々",
+      "outcome": "数や取引を、記憶の外に残す。",
+      "mechanism": "粘土板に記号や数字を刻み、物資や経済活動を記録する。後に言語を表す体系へ発展した。",
+      "caveat": "初期の楔形文字につながる記録の年代。文字の独立した成立は他の地域にもある。",
+      "sources": [
+        "writing"
+      ],
+      "featured": true
+    },
+    {
+      "id": "wheel",
+      "year": -3200,
+      "dateLabel": "約5200年前",
+      "dateKind": "遺物の年代",
+      "title": "車輪と車軸",
+      "category": "transport",
+      "place": "現在のスロベニア・リュブリャナ湿原",
+      "people": "製作者は不明",
+      "outcome": "荷物を載せ、回転を使って運ぶ。",
+      "mechanism": "車輪と軸を組み合わせて荷台を支える。出土した木製の車輪・車軸は初期の輸送技術を伝える。",
+      "caveat": "現存する遺物の推定年代。車輪の起源をこの場所や年だけに限定するものではない。",
+      "sources": [
+        "wheel"
+      ],
+      "featured": true
+    },
+    {
+      "id": "bronze",
+      "year": -2500,
+      "dateLabel": "紀元前3000〜2000年頃",
+      "dateKind": "技術の広がり",
+      "title": "青銅の鋳造",
+      "category": "materials",
+      "place": "西アジアなど",
+      "people": "各地の金属加工職人",
+      "outcome": "金属を混ぜ、道具や器物の性質を変える。",
+      "mechanism": "銅に錫などを加えた合金を溶かし、型へ流し込む。材料の配合と鋳造を組み合わせる技術。",
+      "caveat": "青銅の利用が広がった時期を示す。合金の種類や地域によって開始時期は異なる。",
+      "sources": [
+        "bronze"
+      ],
+      "featured": false
+    },
+    {
+      "id": "glassblowing",
+      "year": -50,
+      "dateLabel": "紀元前1世紀",
+      "dateKind": "技術の成立",
+      "title": "吹きガラス",
+      "category": "materials",
+      "place": "東地中海・レヴァント",
+      "people": "ガラス職人たち",
+      "outcome": "ガラスの中に空気を入れ、さまざまな器をつくる。",
+      "mechanism": "熱して軟らかくしたガラスへ息を吹き込み、薄い中空の形にする。成形できる形や生産の幅が広がった。",
+      "caveat": "ガラス製造そのものはさらに古い。ここでは吹いて成形する方法の成立期を示す。",
+      "sources": [
+        "glass"
+      ],
+      "featured": false
+    },
+    {
+      "id": "waterwheel",
+      "year": -25,
+      "dateLabel": "紀元前1世紀",
+      "dateKind": "文献記録",
+      "title": "製粉用の水車",
+      "category": "energy",
+      "place": "地中海世界",
+      "people": "古代の工人／記録者ウィトルウィウス",
+      "outcome": "流れる水に、穀物を挽く仕事を任せる。",
+      "mechanism": "水流で羽根車を回し、歯車で石臼へ回転を伝える。自然の流れを連続した作業に変える装置。",
+      "caveat": "古代の文献に記された方式を収録。水車全般がこの年に初めて作られたという意味ではない。",
+      "sources": [
+        "water"
+      ],
+      "featured": true
+    },
+    {
+      "id": "roman-concrete",
+      "year": 79,
+      "dateLabel": "79年以前",
+      "dateKind": "遺構の年代",
+      "title": "ローマンコンクリート",
+      "category": "materials",
+      "place": "ローマ世界・ポンペイなど",
+      "people": "古代ローマの建設職人",
+      "outcome": "石材を積む以外の方法で、大きな構造物をつくる。",
+      "mechanism": "石灰や火山性の材料などを組み合わせ、骨材を固める。古代の建設現場に配合・施工の痕跡が残る。",
+      "caveat": "ポンペイの79年以前の施工例を目印にしている。コンクリートの発明年ではない。",
+      "sources": [
+        "concrete"
+      ],
+      "featured": false
+    },
+    {
+      "id": "paper",
+      "year": 105,
+      "dateLabel": "105年",
+      "dateKind": "宮廷への報告",
+      "title": "蔡倫による製紙法の改良",
+      "category": "communication",
+      "place": "中国・後漢",
+      "people": "蔡倫と紙づくりの担い手",
+      "outcome": "文字を書くための、薄く軽い素材をつくる。",
+      "mechanism": "植物などの繊維をほぐして水に分散し、薄くすいて乾かす製紙法を改良し報告した。",
+      "caveat": "紙の遺物は105年以前にも存在する。蔡倫が紙そのものを初めて発明したとは断定しない。",
+      "sources": [
+        "paper"
+      ],
+      "featured": true
+    },
+    {
+      "id": "woodblock",
+      "year": 868,
+      "dateLabel": "868年",
+      "dateKind": "現存する印刷物",
+      "title": "木版で刷る書物",
+      "category": "communication",
+      "place": "中国",
+      "people": "印刷職人／金剛般若経の施主・王玠",
+      "outcome": "同じ文章と絵を、繰り返し複製する。",
+      "mechanism": "版木に文字や図を彫り、墨を付けて紙へ写し取る。868年の金剛般若経は制作日のある現存例。",
+      "caveat": "木版印刷は868年より前からある。ここでは日付を確認できる完本を目印にしている。",
+      "sources": [
+        "woodblock"
+      ],
+      "featured": false
+    },
+    {
+      "id": "movable-type",
+      "year": 1045,
+      "dateLabel": "1041〜1048年頃",
+      "dateKind": "文献に残る技術",
+      "title": "組み替えられる活字",
+      "category": "communication",
+      "place": "中国・宋代",
+      "people": "畢昇ら",
+      "outcome": "文字の部品を、別の文章にも使い回す。",
+      "mechanism": "文字を一つずつ部品にし、必要な順序に並べて印刷する。文章ごとに版全体を彫る作業を変えた。",
+      "caveat": "畢昇の技術の記録に基づく時期。後の木活字・金属活字や各地の改良をひとまとめにしない。",
+      "sources": [
+        "movable"
+      ],
+      "featured": true
+    },
+    {
+      "id": "compass",
+      "year": 1080,
+      "dateLabel": "11世紀",
+      "dateKind": "文献記録",
+      "title": "磁針による方位の確認",
+      "category": "transport",
+      "place": "中国・宋代",
+      "people": "沈括が記録した技術者たち",
+      "outcome": "空が見えなくても、方角を確かめる。",
+      "mechanism": "磁化した針を水に浮かべる、糸で吊るすなどの方法で、地磁気に沿う方向を読み取る。",
+      "caveat": "指南器の利用はそれ以前にもある。ここでは宋代の具体的な磁針の使用法の記録を扱う。",
+      "sources": [
+        "compass"
+      ],
+      "featured": true
+    },
+    {
+      "id": "spectacles",
+      "year": 1280,
+      "dateLabel": "13世紀",
+      "dateKind": "技術の成立",
+      "title": "眼鏡",
+      "category": "life",
+      "place": "イタリアなど",
+      "people": "光学器具を製作した職人たち",
+      "outcome": "見えにくい文字を、レンズで読みやすくする。",
+      "mechanism": "二つのレンズを目の前に保持し、光の進み方を変える。初期は近くを見るための凸レンズが使われた。",
+      "caveat": "成立時期・発明者には不確実性がある。現代の多様な視力補正が一度に生まれたわけではない。",
+      "sources": [
+        "glasses"
+      ],
+      "featured": true
+    },
+    {
+      "id": "porcelain",
+      "year": 1300,
+      "dateLabel": "14世紀",
+      "dateKind": "技術の発展",
+      "title": "景徳鎮の青花磁器",
+      "category": "materials",
+      "place": "中国・景徳鎮",
+      "people": "陶磁器の職人たち",
+      "outcome": "白い器に青い模様を焼き付け、遠くへ届ける。",
+      "mechanism": "粘土の配合や焼成を改良し、コバルト顔料の模様を釉薬の下に焼き付ける技術を発展させた。",
+      "caveat": "青花の先行例は唐代にある。14世紀は景徳鎮での材料・焼成技術の発展を示す。",
+      "sources": [
+        "porcelain"
+      ],
+      "featured": true
+    },
+    {
+      "id": "gutenberg",
+      "year": 1455,
+      "dateLabel": "1455年頃",
+      "dateKind": "印刷の完成",
+      "title": "グーテンベルクの活版印刷",
+      "category": "communication",
+      "place": "現在のドイツ・マインツ",
+      "people": "ヨハネス・グーテンベルクと協力者",
+      "outcome": "金属活字と印刷機で、書物を複製する。",
+      "mechanism": "活字の製作、インク、印刷の圧力などを組み合わせて、まとまった部数の書物を印刷した。",
+      "caveat": "グーテンベルク聖書の完成時期を目印にする。活字印刷の先行例は中国・朝鮮にもある。",
+      "sources": [
+        "gutenberg"
+      ],
+      "featured": true
+    },
+    {
+      "id": "flush-toilet",
+      "year": 1596,
+      "dateLabel": "1596年",
+      "dateKind": "出版",
+      "title": "ハリントンの水洗便所",
+      "category": "life",
+      "place": "英国",
+      "people": "ジョン・ハリントン",
+      "outcome": "水を流して、排泄物を運び去る。",
+      "mechanism": "貯めた水で便器を洗い流す仕組みを設計し、書物で説明した。",
+      "caveat": "古代の排水・洗浄設備が先行する。現代的な水封や下水道まで含む発明ではない。",
+      "sources": [
+        "flush"
+      ],
+      "featured": false
+    },
+    {
+      "id": "napier-bones",
+      "year": 1617,
+      "dateLabel": "1617年",
+      "dateKind": "出版",
+      "title": "ネイピアの計算棒",
+      "category": "computing",
+      "place": "スコットランド",
+      "people": "ジョン・ネイピア",
+      "outcome": "掛け算を、表の読み取りと足し算で進める。",
+      "mechanism": "数字を刻んだ棒を並べ、対応する積を読み取って合計する。繰り返しの算術を道具で助ける。",
+      "caveat": "1617年は使い方を著した書物の出版。対数の発表年とは異なる。",
+      "sources": [
+        "napier"
+      ],
+      "featured": false
+    },
+    {
+      "id": "pascaline",
+      "year": 1642,
+      "dateLabel": "1642年",
+      "dateKind": "試作",
+      "title": "パスカルの計算機",
+      "category": "computing",
+      "place": "フランス",
+      "people": "ブレーズ・パスカル",
+      "outcome": "足し算の繰り上がりを、機械に任せる。",
+      "mechanism": "数字を設定する車輪と繰り上がりの機構を組み合わせ、桁をまたぐ加算を機械化した。",
+      "caveat": "初期の計算機を製作し始めた年。より古い計算器や、後続する模型・改良もある。",
+      "sources": [
+        "pascal"
+      ],
+      "featured": true
+    },
+    {
+      "id": "seed-drill",
+      "year": 1701,
+      "dateLabel": "1701年",
+      "dateKind": "開発",
+      "title": "タルの条播機",
+      "category": "life",
+      "place": "英国",
+      "people": "ジェスロ・タル",
+      "outcome": "種を、溝の中へ規則的にまく。",
+      "mechanism": "種を一定の位置へ落とし、土で覆う作業を機械化する。ばらまきに比べて種の配置を管理しやすくした。",
+      "caveat": "英国農業での改良の節目。種まき用の道具・機械は他地域の先行技術もある。",
+      "sources": [
+        "seed"
+      ],
+      "featured": false
+    },
+    {
+      "id": "newcomen",
+      "year": 1712,
+      "dateLabel": "1712年",
+      "dateKind": "稼働",
+      "title": "ニューコメン機関",
+      "category": "energy",
+      "place": "英国・ダドリー付近",
+      "people": "トマス・ニューコメンと製作に携わった工人",
+      "outcome": "鉱山の水を、蒸気の力で汲み出す。",
+      "mechanism": "蒸気を冷やして生じる圧力差でピストンを動かし、ポンプを駆動する大気圧機関。",
+      "caveat": "先行するセイヴァリの蒸気ポンプがある。ここでは実用的な鉱山排水機関の稼働を示す。",
+      "sources": [
+        "newcomen"
+      ],
+      "featured": true
+    },
+    {
+      "id": "harrison",
+      "year": 1761,
+      "dateLabel": "1761年",
+      "dateKind": "航海試験",
+      "title": "経度を測る時計 H4",
+      "category": "transport",
+      "place": "英国からジャマイカへの航路",
+      "people": "ジョン・ハリソン／試験を担ったウィリアム・ハリソン",
+      "outcome": "海上でも、東西の位置を確かめる。",
+      "mechanism": "出発地の時刻を精密な時計で保ち、現地の時刻との差から経度を求める方法を航海で検証した。",
+      "caveat": "H4の製作は1750年代。1761年は航海試験で、時計単体の発明年ではない。",
+      "sources": [
+        "harrison"
+      ],
+      "featured": false
+    },
+    {
+      "id": "watt",
+      "year": 1769,
+      "dateLabel": "1769年",
+      "dateKind": "特許",
+      "title": "ワットの分離凝縮器",
+      "category": "energy",
+      "place": "英国",
+      "people": "ジェームズ・ワット",
+      "outcome": "蒸気機関が使う燃料を減らす。",
+      "mechanism": "蒸気を冷やす容器をシリンダーから分離。シリンダーを毎回冷却・再加熱する無駄を減らした。",
+      "caveat": "着想と模型は1765年。1769年は特許の年であり、蒸気機関そのものの起源ではない。",
+      "sources": [
+        "watt"
+      ],
+      "featured": true
+    },
+    {
+      "id": "spinning-jenny",
+      "year": 1770,
+      "dateLabel": "1770年",
+      "dateKind": "特許",
+      "title": "ジェニー紡績機",
+      "category": "materials",
+      "place": "英国",
+      "people": "ジェームズ・ハーグリーヴズ",
+      "outcome": "一人の作業で、複数の糸を同時に紡ぐ。",
+      "mechanism": "複数の紡錘を一つの駆動系で動かす。手紡ぎの工程を並列化した機械。",
+      "caveat": "製作は特許より前。1770年は特許の年で、水力紡績機など別の機構と区別する。",
+      "sources": [
+        "jenny"
+      ],
+      "featured": true
+    },
+    {
+      "id": "balloon",
+      "year": 1783,
+      "dateLabel": "1783年",
+      "dateKind": "有人飛行",
+      "title": "熱気球",
+      "category": "transport",
+      "place": "フランス",
+      "people": "モンゴルフィエ兄弟／ピラートル・ド・ロジェら",
+      "outcome": "人が乗った機体を、空へ浮かべる。",
+      "mechanism": "袋の中の空気を温め、周囲の空気との密度差による浮力を使う。",
+      "caveat": "同年に無人・動物搭乗・人の自由飛行などの段階がある。ここでは有人自由飛行を目印にする。",
+      "sources": [
+        "balloon"
+      ],
+      "featured": true
+    },
+    {
+      "id": "smallpox-vaccine",
+      "year": 1796,
+      "dateLabel": "1796年",
+      "dateKind": "実施",
+      "title": "牛痘を用いる種痘",
+      "category": "life",
+      "place": "英国",
+      "people": "エドワード・ジェンナー／地域の経験知を担った人々",
+      "outcome": "感染症を、発症前に予防する方法を探る。",
+      "mechanism": "牛痘への感染が天然痘への抵抗と関わるという経験をもとに、予防法を検証した。",
+      "caveat": "人痘接種などの先行する予防実践がある。1796年の実験を、現代の医療手順として紹介するものではない。",
+      "sources": [
+        "vaccine"
+      ],
+      "featured": true
+    },
+    {
+      "id": "volta",
+      "year": 1800,
+      "dateLabel": "1800年",
+      "dateKind": "発表",
+      "title": "ボルタの電堆",
+      "category": "energy",
+      "place": "イタリア",
+      "people": "アレッサンドロ・ボルタ",
+      "outcome": "電流を、継続して取り出せるようにする。",
+      "mechanism": "異なる金属と電解液を含む層を積み重ね、化学反応から電気を得る。電気実験の安定した電源になった。",
+      "caveat": "持続的な電流を供給する電池の発表年。充電できる電池とは異なる。",
+      "sources": [
+        "volta"
+      ],
+      "featured": true
+    },
+    {
+      "id": "jacquard",
+      "year": 1801,
+      "dateLabel": "1801年",
+      "dateKind": "実演",
+      "title": "パンチカードで動く織機",
+      "category": "computing",
+      "place": "フランス・リヨン",
+      "people": "ジョゼフ・マリー・ジャカードら",
+      "outcome": "織り模様を、交換できる指示として保存する。",
+      "mechanism": "カードの穴の有無で糸を選び、模様を織る工程を制御する。機械の動作を外部の記録で指定した。",
+      "caveat": "1801年の実演を目印にする。穴あきの媒体で織機を制御する先行技術を改良したもの。",
+      "sources": [
+        "jacquard"
+      ],
+      "featured": true
+    },
+    {
+      "id": "steam-locomotive",
+      "year": 1804,
+      "dateLabel": "1804年",
+      "dateKind": "走行実験",
+      "title": "レールを走る蒸気機関車",
+      "category": "transport",
+      "place": "ウェールズ・ペナダレン",
+      "people": "リチャード・トレビシックら",
+      "outcome": "動力を車両に載せ、重い荷物を引く。",
+      "mechanism": "高圧蒸気機関をレール上の車両へ組み込み、貨物を牽引した。",
+      "caveat": "初期の走行実験の年。商用鉄道としての普及には線路や車両の改良が必要だった。",
+      "sources": [
+        "locomotive"
+      ],
+      "featured": true
+    },
+    {
+      "id": "canning",
+      "year": 1810,
+      "dateLabel": "1810年",
+      "dateKind": "出版・特許",
+      "title": "加熱して密封する食品保存",
+      "category": "life",
+      "place": "フランス・英国",
+      "people": "ニコラ・アペール、ピーター・デュランドら",
+      "outcome": "食べ物を、長期間保存し運べるようにする。",
+      "mechanism": "食品を加熱し、密封容器の中で保存する。瓶を用いた方法から金属容器による缶詰へ展開した。",
+      "caveat": "1810年はアペールの方法の公表とデュランドの特許の節目。実験や実用化には複数の段階がある。",
+      "sources": [
+        "canning"
+      ],
+      "featured": true
+    },
+    {
+      "id": "bicycle",
+      "year": 1817,
+      "dateLabel": "1817年",
+      "dateKind": "実演",
+      "title": "二輪のドライジーネ",
+      "category": "transport",
+      "place": "ドイツ・マンハイム",
+      "people": "カール・ドライス",
+      "outcome": "自分の足で、二輪に乗って移動する。",
+      "mechanism": "前後に並ぶ車輪と、操舵できる前輪を組み合わせた。地面を足で蹴り、バランスを取って進む。",
+      "caveat": "ペダルやチェーンはまだない。現代の自転車は後続の機構を組み合わせて成立した。",
+      "sources": [
+        "bicycle"
+      ],
+      "featured": false
+    },
+    {
+      "id": "motor",
+      "year": 1821,
+      "dateLabel": "1821年",
+      "dateKind": "実験",
+      "title": "電磁回転装置",
+      "category": "energy",
+      "place": "英国・ロンドン",
+      "people": "マイケル・ファラデー",
+      "outcome": "電気を、回転する動きに変える。",
+      "mechanism": "磁石と電流の相互作用で導線を連続的に回転させた。電動機につながる原理を装置で示した。",
+      "caveat": "実験装置の実現年。工場や家庭で使える実用モーターは後の改良を経て発達した。",
+      "sources": [
+        "motor"
+      ],
+      "featured": false
+    },
+    {
+      "id": "generator",
+      "year": 1831,
+      "dateLabel": "1831年",
+      "dateKind": "実験",
+      "title": "電磁誘導による発電",
+      "category": "energy",
+      "place": "英国・ロンドン",
+      "people": "マイケル・ファラデー",
+      "outcome": "動きから、電気をつくり出す。",
+      "mechanism": "磁石と導体の相対運動によって電流を取り出す。回転する円盤を使う発電装置も製作した。",
+      "caveat": "電磁誘導の発見と初期装置の年。大規模な電力供給はさらに後の技術と設備を必要とした。",
+      "sources": [
+        "generator"
+      ],
+      "featured": true
+    },
+    {
+      "id": "analytical-engine",
+      "year": 1834,
+      "dateLabel": "1834年",
+      "dateKind": "構想",
+      "title": "バベッジの解析機関",
+      "category": "computing",
+      "place": "英国",
+      "people": "チャールズ・バベッジ／解説と計算手順を示したエイダ・ラヴレス",
+      "outcome": "一つの機械に、さまざまな計算をさせる。",
+      "mechanism": "計算する部分、記憶する部分、指示の入力を分けた汎用的な機械式計算装置を構想した。",
+      "caveat": "1834年は構想の開始。完成した汎用計算機がこの年に動いたわけではない。",
+      "sources": [
+        "babbage"
+      ],
+      "featured": false
+    },
+    {
+      "id": "refrigeration",
+      "year": 1834,
+      "dateLabel": "1834年",
+      "dateKind": "初期装置",
+      "title": "蒸気圧縮式の冷凍機",
+      "category": "life",
+      "place": "英国",
+      "people": "ジェイコブ・パーキンスら",
+      "outcome": "周囲より低い温度を、機械でつくる。",
+      "mechanism": "流体の蒸発で熱を奪い、圧縮・凝縮して再び使う循環を装置にした。",
+      "caveat": "初期の冷凍装置の節目。家庭用冷蔵庫が普及するのはさらに後の時代。",
+      "sources": [
+        "refrigeration"
+      ],
+      "featured": false
+    },
+    {
+      "id": "telegraph",
+      "year": 1837,
+      "dateLabel": "1837年",
+      "dateKind": "実用化への導入",
+      "title": "五針式の電気電信",
+      "category": "communication",
+      "place": "英国",
+      "people": "ウィリアム・クック、チャールズ・ホイートストン",
+      "outcome": "人が運ぶより速く、離れた場所へ文字を伝える。",
+      "mechanism": "電流で針の向きを変え、表示された文字を読む方式。電線による遠距離通信を実用化へ近づけた。",
+      "caveat": "英国での実用的な電信の導入年。モールスらの方式など、複数の開発が並行した。",
+      "sources": [
+        "telegraph"
+      ],
+      "featured": true
+    },
+    {
+      "id": "daguerreotype",
+      "year": 1839,
+      "dateLabel": "1839年",
+      "dateKind": "公開",
+      "title": "ダゲレオタイプ写真",
+      "category": "communication",
+      "place": "フランス",
+      "people": "ルイ・ダゲール／先行研究のニセフォール・ニエプス",
+      "outcome": "目の前の像を、光で記録する。",
+      "mechanism": "銀を使う感光面に光学像を写し、現像して固定する。細部を残せる写真技術が公開された。",
+      "caveat": "写真の実験や成功例は1839年以前にもある。ここではダゲレオタイプの公開を収録する。",
+      "sources": [
+        "photo"
+      ],
+      "featured": false
+    },
+    {
+      "id": "vulcanization",
+      "year": 1839,
+      "dateLabel": "1839年",
+      "dateKind": "開発",
+      "title": "ゴムの加硫",
+      "category": "materials",
+      "place": "米国",
+      "people": "チャールズ・グッドイヤーら",
+      "outcome": "ゴムを、温度変化に耐える工業材料にする。",
+      "mechanism": "硫黄と熱を使って天然ゴムの性質を変え、粘着や硬化の問題を改善する。",
+      "caveat": "近代の硫黄加硫の開発を扱う。古代アメリカのゴム加工など、別の加工技術も先行する。",
+      "sources": [
+        "rubber",
+        "rubber-date"
+      ],
+      "featured": false
+    },
+    {
+      "id": "ether-anesthesia",
+      "year": 1846,
+      "dateLabel": "1846年",
+      "dateKind": "公開実演",
+      "title": "手術でのエーテル麻酔",
+      "category": "life",
+      "place": "米国・ボストン",
+      "people": "ウィリアム・モートン、ジョン・ウォーレンら",
+      "outcome": "痛みを抑えながら、手術を行う。",
+      "mechanism": "エーテルの作用を利用して手術中の感覚を抑える方法を、病院で公開実演した。",
+      "caveat": "麻酔の先行実践はある。1846年はマサチューセッツ総合病院での公開実演を示す。",
+      "sources": [
+        "ether"
+      ],
+      "featured": true
+    },
+    {
+      "id": "bessemer",
+      "year": 1855,
+      "dateLabel": "1855年",
+      "dateKind": "特許",
+      "title": "送風による製鋼法",
+      "category": "materials",
+      "place": "英国・米国",
+      "people": "ヘンリー・ベッセマー、ウィリアム・ケリー、ロバート・マシェットら",
+      "outcome": "大量の鉄から、鋼をつくる工程を速める。",
+      "mechanism": "溶けた鉄へ空気を吹き込み、炭素などを酸化させる。成分調整や設備の改良を重ねて工業化した。",
+      "caveat": "1855年はベッセマーの英国特許。独立した開発や成分調整への他者の貢献もある。",
+      "sources": [
+        "steel"
+      ],
+      "featured": true
+    },
+    {
+      "id": "lead-battery",
+      "year": 1859,
+      "dateLabel": "1859年",
+      "dateKind": "開発",
+      "title": "鉛蓄電池",
+      "category": "energy",
+      "place": "フランス",
+      "people": "ガストン・プランテ",
+      "outcome": "電気を使ったあと、充電して再び使う。",
+      "mechanism": "鉛を用いた電極と電解液の反応を、充電によって逆向きに進められるようにした。",
+      "caveat": "初期の充電式電池の開発年。現在の製品は電極構造などに多くの改良を加えている。",
+      "sources": [
+        "lead"
+      ],
+      "featured": false
+    },
+    {
+      "id": "pasteurization",
+      "year": 1865,
+      "dateLabel": "1865年",
+      "dateKind": "特許出願",
+      "title": "パスツールの加熱保存法",
+      "category": "life",
+      "place": "フランス",
+      "people": "ルイ・パスツールら",
+      "outcome": "飲み物の変質を抑え、保存しやすくする。",
+      "mechanism": "温度を管理した加熱によって微生物の働きを抑える方法を、ワインの保存に適用した。",
+      "caveat": "1865年はワインの保存法の特許出願。牛乳などへの利用は後に発展した。",
+      "sources": [
+        "pasteur"
+      ],
+      "featured": false
+    },
+    {
+      "id": "otto",
+      "year": 1876,
+      "dateLabel": "1876年",
+      "dateKind": "完成",
+      "title": "四ストローク機関",
+      "category": "energy",
+      "place": "ドイツ・ケルン",
+      "people": "ニコラウス・オットーとDEUTZの技術者",
+      "outcome": "燃料を機械の内部で燃やし、動力にする。",
+      "mechanism": "吸気・圧縮・燃焼膨張・排気を繰り返す。圧縮した混合気を燃やす実用機関を完成させた。",
+      "caveat": "内燃機関の唯一の起源ではない。四ストロークの先行構想と、1877年以降の量産を区別する。",
+      "sources": [
+        "otto"
+      ],
+      "featured": false
+    },
+    {
+      "id": "telephone",
+      "year": 1876,
+      "dateLabel": "1876年",
+      "dateKind": "特許",
+      "title": "ベルの電話",
+      "category": "communication",
+      "place": "米国",
+      "people": "アレクサンダー・グラハム・ベル、トマス・ワトソンら",
+      "outcome": "離れた相手と、声で話す。",
+      "mechanism": "音による振動を電気信号へ変え、受信側で再び振動として取り出す。",
+      "caveat": "複数の発明者が開発に関わった。1876年はベルの特許の年で、唯一の起源を示さない。",
+      "sources": [
+        "telephone",
+        "phone-credit"
+      ],
+      "featured": true
+    },
+    {
+      "id": "phonograph",
+      "year": 1877,
+      "dateLabel": "1877年",
+      "dateKind": "試作",
+      "title": "蓄音機",
+      "category": "communication",
+      "place": "米国・メンローパーク",
+      "people": "トマス・エジソンと研究所の協力者",
+      "outcome": "過ぎ去った音を、もう一度聴く。",
+      "mechanism": "振動を円筒上の溝に記録し、針でなぞって音に戻す。記録と再生を一つの装置で行う。",
+      "caveat": "音を記録する先行装置は存在する。ここでは録音を再生できる蓄音機の開発を扱う。",
+      "sources": [
+        "phonograph"
+      ],
+      "featured": false
+    },
+    {
+      "id": "turbine",
+      "year": 1884,
+      "dateLabel": "1884年",
+      "dateKind": "試作",
+      "title": "パーソンズの蒸気タービン",
+      "category": "energy",
+      "place": "英国・ニューカッスル",
+      "people": "チャールズ・パーソンズと製作チーム",
+      "outcome": "蒸気の力を、高速の回転へ直接変える。",
+      "mechanism": "蒸気を複数段の羽根に通して軸を回す。往復運動の機関とは異なる形で発電機を駆動した。",
+      "caveat": "収録年は初期の実験用発電機の製作年。蒸気タービンには別系統の開発もある。",
+      "sources": [
+        "turbine"
+      ],
+      "featured": false
+    },
+    {
+      "id": "benz-car",
+      "year": 1886,
+      "dateLabel": "1886年",
+      "dateKind": "特許出願・公開",
+      "title": "ベンツのガソリン自動車",
+      "category": "transport",
+      "place": "ドイツ・マンハイム",
+      "people": "カール・ベンツら",
+      "outcome": "馬を使わず、エンジンで道路を走る。",
+      "mechanism": "軽量な三輪の車体に四ストロークのガソリン機関を一体化した。操舵・駆動・冷却も組み込んだ。",
+      "caveat": "車両の完成は1885年、特許出願と公開は1886年。蒸気車や他の自動車の開発も先行・並行している。",
+      "sources": [
+        "benz"
+      ],
+      "featured": true
+    },
+    {
+      "id": "wind-generator",
+      "year": 1887,
+      "dateLabel": "1887年",
+      "dateKind": "実験",
+      "title": "ブライスの風力発電",
+      "category": "energy",
+      "place": "スコットランド・メアリーカーク",
+      "people": "ジェームズ・ブライス",
+      "outcome": "風から得た電気で、家を照らす。",
+      "mechanism": "風で回る装置を発電機につなぎ、蓄電池に電気を貯めて照明へ使った。",
+      "caveat": "初期の風力発電の一例。風車そのものははるか以前からあり、唯一の発明者を示すものではない。",
+      "sources": [
+        "wind"
+      ],
+      "featured": false
+    },
+    {
+      "id": "pneumatic-tyre",
+      "year": 1888,
+      "dateLabel": "1888年",
+      "dateKind": "試作",
+      "title": "実用的な空気入りタイヤ",
+      "category": "transport",
+      "place": "英国・ベルファストなど",
+      "people": "ジョン・ボイド・ダンロップ",
+      "outcome": "路面からの衝撃を、空気で和らげる。",
+      "mechanism": "ゴムのチューブに空気を入れ、車輪の外側に取り付ける。固いタイヤの乗り心地を改善した。",
+      "caveat": "ロバート・トムソンの先行発明がある。1888年はダンロップによる再発明・実用化への節目。",
+      "sources": [
+        "tyre"
+      ],
+      "featured": false
+    },
+    {
+      "id": "hollerith",
+      "year": 1890,
+      "dateLabel": "1890年",
+      "dateKind": "実務利用",
+      "title": "パンチカード集計機",
+      "category": "computing",
+      "place": "米国",
+      "people": "ハーマン・ホレリスと協力者",
+      "outcome": "膨大な調査票を、機械で数え上げる。",
+      "mechanism": "情報をカードの穴に変え、電気的に読み取って集計する。1890年の米国国勢調査に用いられた。",
+      "caveat": "国勢調査での利用年。装置・カードの開発や特許はそれ以前から進んでいた。",
+      "sources": [
+        "hollerith"
+      ],
+      "featured": false
+    },
+    {
+      "id": "wireless",
+      "year": 1895,
+      "dateLabel": "1895年",
+      "dateKind": "通信実験",
+      "title": "無線電信",
+      "category": "communication",
+      "place": "イタリア",
+      "people": "グリエルモ・マルコーニら",
+      "outcome": "電線を敷かずに、信号を送る。",
+      "mechanism": "電波を発生・検出する装置とアンテナを組み合わせ、離れた場所へ符号を伝える。",
+      "caveat": "電磁波の理論・実験や、他の研究者の無線開発を土台とする。1895年はマルコーニの通信実験。",
+      "sources": [
+        "radio"
+      ],
+      "featured": false
+    },
+    {
+      "id": "wright-flyer",
+      "year": 1903,
+      "dateLabel": "1903年",
+      "dateKind": "飛行実験",
+      "title": "ライト・フライヤー",
+      "category": "transport",
+      "place": "米国・ノースカロライナ",
+      "people": "ウィルバー・ライト、オーヴィル・ライト",
+      "outcome": "動力を持つ機体を操縦し、飛び続ける。",
+      "mechanism": "翼・エンジン・プロペラに加え、姿勢を制御する仕組みを統合した。",
+      "caveat": "1903年は初期の飛行実験。旅客機としての実用化は後の多くの改良を経て進んだ。",
+      "sources": [
+        "wright"
+      ],
+      "featured": true
+    },
+    {
+      "id": "bakelite",
+      "year": 1907,
+      "dateLabel": "1907年",
+      "dateKind": "開発",
+      "title": "ベークライト",
+      "category": "materials",
+      "place": "米国",
+      "people": "レオ・ベークランドと協力者",
+      "outcome": "天然素材に頼らず、成形できる樹脂をつくる。",
+      "mechanism": "フェノールとホルムアルデヒドの反応を制御し、熱で硬化する樹脂を得る。電気絶縁などに使われた。",
+      "caveat": "1907年の実験・開発を基準にしている。公開発表は1909年で、その後に事業化が進んだ。",
+      "sources": [
+        "bakelite"
+      ],
+      "featured": true
+    },
+    {
+      "id": "insulin",
+      "year": 1922,
+      "dateLabel": "1922年",
+      "dateKind": "臨床利用",
+      "title": "治療に使えるインスリン",
+      "category": "life",
+      "place": "カナダ・トロント",
+      "people": "バンティング、ベスト、コリップ、マクラウドら",
+      "outcome": "糖尿病の治療に、体内物質を役立てる。",
+      "mechanism": "膵臓に由来する物質を抽出・精製し、患者への治療に用いる段階へ進めた。",
+      "caveat": "研究は1921年。1922年1月の初期投与と精製後の投与は区別され、ここでは臨床利用の開始を扱う。",
+      "sources": [
+        "insulin"
+      ],
+      "featured": false
+    },
+    {
+      "id": "liquid-rocket",
+      "year": 1926,
+      "dateLabel": "1926年",
+      "dateKind": "飛行実験",
+      "title": "液体燃料ロケット",
+      "category": "transport",
+      "place": "米国・マサチューセッツ",
+      "people": "ロバート・ゴダードと協力者",
+      "outcome": "液体の燃料と酸化剤から、推進力をつくる。",
+      "mechanism": "ガソリンと液体酸素を燃焼室へ送り、燃焼ガスを噴射する。",
+      "caveat": "ロケット自体は古い技術。ここでは液体推進剤を用いた初期の成功した飛行を示す。",
+      "sources": [
+        "rocket"
+      ],
+      "featured": false
+    },
+    {
+      "id": "television",
+      "year": 1926,
+      "dateLabel": "1926年",
+      "dateKind": "実演",
+      "title": "ベアードの機械式テレビ",
+      "category": "communication",
+      "place": "英国・ロンドン",
+      "people": "ジョン・ロジー・ベアードら",
+      "outcome": "動く像を、別の場所へ送る。",
+      "mechanism": "円盤などで画像を順番に走査し、明暗を信号として送受信する。",
+      "caveat": "機械式方式の公開実演の年。後に広がる電子式テレビとは方式や開発の系統が異なる。",
+      "sources": [
+        "television"
+      ],
+      "featured": true
+    },
+    {
+      "id": "nylon",
+      "year": 1935,
+      "dateLabel": "1935年",
+      "dateKind": "合成",
+      "title": "ナイロン66",
+      "category": "materials",
+      "place": "米国・デュポン",
+      "people": "ウォーレス・カロザースらの研究チーム",
+      "outcome": "化学合成から、丈夫な繊維をつくる。",
+      "mechanism": "小さな分子を長くつなぎ、溶融した材料から糸を引く。材料の合成と紡糸技術を組み合わせた。",
+      "caveat": "1935年はナイロン66の合成。一般向けの製品展開は1930年代末以降。",
+      "sources": [
+        "nylon"
+      ],
+      "featured": false
+    },
+    {
+      "id": "jet-aircraft",
+      "year": 1939,
+      "dateLabel": "1939年",
+      "dateKind": "飛行実験",
+      "title": "ターボジェット航空機",
+      "category": "transport",
+      "place": "ドイツ",
+      "people": "ハンス・フォン・オハインとハインケルのチーム",
+      "outcome": "プロペラを使わず、噴流で飛ぶ。",
+      "mechanism": "圧縮した空気へ燃料を加えて燃やし、タービンを駆動しながら後方へ噴射する。",
+      "caveat": "He 178の初飛行の年。英国のフランク・ホイットルらによる独立した開発もある。",
+      "sources": [
+        "jet"
+      ],
+      "featured": false
+    },
+    {
+      "id": "penicillin",
+      "year": 1941,
+      "dateLabel": "1941年",
+      "dateKind": "臨床利用",
+      "title": "ペニシリンの治療への応用",
+      "category": "life",
+      "place": "英国・オックスフォードなど",
+      "people": "フローリー、チェイン、ヒートリーら／発見者フレミング",
+      "outcome": "細菌感染の治療に、抗生物質を使う。",
+      "mechanism": "カビがつくる物質を抽出・精製し、治療へ利用できる形にした。生産工程の開発も不可欠だった。",
+      "caveat": "抗菌作用の発見は1928年。1941年は初期の臨床利用で、大量生産の確立はその後。",
+      "sources": [
+        "penicillin"
+      ],
+      "featured": true
+    },
+    {
+      "id": "z3",
+      "year": 1941,
+      "dateLabel": "1941年",
+      "dateKind": "完成",
+      "title": "Z3計算機",
+      "category": "computing",
+      "place": "ドイツ",
+      "people": "コンラート・ツーゼら",
+      "outcome": "記録した手順に従って、計算を進める。",
+      "mechanism": "電磁リレーで二進数を扱い、外部に記録したプログラムに従って演算する。",
+      "caveat": "初期のプログラム制御式計算機の一つ。電子式でもプログラム内蔵式でもない。",
+      "sources": [
+        "computers"
+      ],
+      "featured": false
+    },
+    {
+      "id": "nuclear",
+      "year": 1942,
+      "dateLabel": "1942年",
+      "dateKind": "実験",
+      "title": "制御された原子炉",
+      "category": "energy",
+      "place": "米国・シカゴ",
+      "people": "エンリコ・フェルミらの研究チーム",
+      "outcome": "核分裂の連鎖反応を、人が制御する。",
+      "mechanism": "ウランと黒鉛を配置し、制御棒を使って連鎖反応を調整するChicago Pile 1を稼働させた。",
+      "caveat": "1942年は自己持続する制御された連鎖反応の実験。発電所の商用運転を意味しない。",
+      "sources": [
+        "nuclear"
+      ],
+      "featured": true
+    },
+    {
+      "id": "eniac",
+      "year": 1946,
+      "dateLabel": "1946年",
+      "dateKind": "公開",
+      "title": "ENIAC",
+      "category": "computing",
+      "place": "米国・ペンシルベニア大学",
+      "people": "ジョン・モークリー、J・プレスパー・エッカートと開発・プログラミングチーム",
+      "outcome": "電子回路で、大量の数値計算を進める。",
+      "mechanism": "多数の真空管を用い、機械式の接点を動かす計算から電子的な演算へ移行した。",
+      "caveat": "1946年は公開年。先行する電子式計算装置があり、初期ENIACは配線やスイッチで手順を設定した。",
+      "sources": [
+        "computers"
+      ],
+      "featured": true
+    },
+    {
+      "id": "transistor",
+      "year": 1947,
+      "dateLabel": "1947年",
+      "dateKind": "実験",
+      "title": "点接触トランジスタ",
+      "category": "computing",
+      "place": "米国・ベル研究所",
+      "people": "ジョン・バーディーン、ウォルター・ブラッテンら",
+      "outcome": "半導体で、電気信号を増幅する。",
+      "mechanism": "ゲルマニウムへ細い接点を当て、電流を制御する素子を実現した。",
+      "caveat": "1947年は点接触型の動作実験。後の接合型や電界効果型とは構造が異なる。",
+      "sources": [
+        "transistor"
+      ],
+      "featured": true
+    },
+    {
+      "id": "stored-program",
+      "year": 1948,
+      "dateLabel": "1948年",
+      "dateKind": "プログラム実行",
+      "title": "プログラムを記憶する計算機",
+      "category": "computing",
+      "place": "英国・マンチェスター大学",
+      "people": "フレデリック・ウィリアムズ、トム・キルバーン、ジェフ・トゥーティル",
+      "outcome": "計算手順そのものを、電子的に保存して実行する。",
+      "mechanism": "Babyと呼ばれる実験機で、データだけでなく命令も電子メモリーに格納した。",
+      "caveat": "小規模な実験機での実行年。汎用的な実務利用の計算機はその後に発展した。",
+      "sources": [
+        "computers"
+      ],
+      "featured": false
+    },
+    {
+      "id": "solar-cell",
+      "year": 1954,
+      "dateLabel": "1954年",
+      "dateKind": "実演",
+      "title": "実用的なシリコン太陽電池",
+      "category": "energy",
+      "place": "米国・ベル研究所",
+      "people": "ダリル・チャピン、カルヴィン・フラー、ジェラルド・ピアソン",
+      "outcome": "太陽の光を、直接電気に変える。",
+      "mechanism": "シリコンの接合を利用して、光で生じた電荷を電流として取り出す。実用に近い変換効率を示した。",
+      "caveat": "光起電力の発見や先行する太陽電池は19世紀に遡る。ここではシリコン電池の実演を扱う。",
+      "sources": [
+        "solar"
+      ],
+      "featured": true
+    },
+    {
+      "id": "fortran",
+      "year": 1957,
+      "dateLabel": "1957年",
+      "dateKind": "外部利用",
+      "title": "FORTRAN",
+      "category": "computing",
+      "place": "米国",
+      "people": "ジョン・バッカスらIBMのチーム",
+      "outcome": "数式に近い表現から、計算機を動かす。",
+      "mechanism": "人が書いた高水準のプログラムを、計算機で実行できる命令へ変換するコンパイラを実用化した。",
+      "caveat": "最初のプログラミング言語という意味ではない。広く使われる科学技術計算言語の節目。",
+      "sources": [
+        "fortran"
+      ],
+      "featured": false
+    },
+    {
+      "id": "integrated-circuit",
+      "year": 1958,
+      "dateLabel": "1958年",
+      "dateKind": "実験",
+      "title": "集積回路",
+      "category": "computing",
+      "place": "米国",
+      "people": "ジャック・キルビー／別方式を発展させたロバート・ノイスら",
+      "outcome": "回路の部品を、一つの小さな基板にまとめる。",
+      "mechanism": "半導体上にトランジスタなどの回路要素を形成する。多数の個別部品を配線する課題に取り組んだ。",
+      "caveat": "1958年はキルビーの実験。実用的なシリコン集積回路にはノイスらの重要な貢献がある。",
+      "sources": [
+        "ic"
+      ],
+      "featured": true
+    },
+    {
+      "id": "laser",
+      "year": 1960,
+      "dateLabel": "1960年",
+      "dateKind": "実演",
+      "title": "ルビーレーザー",
+      "category": "communication",
+      "place": "米国・ヒューズ研究所",
+      "people": "セオドア・メイマンら",
+      "outcome": "揃った光を、細いビームとして取り出す。",
+      "mechanism": "励起したルビーと光の反射を利用し、誘導放出によって光を増幅する。",
+      "caveat": "レーザーの理論やメーザーの先行研究がある。1960年は動作するルビーレーザーの実演。",
+      "sources": [
+        "laser"
+      ],
+      "featured": false
+    },
+    {
+      "id": "unimate",
+      "year": 1961,
+      "dateLabel": "1961年",
+      "dateKind": "工場導入",
+      "title": "産業用ロボット Unimate",
+      "category": "computing",
+      "place": "米国・ゼネラルモーターズ",
+      "people": "ジョージ・デボル、ジョセフ・エンゲルバーガーら",
+      "outcome": "高温の部品を扱う仕事を、機械の腕に任せる。",
+      "mechanism": "記憶した命令に従ってアームを動かし、ダイカスト部品の取り出しや積み重ねを行う。",
+      "caveat": "工場に導入された年。人型ロボットや自律的に考える機械ではなく、手順に従う産業用装置。",
+      "sources": [
+        "robot"
+      ],
+      "featured": true
+    },
+    {
+      "id": "shinkansen",
+      "year": 1964,
+      "dateLabel": "1964年",
+      "dateKind": "営業開始",
+      "title": "東海道新幹線",
+      "category": "transport",
+      "place": "日本・東京〜新大阪",
+      "people": "日本国有鉄道と車両・設備の開発者たち",
+      "outcome": "都市の間を、高速な鉄道で日常的に行き来する。",
+      "mechanism": "専用線路、電車方式の車両、信号・運行管理を一体で整備し、高速運転を実現した。",
+      "caveat": "個別の部品の発明年ではなく、高速鉄道システムとしての営業開始を収録している。",
+      "sources": [
+        "shinkansen"
+      ],
+      "featured": true
+    },
+    {
+      "id": "mouse",
+      "year": 1968,
+      "dateLabel": "1968年",
+      "dateKind": "公開実演",
+      "title": "マウスと対話的な画面操作",
+      "category": "computing",
+      "place": "米国・SRI",
+      "people": "ダグラス・エンゲルバート、ビル・イングリッシュら",
+      "outcome": "画面上の位置を指し、コンピュータと対話する。",
+      "mechanism": "手元の装置の動きを画面のポインターへ対応させる。文書編集や共同作業とともに実演した。",
+      "caveat": "マウスの試作は1960年代前半。1968年はNLSの大規模な公開実演を示す。",
+      "sources": [
+        "mouse"
+      ],
+      "featured": false
+    },
+    {
+      "id": "arpanet",
+      "year": 1969,
+      "dateLabel": "1969年",
+      "dateKind": "接続開始",
+      "title": "ARPANET",
+      "category": "computing",
+      "place": "米国",
+      "people": "ARPA、BBN、参加大学の研究チーム",
+      "outcome": "異なる場所のコンピュータを、ネットワークで結ぶ。",
+      "mechanism": "情報を小さな単位に分けて送り、交換機を介して複数の拠点を接続する。",
+      "caveat": "初期のネットワーク接続の年。インターネットの全体像やWebがこの年に完成したわけではない。",
+      "sources": [
+        "arpanet"
+      ],
+      "featured": false
+    },
+    {
+      "id": "ct",
+      "year": 1971,
+      "dateLabel": "1971年",
+      "dateKind": "臨床撮影",
+      "title": "X線CT",
+      "category": "life",
+      "place": "英国など",
+      "people": "ゴッドフリー・ハウンズフィールド／理論面のアラン・コーマックら",
+      "outcome": "体の断面を、外からの測定で画像にする。",
+      "mechanism": "多方向からのX線測定をコンピュータで計算し、内部の断面像を再構成する。",
+      "caveat": "初期の患者撮影の年。理論・装置の開発や公表には別の年がある。",
+      "sources": [
+        "ct"
+      ],
+      "featured": true
+    },
+    {
+      "id": "microprocessor",
+      "year": 1971,
+      "dateLabel": "1971年",
+      "dateKind": "製品発表",
+      "title": "マイクロプロセッサ 4004",
+      "category": "computing",
+      "place": "米国・日本",
+      "people": "フェデリコ・ファジン、テッド・ホフ、スタンレー・メイザー、嶋正利ら",
+      "outcome": "計算の中核を、一つのチップに載せる。",
+      "mechanism": "CPUの機能を半導体集積回路へまとめた。日本の電卓開発の依頼から生まれたチップ群の中核。",
+      "caveat": "1971年はIntel 4004を含む製品群の発表。並行する他のプロセッサ開発もある。",
+      "sources": [
+        "cpu"
+      ],
+      "featured": true
+    },
+    {
+      "id": "mri",
+      "year": 1973,
+      "dateLabel": "1973年",
+      "dateKind": "画像化の報告",
+      "title": "磁気共鳴による画像化",
+      "category": "life",
+      "place": "米国・英国など",
+      "people": "ポール・ラウターバー、ピーター・マンスフィールドら",
+      "outcome": "磁気共鳴の信号から、内部の構造を見る。",
+      "mechanism": "磁場に位置ごとの違いを与え、磁気共鳴の信号がどこから来たかを画像として取り出す。",
+      "caveat": "1973年はラウターバーの画像化の報告。人を撮影する臨床装置は後続の研究を経て発達した。",
+      "sources": [
+        "mri"
+      ],
+      "featured": false
+    },
+    {
+      "id": "ivf",
+      "year": 1978,
+      "dateLabel": "1978年",
+      "dateKind": "出産",
+      "title": "体外受精",
+      "category": "life",
+      "place": "英国",
+      "people": "ロバート・エドワーズ、パトリック・ステプトー、ジーン・パーディら",
+      "outcome": "体外で受精した胚から、出産へつなぐ。",
+      "mechanism": "採卵、体外での受精・培養、子宮への移植という工程を組み合わせた。",
+      "caveat": "1978年はルイーズ・ブラウンの誕生。長年の研究と医療チームの共同作業による成果。",
+      "sources": [
+        "ivf"
+      ],
+      "featured": false
+    },
+    {
+      "id": "stereolithography",
+      "year": 1986,
+      "dateLabel": "1986年",
+      "dateKind": "特許・事業化",
+      "title": "光造形による3Dプリント",
+      "category": "materials",
+      "place": "米国",
+      "people": "チャールズ・ハルら",
+      "outcome": "デジタルな形を、薄い層から立体につくる。",
+      "mechanism": "光で固まる樹脂を層ごとに硬化させる。金型を作る前に、設計した立体を直接試作できる。",
+      "caveat": "1986年はハルの特許と事業化の節目。3D造形には他の先行研究・方式もある。",
+      "sources": [
+        "printing3d",
+        "printing3d-patent"
+      ],
+      "featured": true
+    },
+    {
+      "id": "world-wide-web",
+      "year": 1989,
+      "dateLabel": "1989年",
+      "dateKind": "提案",
+      "title": "World Wide Web",
+      "category": "communication",
+      "place": "スイス・CERN",
+      "people": "ティム・バーナーズ＝リーら",
+      "outcome": "文書をリンクで結び、ネットワーク越しに読む。",
+      "mechanism": "文書の所在、転送方法、記述方法を組み合わせ、リンクをたどる情報共有の仕組みを構想した。",
+      "caveat": "1989年は提案。動くブラウザー・サーバーは1990年、ソフトウェアの公有化は1993年。",
+      "sources": [
+        "web"
+      ],
+      "featured": true
+    },
+    {
+      "id": "lithium-ion",
+      "year": 1991,
+      "dateLabel": "1991年",
+      "dateKind": "商品化",
+      "title": "リチウムイオン電池",
+      "category": "energy",
+      "place": "日本など",
+      "people": "ウィッティンガム、グッドイナフ、吉野彰ら／商品化チーム",
+      "outcome": "小さく軽い機器に、充電できる電源を載せる。",
+      "mechanism": "リチウムイオンを二つの電極の間で移動させる。電極材料の改良を積み重ねて商品化に至った。",
+      "caveat": "1991年は商品化の年。基礎となる研究と試作は1970〜1980年代に行われた。",
+      "sources": [
+        "lithium"
+      ],
+      "featured": true
+    },
+    {
+      "id": "blue-led",
+      "year": 1993,
+      "dateLabel": "1990年代",
+      "dateKind": "実用化への進展",
+      "title": "高効率の青色LED",
+      "category": "energy",
+      "place": "日本",
+      "people": "赤﨑勇、天野浩、中村修二ら",
+      "outcome": "半導体から青い光を出し、白色照明へつなぐ。",
+      "mechanism": "窒化ガリウム系の結晶や接合を改良し、効率よく青色光を放つ半導体素子を実現した。",
+      "caveat": "複数の研究上の突破をまとめて1990年代としている。青色LED自体と白色LEDの製品化は別の段階。",
+      "sources": [
+        "led"
+      ],
+      "featured": false
+    },
+    {
+      "id": "gps",
+      "year": 1995,
+      "dateLabel": "1995年",
+      "dateKind": "全面運用",
+      "title": "GPSによる衛星測位",
+      "category": "transport",
+      "place": "米国／全世界",
+      "people": "米国国防総省と研究・開発チーム",
+      "outcome": "衛星の信号から、自分の位置を知る。",
+      "mechanism": "複数の衛星から届く時刻の情報を用い、受信機の位置と時刻を計算する。",
+      "caveat": "1995年は全面的な運用能力の達成。研究・衛星打上げ・民間利用はそれ以前から段階的に進んだ。",
+      "sources": [
+        "gps"
+      ],
+      "featured": false
+    },
+    {
+      "id": "crispr",
+      "year": 2012,
+      "dateLabel": "2012年",
+      "dateKind": "論文公開",
+      "title": "RNAで標的を指定するCas9",
+      "category": "life",
+      "place": "欧州・米国など",
+      "people": "マルティン・イネク、エマニュエル・シャルパンティエ、ジェニファー・ダウドナら",
+      "outcome": "DNAを切る場所を、RNAで指定する。",
+      "mechanism": "細菌の仕組みをもとに、RNAで誘導するDNA切断を実験で示した。ゲノム編集への応用を提案した。",
+      "caveat": "2012年は試験管内での仕組みの実証。生きた細胞での編集や治療の実用化とは別の段階。",
+      "sources": [
+        "crispr"
+      ],
+      "featured": false
+    },
+    {
+      "id": "transformer",
+      "year": 2017,
+      "dateLabel": "2017年",
+      "dateKind": "論文公開",
+      "title": "Transformer",
+      "category": "computing",
+      "place": "米国など",
+      "people": "アシシュ・ヴァスワニらの研究チーム",
+      "outcome": "文章の離れた部分の関係を、まとめて処理する。",
+      "mechanism": "注意機構を中心に系列を処理するモデルを提案。逐次的な再帰処理に依存せず、機械翻訳で性能を示した。",
+      "caveat": "2017年はモデルの提案。AIや注意機構そのものの起源ではなく、後のモデルのすべてを説明するものでもない。",
+      "sources": [
+        "transformer"
+      ],
+      "featured": false
+    }
+  ],
+  "relations": [
+    {
+      "from": "newcomen",
+      "to": "watt",
+      "label": "改良：シリンダーの冷却による燃料の無駄を減らす",
+      "sources": [
+        "newcomen",
+        "watt"
+      ]
+    },
+    {
+      "from": "volta",
+      "to": "motor",
+      "label": "利用：継続的な電流で電磁回転を実験する",
+      "sources": [
+        "volta",
+        "motor"
+      ]
+    },
+    {
+      "from": "volta",
+      "to": "lead-battery",
+      "label": "同じ課題：電気を取り出す装置を、充電式へ",
+      "sources": [
+        "volta",
+        "lead"
+      ]
+    },
+    {
+      "from": "motor",
+      "to": "generator",
+      "label": "共通する基盤：電気と磁気と運動の関係",
+      "sources": [
+        "motor",
+        "generator"
+      ]
+    },
+    {
+      "from": "generator",
+      "to": "turbine",
+      "label": "組み合わせ：タービンで発電機を回す",
+      "sources": [
+        "generator",
+        "turbine"
+      ]
+    },
+    {
+      "from": "generator",
+      "to": "wind-generator",
+      "label": "組み合わせ：風の回転を発電機へ伝える",
+      "sources": [
+        "generator",
+        "wind"
+      ]
+    },
+    {
+      "from": "lead-battery",
+      "to": "wind-generator",
+      "label": "利用：風で得た電気を蓄電池に貯める",
+      "sources": [
+        "wind"
+      ]
+    },
+    {
+      "from": "lead-battery",
+      "to": "lithium-ion",
+      "label": "同じ課題：充電して持ち運べる電源",
+      "sources": [
+        "lead",
+        "lithium"
+      ]
+    },
+    {
+      "from": "solar-cell",
+      "to": "blue-led",
+      "label": "共通する基盤：半導体による光と電気の変換",
+      "sources": [
+        "solar",
+        "led"
+      ]
+    },
+    {
+      "from": "stone-tools",
+      "to": "pottery",
+      "label": "同じ課題：材料を加工して道具をつくる",
+      "sources": [
+        "stone",
+        "pottery"
+      ]
+    },
+    {
+      "from": "pottery",
+      "to": "porcelain",
+      "label": "改良：材料の配合と高温での焼成を発展させる",
+      "sources": [
+        "pottery",
+        "porcelain"
+      ]
+    },
+    {
+      "from": "glassblowing",
+      "to": "spectacles",
+      "label": "共通する素材：ガラスを成形して道具にする",
+      "sources": [
+        "glass",
+        "glasses"
+      ]
+    },
+    {
+      "from": "vulcanization",
+      "to": "pneumatic-tyre",
+      "label": "利用：ゴムを車輪の衝撃を吸収する部材へ",
+      "sources": [
+        "rubber",
+        "tyre"
+      ]
+    },
+    {
+      "from": "bakelite",
+      "to": "nylon",
+      "label": "共通する基盤：合成した高分子を工業材料にする",
+      "sources": [
+        "bakelite",
+        "nylon"
+      ]
+    },
+    {
+      "from": "wheel",
+      "to": "bicycle",
+      "label": "組み合わせ：二つの車輪と操舵機構",
+      "sources": [
+        "wheel",
+        "bicycle"
+      ]
+    },
+    {
+      "from": "bicycle",
+      "to": "pneumatic-tyre",
+      "label": "改良：自転車の乗り心地を空気で改善する",
+      "sources": [
+        "tyre"
+      ]
+    },
+    {
+      "from": "otto",
+      "to": "benz-car",
+      "label": "利用：四ストローク機関を車体に組み込む",
+      "sources": [
+        "otto",
+        "benz"
+      ]
+    },
+    {
+      "from": "steam-locomotive",
+      "to": "shinkansen",
+      "label": "同じ課題：レール上の動力車で都市を結ぶ",
+      "sources": [
+        "locomotive",
+        "shinkansen"
+      ]
+    },
+    {
+      "from": "wright-flyer",
+      "to": "jet-aircraft",
+      "label": "同じ課題：航空機を前進させる動力を変える",
+      "sources": [
+        "wright",
+        "jet"
+      ]
+    },
+    {
+      "from": "harrison",
+      "to": "gps",
+      "label": "同じ課題：精密な時刻から位置を求める",
+      "sources": [
+        "harrison",
+        "gps"
+      ]
+    },
+    {
+      "from": "liquid-rocket",
+      "to": "gps",
+      "label": "組み合わせ：ロケットで測位衛星を軌道へ運ぶ",
+      "sources": [
+        "rocket",
+        "gps"
+      ]
+    },
+    {
+      "from": "cuneiform",
+      "to": "paper",
+      "label": "同じ課題：情報を記憶の外に残す",
+      "sources": [
+        "writing",
+        "paper"
+      ]
+    },
+    {
+      "from": "paper",
+      "to": "woodblock",
+      "label": "利用：紙を印刷の媒体にする",
+      "sources": [
+        "paper",
+        "woodblock"
+      ]
+    },
+    {
+      "from": "woodblock",
+      "to": "movable-type",
+      "label": "同じ課題：文章を複製する版のつくり方",
+      "sources": [
+        "woodblock",
+        "movable"
+      ]
+    },
+    {
+      "from": "movable-type",
+      "to": "gutenberg",
+      "label": "同じ仕組み：文字を組み替えて使う活字。直接の伝播は断定しない",
+      "sources": [
+        "movable",
+        "gutenberg"
+      ]
+    },
+    {
+      "from": "telegraph",
+      "to": "telephone",
+      "label": "同じ課題：電気で離れた場所へ情報を送る",
+      "sources": [
+        "telegraph",
+        "telephone"
+      ]
+    },
+    {
+      "from": "telegraph",
+      "to": "wireless",
+      "label": "同じ課題：符号を伝える経路を電線から電波へ",
+      "sources": [
+        "telegraph",
+        "radio"
+      ]
+    },
+    {
+      "from": "telephone",
+      "to": "phonograph",
+      "label": "開発の背景：声の振動を記録・再生する発想",
+      "sources": [
+        "phonograph"
+      ]
+    },
+    {
+      "from": "daguerreotype",
+      "to": "television",
+      "label": "同じ課題：像を記録することから、動く像を送ることへ",
+      "sources": [
+        "photo",
+        "television"
+      ]
+    },
+    {
+      "from": "laser",
+      "to": "stereolithography",
+      "label": "利用：光で樹脂を層ごとに硬化させる",
+      "sources": [
+        "printing3d"
+      ]
+    },
+    {
+      "from": "napier-bones",
+      "to": "pascaline",
+      "label": "同じ課題：算術の繰り返しを道具で助ける",
+      "sources": [
+        "napier",
+        "pascal"
+      ]
+    },
+    {
+      "from": "spinning-jenny",
+      "to": "jacquard",
+      "label": "同じ課題：繊維の仕事を機械で支える",
+      "sources": [
+        "jenny",
+        "jacquard"
+      ]
+    },
+    {
+      "from": "jacquard",
+      "to": "analytical-engine",
+      "label": "着想：パンチカードで機械の手順を指定する",
+      "sources": [
+        "babbage",
+        "jacquard"
+      ]
+    },
+    {
+      "from": "jacquard",
+      "to": "hollerith",
+      "label": "共通する方法：穴の有無で情報を表す",
+      "sources": [
+        "jacquard",
+        "hollerith"
+      ]
+    },
+    {
+      "from": "analytical-engine",
+      "to": "stored-program",
+      "label": "同じ課題：手順を変えられる汎用計算機をつくる",
+      "sources": [
+        "babbage",
+        "computers"
+      ]
+    },
+    {
+      "from": "eniac",
+      "to": "stored-program",
+      "label": "同じ課題：電子計算機の手順を設定する方法",
+      "sources": [
+        "computers"
+      ]
+    },
+    {
+      "from": "transistor",
+      "to": "integrated-circuit",
+      "label": "集積：トランジスタを含む回路要素を一体化する",
+      "sources": [
+        "ic"
+      ]
+    },
+    {
+      "from": "integrated-circuit",
+      "to": "microprocessor",
+      "label": "集積：CPUの機能を一つのチップに載せる",
+      "sources": [
+        "cpu"
+      ]
+    },
+    {
+      "from": "stored-program",
+      "to": "fortran",
+      "label": "同じ課題：コンピュータが実行する手順を記述する",
+      "sources": [
+        "computers",
+        "fortran"
+      ]
+    },
+    {
+      "from": "jacquard",
+      "to": "unimate",
+      "label": "共通する方法：記憶した指示で機械の動作を変える",
+      "sources": [
+        "jacquard",
+        "robot"
+      ]
+    },
+    {
+      "from": "arpanet",
+      "to": "world-wide-web",
+      "label": "基盤：ネットワーク上で文書をやり取りする",
+      "sources": [
+        "arpanet",
+        "web"
+      ]
+    },
+    {
+      "from": "agriculture",
+      "to": "seed-drill",
+      "label": "改良：種をまく作業を機械化する",
+      "sources": [
+        "agriculture",
+        "seed"
+      ]
+    },
+    {
+      "from": "agriculture",
+      "to": "maize",
+      "label": "同じ営み：栽培と選択によって作物を変えていく",
+      "sources": [
+        "agriculture",
+        "maize"
+      ]
+    },
+    {
+      "from": "canning",
+      "to": "pasteurization",
+      "label": "共通する方法：加熱を食品の保存へ利用する",
+      "sources": [
+        "canning",
+        "pasteur"
+      ]
+    },
+    {
+      "from": "canning",
+      "to": "refrigeration",
+      "label": "同じ課題：食べ物を長く保存する",
+      "sources": [
+        "canning",
+        "refrigeration"
+      ]
+    },
+    {
+      "from": "smallpox-vaccine",
+      "to": "penicillin",
+      "label": "同じ課題：感染症に対処する。予防と治療の違いがある",
+      "sources": [
+        "vaccine",
+        "penicillin"
+      ]
+    },
+    {
+      "from": "ct",
+      "to": "mri",
+      "label": "同じ課題：体の内部を断面像として見る",
+      "sources": [
+        "ct",
+        "mri"
+      ]
+    }
+  ]
+}
