@@ -125,17 +125,11 @@ test('関連項目は最大5件、重複なし、背景と同時代を区別す�
   assert.equal(links.some(r => r.entry.id === 'li-kokoro'), false);
 });
 
-test('3ガイド・全18ステップ・関係の参照先が実在し、根拠がある', () => {
-  assert.equal(editorial.courses.length, 3);
-  for (const course of editorial.courses) {
-    assert.equal(course.steps.length, 6);
-    for (const step of course.steps) {
-      assert.ok(byId.has(step.entryId));
-      assert.ok(step.note.length > 10);
-      assert.ok(details[step.entryId].sourceIds.length);
-      assert.ok(details[step.entryId].context || details[step.entryId].era);
-      assert.ok(details[step.entryId].significance);
-    }
+test('追加解説・関係・出典の参照先が実在し、根拠がある', () => {
+  for (const [id, detail] of Object.entries(editorial.entries)) {
+    assert.ok(byId.has(id));
+    assert.ok(detail.sourceIds?.length);
+    assert.ok(details[id].context || details[id].era);
   }
   for (const relation of editorial.relations) {
     assert.ok(byId.has(relation.from)); assert.ok(byId.has(relation.to));
