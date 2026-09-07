@@ -168,94 +168,6 @@ input[type=checkbox] {
   font-size:12px;
 }
 
-.guides {
-  margin-top:28px;
-}
-
-.guide-options {
-  display:grid;
-  grid-template-columns:repeat(3,minmax(0,1fr));
-  gap:8px;
-}
-
-.guide-button {
-  text-align:left;
-  border-radius:8px;
-  padding:12px;
-  display:flex;
-  align-items:flex-start;
-  gap:10px;
-  line-height:1.5;
-}
-
-.guide-number {
-  color:var(--accent);
-  font-family:Georgia,serif;
-  font-size:20px;
-  line-height:1.2;
-}
-
-.guide-button strong {
-  display:block;
-  font-size:12px;
-  font-weight:600;
-}
-
-.guide-button small {
-  font-size:11px;
-  color:var(--muted);
-}
-
-.guide-button[aria-pressed=true] {
-  border-color:var(--accent);
-  background:var(--accent-soft);
-}
-
-.guide-progress {
-  margin-top:12px;
-  border-left:3px solid var(--accent);
-  padding:10px 14px;
-  background:var(--accent-soft);
-}
-
-.guide-step-head {
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  gap:8px;
-  font-size:12px;
-}
-
-.guide-progress p {
-  margin:6px 0 10px;
-  font-size:13px;
-}
-
-.guide-step-actions {
-  display:flex;
-  gap:6px;
-  flex-wrap:wrap;
-}
-
-.guide-step-actions button {
-  font-size:12px;
-}
-
-.guide-dots {
-  display:flex;
-  gap:5px;
-}
-
-.guide-dots button {
-  padding:1px 8px;
-  font-size:12px;
-}
-
-.guide-dots button[aria-current=step] {
-  background:var(--accent);
-  color:white;
-}
-
 .navigator {
   margin-top:24px;
   padding:16px 18px 12px;
@@ -1062,17 +974,6 @@ input[type=checkbox] {
     grid-template-columns:minmax(0,1fr) 320px;
     gap:18px;
   }
-  .has-detail .guide-options {
-    grid-template-columns:1fr;
-    gap:5px;
-  }
-  .has-detail .guide-button {
-    padding:7px 10px;
-    align-items:center;
-  }
-  .has-detail .guide-button small {
-    display:none;
-  }
   .has-detail .heading-row {
     align-items:flex-start;
     flex-direction:column;
@@ -1103,26 +1004,6 @@ input[type=checkbox] {
     margin-top:10px;
     font-size:12px;
     min-height:44px;
-  }
-  .guides {
-    margin-top:17px;
-  }
-  .guide-options {
-    grid-template-columns:1fr;
-    gap:6px;
-  }
-  .guide-button {
-    padding:10px 12px;
-    align-items:center;
-  }
-  .guide-button strong {
-    font-size:13px;
-  }
-  .guide-button small {
-    display:none;
-  }
-  .guide-number {
-    font-size:17px;
   }
   .navigator {
     padding:13px 10px;
@@ -1281,29 +1162,6 @@ input[type=checkbox] {
   font-size: 13px;
 }
 
-.guides {
-  margin-top: 14px;
-}
-
-.guides > summary {
-  cursor: pointer;
-  font-size: 12px;
-  font-weight: 600;
-  padding: 5px 0;
-  color: var(--accent);
-}
-
-.guides > summary span {
-  font-weight: 400;
-  color: var(--muted);
-  margin-left: 10px;
-  font-size: 11px;
-}
-
-.guide-options {
-  margin-top: 10px;
-}
-
 .navigator {
   margin-top: 12px;
   padding: 10px 14px;
@@ -1332,9 +1190,6 @@ input[type=checkbox] {
 @media(max-width:760px) {
   .reading-toggle {
     margin-top: 3px;
-  }
-  .guides {
-    margin-top: 5px;
   }
   .navigator {
     padding: 10px;

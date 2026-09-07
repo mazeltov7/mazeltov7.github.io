@@ -11,7 +11,7 @@ const state = {
   data: null, editorial: null, details: {}, entries: [], categories: new Set(),
   range: { start: 1913, end: 1915 }, query: '', reading: false, onlyRead: false,
   view: mobile.matches ? 'list' : 'timeline', viewChosen: false, selectedId: null,
-  guideId: null, step: 0, beforeSearch: null, visible: [],
+  beforeSearch: null, visible: [],
 };
 let categoryMap = {}, laneMap = {}, byId = new Map();
 let returnFocus = null;
@@ -40,7 +40,7 @@ async function init() {
       getJSON(`periods/${periodId}.explore.json`, true), getJSON('../my-books/books-data.json', true),
     ]);
     state.data = data;
-    state.editorial = editorial || { courses: [], entries: {}, sources: {}, relations: [], bookLinks: [] };
+    state.editorial = editorial || { entries: {}, sources: {}, relations: [], bookLinks: [] };
     state.details = { ...(details || {}) };
     for (const [id, content] of Object.entries(state.editorial.entries)) {
       state.details[id] = { ...state.details[id], ...content };
@@ -97,7 +97,6 @@ function writeURL(push = false) {
   if (state.onlyRead) url.searchParams.set('read', '1');
   if (state.categories.size !== Object.keys(categoryMap).length) url.searchParams.set('categories', [...state.categories].join(','));
   if (state.selectedId) url.searchParams.set('entry', state.selectedId);
-  if (state.guideId) { url.searchParams.set('guide', state.guideId); url.searchParams.set('step', state.step); }
   if (push && url.href !== location.href) history.pushState({}, '', url);
   else history.replaceState({}, '', url);
 }
@@ -113,9 +112,6 @@ function restoreURL() {
   state.categories = params.has('categories') ? new Set(params.get('categories').split(',').filter(id => categoryMap[id])) : new Set(Object.keys(categoryMap));
   state.selectedId = byId.has(params.get('entry')) ? params.get('entry') : null;
   if (byId.get(state.selectedId)?.isReading) state.reading = true;
-  const guide = state.editorial.courses.find(c => c.id === params.get('guide'));
-  state.guideId = guide?.id || null;
-  state.step = guide ? Math.max(0, Math.min(guide.steps.length - 1, Number.parseInt(params.get('step'), 10) || 0)) : 0;
   state.beforeSearch = null;
   $('search').value = state.query;
 }
@@ -134,7 +130,6 @@ function setRange(range) {
   $('rangeError').hidden = true;
   clearQuery();
   state.range = clampRange(range.start, range.end, state.data);
-  state.guideId = null;
   closeDetail(false);
   render();
   writeURL(true);
@@ -143,7 +138,6 @@ function setRange(range) {
 function runSearch(value) {
   if (!state.query && value.trim()) state.beforeSearch = { range: { ...state.range }, view: state.view };
   state.query = value.trim();
-  state.guideId = null;
   closeDetail(false);
   if (state.query) {
     state.view = 'list';
@@ -220,7 +214,7 @@ function refilter() {
 }
 
 function render() {
-  renderGuides(); renderOverview(); renderFilters(); renderResults();
+  renderOverview(); renderFilters(); renderResults();
 }
 
 function renderOverview() {
@@ -345,38 +339,6 @@ function renderTimeline() {
   }));
 }
 
-function renderGuides() {
-  $('guidesDisclosure').hidden = !state.editorial.courses.length;
-  if (state.guideId) $('guidesDisclosure').open = true;
-  $('guideOptions').innerHTML = state.editorial.courses.map((course, i) => `<button class="guide-button" type="button" data-guide="${course.id}" aria-pressed="${state.guideId === course.id}"><span class="guide-number">0${i + 1}</span><span><strong>${esc(course.title)}</strong><small>${esc(course.subtitle)}</small></span></button>`).join('');
-  $('guideOptions').querySelectorAll('[data-guide]').forEach(button => button.addEventListener('click', () => openGuide(button.dataset.guide, 0)));
-  const course = state.editorial.courses.find(c => c.id === state.guideId);
-  $('guideProgress').hidden = !course;
-  if (!course) return;
-  const step = course.steps[state.step];
-  $('guideProgress').innerHTML = `<div class="guide-step-head"><strong>${state.step + 1} / ${course.steps.length} · ${esc(byId.get(step.entryId).title)}</strong><button type="button" class="text-button" id="endGuide">ガイドを閉じる</button></div><p>${esc(step.note)}</p><div class="guide-step-actions"><button type="button" id="previousStep"${state.step === 0 ? ' disabled' : ''}>← 前の項目</button><div class="guide-dots">${course.steps.map((s, i) => `<button type="button" data-step="${i}" aria-label="${i + 1}：${esc(byId.get(s.entryId).title)}"${i === state.step ? ' aria-current="step"' : ''}>${i + 1}</button>`).join('')}</div><button type="button" id="nextStep"${state.step === course.steps.length - 1 ? ' disabled' : ''}>次の項目 →</button><button type="button" id="showGuideDetail">解説を開く</button></div>`;
-  $('previousStep').addEventListener('click', () => openGuide(course.id, state.step - 1));
-  $('nextStep').addEventListener('click', () => openGuide(course.id, state.step + 1));
-  $('showGuideDetail').addEventListener('click', event => selectEntry(step.entryId, event.currentTarget));
-  $('endGuide').addEventListener('click', () => { state.guideId = null; renderGuides(); writeURL(); });
-  $('guideProgress').querySelectorAll('[data-step]').forEach(button => button.addEventListener('click', () => openGuide(course.id, Number(button.dataset.step))));
-}
-
-function openGuide(id, step) {
-  const course = state.editorial.courses.find(c => c.id === id);
-  if (!course || !course.steps[step]) return;
-  clearQuery(); resetCategories();
-  state.guideId = id; state.step = step;
-  const entry = byId.get(course.steps[step].entryId);
-  state.range = clampRange(entry.year - 2, (entry.yearEnd ?? entry.year) + 2, state.data);
-  state.selectedId = entry.id;
-  render();
-  // スマホではガイドの前後操作を隠さず、解説はボタンから開く。
-  if (mobile.matches) hidePane(); else renderDetail();
-  writeURL(true);
-  announce(`${course.title}、${step + 1}項目目。${entry.title}`);
-}
-
 function rememberOpener(entryId, element) {
   returnFocus = { element, id: element.id, entryId };
 }
@@ -418,13 +380,10 @@ function renderDetail() {
   const sources = sourceLinks(ids);
   const findUrl = `https://ndlsearch.ndl.go.jp/search?keyword=${encodeURIComponent(entry.title)}`;
   const sourceSection = `${sources ? `<ul class="sources-list">${sources}</ul>` : '<p class="source-status">この項目の出典は整理中です。</p>'}<a href="${findUrl}" target="_blank" rel="noopener noreferrer">国立国会図書館で資料を探す ↗</a>`;
-  const course = state.editorial.courses.find(c => c.id === state.guideId);
-  const courseStep = course?.steps[state.step];
-  const guideNote = courseStep?.entryId === entry.id ? section('このガイドの視点', paragraphs(courseStep.note)) : '';
   const books = state.reading && entry.bookRecords?.length ? entry.bookRecords.map(book => `<div class="book-record"><a href="${esc(book.url)}" target="_blank" rel="noopener">${esc(book.title)} ↗</a><small>${esc(book.readYear)}年に読了 · ${esc(book.author)}</small><small>原著発行年：${book.publishedYear}（My Booksの記録）</small></div>`).join('') : '';
   const bio = detail.authorBio ? `<details><summary>著者について${detail.authorBio.born ? ` · ${detail.authorBio.born}–${detail.authorBio.died || ''}` : ''}</summary><div>${paragraphs(detail.authorBio.summary)}</div></details>` : '';
   $('detailEyebrow').textContent = `${laneMap[entry.lane].label} / ${yearLabel(entry)}`;
-  $('detailContent').innerHTML = `<h2 id="detailTitle">${esc(entry.title)}</h2><div class="detail-meta"><span class="entry-kind" style="--entry-color:${category.color}">${esc(category.label)}</span>${detail.sourceIds?.length ? '<span>出典付き</span>' : ''}</div><p class="detail-summary">${esc(entry.summary)}</p>${facts}${guideNote}${section('背景と位置づけ', paragraphs(detail.context || detail.era))}${section('何が変わったか', paragraphs(detail.significance))}${section('My Booksの読書記録', books)}${section('つながりをたどる', related.length ? relations : '')}${section('テーマから探す', detail.themes?.length ? `<div class="theme-tags">${detail.themes.map(t => `<button type="button" data-theme="${esc(t)}">${esc(t)}</button>`).join('')}</div>` : '')}${section('詳しく読む', bio)}${section('出典・原文', sourceSection)}<div class="detail-actions"><button type="button" id="showContemporaries">この時代の一覧を見る</button><button type="button" id="copyLink">この項目のリンクをコピー</button></div>`;
+  $('detailContent').innerHTML = `<h2 id="detailTitle">${esc(entry.title)}</h2><div class="detail-meta"><span class="entry-kind" style="--entry-color:${category.color}">${esc(category.label)}</span>${detail.sourceIds?.length ? '<span>出典付き</span>' : ''}</div><p class="detail-summary">${esc(entry.summary)}</p>${facts}${section('背景と位置づけ', paragraphs(detail.context || detail.era))}${section('何が変わったか', paragraphs(detail.significance))}${section('My Booksの読書記録', books)}${section('つながりをたどる', related.length ? relations : '')}${section('テーマから探す', detail.themes?.length ? `<div class="theme-tags">${detail.themes.map(t => `<button type="button" data-theme="${esc(t)}">${esc(t)}</button>`).join('')}</div>` : '')}${section('詳しく読む', bio)}${section('出典・原文', sourceSection)}<div class="detail-actions"><button type="button" id="showContemporaries">この時代の一覧を見る</button><button type="button" id="copyLink">この項目のリンクをコピー</button></div>`;
   $('detailContent').querySelectorAll('[data-related]').forEach(button => button.addEventListener('click', () => selectEntry(button.dataset.related, button)));
   $('detailContent').querySelectorAll('[data-theme]').forEach(button => button.addEventListener('click', () => {
     const theme = button.dataset.theme; closeDetail(false); $('search').value = theme; runSearch(theme);
