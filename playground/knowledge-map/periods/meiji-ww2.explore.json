@@ -1,0 +1,109 @@
+{
+  "reviewedAt": "2026-09-07",
+  "courses": [
+    {
+      "id": "individual", "title": "近代的な個人はどう描かれたか", "subtitle": "学問・社会・小説をたどる",
+      "steps": [
+        {"entryId":"ph-fukuzawa-gakumon","note":"学ぶことと独立すること。その結びつきを『学問のすゝめ』から考えます。ここから先は、同じ問いを異なる作品に向ける読み比べです。"},
+        {"entryId":"li-ukigumo","note":"独立の理念から、職場と家庭で揺れる一人の青年へ。社会の仕組みが個人の選択をどう縛るかに注目します。"},
+        {"entryId":"li-hakai","note":"個人が努力すれば自由になれるのか。『破戒』では、出自をめぐる差別と告白の問題から考えます。"},
+        {"entryId":"li-sanshiro","note":"地方から東京へ来た青年の目を借りて、大学・都市・恋愛という新しい環境を眺めます。"},
+        {"entryId":"jp-taisho","note":"1912年、明治から大正へ。次の『こゝろ』では、時代の区切りが登場人物にどのように受け止められるかを読みます。"},
+        {"entryId":"li-kokoro","note":"自立した個人の内面には、孤独や罪もあります。最初の独立の理念と比べながら、『先生』の語りを読んでみてください。"}
+      ]
+    },
+    {
+      "id": "worldviews", "title": "世界の見方はどう変わったか", "subtitle": "生命・物理・絵画を横断する",
+      "steps": [
+        {"entryId":"sc-darwin","note":"生物の多様さを、長い時間の変化として説明する。まず『種の起源』で、固定された自然観が問い直される場面を見ます。"},
+        {"entryId":"sc-planck","note":"次は生命から物理へ。熱い物体の光を説明するため、エネルギーを連続量だけで扱う見方に新しい仮定が加わります。"},
+        {"entryId":"sc-special-relativity","note":"1905年、時間と空間の測り方が問い直されます。測定する観測者を理論に含める発想に注目します。"},
+        {"entryId":"ar-picasso-demoiselles","note":"同じ時代の絵画では、身体と空間の描き方が大きく変わります。相対性理論の直接の影響とはせず、別分野の表現として比べます。"},
+        {"entryId":"sc-bohr","note":"原子の内部へ。ボーアは量子の考え方を取り入れ、水素のスペクトルを説明する原子模型を示しました。"},
+        {"entryId":"sc-general-relativity","note":"最後は重力へ。特殊相対論で扱いきれなかった問題が、時空の幾何学を用いて捉え直されます。"}
+      ]
+    },
+    {
+      "id": "mass-society", "title": "大衆社会と戦争をどう読むか", "subtitle": "政治・経済・文学・美術をつなぐ",
+      "steps": [
+        {"entryId":"wd-ww1","note":"戦争が戦場の外の暮らしや経済にも及ぶ時代。第一次世界大戦と日本の関わりを入口にします。"},
+        {"entryId":"jp-rice-riots","note":"大戦期の景気は、誰にとっての豊かさだったのか。米価高騰に対する人びとの抗議に目を向けます。"},
+        {"entryId":"jp-suffrage","note":"政治に参加できる人が増える一方で、思想への取り締まりも強まります。1925年の二つの法律を並べて考えます。"},
+        {"entryId":"li-kanikosen","note":"政治制度から、働く人びとの声へ。個人ではなく集団を描く小説の語り方に注目します。"},
+        {"entryId":"wd-black-thursday","note":"『蟹工船』が出た1929年の秋、米国で株価が暴落。出版が先なので、小説をこの暴落の結果と捉えず、同年の出来事として比較します。"},
+        {"entryId":"ar-guernica","note":"スペイン内戦下の爆撃を受けて制作された絵画へ。戦争を記録し、伝える表現にはどのような力があるでしょうか。"}
+      ]
+    }
+  ],
+  "sources": {
+    "gakumon":{"title":"『学問のすすめ』書誌・原文","publisher":"青空文庫","url":"https://www.aozora.gr.jp/cards/000296/card47061.html","scope":"初出・著者・原文"},
+    "ukigumo":{"title":"二葉亭四迷『浮雲』書誌・原文","publisher":"青空文庫","url":"https://www.aozora.gr.jp/cards/000006/card1869.html","scope":"作品・原文"},
+    "hakai":{"title":"『破戒』書誌・原文","publisher":"青空文庫","url":"https://www.aozora.gr.jp/cards/000158/card1502.html","scope":"初出・原文"},
+    "sanshiro":{"title":"『三四郎』書誌・原文","publisher":"青空文庫","url":"https://www.aozora.gr.jp/cards/000148/card794.html","scope":"作品・著者・原文"},
+    "kokoro":{"title":"『こころ』書誌・原文","publisher":"青空文庫","url":"https://www.aozora.gr.jp/cards/000148/card773.html","scope":"1914年の連載・著者"},
+    "kokoro-text":{"title":"『こころ』本文を読む","publisher":"青空文庫","url":"https://www.aozora.gr.jp/cards/000148/files/773_14560.html","scope":"作中の明治天皇崩御・乃木の殉死"},
+    "rashomon":{"title":"『羅生門』書誌・原文","publisher":"青空文庫","url":"https://www.aozora.gr.jp/cards/000879/card127.html","scope":"初出・古典との関係"},
+    "tanizaki":{"title":"谷崎潤一郎の人物紹介","publisher":"国立国会図書館","url":"https://www.ndl.go.jp/portrait/datas/6058","scope":"経歴・1949年の文化勲章受章"},
+    "darwin":{"title":"『種の起源』1859年初版の書誌","publisher":"Darwin Online","url":"https://darwin-online.org.uk/content/record?itemID=F373","scope":"初版・原資料への入口"},
+    "planck":{"title":"マックス・プランク：研究と生涯","publisher":"ノーベル財団","url":"https://www.nobelprize.org/prizes/physics/1918/planck/facts/","scope":"1900年の量子仮説"},
+    "einstein":{"title":"アルベルト・アインシュタインの研究史","publisher":"マックス・プランク重力物理学研究所","url":"https://www.einstein-online.info/en/about-einstein-online/about-albert-einstein/","scope":"1905年の論文・1915年の一般相対論"},
+    "equivalence":{"title":"等価原理：エレベーター・ロケット・重力","publisher":"マックス・プランク重力物理学研究所","url":"https://www.einstein-online.info/en/spotlight/equivalence_principle/","scope":"特殊相対論から一般相対論へ"},
+    "bohr":{"title":"ボーアの原子模型","publisher":"コペンハーゲン大学 ニールス・ボーア研究所","url":"https://nbi.ku.dk/english/www/niels/bohr/bohratomet/","scope":"1913年の論文と水素スペクトル"},
+    "demoiselles":{"title":"『アヴィニョンの娘たち』作品を見る","publisher":"ニューヨーク近代美術館（MoMA）","url":"https://www.moma.org/collection/works/79766","scope":"1907年の制作・造形・背景"},
+    "rite":{"title":"バレエ・リュス：楽譜と舞台資料","publisher":"米国議会図書館","url":"https://www.loc.gov/exhibits/ballets-russes/exhibition-items.html","scope":"『春の祭典』の1913年の舞台資料"},
+    "taisho":{"title":"大正デモクラシー：概説","publisher":"国立国会図書館","url":"https://www.ndl.go.jp/modern/cha3/index.html","scope":"第一次世界大戦と日本・政党政治"},
+    "rice":{"title":"風刺漫画から見る大正デモクラシー","publisher":"国立国会図書館","url":"https://www.ndl.go.jp/kaleido/entry/10/1.html","scope":"大戦期の物価・米騒動・社会運動"},
+    "suffrage":{"title":"男子普通選挙法の成立と治安維持法","publisher":"国立国会図書館","url":"https://www.ndl.go.jp/modern/cha3/description13.html","scope":"二つの法律と成立過程"},
+    "kanikosen":{"title":"『蟹工船』書誌・原文","publisher":"青空文庫","url":"https://www.aozora.gr.jp/cards/000156/card1465.html","scope":"1929年5・6月の初出・著者・原文"},
+    "crash":{"title":"1929年の株式市場暴落","publisher":"Federal Reserve History","url":"https://www.federalreservehistory.org/essays/stock-market-crash-of-1929","scope":"1929年の株価暴落と金融政策"},
+    "guernica":{"title":"『ゲルニカ』作品と解説","publisher":"ソフィア王妃芸術センター","url":"https://www.museoreinasofia.es/en/collections/artwork/guernica-0/","scope":"1937年の制作・スペイン内戦との関係"}
+  },
+  "entries": {
+    "ph-fukuzawa-gakumon":{"dateLabel":"初編刊行","publication":"1872年（以後、続編を刊行）","sourceIds":["gakumon"],"significance":"日常に役立つ学問と個人の独立を結びつけた啓蒙書。独立を掲げる言葉が、その後の小説に描かれる個人の現実とどう響き合うかを考えられます。","themes":["学問","独立","個人と社会"]},
+    "li-ukigumo":{"dateLabel":"初編刊行","publication":"1887年（続編は1888〜1889年）","setting":"明治期の東京。官吏の職場と下宿生活。","sourceIds":["ukigumo"],"significance":"社会的な立場と内面の隔たりを、青年の仕事・恋愛・対人関係に即して読める作品です。ガイドでは、独立の理念と生活上の制約を読み比べます。","themes":["個人と社会","言文一致","近代日本文学"]},
+    "li-hakai":{"dateLabel":"刊行","publication":"1906年3月25日","setting":"明治期の信州。被差別部落出身の教師を主人公にする。","sourceIds":["hakai"],"significance":"差別を受ける立場と、出自を隠して生きる苦悩を中心に置いた小説。作品の描写と、現代の人権の視点とを区別しながら読む必要があります。","themes":["個人と社会","差別","近代日本文学"]},
+    "li-sanshiro":{"dateLabel":"連載開始","publication":"1908年","setting":"明治後期の東京。地方から大学へ進んだ青年の生活。","sourceIds":["sanshiro"],"significance":"都市の新しい人間関係を、まだその規則を知らない青年の目から眺めます。後の『こゝろ』と比べると、世代と語り手の違いを考えられます。","themes":["個人と社会","都市","夏目漱石"]},
+    "jp-taisho":{"context":"1912年の明治天皇崩御に伴い、大正へ改元されました。政治・社会の変化は改元の日に一斉に起きたわけではなく、明治末から続く動きを含んでいます。","significance":"『こゝろ』では、明治天皇の死と乃木希典の殉死が登場人物の語りに入ります。年表上の時代区分と、人が経験する時代の終わりとを比べられます。","sourceIds":["taisho","kokoro-text"],"themes":["時代の転換","個人と社会"]},
+    "li-kokoro":{"dateLabel":"新聞連載","publication":"1914年4〜8月（同年単行本化）","setting":"明治期の回想と、明治天皇崩御・乃木希典の殉死を迎える1912年頃。","sourceIds":["kokoro","kokoro-text"],"significance":"個人の罪や孤独を、時代の終わりと重ねて描いています。発表年の1914年と、作中の1912年を分けて捉えることで、同時代の史実との関係が明確になります。","themes":["個人と社会","時代の転換","夏目漱石","罪と孤独"]},
+    "li-rashomon":{"dateLabel":"初出","publication":"1915年11月『帝国文学』","setting":"荒廃した平安期の京都・羅生門。発表年の大正期が舞台ではない。","sourceIds":["rashomon"],"significance":"古典の題材を用いて人間の行動と正当化を問う短編です。発表された時代と物語の舞台が異なる例としても読めます。"},
+    "li-shisei":{"dateLabel":"初出","setting":"文政期の江戸・深川。","sourceIds":["tanizaki"]},
+    "li-tanizaki":{"sourceIds":["tanizaki"]},
+    "sc-darwin":{"context":"ダーウィンは1859年に『種の起源』を刊行し、自然選択を軸に、生物の変化と多様性を説明しました。長い時間をかけた変化が、現在の自然を理解する手がかりになります。","significance":"種を固定された分類として見るだけでなく、共通の由来と分岐の歴史から考える視点を広めました。社会制度を正当化する議論と、生物学の説明とは区別して読む必要があります。","sourceIds":["darwin"],"themes":["進化","世界像","科学史"],"dateLabel":"刊行"},
+    "sc-planck":{"context":"熱した物体が放つ光の分布を説明する問題に対し、プランクは1900年にエネルギーの量子という仮定を導入しました。プランク定数が、エネルギーと振動数を結びます。","significance":"エネルギーを連続的に扱う古典物理の見方だけでは説明できない問題に、新しい道を開きました。この時点で、後の量子力学全体が完成したわけではありません。","sourceIds":["planck"],"themes":["量子","世界像","科学史"]},
+    "sc-special-relativity":{"context":"1905年の論文で、アインシュタインは光と運動の関係を考え、時間と空間の測定を捉え直しました。特殊相対論は、重力を含まない範囲での物理の枠組みを与えます。","significance":"観測者によらない共通の法則と、観測者によって異なる時間・距離の測定を両立させました。次の課題となる重力は、一般相対論へつながります。","sourceIds":["einstein","equivalence"],"themes":["時間と空間","世界像","科学史"]},
+    "ar-picasso-demoiselles":{"dateLabel":"制作","context":"ピカソが1907年にパリで制作した作品。多くの習作を経て、人物と空間の関係を大胆に組み替えました。アフリカやオセアニアの造形との接触も、美術館の解説で論じられています。","significance":"自然らしい身体や一貫した空間を描くという慣習を問い直します。同時代の科学と並べると、異なる分野が世界をどう表現し直したかを比較できます。","sourceIds":["demoiselles"],"themes":["世界像","時間と空間","近代美術"]},
+    "sc-bohr":{"context":"1913年、ボーアは原子模型について三つの論文を発表しました。量子の考え方を取り入れ、水素が出す光のスペクトルに説明を与えました。","significance":"原子の構造と観測できる光を結びつけた段階です。古典的な模型をそのまま捨てるのではなく、新しい仮定を組み合わせて問題を解きました。","sourceIds":["bohr"],"themes":["量子","原子","世界像"]},
+    "sc-general-relativity":{"context":"特殊相対論に重力をどう組み込むかという課題に対し、アインシュタインは等価原理を出発点に研究を進めました。1915年に一般相対論を完成させ、1916年に総説を公表しました。","significance":"重力を時空の幾何学として扱う枠組みが生まれました。1905年の特殊相対論から約10年をかけた展開として見ると、科学が一度の発見で完結しないことも分かります。","sourceIds":["einstein","equivalence"],"themes":["時間と空間","重力","世界像"]},
+    "ar-stravinsky-rite":{"dateLabel":"初演","publication":"1913年、パリ","context":"バレエ・リュスによる舞台作品。ストラヴィンスキーの音楽とニジンスキーの振付が組み合わされました。米国議会図書館の展示では、振付が書き込まれた楽譜などを見られます。","significance":"音楽だけでなく、振付・衣装・舞台を合わせて読むと、複数の芸術が一つの作品を形づくることが分かります。","sourceIds":["rite"],"themes":["近代芸術","舞台","世界像"]},
+    "wd-ww1":{"context":"1914〜1918年の戦争は国際関係を大きく変え、日本の政治・経済にも影響しました。日本では大戦期に輸出が増え、景気拡大と物価上昇が進みました。","significance":"戦場と離れた生活や市場にも戦争が及ぶことが見えてきます。日本の米騒動や戦後の政治運動と合わせて、その波及をたどれます。","sourceIds":["taisho","rice"],"themes":["戦争と社会","大衆社会","経済"]},
+    "jp-rice-riots":{"context":"第一次世界大戦期の輸出増加によるインフレに、米の投機的な買い占めなどが重なり、米価が上昇しました。1918年には生活を圧迫された人びとの抗議が全国へ広がりました。","significance":"景気の拡大と生活の改善は同じではありません。物価・政党政治・大衆運動の結びつきを、日常の食料から考えられます。","sourceIds":["rice"],"themes":["大衆社会","経済","個人と社会"]},
+    "jp-suffrage":{"context":"1925年、男子普通選挙法が成立し、選挙権の納税資格が撤廃されました。対象は25歳以上の男子で、女性は含まれません。同年、国体の変革や私有財産制度の否認を目的とする結社などを取り締まる治安維持法も成立しました。","significance":"政治参加の拡大と思想の取り締まりを、別々の法制度として同時に見られる年です。「普通」の範囲に誰が含まれなかったのかにも注意して読むことができます。","sourceIds":["suffrage"],"themes":["大衆社会","政治参加","思想統制"]},
+    "li-kanikosen":{"dateLabel":"初出","publication":"1929年5・6月『戦旗』","setting":"北洋漁業の蟹工船。労働者たちの過酷な生活。","sourceIds":["kanikosen"],"significance":"一人の英雄ではなく、労働者の集団に焦点を当てた作品です。1929年10月の米国株価暴落よりも前に発表されている点を押さえると、前後関係を混同せずに読めます。","themes":["大衆社会","労働","個人と社会"]},
+    "wd-black-thursday":{"context":"1920年代の米国で株価が大きく上昇した後、1929年10月に暴落が起きました。信用取引と投機の拡大や、中央銀行の対応も、金融史の資料から追うことができます。","significance":"暴落と、その後の長期的な恐慌を一つの出来事としてまとめず、連続する過程として見ることが大切です。景気・信用・政策の関係を考える入口になります。","sourceIds":["crash"],"themes":["大衆社会","経済","金融"]},
+    "ar-guernica":{"dateLabel":"制作","context":"スペイン共和国政府からパリ万国博覧会のための作品を依頼されたピカソが、スペイン内戦中のゲルニカ爆撃を受けて1937年に制作しました。","significance":"戦争の暴力を、大きな画面と象徴的な身体表現で伝えた作品です。制作の背景と、後に反戦の象徴として受け止められていく過程を分けてたどれます。","sourceIds":["guernica"],"themes":["戦争と社会","近代美術","表現"]}
+  },
+  "relations": [
+    {"from":"li-kokoro","to":"jp-taisho","type":"background","note":"『こゝろ』の作中では、明治天皇の崩御と乃木希典の殉死が語られます。","sourceIds":["kokoro-text"]},
+    {"from":"sc-special-relativity","to":"sc-general-relativity","type":"influence","note":"アインシュタインは、特殊相対論と重力を両立させる問題から一般相対論の研究を進めました。","sourceIds":["equivalence"]},
+    {"from":"sc-planck","to":"sc-bohr","type":"influence","note":"ボーアの原子模型は、プランクによって導入された量子の考え方を取り入れています。","sourceIds":["bohr","planck"]},
+    {"from":"sc-special-relativity","to":"ar-picasso-demoiselles","type":"theme","note":"時間・空間の表し方を、物理と絵画から読み比べる組み合わせです。直接の影響関係は主張していません。","sourceIds":["einstein","demoiselles"]},
+    {"from":"wd-ww1","to":"jp-rice-riots","type":"influence","note":"大戦期の輸出増加によるインフレが、米価高騰の背景の一つとなりました。","sourceIds":["rice"]},
+    {"from":"li-kanikosen","to":"wd-black-thursday","type":"contemporary","note":"どちらも1929年。『蟹工船』の発表は5・6月、米国の株価暴落は10月で、出版が先です。","sourceIds":["kanikosen","crash"]},
+    {"from":"ar-guernica","to":"wd-spanish-civil","type":"background","note":"スペイン内戦中のゲルニカ爆撃が、この絵画の制作背景にあります。","sourceIds":["guernica"]}
+  ],
+  "bookLinks": [
+    {"entryId":"li-kinosaki","title":"城の崎にて・小僧の神様","author":"志賀直哉"},
+    {"entryId":"li-sanshiro","title":"三四郎","author":"夏目漱石"},
+    {"entryId":"li-kojin","title":"行人","author":"夏目漱石"},
+    {"entryId":"li-kokoro","title":"こころ","author":"夏目漱石"},
+    {"entryId":"li-aguranabe","title":"牛店雑談 安愚楽鍋 初編","author":"仮名垣魯文"},
+    {"entryId":"li-shoyo","title":"小説神髄","author":"坪内逍遥"},
+    {"entryId":"li-ukigumo","title":"浮雲","author":"二葉亭四迷"},
+    {"entryId":"li-hakai","title":"破戒","author":"島崎藤村"},
+    {"entryId":"li-tousei-shosei","title":"当世書生気質","author":"坪内逍遥"},
+    {"entryId":"ph-fukuzawa-gakumon","title":"学問のすすめ","author":"福沢諭吉"},
+    {"entryId":"li-maihime","title":"舞姫","author":"森鷗外"},
+    {"entryId":"li-midaregami","title":"みだれ髪","author":"与謝野晶子"},
+    {"entryId":"li-cat","title":"吾輩は猫である","author":"夏目漱石"}
+  ]
+}
