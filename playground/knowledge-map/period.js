@@ -15,6 +15,7 @@ const state = {
 };
 let categoryMap = {}, laneMap = {}, byId = new Map();
 let returnFocus = null;
+const timelineEntryButtons = new Map();
 let lastTimelineWidth = 0;
 let readingError = false;
 
@@ -290,7 +291,7 @@ function entryCard(entry, compact = false) {
 }
 
 function bindEntryButtons(container) {
-  container.querySelectorAll('[data-entry]').forEach(button => button.addEventListener('click', () => selectEntry(button.dataset.entry)));
+  container.querySelectorAll('[data-entry]').forEach(button => button.addEventListener('click', () => selectEntry(button.dataset.entry, button)));
 }
 
 function renderList() {
@@ -303,6 +304,7 @@ function renderList() {
 }
 
 function renderTimeline() {
+  timelineEntryButtons.clear();
   const width = $('timelineView').clientWidth || $('pageContent').clientWidth;
   lastTimelineWidth = Math.round(width);
   const availableColumns = Math.floor((width - (mobile.matches ? 80 : 110)) / 145);
@@ -330,10 +332,13 @@ function renderTimeline() {
   }).join('');
   $('timelineView').style.setProperty('--columns', count);
   $('timelineView').innerHTML = header + rows;
-  $('timelineView').querySelectorAll('[data-bucket]').forEach(button => button.addEventListener('click', () => {
+  $('timelineView').querySelectorAll('[data-bucket]').forEach(button => {
     const group = groups[Number(button.dataset.bucket)];
-    if (group.items.length === 1) selectEntry(group.items[0].id); else openCluster(group);
-  }));
+    for (const entry of group.items) timelineEntryButtons.set(entry.id, button);
+    button.addEventListener('click', () => {
+      if (group.items.length === 1) selectEntry(group.items[0].id, button); else openCluster(group, button);
+    });
+  });
   $('timelineView').querySelectorAll('[data-range-start]').forEach(button => button.addEventListener('click', () => {
     state.view = 'list'; state.viewChosen = true;
     setRange({ start: Number(button.dataset.rangeStart), end: Number(button.dataset.rangeEnd) });
@@ -352,7 +357,7 @@ function renderGuides() {
   $('guideProgress').innerHTML = `<div class="guide-step-head"><strong>${state.step + 1} / ${course.steps.length} · ${esc(byId.get(step.entryId).title)}</strong><button type="button" class="text-button" id="endGuide">ガイドを閉じる</button></div><p>${esc(step.note)}</p><div class="guide-step-actions"><button type="button" id="previousStep"${state.step === 0 ? ' disabled' : ''}>← 前の項目</button><div class="guide-dots">${course.steps.map((s, i) => `<button type="button" data-step="${i}" aria-label="${i + 1}：${esc(byId.get(s.entryId).title)}"${i === state.step ? ' aria-current="step"' : ''}>${i + 1}</button>`).join('')}</div><button type="button" id="nextStep"${state.step === course.steps.length - 1 ? ' disabled' : ''}>次の項目 →</button><button type="button" id="showGuideDetail">解説を開く</button></div>`;
   $('previousStep').addEventListener('click', () => openGuide(course.id, state.step - 1));
   $('nextStep').addEventListener('click', () => openGuide(course.id, state.step + 1));
-  $('showGuideDetail').addEventListener('click', () => selectEntry(step.entryId));
+  $('showGuideDetail').addEventListener('click', event => selectEntry(step.entryId, event.currentTarget));
   $('endGuide').addEventListener('click', () => { state.guideId = null; renderGuides(); writeURL(); });
   $('guideProgress').querySelectorAll('[data-step]').forEach(button => button.addEventListener('click', () => openGuide(course.id, Number(button.dataset.step))));
 }
@@ -372,11 +377,15 @@ function openGuide(id, step) {
   announce(`${course.title}、${step + 1}項目目。${entry.title}`);
 }
 
-function selectEntry(id, push = true) {
+function rememberOpener(entryId, element) {
+  returnFocus = { element, id: element.id, entryId };
+}
+
+function selectEntry(id, opener) {
   const entry = byId.get(id);
   if (!entry) return;
   const wasHidden = $('detailPane').hidden;
-  if (wasHidden) returnFocus = document.activeElement;
+  if (opener && $('pageContent').contains(opener)) rememberOpener(id, opener);
   state.selectedId = id;
   if (entry.isReading) state.reading = true;
   // 関連項目が現在の絞り込み外でも、選択した項目を必ず地図で確認できる。
@@ -386,7 +395,7 @@ function selectEntry(id, push = true) {
     state.range = clampRange(entry.year - 2, (entry.yearEnd ?? entry.year) + 2, state.data);
   }
   renderDetail(); render();
-  writeURL(push);
+  writeURL(true);
   if (wasHidden) $('closeDetail').focus({ preventScroll: true });
   announce(`${entry.title}の詳細を開きました`);
 }
@@ -416,7 +425,7 @@ function renderDetail() {
   const bio = detail.authorBio ? `<details><summary>著者について${detail.authorBio.born ? ` · ${detail.authorBio.born}–${detail.authorBio.died || ''}` : ''}</summary><div>${paragraphs(detail.authorBio.summary)}</div></details>` : '';
   $('detailEyebrow').textContent = `${laneMap[entry.lane].label} / ${yearLabel(entry)}`;
   $('detailContent').innerHTML = `<h2 id="detailTitle">${esc(entry.title)}</h2><div class="detail-meta"><span class="entry-kind" style="--entry-color:${category.color}">${esc(category.label)}</span>${detail.sourceIds?.length ? '<span>出典付き</span>' : ''}</div><p class="detail-summary">${esc(entry.summary)}</p>${facts}${guideNote}${section('背景と位置づけ', paragraphs(detail.context || detail.era))}${section('何が変わったか', paragraphs(detail.significance))}${section('My Booksの読書記録', books)}${section('つながりをたどる', related.length ? relations : '')}${section('テーマから探す', detail.themes?.length ? `<div class="theme-tags">${detail.themes.map(t => `<button type="button" data-theme="${esc(t)}">${esc(t)}</button>`).join('')}</div>` : '')}${section('詳しく読む', bio)}${section('出典・原文', sourceSection)}<div class="detail-actions"><button type="button" id="showContemporaries">この時代の一覧を見る</button><button type="button" id="copyLink">この項目のリンクをコピー</button></div>`;
-  $('detailContent').querySelectorAll('[data-related]').forEach(button => button.addEventListener('click', () => selectEntry(button.dataset.related)));
+  $('detailContent').querySelectorAll('[data-related]').forEach(button => button.addEventListener('click', () => selectEntry(button.dataset.related, button)));
   $('detailContent').querySelectorAll('[data-theme]').forEach(button => button.addEventListener('click', () => {
     const theme = button.dataset.theme; closeDetail(false); $('search').value = theme; runSearch(theme);
     $('search').focus();
@@ -435,8 +444,8 @@ function renderDetail() {
   $('detailPane').scrollTop = 0;
 }
 
-function openCluster(group) {
-  returnFocus = document.activeElement;
+function openCluster(group, opener) {
+  rememberOpener(group.items[0].id, opener);
   state.selectedId = null;
   $('detailEyebrow').textContent = `${group.lane.label} / ${group.items.length}項目`;
   $('detailContent').innerHTML = `<h2 id="detailTitle">${group.start}${group.start === group.end ? '' : `–${group.end}`}年の${esc(group.lane.label)}</h2><p class="detail-summary">この年代区分にある項目です。読みたい項目を選んでください。</p><div class="cluster-list">${group.items.map(e => entryCard(e, true)).join('')}</div>`;
@@ -463,8 +472,14 @@ function closeDetail(update = true) {
   state.selectedId = null; hidePane();
   if (update) {
     renderResults(); writeURL();
-    if (returnFocus?.isConnected && !returnFocus.closest('#detailPane')) returnFocus.focus({ preventScroll: true });
-    else $('search').focus({ preventScroll: true });
+    // 再描画で開いたボタンのDOMが置き換わっても、同じ項目から操作を続ける。
+    const entryButton = state.view === 'timeline'
+      ? timelineEntryButtons.get(returnFocus?.entryId)
+      : [...$('listView').querySelectorAll('[data-entry]')].find(button => button.dataset.entry === returnFocus?.entryId);
+    const candidates = [returnFocus?.element, returnFocus?.id && $(returnFocus.id), entryButton];
+    const opener = candidates.find(element => element?.isConnected && element.getClientRects().length && !$('detailPane').contains(element));
+    (opener || $('search')).focus({ preventScroll: true });
+    returnFocus = null;
   }
 }
 
