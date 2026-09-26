@@ -230,6 +230,15 @@
     {"id":"li-niseni-doka","title":"江戸川乱歩『二銭銅貨』","year":1923,"category":"literature","lane":"li_jp","region":"east_asia","where":"日本","summary":"暗号解読により真相が明かされる本格推理短編。江戸川乱歩のデビュー作で日本探偵小説の本格的出発点となる。"},
     {"id":"li-haru-to-shura","title":"宮沢賢治『春と修羅』","year":1924,"category":"literature","lane":"li_jp","region":"east_asia","where":"日本","summary":"「わたくしといふ現象は…」で始まる心象スケッチ集。自費出版の詩集で、独自の科学・宗教・宇宙観により日本詩の最果てを示す。"},
     {"id":"li-chumon-no-oi","title":"宮沢賢治『注文の多い料理店』","year":1924,"category":"literature","lane":"li_jp","region":"east_asia","where":"日本","summary":"猟師2人が山猫の料理店に逆に食われそうになる表題作他9編の童話集。賢治存命中唯一の童話集、独創的童話文学の出発。"},
-    {"id":"li-bungei-jidai","title":"『文芸時代』創刊（新感覚派）","year":1924,"category":"literature","lane":"li_jp","region":"east_asia","where":"東京","summary":"横光利一・川端康成らがモダニズム雑誌『文芸時代』を創刊。「新感覚派」と命名され、プロレタリア文学と並ぶ大正末モダニズムの旗手となる。"}
+    {"id":"li-bungei-jidai","title":"『文芸時代』創刊（新感覚派）","year":1924,"category":"literature","lane":"li_jp","region":"east_asia","where":"東京","summary":"横光利一・川端康成らがモダニズム雑誌『文芸時代』を創刊。「新感覚派」と命名され、プロレタリア文学と並ぶ大正末モダニズムの旗手となる。"},
+    {"id":"li-sorekara","title":"夏目漱石『それから』","author":"夏目漱石","year":1909,"category":"literature","lane":"li_jp","region":"east_asia","where":"東京","summary":"親の援助で暮らす代助が友人の妻への愛を選び、家族と社会との関係を問われる長編。"},
+    {"id":"li-mon","title":"夏目漱石『門』","author":"夏目漱石","year":1910,"category":"literature","lane":"li_jp","region":"east_asia","where":"東京・鎌倉","summary":"過去の罪の意識を抱えて暮らす宗助と御米。夫婦の生活と、救いを求める参禅を描く。"},
+    {"id":"li-higan","title":"夏目漱石『彼岸過迄』","author":"夏目漱石","year":1912,"category":"literature","lane":"li_jp","region":"east_asia","where":"東京","summary":"敬太郎の見聞から須永と千代子の心理へ移り、嫉妬や自己意識を複数の語りで描く。"},
+    {"id":"li-michikusa","title":"夏目漱石『道草』","author":"夏目漱石","year":1915,"category":"literature","lane":"li_jp","region":"east_asia","where":"東京","summary":"帰国した教師・健三の夫婦生活や養父との金銭問題を描く、自伝的な長編小説。"},
+    {"id":"li-buncho","title":"夏目漱石『文鳥』","author":"夏目漱石","year":1908,"category":"literature","lane":"li_jp","region":"east_asia","where":"東京","summary":"書斎で飼う文鳥との日常と、その死を描く短編。小さな生き物への関心と隔たりを見つめる。"},
+    {"id":"li-yumejuya","title":"夏目漱石『夢十夜』","author":"夏目漱石","year":1908,"category":"literature","lane":"li_jp","region":"east_asia","where":"夢の中のさまざまな場所","summary":"十の夢を通じて、時間、生と死、不安を描く連作短編。現実の筋道から離れた幻想を語る。"},
+    {"id":"li-vita-sexualis","title":"森鴎外『ヰタ・セクスアリス』","author":"森鴎外","year":1909,"category":"literature","lane":"li_jp","region":"east_asia","where":"日本","summary":"哲学教師・金井湛が幼少期からの性の記憶を振り返り、欲望と自己認識を記述する。"},
+    {"id":"li-seinen","title":"森鴎外『青年』","author":"森鴎外","year":1910,"yearEnd":1911,"category":"literature","lane":"li_jp","region":"east_asia","where":"東京・箱根","summary":"作家を志して上京した小泉純一が、文学・思想・恋愛との出会いから生き方を探る。"},
+    {"id":"li-kozo-no-kamisama","title":"志賀直哉『小僧の神様』","author":"志賀直哉","year":1920,"category":"literature","lane":"li_jp","region":"east_asia","where":"東京・神田","summary":"奉公する少年・仙吉と、彼に鮨をおごる紳士。善意を施す側と受け取る側の隔たりを描く。"}
   ]
 }

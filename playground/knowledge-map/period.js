@@ -1,7 +1,7 @@
 import {
   wareki, yearLabel, clampRange, shiftRange, overlaps, filterEntries, fitEntries,
   timelineBuckets, attachBooks, relatedEntries, RELATION_LABELS,
-} from './period-model.mjs';
+} from './period-model.mjs?v=9bc346d3';
 
 const $ = id => document.getElementById(id);
 const esc = value => String(value ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[c]);
@@ -380,7 +380,7 @@ function renderDetail() {
   const sources = sourceLinks(ids);
   const findUrl = `https://ndlsearch.ndl.go.jp/search?keyword=${encodeURIComponent(entry.title)}`;
   const sourceSection = `${sources ? `<ul class="sources-list">${sources}</ul>` : '<p class="source-status">この項目の出典は整理中です。</p>'}<a href="${findUrl}" target="_blank" rel="noopener noreferrer">国立国会図書館で資料を探す ↗</a>`;
-  const books = state.reading && entry.bookRecords?.length ? entry.bookRecords.map(book => `<div class="book-record"><a href="${esc(book.url)}" target="_blank" rel="noopener">${esc(book.title)} ↗</a><small>${esc(book.readYear)}年に読了 · ${esc(book.author)}</small><small>原著発行年：${book.publishedYear}（My Booksの記録）</small></div>`).join('') : '';
+  const books = state.reading && entry.bookRecords?.length ? entry.bookRecords.map(book => `<div class="book-record"><a href="${esc(book.url)}" target="_blank" rel="noopener">${esc(book.title)} ↗</a><small>${esc(book.readYear)}年に読了 · ${esc(book.author)}</small><small>${book.isCollection ? 'この本の収録作品として表示' : `原著発行年：${book.publishedYear}（My Booksの記録）`}</small></div>`).join('') : '';
   const bio = detail.authorBio ? `<details><summary>著者について${detail.authorBio.born ? ` · ${detail.authorBio.born}–${detail.authorBio.died || ''}` : ''}</summary><div>${paragraphs(detail.authorBio.summary)}</div></details>` : '';
   $('detailEyebrow').textContent = `${laneMap[entry.lane].label} / ${yearLabel(entry)}`;
   $('detailContent').innerHTML = `<h2 id="detailTitle">${esc(entry.title)}</h2><div class="detail-meta"><span class="entry-kind" style="--entry-color:${category.color}">${esc(category.label)}</span>${detail.sourceIds?.length ? '<span>出典付き</span>' : ''}</div><p class="detail-summary">${esc(entry.summary)}</p>${facts}${section('背景と位置づけ', paragraphs(detail.context || detail.era))}${section('何が変わったか', paragraphs(detail.significance))}${section('My Booksの読書記録', books)}${section('つながりをたどる', related.length ? relations : '')}${section('テーマから探す', detail.themes?.length ? `<div class="theme-tags">${detail.themes.map(t => `<button type="button" data-theme="${esc(t)}">${esc(t)}</button>`).join('')}</div>` : '')}${section('詳しく読む', bio)}${section('出典・原文', sourceSection)}<div class="detail-actions"><button type="button" id="showContemporaries">この時代の一覧を見る</button><button type="button" id="copyLink">この項目のリンクをコピー</button></div>`;

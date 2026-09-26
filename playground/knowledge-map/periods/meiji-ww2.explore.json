@@ -1,5 +1,5 @@
 {
-  "reviewedAt": "2026-09-07",
+  "reviewedAt": "2026-09-26",
   "courses": [],
   "sources": {
     "gakumon":{"title":"『学問のすすめ』書誌・原文","publisher":"青空文庫","url":"https://www.aozora.gr.jp/cards/000296/card47061.html","scope":"初出・著者・原文"},
@@ -22,7 +22,23 @@
     "suffrage":{"title":"男子普通選挙法の成立と治安維持法","publisher":"国立国会図書館","url":"https://www.ndl.go.jp/modern/cha3/description13.html","scope":"二つの法律と成立過程"},
     "kanikosen":{"title":"『蟹工船』書誌・原文","publisher":"青空文庫","url":"https://www.aozora.gr.jp/cards/000156/card1465.html","scope":"1929年5・6月の初出・著者・原文"},
     "crash":{"title":"1929年の株式市場暴落","publisher":"Federal Reserve History","url":"https://www.federalreservehistory.org/essays/stock-market-crash-of-1929","scope":"1929年の株価暴落と金融政策"},
-    "guernica":{"title":"『ゲルニカ』作品と解説","publisher":"ソフィア王妃芸術センター","url":"https://www.museoreinasofia.es/en/collections/artwork/guernica-0/","scope":"1937年の制作・スペイン内戦との関係"}
+    "guernica":{"title":"『ゲルニカ』作品と解説","publisher":"ソフィア王妃芸術センター","url":"https://www.museoreinasofia.es/en/collections/artwork/guernica-0/","scope":"1937年の制作・スペイン内戦との関係"},
+    "soseki-works":{"title":"漱石の作品紹介","publisher":"新宿区立漱石山房記念館","url":"https://soseki-museum.jp/soseki-natsume/work-introduction/","scope":"初出・初版・作品概要"},
+    "soseki-editions":{"title":"『四篇』『それから』『彼岸過迄』の初版本","publisher":"新宿区立漱石山房記念館","url":"https://soseki-museum.jp/blog/blog_info/10007/","scope":"1908年の短編・連載と単行本の刊行年"},
+    "mon":{"title":"『門』書誌・原文","publisher":"青空文庫","url":"https://www.aozora.gr.jp/cards/000148/card56923.html","scope":"1910年3〜6月の初出"},
+    "higan":{"title":"『彼岸過迄』書誌・原文","publisher":"青空文庫","url":"https://www.aozora.gr.jp/cards/000148/card765.html","scope":"1912年1〜4月の初出"},
+    "michikusa":{"title":"『道草』書誌・原文","publisher":"青空文庫","url":"https://www.aozora.gr.jp/cards/000148/card783.html","scope":"1915年6〜9月の初出・自伝的な題材"},
+    "michikusa-manuscript":{"title":"『道草』草稿と家族関係","publisher":"新宿区立漱石山房記念館","url":"https://soseki-museum.jp/blog/blog_soseki/8216/","scope":"執筆・生い立ちと作品の関係"},
+    "buncho":{"title":"『文鳥』書誌・原文","publisher":"青空文庫","url":"https://www.aozora.gr.jp/cards/000148/card753.html","scope":"1908年6月の初出"},
+    "buncho-yume":{"title":"『文鳥・夢十夜』作品紹介","publisher":"新潮社","url":"https://www.shinchosha.co.jp/book/101018/","scope":"収録作品・著者紹介"},
+    "vita":{"title":"『ヰタ・セクスアリス』書誌・原文","publisher":"青空文庫","url":"https://www.aozora.gr.jp/cards/000129/card695.html","scope":"1909年7月の初出"},
+    "vita-shincho":{"title":"『ヰタ・セクスアリス』作品紹介","publisher":"新潮社","url":"https://www.shinchosha.co.jp/book/102003/","scope":"回想の構成・掲載誌の発禁・著者紹介"},
+    "seinen":{"title":"『青年』初版本","publisher":"文京区立森鴎外記念館","url":"https://moriogai-kinenkan.jp/modules/collections/index.php?cat_id=7&content_id=34","scope":"1910〜1911年の連載・1913年の単行本"},
+    "seinen-shincho":{"title":"『青年』作品紹介","publisher":"新潮社","url":"https://www.shinchosha.co.jp/book/102002/","scope":"小泉純一の上京と成長・著者紹介"},
+    "gan-shincho":{"title":"『雁』作品紹介","publisher":"新潮社","url":"https://www.shinchosha.co.jp/book/102001/","scope":"お玉と岡田・回想形式"},
+    "gan-edition":{"title":"『雁』展示資料一覧","publisher":"文京区立森鴎外記念館","url":"https://moriogai-kinenkan.jp/uploads/fckeditor/PDF/uid000001_20140130092952a2d71725.pdf","scope":"1915年の初版本・舞台となる無縁坂と不忍池"},
+    "kozo":{"title":"志賀直哉「小僧の神様」講座案内","publisher":"早稲田大学エクステンションセンター","url":"https://www1.ex-waseda.jp/wp-content/uploads/20_waseda_hatchobori_nakano_spring.pdf","scope":"1920年1月の初出・仙吉と紳士・語りの構造"},
+    "shiga-shincho":{"title":"『小僧の神様』作品・著者紹介","publisher":"新潮社","url":"https://www.shinchosha.co.jp/book/830087/","scope":"『城の崎にて』と『小僧の神様』・白樺派・著者紹介"}
   },
   "entries": {
     "ph-fukuzawa-gakumon":{"dateLabel":"初編刊行","publication":"1872年（以後、続編を刊行）","sourceIds":["gakumon"],"significance":"日常に役立つ学問と個人の独立を結びつけた啓蒙書。独立を掲げる言葉が、その後の小説に描かれる個人の現実とどう響き合うかを考えられます。","themes":["学問","独立","個人と社会"]},
@@ -46,7 +62,18 @@
     "jp-suffrage":{"context":"1925年、男子普通選挙法が成立し、選挙権の納税資格が撤廃されました。対象は25歳以上の男子で、女性は含まれません。同年、国体の変革や私有財産制度の否認を目的とする結社などを取り締まる治安維持法も成立しました。","significance":"政治参加の拡大と思想の取り締まりを、別々の法制度として同時に見られる年です。「普通」の範囲に誰が含まれなかったのかにも注意して読むことができます。","sourceIds":["suffrage"],"themes":["大衆社会","政治参加","思想統制"]},
     "li-kanikosen":{"dateLabel":"初出","publication":"1929年5・6月『戦旗』","setting":"北洋漁業の蟹工船。労働者たちの過酷な生活。","sourceIds":["kanikosen"],"significance":"一人の英雄ではなく、労働者の集団に焦点を当てた作品です。1929年10月の米国株価暴落よりも前に発表されている点を押さえると、前後関係を混同せずに読めます。","themes":["大衆社会","労働","個人と社会"]},
     "wd-black-thursday":{"context":"1920年代の米国で株価が大きく上昇した後、1929年10月に暴落が起きました。信用取引と投機の拡大や、中央銀行の対応も、金融史の資料から追うことができます。","significance":"暴落と、その後の長期的な恐慌を一つの出来事としてまとめず、連続する過程として見ることが大切です。景気・信用・政策の関係を考える入口になります。","sourceIds":["crash"],"themes":["大衆社会","経済","金融"]},
-    "ar-guernica":{"dateLabel":"制作","context":"スペイン共和国政府からパリ万国博覧会のための作品を依頼されたピカソが、スペイン内戦中のゲルニカ爆撃を受けて1937年に制作しました。","significance":"戦争の暴力を、大きな画面と象徴的な身体表現で伝えた作品です。制作の背景と、後に反戦の象徴として受け止められていく過程を分けてたどれます。","sourceIds":["guernica"],"themes":["戦争と社会","近代美術","表現"]}
+    "ar-guernica":{"dateLabel":"制作","context":"スペイン共和国政府からパリ万国博覧会のための作品を依頼されたピカソが、スペイン内戦中のゲルニカ爆撃を受けて1937年に制作しました。","significance":"戦争の暴力を、大きな画面と象徴的な身体表現で伝えた作品です。制作の背景と、後に反戦の象徴として受け止められていく過程を分けてたどれます。","sourceIds":["guernica"],"themes":["戦争と社会","近代美術","表現"]},
+    "li-sorekara":{"dateLabel":"初出","publication":"1909年6〜10月、朝日新聞（単行本は1910年1月）","setting":"明治末期の東京。代助の生活と、友人夫婦との関係。","context":"『三四郎』に続く長編。恋愛の選択に、仕事、家族の期待、経済的な依存が絡み合う。日露戦争後の知識人の生活を、個人の内面と社会との接点から描いている。","significance":"『三四郎』『門』と並べると、青春の迷いから、選択の代償や罪の意識へと主題が移る様子を比較できます。","sourceIds":["soseki-works","soseki-editions"],"authorBio":{"born":1867,"died":1916,"summary":"夏目漱石は江戸牛込生まれの小説家・英文学者。本名は金之助。教職とイギリス留学を経て、1905年に『吾輩は猫である』を発表し、1907年に朝日新聞社へ入社した。近代の個人と社会の関係を、長編・短編・随筆のそれぞれで描いた。"},"themes":["前期三部作","個人と社会","恋愛","家族と金銭","夏目漱石"]},
+    "li-mon":{"dateLabel":"初出","publication":"1910年3〜6月、朝日新聞","setting":"明治末期の東京と、宗助が参禅する鎌倉の禅寺。","context":"『三四郎』『それから』に続く前期三部作の一作。宗助と御米は、過去の人間関係を背負って静かな暮らしを送る。宗助は禅寺で救いを求めるが、その経験も過去を簡単に解消するものではない。","significance":"恋愛の成立後にも残る罪悪感と、日々の生活の持続に目を向けます。『それから』の選択と並べて、個人が社会と折り合う難しさを読めます。","sourceIds":["mon","soseki-works"],"authorBio":{"born":1867,"died":1916,"summary":"夏目漱石は江戸牛込生まれの小説家・英文学者。本名は金之助。教職とイギリス留学を経て、1905年に『吾輩は猫である』を発表し、1907年に朝日新聞社へ入社した。近代の個人と社会の関係を、長編・短編・随筆のそれぞれで描いた。"},"themes":["前期三部作","罪と孤独","夫婦","宗教","夏目漱石"]},
+    "li-higan":{"dateLabel":"初出","publication":"1912年1〜4月、朝日新聞（同年9月に単行本化）","setting":"明治末期の東京。青年たちと親族の間の恋愛・対人関係。","context":"1910年の修善寺での大病後に書かれた長編。短編のような章を重ね、敬太郎の好奇心から、須永のためらいや千代子との関係へと焦点を移す。後期三部作の入口に位置づけられる。","significance":"『行人』『こゝろ』へ続く、他者を理解する難しさをたどれます。1912年の発表と、作中の明治末の生活を分けて読むと、時代の境目も見えます。","sourceIds":["higan","soseki-editions"],"authorBio":{"born":1867,"died":1916,"summary":"夏目漱石は江戸牛込生まれの小説家・英文学者。本名は金之助。教職とイギリス留学を経て、1905年に『吾輩は猫である』を発表し、1907年に朝日新聞社へ入社した。近代の個人と社会の関係を、長編・短編・随筆のそれぞれで描いた。"},"themes":["後期三部作","自意識","個人と社会","恋愛","夏目漱石"]},
+    "li-michikusa":{"dateLabel":"初出","publication":"1915年6〜9月、朝日新聞","setting":"明治後期の東京。留学から帰国した健三の家庭。","context":"漱石自身の養子体験や家族関係を題材にした作品。健三の前にかつての養父が現れ、金銭を求める。夫婦や親族のやり取りを通して、恩義と義務、経済的な自立が衝突する日常を描いている。","significance":"『こゝろ』の罪と孤独を、家族や金銭という身近な関係へ引き寄せて比べられます。作者の経験と小説の人物を同一視せずに読むことも大切です。","sourceIds":["michikusa","michikusa-manuscript"],"authorBio":{"born":1867,"died":1916,"summary":"夏目漱石は江戸牛込生まれの小説家・英文学者。本名は金之助。教職とイギリス留学を経て、1905年に『吾輩は猫である』を発表し、1907年に朝日新聞社へ入社した。近代の個人と社会の関係を、長編・短編・随筆のそれぞれで描いた。"},"themes":["家族と金銭","夫婦","自伝的小説","個人と社会","夏目漱石"]},
+    "li-buncho":{"dateLabel":"初出","publication":"1908年6月、大阪朝日新聞","setting":"文鳥を飼う語り手の書斎と家庭。","context":"朝日新聞社へ入社した翌年の短編。小鳥を眺める喜びや世話をする日常に、過去の記憶が交錯する。やがて訪れる文鳥の死によって、語り手と周囲の人びとの受け止め方の違いも表れる。","significance":"長編で描く社会や恋愛に加え、日常の観察から孤独や他者への距離を考えられます。同年の『夢十夜』とは語りの形式の違いも比較できます。","sourceIds":["buncho","buncho-yume","soseki-editions"],"authorBio":{"born":1867,"died":1916,"summary":"夏目漱石は江戸牛込生まれの小説家・英文学者。本名は金之助。教職とイギリス留学を経て、1905年に『吾輩は猫である』を発表し、1907年に朝日新聞社へ入社した。近代の個人と社会の関係を、長編・短編・随筆のそれぞれで描いた。"},"themes":["短編","孤独","生と死","日常","夏目漱石"]},
+    "li-yumejuya":{"dateLabel":"初出","publication":"1908年7〜8月、朝日新聞","setting":"十の夢。それぞれ舞台と時間が異なる。","context":"『文鳥』と同じ1908年に発表され、のちに『四篇』へ収録された。夢という枠組みを使い、長い時間の経過や奇妙な変化を、日常とは異なる論理で描く。","significance":"『三四郎』などの社会生活を描く長編と同じ年に、幻想的な短編も生まれています。漱石の表現を現実の心理描写だけに限らず捉えられます。","sourceIds":["soseki-editions","buncho-yume"],"authorBio":{"born":1867,"died":1916,"summary":"夏目漱石は江戸牛込生まれの小説家・英文学者。本名は金之助。教職とイギリス留学を経て、1905年に『吾輩は猫である』を発表し、1907年に朝日新聞社へ入社した。近代の個人と社会の関係を、長編・短編・随筆のそれぞれで描いた。"},"themes":["幻想文学","夢","生と死","時間","夏目漱石"]},
+    "li-vita-sexualis":{"dateLabel":"初出","publication":"1909年7月、『スバル』","setting":"金井湛が回想する幼少期から青年期。","context":"性をめぐる経験を冷静な語り口で振り返る自伝的な小説。掲載された『スバル』の号は発売禁止となった。個人の経験を文学に記す試みと、当時の出版・社会規範との緊張が表れている。","significance":"自己の欲望をどう観察し、言葉にするかを問う作品です。『青年』の成長や思想への関心と並べ、鴎外の人間観を比較できます。","sourceIds":["vita","vita-shincho"],"authorBio":{"born":1862,"died":1922,"summary":"森鴎外は津和野生まれの小説家・翻訳家・陸軍軍医。本名は森林太郎。東京大学医学部卒業後、ドイツへ留学。軍医の仕事と並行して『舞姫』『ヰタ・セクスアリス』『青年』『雁』などを執筆し、西洋文学の翻訳や歴史小説にも取り組んだ。"},"themes":["性と自己認識","自伝的小説","検閲","近代日本文学","森鴎外"]},
+    "li-seinen":{"dateLabel":"初出","publication":"1910年3月〜1911年8月、『スバル』（単行本は1913年2月）","setting":"明治末期の東京。後半では箱根へ向かう。","context":"小泉純一は作家や学生と交わり、未亡人との恋愛も経験する。明治末の東京を歩く青年の見聞と内面の変化を描き、読書や議論で得た知識と、生活で経験することの間を問い直している。","significance":"『三四郎』と、地方から上京する青年の視点を比較できます。『雁』と並べれば、同じ東京でも人物の立場や語り方で見える世界が変わります。","sourceIds":["seinen","seinen-shincho"],"authorBio":{"born":1862,"died":1922,"summary":"森鴎外は津和野生まれの小説家・翻訳家・陸軍軍医。本名は森林太郎。東京大学医学部卒業後、ドイツへ留学。軍医の仕事と並行して『舞姫』『ヰタ・セクスアリス』『青年』『雁』などを執筆し、西洋文学の翻訳や歴史小説にも取り組んだ。"},"themes":["青春小説","自己形成","都市","文学と思想","森鴎外"]},
+    "li-kozo-no-kamisama":{"dateLabel":"初出","publication":"1920年1月、『白樺』","setting":"東京・神田の商店と鮨屋。少年の奉公生活。","context":"奉公先の生活から鮨に憧れる仙吉と、匿名で親切を施す紳士を描いた短編。人物それぞれの思いに加え、終盤には語り手が結末の書き方に触れる仕掛けがある。","significance":"『城の崎にて』の内省と並べ、他者への善意や、相手の経験を想像する難しさを読めます。物語を語る行為そのものにも目を向けられます。","sourceIds":["kozo","shiga-shincho"],"authorBio":{"born":1883,"died":1971,"summary":"志賀直哉は石巻生まれの小説家。武者小路実篤らと雑誌『白樺』を創刊した。身近な経験や人間関係を簡潔な文体で描き、『城の崎にて』『小僧の神様』などの短編と、長編『暗夜行路』を残した。"},"themes":["白樺派","善意","他者理解","語り","志賀直哉"]},
+    "li-gan":{"dateLabel":"連載","publication":"1911年9月〜1913年5月、『スバル』（単行本は1915年）","setting":"1880年頃の東京・本郷、無縁坂と不忍池周辺。","sourceIds":["gan-shincho","gan-edition"],"significance":"発表は明治末から大正初期ですが、舞台は約30年前です。お玉の生活上の制約と医学生の自由を並べることで、同じ都市に暮らす人びとの立場の違いが見えます。"},
+    "li-cat":{"dateLabel":"連載","publication":"1905年1月〜1906年8月、『ホトトギス』","setting":"明治後期の東京。苦沙弥先生の家庭と知識人の集まり。","context":"東京帝国大学で教えていた漱石が発表した小説。名前のない猫の観察を通して、教師や学者たちの会話と暮らしを風刺する。1905年の掲載が好評を得て続編が書かれ、全11章となった。","sourceIds":["soseki-works"],"themes":["風刺","知識人","個人と社会","夏目漱石"]}
   },
   "relations": [
     {"from":"li-kokoro","to":"jp-taisho","type":"background","note":"『こゝろ』の作中では、明治天皇の崩御と乃木希典の殉死が語られます。","sourceIds":["kokoro-text"]},
@@ -55,7 +82,16 @@
     {"from":"sc-special-relativity","to":"ar-picasso-demoiselles","type":"theme","note":"時間・空間の表し方を、物理と絵画から読み比べる組み合わせです。直接の影響関係は主張していません。","sourceIds":["einstein","demoiselles"]},
     {"from":"wd-ww1","to":"jp-rice-riots","type":"influence","note":"大戦期の輸出増加によるインフレが、米価高騰の背景の一つとなりました。","sourceIds":["rice"]},
     {"from":"li-kanikosen","to":"wd-black-thursday","type":"contemporary","note":"どちらも1929年。『蟹工船』の発表は5・6月、米国の株価暴落は10月で、出版が先です。","sourceIds":["kanikosen","crash"]},
-    {"from":"ar-guernica","to":"wd-spanish-civil","type":"background","note":"スペイン内戦中のゲルニカ爆撃が、この絵画の制作背景にあります。","sourceIds":["guernica"]}
+    {"from":"ar-guernica","to":"wd-spanish-civil","type":"background","note":"スペイン内戦中のゲルニカ爆撃が、この絵画の制作背景にあります。","sourceIds":["guernica"]},
+    {"from":"li-sanshiro","to":"li-sorekara","type":"author","note":"前期三部作の最初の二作。上京する学生と、卒業後の代助を並べて比較できます。","sourceIds":["sanshiro","soseki-works","soseki-editions"]},
+    {"from":"li-sorekara","to":"li-mon","type":"author","note":"前期三部作の二作。恋愛の選択と、その後にも残る罪の意識を比較できます。","sourceIds":["soseki-works","soseki-editions","mon"]},
+    {"from":"li-higan","to":"li-kojin","type":"author","note":"後期三部作の二作。他者への疑いと自意識の深まりをたどれます。","sourceIds":["higan","soseki-editions"]},
+    {"from":"li-kojin","to":"li-kokoro","type":"author","note":"後期三部作の二作。家族や友人との隔たり、孤独の語り方を比較できます。","sourceIds":["kokoro","kokoro-text"]},
+    {"from":"li-kokoro","to":"li-michikusa","type":"author","note":"晩年の長編二作。罪と孤独を、家族や金銭の関係から読み比べられます。","sourceIds":["kokoro","kokoro-text","michikusa","michikusa-manuscript"]},
+    {"from":"li-buncho","to":"li-yumejuya","type":"author","note":"ともに1908年の短編。日常の観察と夢の語りを比べられます。","sourceIds":["buncho","buncho-yume","soseki-editions"]},
+    {"from":"li-vita-sexualis","to":"li-seinen","type":"author","note":"経験を振り返る語りと、青年の成長を追う語りを比較できます。","sourceIds":["vita","vita-shincho","seinen","seinen-shincho"]},
+    {"from":"li-seinen","to":"li-gan","type":"author","note":"東京を舞台にした二作。青年の見聞と、お玉の限られた生活を比べられます。","sourceIds":["seinen","seinen-shincho","gan-shincho","gan-edition"]},
+    {"from":"li-kinosaki","to":"li-kozo-no-kamisama","type":"author","note":"『城の崎にて』の生と死への内省と、『小僧の神様』の他者への善意を比べられます。","sourceIds":["kozo","shiga-shincho"]}
   ],
   "bookLinks": [
     {"entryId":"li-kinosaki","title":"城の崎にて・小僧の神様","author":"志賀直哉"},
@@ -70,6 +106,16 @@
     {"entryId":"ph-fukuzawa-gakumon","title":"学問のすすめ","author":"福沢諭吉"},
     {"entryId":"li-maihime","title":"舞姫","author":"森鷗外"},
     {"entryId":"li-midaregami","title":"みだれ髪","author":"与謝野晶子"},
-    {"entryId":"li-cat","title":"吾輩は猫である","author":"夏目漱石"}
+    {"entryId":"li-cat","title":"吾輩は猫である","author":"夏目漱石"},
+    {"entryId":"li-sorekara","title":"それから","author":"夏目漱石"},
+    {"entryId":"li-mon","title":"門","author":"夏目漱石"},
+    {"entryId":"li-higan","title":"彼岸過迄","author":"夏目漱石"},
+    {"entryId":"li-michikusa","title":"道草","author":"夏目漱石"},
+    {"entryId":"li-buncho","title":"文鳥・夢十夜","author":"夏目漱石"},
+    {"entryId":"li-yumejuya","title":"文鳥・夢十夜","author":"夏目漱石"},
+    {"entryId":"li-vita-sexualis","title":"ヰタ・セクスアリス","author":"森鴎外"},
+    {"entryId":"li-seinen","title":"青年","author":"森鴎外"},
+    {"entryId":"li-kozo-no-kamisama","title":"城の崎にて・小僧の神様","author":"志賀直哉"},
+    {"entryId":"li-gan","title":"雁","author":"森鴎外"}
   ]
 }

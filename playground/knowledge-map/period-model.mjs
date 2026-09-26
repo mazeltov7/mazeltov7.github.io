@@ -95,10 +95,14 @@ export function attachBooks(baseEntries, bookData, links, bounds) {
       if (!Number.isFinite(book.publishedYear) || book.publishedYear < bounds.start || book.publishedYear > bounds.end) continue;
       const key = bookKey(book);
       const record = { ...book, readYear, url: `../my-books/book.html?id=${encodeURIComponent(key)}` };
-      const mapping = links.find(link => normalize(link.title) === normalize(book.title) && normalize(link.author) === normalize(book.author));
-      let entry = mapping && byId.get(mapping.entryId);
-      if (!entry) {
-        entry = synthetic.get(key);
+      // 合本は収録作品それぞれへ接続する。冊数は書籍キーで一度だけ数える。
+      const matchedIds = new Set(links
+        .filter(link => normalize(link.title) === normalize(book.title) && normalize(link.author) === normalize(book.author))
+        .map(link => link.entryId));
+      const targets = [...matchedIds].map(id => byId.get(id)).filter(Boolean);
+      record.isCollection = targets.length > 1;
+      if (!targets.length) {
+        let entry = synthetic.get(key);
         if (!entry) {
           entry = {
             id: `reading:${key}`, title: book.title, author: book.author,
@@ -109,8 +113,9 @@ export function attachBooks(baseEntries, bookData, links, bounds) {
           synthetic.set(key, entry);
           entries.push(entry);
         }
+        targets.push(entry);
       }
-      entry.bookRecords.push(record);
+      for (const entry of targets) entry.bookRecords.push(record);
       seen.add(key);
     }
   }
