@@ -220,7 +220,7 @@
     {"id":"li-kirinohana","title":"北原白秋『桐の花』","year":1913,"category":"literature","lane":"li_jp","region":"east_asia","where":"日本","summary":"「春の鳥な鳴きそ鳴きそあかあかと…」など官能と色彩に満ちた短歌349首を収める。大正歌壇のモダンな感性を示す歌集。"},
     {"id":"li-kojin","title":"夏目漱石『行人』","year":1913,"category":"literature","lane":"li_jp","region":"east_asia","where":"日本","summary":"妻と弟の関係に苦悩する主人公一郎の精神を描く後期三部作の中核。「死ぬか、気が違ふか、夫でなければ宗教に入るか」。"},
     {"id":"li-doutei","title":"高村光太郎『道程』","year":1914,"category":"literature","lane":"li_jp","region":"east_asia","where":"日本","summary":"「僕の前に道はない 僕の後ろに道は出来る」の冒頭で知られる詩集。口語自由詩を本格的に文学として確立、後の『智恵子抄』への前史。"},
-    {"id":"li-sansho","title":"森鴎外『山椒大夫』","year":1915,"category":"literature","lane":"li_jp","region":"east_asia","where":"日本","summary":"人買いに売られ離散する母子四人「安寿と厨子王」の悲劇。中世説経節を再話した鴎外晩年の歴史小説の代表作。"},
+    {"id":"li-sansho","title":"森鴎外『山椒大夫』","year":1915,"category":"literature","lane":"li_jp","region":"east_asia","where":"日本","summary":"人買いによって離散する母と姉弟「安寿と厨子王」の悲劇。中世説経節を再話した鴎外晩年の歴史小説の代表作。"},
     {"id":"li-kinosaki","title":"志賀直哉『城の崎にて』","year":1917,"category":"literature","lane":"li_jp","region":"east_asia","where":"日本","summary":"怪我の養生中に蜂・鼠・蠑螈の死を凝視する心境を淡々と綴る短編。志賀の心境小説、白樺派の到達点。"},
     {"id":"li-tsukini-hoeru","title":"萩原朔太郎『月に吠える』","year":1917,"category":"literature","lane":"li_jp","region":"east_asia","where":"日本","summary":"病的な感性と口語自由詩のリズムで近代詩を一変させた詩集。「竹」「蛙よ」など、朔太郎の代表作。"},
     {"id":"li-jigokuhen","title":"芥川龍之介『地獄変』","year":1918,"category":"literature","lane":"li_jp","region":"east_asia","where":"日本","summary":"娘を業火に焼かれながら傑作の地獄変屏風を完成させる絵師良秀の物語。芸術至上主義のグロテスクを描く芥川中期の傑作。"},
@@ -239,6 +239,10 @@
     {"id":"li-yumejuya","title":"夏目漱石『夢十夜』","author":"夏目漱石","year":1908,"category":"literature","lane":"li_jp","region":"east_asia","where":"夢の中のさまざまな場所","summary":"十の夢を通じて、時間、生と死、不安を描く連作短編。現実の筋道から離れた幻想を語る。"},
     {"id":"li-vita-sexualis","title":"森鴎外『ヰタ・セクスアリス』","author":"森鴎外","year":1909,"category":"literature","lane":"li_jp","region":"east_asia","where":"日本","summary":"哲学教師・金井湛が幼少期からの性の記憶を振り返り、欲望と自己認識を記述する。"},
     {"id":"li-seinen","title":"森鴎外『青年』","author":"森鴎外","year":1910,"yearEnd":1911,"category":"literature","lane":"li_jp","region":"east_asia","where":"東京・箱根","summary":"作家を志して上京した小泉純一が、文学・思想・恋愛との出会いから生き方を探る。"},
-    {"id":"li-kozo-no-kamisama","title":"志賀直哉『小僧の神様』","author":"志賀直哉","year":1920,"category":"literature","lane":"li_jp","region":"east_asia","where":"東京・神田","summary":"奉公する少年・仙吉と、彼に鮨をおごる紳士。善意を施す側と受け取る側の隔たりを描く。"}
+    {"id":"li-kozo-no-kamisama","title":"志賀直哉『小僧の神様』","author":"志賀直哉","year":1920,"category":"literature","lane":"li_jp","region":"east_asia","where":"東京・神田","summary":"奉公する少年・仙吉と、彼に鮨をおごる紳士。善意を施す側と受け取る側の隔たりを描く。"},
+    {"id":"li-abe","title":"森鴎外『阿部一族』","author":"森鴎外","year":1913,"category":"literature","lane":"li_jp","region":"east_asia","where":"日本","summary":"江戸初期の肥後藩の事件を題材に、殉死と忠義を求める秩序が一族を追い詰める過程を描く。"},
+    {"id":"li-takase","title":"森鴎外『高瀬舟』","author":"森鴎外","year":1916,"category":"literature","lane":"li_jp","region":"east_asia","where":"日本","summary":"島流しとなった喜助と同心・庄兵衛の対話から、足ることを知る暮らしと、死をめぐる判断を問う。"},
+    {"id":"li-yujo","title":"武者小路実篤『友情』","author":"武者小路実篤","year":1919,"category":"literature","lane":"li_jp","region":"east_asia","where":"日本","summary":"野島・大宮・杉子の関係を通して、友情と恋愛の衝突、他者の思いと失恋後の生を描く。"},
+    {"id":"li-omedeta","title":"武者小路実篤『お目出たき人』","author":"武者小路実篤","year":1911,"category":"literature","lane":"li_jp","region":"east_asia","where":"日本","summary":"女性への一方的な思いを抱く青年の語りを通じて、欲望と自己肯定、現実と空想の隔たりを描く。"}
   ]
 }

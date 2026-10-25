@@ -59,14 +59,14 @@ test('検索に合わせた年代範囲と空結果が得られる', () => {
 
 test('カテゴリ・年代・読書の絞り込みを組み合わせる', () => {
   const results = filterEntries(attached.entries, details, { categories: new Set(['literature']), range: { start: 1913, end: 1915 }, reading: true, onlyRead: true });
-  assert.deepEqual(results.map(e => e.id), ['li-gan', 'li-kojin', 'li-kokoro', 'li-michikusa']);
+  assert.deepEqual(results.map(e => e.id), ['li-gan', 'li-kojin', 'li-abe', 'li-kokoro', 'li-michikusa', 'li-sansho']);
   assert.equal(filterEntries(data.entries, details, { categories: new Set() }).length, 0);
 });
 
-test('全205項目と1945年末尾の全6項目を表示する', () => {
-  assert.equal(data.entries.length, 205);
-  assert.equal(new Set(data.entries.map(e => e.id)).size, 205);
-  assert.equal(filterEntries(data.entries, details, { range: data }).length, 205);
+test('全209項目と1945年末尾の全6項目を表示する', () => {
+  assert.equal(data.entries.length, 209);
+  assert.equal(new Set(data.entries.map(e => e.id)).size, 209);
+  assert.equal(filterEntries(data.entries, details, { range: data }).length, 209);
   const last = filterEntries(data.entries, details, { range: { start: 1945, end: 1945 } });
   assert.equal(last.filter(e => e.year === 1945).length, 6);
   assert.ok(last.some(e => e.id === 'jp-potsdam'));
@@ -85,13 +85,13 @@ test('どの横幅・期間でも年表のまとまりに欠落と重複がな�
   }
 });
 
-test('My Booksの28冊を23作品と未収録の7冊に接続し、合本でも冊数を重複させない', () => {
-  assert.equal(attached.bookCount, 28);
-  assert.equal(attached.entries.length, 212);
+test('My Booksの32冊を29作品と未収録の7冊に接続し、合本でも冊数を重複させない', () => {
+  assert.equal(attached.bookCount, 32);
+  assert.equal(attached.entries.length, 216);
   assert.equal(attached.entries.filter(e => e.isReading).length, 7);
-  assert.equal(attached.entries.filter(e => !e.isReading && e.bookRecords.length).length, 23);
-  assert.equal(filterEntries(attached.entries, details, {}).length, 205);
-  assert.equal(filterEntries(attached.entries, details, { reading: true, onlyRead: true }).length, 30);
+  assert.equal(attached.entries.filter(e => !e.isReading && e.bookRecords.length).length, 29);
+  assert.equal(filterEntries(attached.entries, details, {}).length, 209);
+  assert.equal(filterEntries(attached.entries, details, { reading: true, onlyRead: true }).length, 36);
   assert.equal(attached.entries.find(e => e.id === 'li-kokoro').bookRecords[0].title, 'こころ');
   assert.equal(attached.entries.find(e => e.id === 'li-kojin').year, 1913);
   assert.equal(attached.entries.find(e => e.id === 'li-kojin').bookRecords[0].publishedYear, 1914);
@@ -147,6 +147,54 @@ test('著者が違う同名作品・部分一致の作品を誤って読了に�
   assert.equal(result.entries.find(e => e.id === 'li-kokoro').bookRecords.length, 0);
   assert.equal(result.entries.find(e => e.id === 'li-mon').bookRecords.length, 0);
   assert.equal(result.entries.filter(e => e.isReading).length, 2);
+});
+
+test('原著年のない合本を収録作品に接続し、作品ごとの年と再読を保つ', () => {
+  const collection = books['2026'].find(b => b.title === '阿部一族・舞姫');
+  assert.equal(collection.publishedYear, undefined);
+  for (const id of ['li-maihime', 'li-ougai-utakata', 'li-abe']) {
+    const entry = attached.entries.find(e => e.id === id);
+    const record = entry.bookRecords.find(b => b.title === collection.title);
+    assert.equal(record.isCollection, true);
+    assert.equal(record.readYear, '2026');
+    assert.equal(entry.year, byId.get(id).year);
+  }
+  assert.ok(attached.entries.find(e => e.id === 'li-maihime').bookRecords.some(b => b.readYear === '2025'));
+  assert.equal(attached.entries.find(e => e.id === 'li-yujo').year, 1919);
+  assert.equal(attached.entries.find(e => e.id === 'li-yujo').bookRecords[0].publishedYear, 1920);
+});
+
+test('現代の解説書は期間外でも関連書となり、原典を読了扱いにしない', () => {
+  const entry = attached.entries.find(e => e.id === 'ph-nishida');
+  assert.equal(attached.relatedBookCount, 2);
+  assert.equal(entry.year, 1911);
+  assert.equal(entry.bookRecords.length, 0);
+  assert.deepEqual(entry.relatedBookRecords.map(b => b.publishedYear).sort(), [2022, 2025]);
+  assert.equal(filterEntries([entry], details, { reading: true, onlyRead: true }).length, 0);
+  assert.equal(filterEntries([entry], details, { reading: true, query: '藤田正勝' }).length, 1);
+  const reread = attachBooks([entry], { '2026': [entry.relatedBookRecords[0]], '2025': [entry.relatedBookRecords[0]] }, editorial.bookLinks, data);
+  assert.equal(reread.relatedBookCount, 1);
+  assert.equal(reread.entries.length, 1);
+  assert.equal(reread.entries[0].relatedBookRecords.length, 2);
+});
+
+test('全体マップで今回の10冊に到達でき、出典と原典の参照先も実在する', () => {
+  const world = read('./data.json'), worldDetails = read('./data.details.json');
+  const result = attachBooks(world.entries, books, world.bookLinks, { start: -10000, end: 2030 }, { includeUnlinked: false });
+  assert.equal(result.entries.length, world.entries.length);
+  assert.equal(new Set(world.entries.map(e => e.id)).size, world.entries.length);
+  const records = new Set(result.entries.flatMap(e => e.bookRecords.map(bookKey)));
+  for (const book of books['2026'].slice(-10)) assert.ok(records.has(bookKey(book)), book.title);
+  for (const link of world.bookLinks) {
+    assert.ok(world.entries.some(e => e.id === link.entryId));
+    const detail = worldDetails[link.entryId];
+    assert.ok(detail.sources.length);
+    for (const source of detail.sources) assert.equal(new URL(source.url).protocol, 'https:');
+    for (const related of detail.relatedEntries || []) assert.ok(world.entries.some(e => e.id === related.entryId));
+  }
+  assert.equal(result.entries.find(e => e.id === 'ea-wakamatsu-zen').year, 2025);
+  assert.equal(result.entries.find(e => e.id === 'ea-fujita-zen').year, 2022);
+  assert.equal(result.entries.find(e => e.id === 'ph-nishida').bookRecords.length, 0);
 });
 
 test('関連項目は最大5件、重複なし、背景と同時代を区別する', () => {

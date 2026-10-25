@@ -3,7 +3,7 @@
     "title": "人類知マップ",
     "description": "地理（地域）×時間（西暦）の二軸で、人類の発見・思想・芸術・史実をマッピング。",
     "version": "0.1",
-    "lastUpdated": "2026-04-26"
+    "lastUpdated": "2026-10-25"
   },
   "categories": [
     {"id": "science",     "label": "科学・発見",  "icon": "🔬", "color": "#2563eb"},
@@ -141,6 +141,21 @@
     {"id":"gl-human-rights","title":"世界人権宣言","year":1948,"category":"philosophy","region":"global","where":"パリ（国連総会）","summary":"全人類の自由と平等の基本権を成文化。後の国際人権規約・各国憲法に多大な影響。"},
     {"id":"gl-www","title":"World Wide Web 公開","year":1991,"category":"tech","region":"global","where":"CERN（スイス）→世界","summary":"ティム・バーナーズ＝リーがWeb技術を一般公開。情報革命の社会基盤が誕生。"},
     {"id":"gl-human-genome","title":"ヒトゲノム解読 完了","year":2003,"category":"science","region":"global","where":"国際協力プロジェクト","summary":"国際ヒトゲノム計画がほぼ全配列の解読を達成。生命科学・医療を一変させた。"},
-    {"id":"gl-covid","title":"COVID-19 パンデミック","year":2020,"category":"event","region":"global","where":"全世界","summary":"WHOがパンデミック宣言。社会・経済・労働・教育の様相を一変、生活様式の常識を変えた。"}
-  ]
+    {"id":"gl-covid","title":"COVID-19 パンデミック","year":2020,"category":"event","region":"global","where":"全世界","summary":"WHOがパンデミック宣言。社会・経済・労働・教育の様相を一変、生活様式の常識を変えた。"},
+    {"id":"li-maihime","title":"森鴎外『舞姫』","year":1890,"category":"literature","region":"east_asia","where":"日本（ベルリン回想）","summary":"留学中のドイツ人少女との恋と別離を描く雅文体の短編。日本近代浪漫派文学の出発点。"},
+    {"id":"li-ougai-utakata","title":"森鴎外『うたかたの記』","year":1890,"category":"literature","region":"east_asia","where":"東京","summary":"ミュンヘンを舞台に画学生と薄幸の少女を描く浪漫的短篇。『舞姫』と並ぶ「ドイツ三部作」の一つ。"},
+    {"id":"li-abe","title":"森鴎外『阿部一族』","author":"森鴎外","year":1913,"category":"literature","region":"east_asia","where":"日本","summary":"江戸初期の肥後藩の事件を題材に、殉死と忠義を求める秩序が一族を追い詰める過程を描く。"},
+    {"id":"li-sansho","title":"森鴎外『山椒大夫』","year":1915,"category":"literature","region":"east_asia","where":"日本","summary":"人買いによって離散する母と姉弟「安寿と厨子王」の悲劇。中世説経節を再話した鴎外晩年の歴史小説の代表作。"},
+    {"id":"li-takase","title":"森鴎外『高瀬舟』","author":"森鴎外","year":1916,"category":"literature","region":"east_asia","where":"日本","summary":"島流しとなった喜助と同心・庄兵衛の対話から、足ることを知る暮らしと、死をめぐる判断を問う。"},
+    {"id":"li-yujo","title":"武者小路実篤『友情』","author":"武者小路実篤","year":1919,"category":"literature","region":"east_asia","where":"日本","summary":"野島・大宮・杉子の関係を通して、友情と恋愛の衝突、他者の思いと失恋後の生を描く。"},
+    {"id":"li-omedeta","title":"武者小路実篤『お目出たき人』","author":"武者小路実篤","year":1911,"category":"literature","region":"east_asia","where":"日本","summary":"女性への一方的な思いを抱く青年の語りを通じて、欲望と自己肯定、現実と空想の隔たりを描く。"},
+    {"id":"ph-nishida","title":"西田幾多郎『善の研究』","year":1911,"category":"philosophy","region":"east_asia","where":"日本・京都","summary":"純粋経験を起点に東洋的思惟と西洋哲学を統合。日本独自の哲学体系・京都学派の出発点。"},
+    {"id":"na-deneen-liberalism","title":"パトリック・J・デニーン『リベラリズムはなぜ失敗したのか』","author":"パトリック・J・デニーン","year":2018,"category":"philosophy","region":"north_america","where":"アメリカ","summary":"個人の自律を重視するリベラリズムが、共同体・市民性・平等をどう変えるかを批判的に検討する。"},
+    {"id":"na-sandel-justice","title":"マイケル・サンデル『これからの「正義」の話をしよう いまを生き延びるための哲学』","author":"マイケル・サンデル","year":2009,"category":"philosophy","region":"north_america","where":"アメリカ","summary":"具体例と対話を通して、功利主義、自由、権利、公共善をめぐる正義の考え方を検討する。"},
+    {"id":"ea-wakamatsu-zen","title":"若松英輔『西田幾多郎 善の研究 日常で深める哲学』","author":"若松英輔","year":2025,"category":"philosophy","region":"east_asia","where":"日本","summary":"西田幾多郎『善の研究』を、知と愛、純粋経験などの問いから日常に引き寄せて読む解説書。"},
+    {"id":"ea-fujita-zen","title":"藤田正勝『西田幾多郎『善の研究』を読む』","author":"藤田正勝","year":2022,"category":"philosophy","region":"east_asia","where":"日本","summary":"実在・善・宗教・純粋経験を手がかりに、西田幾多郎『善の研究』を読み解く。"},
+    {"id":"ea-karatani-origins","title":"柄谷行人『定本 日本近代文学の起源』","author":"柄谷行人","year":1980,"category":"literature","region":"east_asia","where":"日本","summary":"風景、内面、告白などの成立を問い、日本近代文学を支える認識の枠組みを捉え直す批評。"},
+    {"id":"ea-ogawa-novel-thinking","title":"小川哲『言語化するための小説思考』","author":"小川哲","year":2025,"category":"literature","region":"east_asia","where":"日本","summary":"小説家の思考過程から、読者を想像し、情報を順序立てて言葉にする営みを考える。"}
+  ],
+  "bookLinks": [{"entryId":"li-abe","title":"阿部一族・舞姫","author":"森鴎外"},{"entryId":"li-maihime","title":"阿部一族・舞姫","author":"森鴎外"},{"entryId":"li-ougai-utakata","title":"阿部一族・舞姫","author":"森鴎外"},{"entryId":"li-sansho","title":"山椒大夫・高瀬舟","author":"森鴎外"},{"entryId":"li-takase","title":"山椒大夫・高瀬舟","author":"森鴎外"},{"entryId":"li-yujo","title":"友情","author":"武者小路実篤"},{"entryId":"li-omedeta","title":"お目出たき人","author":"武者小路実篤"},{"entryId":"ph-nishida","title":"西田幾多郎 善の研究 日常で深める哲学","author":"若松英輔","kind":"commentary"},{"entryId":"ph-nishida","title":"西田幾多郎『善の研究』を読む","author":"藤田正勝","kind":"commentary"},{"entryId":"na-deneen-liberalism","title":"リベラリズムはなぜ失敗したのか","author":"パトリック・J・デニーン"},{"entryId":"na-sandel-justice","title":"これからの「正義」の話をしよう いまを生き延びるための哲学","author":"マイケル・サンデル"},{"entryId":"ea-wakamatsu-zen","title":"西田幾多郎 善の研究 日常で深める哲学","author":"若松英輔"},{"entryId":"ea-fujita-zen","title":"西田幾多郎『善の研究』を読む","author":"藤田正勝"},{"entryId":"ea-karatani-origins","title":"定本 日本近代文学の起源","author":"柄谷行人"},{"entryId":"ea-ogawa-novel-thinking","title":"言語化するための小説思考","author":"小川哲"}]
 }

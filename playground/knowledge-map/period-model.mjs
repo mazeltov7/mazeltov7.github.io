@@ -42,10 +42,11 @@ export function normalize(text = '') {
     .replaceAll('鷗', '鴎').replaceAll('龍之介', '竜之介').replace(/[\s・「」『』、。]/g, '');
 }
 
-export function matchesQuery(entry, detail, query) {
+export function matchesQuery(entry, detail, query, includeBooks = false) {
   const haystack = normalize([
     entry.title, entry.author, entry.where, entry.summary, entry.year, entry.yearEnd,
     wareki(entry.year), detail?.setting, ...(detail?.themes || []),
+    ...(includeBooks ? [...(entry.bookRecords || []), ...(entry.relatedBookRecords || [])].flatMap(book => [book.title, book.author]) : []),
   ].filter(Boolean).join(' '));
   return query.trim().split(/\s+/).every(term => haystack.includes(normalize(term)));
 }
@@ -54,7 +55,7 @@ export function filterEntries(entries, details, { categories, query = '', range,
   return entries.filter(e =>
     (!e.isReading || reading) && (!onlyRead || e.bookRecords?.length) &&
     (!categories || categories.has(e.category)) &&
-    (!range || overlaps(e, range)) && matchesQuery(e, details[e.id], query)
+    (!range || overlaps(e, range)) && matchesQuery(e, details[e.id], query, reading)
   ).sort((a, b) => a.year - b.year || a.title.localeCompare(b.title, 'ja'));
 }
 
@@ -85,23 +86,28 @@ export function bookKey(book) {
   return asin ? asin[1] : book.title.replace(/[\/\\?#&%]+/g, '-');
 }
 
-export function attachBooks(baseEntries, bookData, links, bounds) {
-  const entries = baseEntries.map(e => ({ ...e, bookRecords: [] }));
+export function attachBooks(baseEntries, bookData, links, bounds, { includeUnlinked = true } = {}) {
+  const entries = baseEntries.map(e => ({ ...e, bookRecords: [], relatedBookRecords: [] }));
   const byId = new Map(entries.map(e => [e.id, e]));
   const synthetic = new Map();
   const seen = new Set();
+  const relatedSeen = new Set();
   for (const [readYear, books] of Object.entries(bookData).sort(([a], [b]) => Number(b) - Number(a))) {
     for (const book of books) {
-      if (!Number.isFinite(book.publishedYear) || book.publishedYear < bounds.start || book.publishedYear > bounds.end) continue;
       const key = bookKey(book);
       const record = { ...book, readYear, url: `../my-books/book.html?id=${encodeURIComponent(key)}` };
-      // 合本は収録作品それぞれへ接続する。冊数は書籍キーで一度だけ数える。
-      const matchedIds = new Set(links
+      // 明示的な対応を先に確認する。合本は年が未設定でも各作品へ、解説書は関連読書へ接続。
+      const matches = links
         .filter(link => normalize(link.title) === normalize(book.title) && normalize(link.author) === normalize(book.author))
-        .map(link => link.entryId));
+        .filter(link => byId.has(link.entryId));
+      const commentaryIds = new Set(matches.filter(link => link.kind === 'commentary').map(link => link.entryId));
+      for (const id of commentaryIds) byId.get(id).relatedBookRecords.push({ ...record, kind: 'commentary' });
+      if (commentaryIds.size) relatedSeen.add(key);
+      const matchedIds = new Set(matches.filter(link => link.kind !== 'commentary').map(link => link.entryId));
       const targets = [...matchedIds].map(id => byId.get(id)).filter(Boolean);
       record.isCollection = targets.length > 1;
       if (!targets.length) {
+        if (commentaryIds.size || !includeUnlinked || !Number.isFinite(book.publishedYear) || book.publishedYear < bounds.start || book.publishedYear > bounds.end) continue;
         let entry = synthetic.get(key);
         if (!entry) {
           entry = {
@@ -119,7 +125,7 @@ export function attachBooks(baseEntries, bookData, links, bounds) {
       seen.add(key);
     }
   }
-  return { entries, bookCount: seen.size };
+  return { entries, bookCount: seen.size, relatedBookCount: relatedSeen.size };
 }
 
 export const RELATION_LABELS = {

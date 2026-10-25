@@ -1,5 +1,5 @@
 {
-  "reviewedAt": "2026-09-26",
+  "reviewedAt": "2026-10-25",
   "courses": [],
   "sources": {
     "gakumon":{"title":"『学問のすすめ』書誌・原文","publisher":"青空文庫","url":"https://www.aozora.gr.jp/cards/000296/card47061.html","scope":"初出・著者・原文"},
@@ -38,7 +38,18 @@
     "gan-shincho":{"title":"『雁』作品紹介","publisher":"新潮社","url":"https://www.shinchosha.co.jp/book/102001/","scope":"お玉と岡田・回想形式"},
     "gan-edition":{"title":"『雁』展示資料一覧","publisher":"文京区立森鴎外記念館","url":"https://moriogai-kinenkan.jp/uploads/fckeditor/PDF/uid000001_20140130092952a2d71725.pdf","scope":"1915年の初版本・舞台となる無縁坂と不忍池"},
     "kozo":{"title":"志賀直哉「小僧の神様」講座案内","publisher":"早稲田大学エクステンションセンター","url":"https://www1.ex-waseda.jp/wp-content/uploads/20_waseda_hatchobori_nakano_spring.pdf","scope":"1920年1月の初出・仙吉と紳士・語りの構造"},
-    "shiga-shincho":{"title":"『小僧の神様』作品・著者紹介","publisher":"新潮社","url":"https://www.shinchosha.co.jp/book/830087/","scope":"『城の崎にて』と『小僧の神様』・白樺派・著者紹介"}
+    "shiga-shincho":{"title":"『小僧の神様』作品・著者紹介","publisher":"新潮社","url":"https://www.shinchosha.co.jp/book/830087/","scope":"『城の崎にて』と『小僧の神様』・白樺派・著者紹介"},
+    "abe": {"title":"『阿部一族』初出・原文","url":"https://www.aozora.gr.jp/cards/000129/card673.html","publisher":"青空文庫","scope":"1913年1月の初出"},
+    "abe-maihime": {"title":"『阿部一族・舞姫』収録作品","url":"https://www.shinchosha.co.jp/book/102004/","publisher":"新潮社","scope":"合本の収録作品・著者"},
+    "sansho": {"title":"『山椒大夫』初出・原文","url":"https://www.aozora.gr.jp/cards/000129/card689.html","publisher":"青空文庫","scope":"1915年1月の初出"},
+    "takase": {"title":"『高瀬舟』初出・原文","url":"https://www.aozora.gr.jp/cards/000129/card45245.html","publisher":"青空文庫","scope":"1916年1月の初出"},
+    "sansho-takase": {"title":"『山椒大夫・高瀬舟』収録作品","url":"https://www.shinchosha.co.jp/book/102005/","publisher":"新潮社","scope":"合本・主題・著者"},
+    "yujo": {"title":"『友情』作品鑑賞","url":"https://www.mushakoji.org/saneatsu/kansho/kansho_005.html","publisher":"武者小路実篤記念館","scope":"1919年の連載・1920年の単行本・創作背景"},
+    "omedeta": {"title":"『お目出たき人』作品鑑賞","url":"https://www.mushakoji.org/saneatsu/kansho/kansho_009.html","publisher":"武者小路実篤記念館","scope":"1911年の発表・語りと虚構"},
+    "musha": {"title":"武者小路実篤・作品紹介","url":"https://www.shinchosha.co.jp/book/105714/","publisher":"新潮社","scope":"著者略歴と作品"},
+    "nishida": {"title":"思想家紹介・西田幾多郎","url":"https://ceschi.bun.kyoto-u.ac.jp/archive/bun_archive/japanese_philosophy/jp-nishida_guidance/index.htm","publisher":"京都大学","scope":"1911年の刊行・思想と生涯"},
+    "wakamatsu-zen": {"title":"西田幾多郎 善の研究 日常で深める哲学","url":"https://www.nhk-book.co.jp/detail/000000819932025.html","publisher":"NHK出版","scope":"2025年の解説書"},
+    "fujita-zen": {"title":"西田幾多郎『善の研究』を読む","url":"https://www.chikumashobo.co.jp/product/9784480075017/","publisher":"筑摩書房","scope":"2022年の解説書"}
   },
   "entries": {
     "ph-fukuzawa-gakumon":{"dateLabel":"初編刊行","publication":"1872年（以後、続編を刊行）","sourceIds":["gakumon"],"significance":"日常に役立つ学問と個人の独立を結びつけた啓蒙書。独立を掲げる言葉が、その後の小説に描かれる個人の現実とどう響き合うかを考えられます。","themes":["学問","独立","個人と社会"]},
@@ -73,7 +84,13 @@
     "li-seinen":{"dateLabel":"初出","publication":"1910年3月〜1911年8月、『スバル』（単行本は1913年2月）","setting":"明治末期の東京。後半では箱根へ向かう。","context":"小泉純一は作家や学生と交わり、未亡人との恋愛も経験する。明治末の東京を歩く青年の見聞と内面の変化を描き、読書や議論で得た知識と、生活で経験することの間を問い直している。","significance":"『三四郎』と、地方から上京する青年の視点を比較できます。『雁』と並べれば、同じ東京でも人物の立場や語り方で見える世界が変わります。","sourceIds":["seinen","seinen-shincho"],"authorBio":{"born":1862,"died":1922,"summary":"森鴎外は津和野生まれの小説家・翻訳家・陸軍軍医。本名は森林太郎。東京大学医学部卒業後、ドイツへ留学。軍医の仕事と並行して『舞姫』『ヰタ・セクスアリス』『青年』『雁』などを執筆し、西洋文学の翻訳や歴史小説にも取り組んだ。"},"themes":["青春小説","自己形成","都市","文学と思想","森鴎外"]},
     "li-kozo-no-kamisama":{"dateLabel":"初出","publication":"1920年1月、『白樺』","setting":"東京・神田の商店と鮨屋。少年の奉公生活。","context":"奉公先の生活から鮨に憧れる仙吉と、匿名で親切を施す紳士を描いた短編。人物それぞれの思いに加え、終盤には語り手が結末の書き方に触れる仕掛けがある。","significance":"『城の崎にて』の内省と並べ、他者への善意や、相手の経験を想像する難しさを読めます。物語を語る行為そのものにも目を向けられます。","sourceIds":["kozo","shiga-shincho"],"authorBio":{"born":1883,"died":1971,"summary":"志賀直哉は石巻生まれの小説家。武者小路実篤らと雑誌『白樺』を創刊した。身近な経験や人間関係を簡潔な文体で描き、『城の崎にて』『小僧の神様』などの短編と、長編『暗夜行路』を残した。"},"themes":["白樺派","善意","他者理解","語り","志賀直哉"]},
     "li-gan":{"dateLabel":"連載","publication":"1911年9月〜1913年5月、『スバル』（単行本は1915年）","setting":"1880年頃の東京・本郷、無縁坂と不忍池周辺。","sourceIds":["gan-shincho","gan-edition"],"significance":"発表は明治末から大正初期ですが、舞台は約30年前です。お玉の生活上の制約と医学生の自由を並べることで、同じ都市に暮らす人びとの立場の違いが見えます。"},
-    "li-cat":{"dateLabel":"連載","publication":"1905年1月〜1906年8月、『ホトトギス』","setting":"明治後期の東京。苦沙弥先生の家庭と知識人の集まり。","context":"東京帝国大学で教えていた漱石が発表した小説。名前のない猫の観察を通して、教師や学者たちの会話と暮らしを風刺する。1905年の掲載が好評を得て続編が書かれ、全11章となった。","sourceIds":["soseki-works"],"themes":["風刺","知識人","個人と社会","夏目漱石"]}
+    "li-cat":{"dateLabel":"連載","publication":"1905年1月〜1906年8月、『ホトトギス』","setting":"明治後期の東京。苦沙弥先生の家庭と知識人の集まり。","context":"東京帝国大学で教えていた漱石が発表した小説。名前のない猫の観察を通して、教師や学者たちの会話と暮らしを風刺する。1905年の掲載が好評を得て続編が書かれ、全11章となった。","sourceIds":["soseki-works"],"themes":["風刺","知識人","個人と社会","夏目漱石"]},
+    "li-abe": {"dateLabel":"初出","publication":"1913年1月『中央公論』","setting":"江戸初期、肥後・細川家の家臣たち。","context":"主君の死をめぐる殉死と、その後の一族の破局を描く歴史小説。1913年という執筆時期と、江戸初期の物語の舞台を分けて読む。","sourceIds":["abe","abe-maihime"],"themes":["歴史小説","殉死","個人と国家"],"authorBio":{"born":1862,"died":1922,"summary":"森鴎外は津和野生まれの小説家・翻訳家・陸軍軍医。本名は森林太郎。東京大学医学部を卒業し、1884年から1888年までドイツに留学した。軍医として働きながら、西洋文学の翻訳、評論、小説に取り組み、『舞姫』『青年』『雁』などを発表。のちに『阿部一族』『山椒大夫』『高瀬舟』などの歴史小説も執筆した。"}},
+    "li-takase": {"dateLabel":"初出","publication":"1916年1月『中央公論』","setting":"江戸時代の京都。罪人を護送する高瀬舟。","context":"弟を死なせた罪で流される喜助の話を、同心の庄兵衛が聞く。処罰の対象となった行為だけでなく、貧しさの中で何に満足するか、苦しむ他者にどう向き合うかを問いかける。","sourceIds":["takase","sansho-takase"],"themes":["歴史小説","貧困","生と死","人間の尊厳"],"authorBio":{"born":1862,"died":1922,"summary":"森鴎外は津和野生まれの小説家・翻訳家・陸軍軍医。本名は森林太郎。東京大学医学部を卒業し、1884年から1888年までドイツに留学した。軍医として働きながら、西洋文学の翻訳、評論、小説に取り組み、『舞姫』『青年』『雁』などを発表。のちに『阿部一族』『山椒大夫』『高瀬舟』などの歴史小説も執筆した。"}},
+    "li-yujo": {"dateLabel":"連載","publication":"1919年10月16日〜12月11日『大阪毎日新聞』夕刊（単行本は1920年4月）","context":"1919年10〜12月に『大阪毎日新聞』夕刊で連載され、1920年4月に以文社から単行本が刊行された。『新しき村』の活動を始めた時期の実篤が、恋愛の悩みを抱える若者へ向けて書いた作品である。ここでは原著の単行本刊行年を1920年として記録し、指定された電子版の2026年配信とは区別する。\n\n野島、大宮、杉子の関係を通じて、親友を思う気持ちと恋愛感情の衝突を描く。前半の野島を中心とした語りから、後半の書簡へと視点が移ることで、ひとつの恋愛がそれぞれの当事者に異なる姿で経験されることが見えてくる。失恋の苦痛と、その後の生をどう引き受けるかが主題になっている。","sourceIds":["yujo","musha"],"themes":["日本近代文学","白樺派","友情と恋愛","自己と他者","書簡体"],"authorBio":{"born":1885,"died":1976,"summary":"武者小路実篤は東京生まれの小説家・劇作家。1910年に志賀直哉らと『白樺』を創刊し、個人の生を肯定する文学を展開した。1918年には宮崎県で共同生活の実践『新しき村』を始めた。代表作に『お目出たき人』『友情』『真理先生』があり、絵画や書にも取り組んだ。"}},
+    "li-omedeta": {"dateLabel":"発表","publication":"1911年2月（執筆は1910年2月）","context":"1910年に執筆され、1911年2月に発表された武者小路実篤の初期の代表作。執筆と同じ1910年には同人誌『白樺』が創刊されており、実篤が文学活動の方向を定めていく時期に位置する。指定の新潮文庫版は1999年刊で、作品の発表年とは分けて扱う。\n\n語り手の青年は、ほとんど交流のない女性との恋愛を思い描き、現実との隔たりを抱え続ける。日記のように率直な語りでありながら虚構も組み込まれており、作者の実生活の記録とそのまま同一視することはできない。欲望、自己肯定、相手を理想化するまなざしを読む作品である。","sourceIds":["omedeta","musha"],"themes":["日本近代文学","白樺派","自意識","片思い","虚構と現実"],"authorBio":{"born":1885,"died":1976,"summary":"武者小路実篤は東京生まれの小説家・劇作家。1910年に志賀直哉らと『白樺』を創刊し、個人の生を肯定する文学を展開した。1918年には宮崎県で共同生活の実践『新しき村』を始めた。代表作に『お目出たき人』『友情』『真理先生』があり、絵画や書にも取り組んだ。"}},
+    "li-sansho": {"dateLabel":"初出","publication":"1915年1月『中央公論』","setting":"平安時代の越後・佐渡・丹後など。","context":"安寿と厨子王の伝承をもとに、母と姉弟の離散、隷属からの脱出を描いた歴史小説。大正期に書かれた作品であり、登場人物が生きる時代とは異なる。","sourceIds":["sansho","sansho-takase"],"themes":["歴史小説","人間の尊厳","家族","自由"],"authorBio":{"born":1862,"died":1922,"summary":"森鴎外は津和野生まれの小説家・翻訳家・陸軍軍医。本名は森林太郎。東京大学医学部を卒業し、1884年から1888年までドイツに留学した。軍医として働きながら、西洋文学の翻訳、評論、小説に取り組み、『舞姫』『青年』『雁』などを発表。のちに『阿部一族』『山椒大夫』『高瀬舟』などの歴史小説も執筆した。"}},
+    "ph-nishida": {"dateLabel":"刊行","publication":"1911年","context":"西田幾多郎の初期の主著。主観と客観を分ける以前の経験を出発点に、実在、善、宗教を考える。西洋哲学と東洋の宗教的な経験を背景に、日本語による独自の哲学を構想した。","sourceIds":["nishida","wakamatsu-zen","fujita-zen"],"themes":["日本哲学","純粋経験","善","宗教哲学"],"authorBio":{"born":1870,"died":1945,"summary":"西田幾多郎は石川県生まれの哲学者。第四高等学校や京都帝国大学で教え、京都学派の基礎を築いた。『善の研究』以後も、経験と自己、論理、歴史的世界の問題を探究した。"}}
   },
   "relations": [
     {"from":"li-kokoro","to":"jp-taisho","type":"background","note":"『こゝろ』の作中では、明治天皇の崩御と乃木希典の殉死が語られます。","sourceIds":["kokoro-text"]},
@@ -116,6 +133,15 @@
     {"entryId":"li-vita-sexualis","title":"ヰタ・セクスアリス","author":"森鴎外"},
     {"entryId":"li-seinen","title":"青年","author":"森鴎外"},
     {"entryId":"li-kozo-no-kamisama","title":"城の崎にて・小僧の神様","author":"志賀直哉"},
-    {"entryId":"li-gan","title":"雁","author":"森鴎外"}
+    {"entryId":"li-gan","title":"雁","author":"森鴎外"},
+    {"entryId":"li-abe","title":"阿部一族・舞姫","author":"森鴎外"},
+    {"entryId":"li-maihime","title":"阿部一族・舞姫","author":"森鴎外"},
+    {"entryId":"li-ougai-utakata","title":"阿部一族・舞姫","author":"森鴎外"},
+    {"entryId":"li-sansho","title":"山椒大夫・高瀬舟","author":"森鴎外"},
+    {"entryId":"li-takase","title":"山椒大夫・高瀬舟","author":"森鴎外"},
+    {"entryId":"li-yujo","title":"友情","author":"武者小路実篤"},
+    {"entryId":"li-omedeta","title":"お目出たき人","author":"武者小路実篤"},
+    {"entryId":"ph-nishida","title":"西田幾多郎 善の研究 日常で深める哲学","author":"若松英輔","kind":"commentary"},
+    {"entryId":"ph-nishida","title":"西田幾多郎『善の研究』を読む","author":"藤田正勝","kind":"commentary"}
   ]
 }
