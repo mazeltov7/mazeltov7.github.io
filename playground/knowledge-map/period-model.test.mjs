@@ -206,23 +206,17 @@ test('現代の解説書は期間外でも関連書となり、原典を読了�
   assert.equal(reread.entries[0].relatedBookRecords.length, 2);
 });
 
-test('全体マップで今回の10冊に到達でき、出典と原典の参照先も実在する', () => {
+test('全体マップは読書追加から独立した98項目を保持する', () => {
   const world = read('./data.json'), worldDetails = read('./data.details.json');
-  const result = attachBooks(world.entries, books, world.bookLinks, { start: -10000, end: 2030 }, { includeUnlinked: false });
-  assert.equal(result.entries.length, world.entries.length);
-  assert.equal(new Set(world.entries.map(e => e.id)).size, world.entries.length);
-  const records = new Set(result.entries.flatMap(e => e.bookRecords.map(bookKey)));
-  for (const book of books['2026'].slice(-10)) assert.ok(records.has(bookKey(book)), book.title);
-  for (const link of world.bookLinks) {
-    assert.ok(world.entries.some(e => e.id === link.entryId));
-    const detail = worldDetails[link.entryId];
-    assert.ok(detail.sources.length);
-    for (const source of detail.sources) assert.equal(new URL(source.url).protocol, 'https:');
-    for (const related of detail.relatedEntries || []) assert.ok(world.entries.some(e => e.id === related.entryId));
+  assert.equal(world.entries.length, 98);
+  assert.equal(new Set(world.entries.map(e => e.id)).size, 98);
+  assert.equal(world.bookLinks, undefined);
+  for (const id of Object.keys(worldDetails)) assert.ok(world.entries.some(e => e.id === id), id);
+  // 読書追加で作った項目は時代別ページに残り、全体マップには入らない。
+  for (const id of ['li-maihime', 'li-ougai-utakata', 'li-abe', 'li-sansho', 'li-takase', 'li-yujo', 'li-omedeta', 'ph-nishida']) {
+    assert.ok(byId.has(id), id);
+    assert.equal(world.entries.some(e => e.id === id), false, id);
   }
-  assert.equal(result.entries.find(e => e.id === 'ea-wakamatsu-zen').year, 2025);
-  assert.equal(result.entries.find(e => e.id === 'ea-fujita-zen').year, 2022);
-  assert.equal(result.entries.find(e => e.id === 'ph-nishida').bookRecords.length, 0);
 });
 
 test('関連項目は最大5件、重複なし、背景と同時代を区別する', () => {

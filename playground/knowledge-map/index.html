@@ -527,10 +527,6 @@
     }
     .modal-section { margin-bottom: 1.3rem; }
     .modal-section:last-child { margin-bottom: 0; }
-    .modal-book { margin: 0.7rem 0; font-size: 0.88rem; line-height: 1.7; }
-    .modal-book small { display: block; color: #78716c; }
-    .modal-links { padding-left: 1.2rem; font-size: 0.85rem; line-height: 1.8; overflow-wrap: anywhere; }
-    .modal-related { display: block; width: 100%; text-align: left; padding: 0.6rem; margin: 0.5rem 0; border: 1px solid #e7e5e4; border-radius: 0.4rem; background: #fafaf9; font: inherit; cursor: pointer; }
     .modal-section h3 {
       font-size: 0.7rem;
       font-weight: 700;
@@ -682,28 +678,10 @@
         <h3>テーマ</h3>
         <div class="modal-themes" id="modalThemes"></div>
       </div>
-      <div class="modal-section" id="modalBooksSection" hidden>
-        <h3>My Booksの読書記録</h3>
-        <div id="modalBooks"></div>
-      </div>
-      <div class="modal-section" id="modalCommentariesSection" hidden>
-        <h3>原典を読むための関連書</h3>
-        <p class="modal-book">解説書の読書記録です。原典の読了には含めません。</p>
-        <div id="modalCommentaries"></div>
-      </div>
-      <div class="modal-section" id="modalRelatedSection" hidden>
-        <h3>原典と解説書をたどる</h3>
-        <div id="modalRelated"></div>
-      </div>
-      <div class="modal-section" id="modalSourcesSection" hidden>
-        <h3>出典・原文</h3>
-        <ul class="modal-links" id="modalSources"></ul>
-      </div>
     </div>
   </div>
 
-  <script type="module">
-    import { attachBooks } from './period-model.mjs?v=20261025';
+  <script>
     const state = {
       data: null,
       details: {},
@@ -717,15 +695,8 @@
     Promise.all([
       fetch('data.json').then(r => r.json()),
       fetch('data.details.json').then(r => r.ok ? r.json() : {}).catch(() => ({})),
-      fetch('../my-books/books-data.json').then(r => r.ok ? r.json() : {}).catch(() => ({})),
     ])
-      .then(([data, details, books]) => {
-        state.details = details;
-        data.entries = attachBooks(data.entries, books, data.bookLinks || [], {
-          start: data.eras[0].start, end: data.eras.at(-1).end,
-        }, { includeUnlinked: false }).entries;
-        init(data);
-      })
+      .then(([data, details]) => { state.details = details; init(data); })
       .catch(err => {
         document.body.innerHTML = '<p style="padding:2rem;color:#dc2626">データ読み込みに失敗しました: ' + err.message + '</p>';
       });
@@ -913,7 +884,7 @@
         if (!dot) return;
         let show = catActive.has(entry.category);
         if (show && search) {
-          const t = searchText(entry);
+          const t = (entry.title + ' ' + (entry.where || '') + ' ' + (entry.summary || '')).toLowerCase();
           if (!t.includes(search)) show = false;
         }
         dot.classList.toggle('hidden', !show);
@@ -921,10 +892,6 @@
       });
       document.getElementById('stats').textContent = `${visible} / ${state.data.entries.length} 件表示`;
       if (state.selectedEraIndex != null && isMobile()) renderEraDetail();
-    }
-
-    function searchText(entry) {
-      return [entry.title, entry.where, entry.summary, ...(entry.bookRecords || []).flatMap(book => [book.title, book.author]), ...(entry.relatedBookRecords || []).flatMap(book => [book.title, book.author])].filter(Boolean).join(' ').toLowerCase();
     }
 
     const COLUMN_HALF_WIDTH_PX = 60;
@@ -1068,28 +1035,6 @@
       toggleSection('modalSummarySection', entry.summary, () => {
         document.getElementById('modalSummary').textContent = entry.summary;
       });
-      const bookHTML = book => `<div class="modal-book"><a href="${escapeHtml(book.url)}" target="_blank" rel="noopener">${escapeHtml(book.title)} ↗</a><small>${escapeHtml(book.author)} · ${escapeHtml(book.readYear)}年に読了</small><small>${book.isCollection ? 'この本の収録作品として表示' : book.publishedYear ? `原著発行年：${book.publishedYear}` : ''}</small></div>`;
-      toggleSection('modalBooksSection', entry.bookRecords?.length, () => {
-        document.getElementById('modalBooks').innerHTML = entry.bookRecords.map(bookHTML).join('');
-      });
-      toggleSection('modalCommentariesSection', entry.relatedBookRecords?.length, () => {
-        document.getElementById('modalCommentaries').innerHTML = entry.relatedBookRecords.map(bookHTML).join('');
-      });
-      toggleSection('modalSourcesSection', detail.sources?.length, () => {
-        document.getElementById('modalSources').innerHTML = detail.sources.map(source => `<li><a href="${escapeHtml(source.url)}" target="_blank" rel="noopener noreferrer">${escapeHtml(source.title)} ↗</a></li>`).join('');
-      });
-      const related = (detail.relatedEntries || []).map(link => ({ ...link, entry: state.data.entries.find(e => e.id === link.entryId) })).filter(link => link.entry);
-      toggleSection('modalRelatedSection', related.length, () => {
-        const container = document.getElementById('modalRelated');
-        container.replaceChildren();
-        related.forEach(link => {
-          const button = document.createElement('button');
-          button.type = 'button'; button.className = 'modal-related';
-          button.textContent = `${link.label}：${link.entry.title} →`;
-          button.addEventListener('click', () => { openModal(link.entry); document.querySelector('.modal').scrollTop = 0; });
-          container.appendChild(button);
-        });
-      });
       toggleSection('modalEraSection', detail.era, () => {
         document.getElementById('modalEra').innerHTML = mdToHTML(detail.era);
       });
@@ -1180,7 +1125,7 @@
         if (eraIndexOf(e.year) !== i) return false;
         if (!cats.has(e.category)) return false;
         if (search) {
-          const t = searchText(e);
+          const t = (e.title + ' ' + (e.where || '') + ' ' + (e.summary || '')).toLowerCase();
           if (!t.includes(search)) return false;
         }
         return true;
