@@ -243,6 +243,12 @@
     {"id":"li-abe","title":"森鴎外『阿部一族』","author":"森鴎外","year":1913,"category":"literature","lane":"li_jp","region":"east_asia","where":"日本","summary":"江戸初期の肥後藩の事件を題材に、殉死と忠義を求める秩序が一族を追い詰める過程を描く。"},
     {"id":"li-takase","title":"森鴎外『高瀬舟』","author":"森鴎外","year":1916,"category":"literature","lane":"li_jp","region":"east_asia","where":"日本","summary":"島流しとなった喜助と同心・庄兵衛の対話から、足ることを知る暮らしと、死をめぐる判断を問う。"},
     {"id":"li-yujo","title":"武者小路実篤『友情』","author":"武者小路実篤","year":1919,"category":"literature","lane":"li_jp","region":"east_asia","where":"日本","summary":"野島・大宮・杉子の関係を通して、友情と恋愛の衝突、他者の思いと失恋後の生を描く。"},
-    {"id":"li-omedeta","title":"武者小路実篤『お目出たき人』","author":"武者小路実篤","year":1911,"category":"literature","lane":"li_jp","region":"east_asia","where":"日本","summary":"女性への一方的な思いを抱く青年の語りを通じて、欲望と自己肯定、現実と空想の隔たりを描く。"}
+    {"id":"li-omedeta","title":"武者小路実篤『お目出たき人』","author":"武者小路実篤","year":1911,"category":"literature","lane":"li_jp","region":"east_asia","where":"日本","summary":"女性への一方的な思いを抱く青年の語りを通じて、欲望と自己肯定、現実と空想の隔たりを描く。"},
+    {"id":"li-shibusawa-amayogatari","title":"渋沢栄一『雨夜譚』","author":"渋沢栄一","year":1887,"category":"literature","lane":"li_jp","region":"east_asia","where":"日本","summary":"渋沢栄一が青年期からの経験を語った口述自伝。幕末・維新期を、後年の本人の回想からたどる。"},
+    {"id":"ph-shibusawa-rongo","title":"渋沢栄一『論語と算盤』","author":"渋沢栄一","year":1916,"category":"philosophy","lane":"ph_jp","region":"east_asia","where":"日本","summary":"渋沢栄一の談話を編んだ書。道徳と経済活動の関係を、論語や実業の経験に即して論じる。"},
+    {"id":"ph-shoin-ryukonroku","title":"吉田松陰『留魂録』","author":"吉田松陰","year":1859,"category":"philosophy","lane":"ph_jp","region":"east_asia","where":"江戸・伝馬町の獄中","summary":"処刑直前の吉田松陰が獄中で書いた遺書。取り調べの経緯と、同志・門下生へ託す思いを記す。"},
+    {"id":"li-lawrence-seven-pillars","title":"T.E.ロレンス『知恵の七柱』","author":"T.E.ロレンス","year":1922,"category":"literature","lane":"li_world","region":"western_europe","where":"英国（題材はアラビア）","summary":"第一次世界大戦中のアラブ反乱に参加した経験を描く回想。読書記録の完全版が底本とする1922年のテキストに置く。"},
+    {"id":"li-katsu-hikawa-seiwa","title":"勝海舟『氷川清話』","author":"勝海舟","year":1897,"yearEnd":1898,"category":"literature","lane":"li_jp","region":"east_asia","where":"日本","summary":"晩年の勝海舟の談話を吉本襄が編んだ書。幕末・維新の回想や人物評、政治・社会への見方を伝える。"},
+    {"id":"li-akutagawa-kanto-quake","title":"芥川龍之介『大正十二年九月一日の大震に際して』","author":"芥川龍之介","year":1923,"category":"literature","lane":"li_jp","region":"east_asia","where":"東京","summary":"関東大震災後の見聞と思索を記した文章。被災した街、流言や集団心理、文学・芸術と災害の関係を見つめる。"}
   ]
 }

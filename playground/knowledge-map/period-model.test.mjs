@@ -63,10 +63,10 @@ test('カテゴリ・年代・読書の絞り込みを組み合わせる', () =>
   assert.equal(filterEntries(data.entries, details, { categories: new Set() }).length, 0);
 });
 
-test('全209項目と1945年末尾の全6項目を表示する', () => {
-  assert.equal(data.entries.length, 209);
-  assert.equal(new Set(data.entries.map(e => e.id)).size, 209);
-  assert.equal(filterEntries(data.entries, details, { range: data }).length, 209);
+test('全215項目と1945年末尾の全6項目を表示する', () => {
+  assert.equal(data.entries.length, 215);
+  assert.equal(new Set(data.entries.map(e => e.id)).size, 215);
+  assert.equal(filterEntries(data.entries, details, { range: data }).length, 215);
   const last = filterEntries(data.entries, details, { range: { start: 1945, end: 1945 } });
   assert.equal(last.filter(e => e.year === 1945).length, 6);
   assert.ok(last.some(e => e.id === 'jp-potsdam'));
@@ -85,16 +85,44 @@ test('どの横幅・期間でも年表のまとまりに欠落と重複がな�
   }
 });
 
-test('My Booksの32冊を29作品と未収録の7冊に接続し、合本でも冊数を重複させない', () => {
+test('My Booksの32冊を35作品と未収録の1冊に接続し、合本でも冊数を重複させない', () => {
   assert.equal(attached.bookCount, 32);
   assert.equal(attached.entries.length, 216);
-  assert.equal(attached.entries.filter(e => e.isReading).length, 7);
-  assert.equal(attached.entries.filter(e => !e.isReading && e.bookRecords.length).length, 29);
-  assert.equal(filterEntries(attached.entries, details, {}).length, 209);
+  assert.equal(attached.entries.filter(e => e.isReading).length, 1);
+  assert.equal(attached.entries.filter(e => !e.isReading && e.bookRecords.length).length, 35);
+  assert.equal(filterEntries(attached.entries, details, {}).length, 215);
   assert.equal(filterEntries(attached.entries, details, { reading: true, onlyRead: true }).length, 36);
   assert.equal(attached.entries.find(e => e.id === 'li-kokoro').bookRecords[0].title, 'こころ');
   assert.equal(attached.entries.find(e => e.id === 'li-kojin').year, 1913);
   assert.equal(attached.entries.find(e => e.id === 'li-kojin').bookRecords[0].publishedYear, 1914);
+});
+
+test('採択済みの6冊を原典の年代で作品へ接続し、自動表示との重複をなくす', () => {
+  const expected = [
+    ['li-shibusawa-amayogatari', '雨夜譚 渋沢栄一自伝', 1887],
+    ['ph-shibusawa-rongo', '現代語訳 論語と算盤', 1916],
+    ['ph-shoin-ryukonroku', '留魂録読本', 1859],
+    ['li-lawrence-seven-pillars', '完全版 知恵の七柱 1', 1922],
+    ['li-katsu-hikawa-seiwa', '氷川清話', 1897],
+    ['li-akutagawa-kanto-quake', '大正十二年九月一日の大震に際して', 1923],
+  ];
+  for (const [id, title, year] of expected) {
+    const entry = attached.entries.find(e => e.id === id);
+    assert.equal(entry.year, year);
+    assert.equal(entry.bookRecords.length, 1);
+    assert.equal(entry.bookRecords[0].title, title);
+    assert.equal(entry.relatedBookRecords.length, 0);
+    assert.equal(attached.entries.filter(e => e.bookRecords.some(b => b.title === title)).length, 1);
+    assert.ok(details[id].sourceIds.length);
+    assert.ok(details[id].publication.includes(String(year)));
+    assert.ok(details[id].authorBio.summary);
+  }
+  assert.equal(byId.get('li-katsu-hikawa-seiwa').yearEnd, 1898);
+  assert.equal(details['li-shibusawa-amayogatari'].dateLabel, '口述');
+  assert.equal(details['ph-shoin-ryukonroku'].dateLabel, '執筆');
+  assert.equal(details['li-lawrence-seven-pillars'].dateLabel, '底本テキストの成立');
+  assert.equal(attached.entries.find(e => e.id === 'li-lawrence-seven-pillars').bookRecords[0].publishedYear, 1926);
+  assert.equal(attached.entries.find(e => e.isReading).title, 'アイデアのつくり方');
 });
 
 test('My Booksへのリンクは既存book.htmlと同じ識別規則', () => {
