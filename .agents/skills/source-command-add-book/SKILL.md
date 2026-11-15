@@ -7,6 +7,8 @@ description: "本の追加・add-book、既存本の人類知マップの時代�
 
 Use this skill when the user asks to run the migrated source command `add-book`.
 
+このファイルはClaude CodeとCodexで共有する正本。Claude Codeの `/add-book`（`.claude/commands/add-book.md`）はこのファイルへのシンボリックリンクなので、手順を変えるときはこのファイルを編集する。
+
 ## Command Template
 
 # add-book skill
@@ -34,18 +36,18 @@ Use this skill when the user asks to run the migrated source command `add-book`.
 3. cover URL を組み立て: `https://m.media-amazon.com/images/P/{ASIN}.jpg`
 4. プレースホルダー（43B）戻り検査。43B なら商品ページから `https://m.media-amazon.com/images/I/{ImageID}.jpg` 形式を抽出して使う
 5. 同じ年の既登録本をタイトル・著者・ASINで照合し、未登録なら指定年（または当年）の配列末尾に entry を追加。再実行時に重複を作らない
-6. **enrich を自動実行**: 追加した全冊について、[enrich-bookスキル](../source-command-enrich-book/SKILL.md) の多角調査→反映を実施。複数ソースで裏付けの取れた情報のみ書く。ブラウザ確認・commit・push はこのスキルの共通工程へまとめる
+6. **enrich を自動実行**: 追加した全冊について、[enrich-bookスキル](../source-command-enrich-book/SKILL.md)（リポジトリの `.agents/skills/source-command-enrich-book/SKILL.md`）の多角調査→反映を実施。複数ソースで裏付けの取れた情報のみ書く。ブラウザ確認・commit・push はこのスキルの共通工程へまとめる
 7. 下記「共通工程: 人類知マップの採否確認と反映」に従い、全冊の反映候補・見送り案を提示し、確認後に採択された本を反映
 8. 下記「共通工程: 検証と公開」を実施し、本の追加 + enrich + マップ反映を **1つのコミット** にまとめる
 
 ### モード2: Instagram 自動検出（引数なし）
 
-引数なしで呼ばれた場合、Codex in Chrome で https://www.instagram.com/mazeltov7/ を開いて新規本を検出する。
+引数なしで呼ばれた場合、ユーザーのChrome（実行中のツールのChrome接続。Claude CodeはClaude in Chrome、CodexはCodexのChrome接続）で https://www.instagram.com/mazeltov7/ を開いて新規本を検出する。
 
 **処理手順:**
 
 1. **Chrome で Instagram プロフィール開く**
-   - 利用可能なCodexのChrome接続で既存タブ・対象プロフィールを確認し、このタスクで作るタブのIDを記録
+   - 実行中のツールのChrome接続で既存タブ・対象プロフィールを確認し、このタスクで作るタブのIDを記録
    - 新規タブで `https://www.instagram.com/mazeltov7/` に navigate
    - ログインが必要な場合は「ブラウザで一度ログインしてから再実行してください」と告げて中断
    - ログイン済みなら投稿一覧が見える
@@ -79,7 +81,7 @@ Use this skill when the user asks to run the migrated source command `add-book`.
    - 再実行時は既登録本を再追加しない
 
 8. **enrich は自動実行**（ユーザーへ問わない）
-   - 追加した全冊について、[enrich-bookスキル](../source-command-enrich-book/SKILL.md) の多角調査→反映を **自動で実行** する
+   - 追加した全冊について、[enrich-bookスキル](../source-command-enrich-book/SKILL.md)（リポジトリの `.agents/skills/source-command-enrich-book/SKILL.md`）の多角調査→反映を **自動で実行** する
    - enrich-book 側の設計（出典に複数ソースの裏付けがある情報のみ書き込む）に従う
    - ブラウザ確認・commit・push はこのスキルの共通工程へまとめる
 
@@ -161,7 +163,7 @@ Use this skill when the user asks to run the migrated source command `add-book`.
 - **上下巻ものは1エントリにまとめず、別エントリで登録する**（過去の合意）。検索結果で「全X巻の第N巻」表記を見かけたら分割を提案
 - **publisher が日本の出版社なのに Google Books が英語原書を返した場合**は、必ず Amazon JP の日本語訳版 ASIN を採用
 - **同じ本でも複数版がある場合**: Kindle (B0...) を優先。理由: 装丁の帯がない綺麗な表紙が多いため。ただし司馬遼太郎シリーズなど、シリーズ全巻 Kindle で揃えられるかを確認
-- **メモリーファイル参照**: `/Users/yukiishikawa/.Codex/projects/-Users-yukiishikawa-Products-mazeltov7/memory/project_book_covers.md` に過去の知見（プレースホルダー対応・bookmeter経由フォールバック等）が蓄積されているので、表紙取得で詰まったら参照
+- **メモリーファイル参照**: `/Users/yukiishikawa/.claude/projects/-Users-yukiishikawa-Products-mazeltov7/memory/project_book_covers.md`（Claude Codeのメモリ。Codexからも同じパスで読める）に過去の知見（プレースホルダー対応・bookmeter経由フォールバック等）が蓄積されているので、表紙取得で詰まったら参照
 - **enrich と時代別マップの候補整理は自動実行**し、**時代別ページへの反映前に採否を確認**する。全体マップへの追加・接続は行わない。公開の承認は上記の共通工程に従う
 
 ## ローカルサーバ起動コマンド
