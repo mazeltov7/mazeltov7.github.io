@@ -123,7 +123,7 @@
     {"id":"li-sanshiro","title":"夏目漱石『三四郎』","year":1908,"category":"literature","lane":"li_jp","region":"east_asia","where":"日本","summary":"地方青年三四郎の上京と恋を描く青春小説。「迷羊（ストレイ・シープ）」の語が知られる。"},
     {"id":"li-proust","title":"プルースト『失われた時を求めて』 第1巻","year":1913,"category":"literature","lane":"li_world","region":"western_europe","where":"パリ（フランス）","summary":"全7巻にわたる回想と意識の流れを描く20世紀小説革命。マドレーヌの記憶が象徴的。"},
     {"id":"li-kokoro","title":"夏目漱石『こゝろ』","year":1914,"category":"literature","lane":"li_jp","region":"east_asia","where":"日本","summary":"先生の「遺書」を中心に明治期知識人のエゴと罪を描く晩年の代表作。"},
-    {"id":"li-rashomon","title":"芥川龍之介『羅生門』","year":1915,"category":"literature","lane":"li_jp","region":"east_asia","where":"日本","summary":"今昔物語に題材を取り人間のエゴイズムを冷徹に描く短編。芥川の出世作。"},
+    {"id":"li-rashomon","title":"芥川龍之介『羅生門』","year":1915,"category":"literature","lane":"li_jp","region":"east_asia","where":"日本","summary":"『今昔物語集』に題材を取り、荒廃した平安京の羅生門で生きるための悪を選び取る下人を通して、人間のエゴイズムを冷徹に描く短編。"},
     {"id":"li-kafka-meta","title":"カフカ『変身』","year":1915,"category":"literature","lane":"li_world","region":"eastern_europe","where":"プラハ","summary":"ある朝目覚めると巨大な虫になっていたグレゴール・ザムザの物語。20世紀不条理文学の金字塔。"},
     {"id":"li-ulysses","title":"ジョイス『ユリシーズ』","year":1922,"category":"literature","lane":"li_world","region":"western_europe","where":"パリ刊(アイルランド作家)","summary":"ダブリンの一日を膨大な意識の流れで描く。20世紀モダニズム文学の頂点。"},
     {"id":"li-waste-land","title":"T・S・エリオット『荒地』","year":1922,"category":"literature","lane":"li_world","region":"western_europe","where":"英国","summary":"第一次大戦後の精神的荒廃を多言語・引用織りまぜた長詩で表現。モダニズム詩の象徴。"},
@@ -249,6 +249,12 @@
     {"id":"ph-shoin-ryukonroku","title":"吉田松陰『留魂録』","author":"吉田松陰","year":1859,"category":"philosophy","lane":"ph_jp","region":"east_asia","where":"江戸・伝馬町の獄中","summary":"処刑直前の吉田松陰が獄中で書いた遺書。取り調べの経緯と、同志・門下生へ託す思いを記す。"},
     {"id":"li-lawrence-seven-pillars","title":"T.E.ロレンス『知恵の七柱』","author":"T.E.ロレンス","year":1922,"category":"literature","lane":"li_world","region":"western_europe","where":"英国（題材はアラビア）","summary":"第一次世界大戦中のアラブ反乱に参加した経験を描く回想。読書記録の完全版が底本とする1922年のテキストに置く。"},
     {"id":"li-katsu-hikawa-seiwa","title":"勝海舟『氷川清話』","author":"勝海舟","year":1897,"yearEnd":1898,"category":"literature","lane":"li_jp","region":"east_asia","where":"日本","summary":"晩年の勝海舟の談話を吉本襄が編んだ書。幕末・維新の回想や人物評、政治・社会への見方を伝える。"},
-    {"id":"li-akutagawa-kanto-quake","title":"芥川龍之介『大正十二年九月一日の大震に際して』","author":"芥川龍之介","year":1923,"category":"literature","lane":"li_jp","region":"east_asia","where":"東京","summary":"関東大震災後の見聞と思索を記した文章。被災した街、流言や集団心理、文学・芸術と災害の関係を見つめる。"}
+    {"id":"li-akutagawa-kanto-quake","title":"芥川龍之介『大正十二年九月一日の大震に際して』","author":"芥川龍之介","year":1923,"category":"literature","lane":"li_jp","region":"east_asia","where":"東京","summary":"関東大震災後の見聞と思索を記した文章。被災した街、流言や集団心理、文学・芸術と災害の関係を見つめる。"},
+    {"id":"li-wakai","title":"志賀直哉『和解』","author":"志賀直哉","year":1917,"category":"literature","lane":"li_jp","region":"east_asia","where":"千葉・我孫子と東京・麻布","summary":"長く不和だった父への反感が、長女の死や次女の誕生を経てほどけ、和解に至るまでの心の動きを、作者自身の体験をもとに描いた中編。"},
+    {"id":"li-himitsu","title":"谷崎潤一郎『秘密』","author":"谷崎潤一郎","year":1911,"category":"literature","lane":"li_jp","region":"east_asia","where":"東京・浅草","summary":"明治末の浅草で寺に隠れ住み、女装して夜の街を歩く「私」が、かつての女と目隠しの逢瀬を重ね、その秘密を暴いたとたん興味を失う姿を描く。"},
+    {"id":"li-meian","title":"夏目漱石『明暗』","author":"夏目漱石","year":1916,"category":"literature","lane":"li_jp","region":"east_asia","where":"東京","summary":"手術を控えた会社員津田と新婚の妻お延の探り合いを軸に、金銭や虚栄をめぐる日常の人間関係に潜む我執を描いた、漱石の未完の絶筆。"},
+    {"id":"li-ibsen-dollhouse","title":"イプセン『人形の家』","author":"イプセン","year":1879,"category":"literature","lane":"li_world","region":"western_europe","where":"コペンハーゲン刊（ノルウェー作家）","summary":"夫の病気の際に父の署名を偽造して借金した妻ノラが、秘密の露見を機に人形のような妻の立場を拒み、子どもを残して家を出るまでを描く。"},
+    {"id":"li-hana","title":"芥川龍之介『鼻』","author":"芥川龍之介","year":1916,"category":"literature","lane":"li_jp","region":"east_asia","where":"日本・池の尾","summary":"あごの下まで垂れる長い鼻に悩む高僧禅智内供が、鼻を短くしてかえって笑われる姿を通して、傷つく自尊心と傍観者の利己心を描く。"},
+    {"id":"ph-nitobe-bushido","title":"新渡戸稲造『武士道』","author":"新渡戸稲造","year":1900,"category":"philosophy","lane":"ph_jp","region":"north_america","where":"フィラデルフィア刊（英文）","summary":"日本人の道徳の基盤を武士道に求め、義・勇・仁・礼・誠・名誉・忠義などの徳目を、西洋の騎士道や古典と比べながら英語で説く。"}
   ]
 }

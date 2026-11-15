@@ -1,5 +1,5 @@
 {
-  "reviewedAt": "2026-10-25",
+  "reviewedAt": "2026-11-15",
   "courses": [],
   "sources": {
     "amayogatari":{"title":"『渋沢栄一伝記資料』をくまなく探したい","publisher":"渋沢栄一記念財団","url":"https://www.shibusawa.or.jp/center/newsletter/737.html","scope":"1887年の口述と自伝資料の成立"},
@@ -61,7 +61,32 @@
     "musha": {"title":"武者小路実篤・作品紹介","url":"https://www.shinchosha.co.jp/book/105714/","publisher":"新潮社","scope":"著者略歴と作品"},
     "nishida": {"title":"思想家紹介・西田幾多郎","url":"https://ceschi.bun.kyoto-u.ac.jp/archive/bun_archive/japanese_philosophy/jp-nishida_guidance/index.htm","publisher":"京都大学","scope":"1911年の刊行・思想と生涯"},
     "wakamatsu-zen": {"title":"西田幾多郎 善の研究 日常で深める哲学","url":"https://www.nhk-book.co.jp/detail/000000819932025.html","publisher":"NHK出版","scope":"2025年の解説書"},
-    "fujita-zen": {"title":"西田幾多郎『善の研究』を読む","url":"https://www.chikumashobo.co.jp/product/9784480075017/","publisher":"筑摩書房","scope":"2022年の解説書"}
+    "fujita-zen": {"title":"西田幾多郎『善の研究』を読む","url":"https://www.chikumashobo.co.jp/product/9784480075017/","publisher":"筑摩書房","scope":"2022年の解説書"},
+    "shisei-aozora": {"title":"『刺青』初出・原文","publisher":"青空文庫","url":"https://www.aozora.gr.jp/cards/001383/card56641.html","scope":"1910年11月『新思潮』の初出・深川を舞台とする本文"},
+    "shisei-himitsu": {"title":"『刺青・秘密』収録作品","publisher":"新潮社","url":"https://www.shinchosha.co.jp/book/100503/","scope":"合本の収録7編・『刺青』を処女作とする紹介・著者"},
+    "tanizaki-kotobank": {"title":"谷崎潤一郎","publisher":"コトバンク","url":"https://kotobank.jp/word/谷崎潤一郎-18804","scope":"第2次『新思潮』11月号の『刺青』・1911年11月の『秘密』と永井荷風の激賞・ワイルドを種本とする指摘"},
+    "himitsu": {"title":"『秘密』初出・原文","publisher":"青空文庫","url":"https://www.aozora.gr.jp/cards/001383/card57349.html","scope":"1911年11月『中央公論』の初出・浅草を舞台とする本文"},
+    "rashomon-kotobank": {"title":"羅生門","publisher":"コトバンク","url":"https://kotobank.jp/word/羅生門-147211","scope":"1915年11月の発表・『鼻』（1918年刊）所収の定稿・初期の傑作という評価"},
+    "rashomon-hana": {"title":"『羅生門・鼻』収録作品","publisher":"新潮社","url":"https://www.shinchosha.co.jp/book/102501/","scope":"合本の収録8編・著者"},
+    "hana": {"title":"『鼻』初出・原文","publisher":"青空文庫","url":"https://www.aozora.gr.jp/cards/000879/card42.html","scope":"1916年2月『新思潮』の初出・池の尾を舞台とする本文"},
+    "hana-kotobank": {"title":"鼻","publisher":"コトバンク","url":"https://kotobank.jp/word/鼻-115581","scope":"第4次『新思潮』での発表・夏目漱石の激賞と出世作・傍観者の利己主義"},
+    "soseki-akutagawa": {"title":"「知識人」漱石から「作家」漱石へ――「木曜会」にみる師弟関係の構造と変容","publisher":"京都大学大学院教育学研究科紀要","url":"https://repository.kulib.kyoto-u.ac.jp/server/api/core/bitstreams/0ef84c01-98b9-4572-a23a-3377223f13f4/content","scope":"1916年2月に漱石が『鼻』を激賞した書簡"},
+    "ibsen-dollhouse": {"title":"A Doll's House (1879)","publisher":"The Virtual Ibsen Centre（オスロ大学）","url":"https://www.hf.uio.no/is/english/services/virtual-ibsen-centre/on-ibsen-s-work/du","scope":"ローマとアマルフィでの執筆・1879年12月4日の刊行・12月21日の初演"},
+    "dukkehjem-snl": {"title":"Et dukkehjem","publisher":"Store norske leksikon","url":"https://snl.no/Et_dukkehjem","scope":"1879年12月の刊行と初演・筋・1880年のドイツ上演の別結末"},
+    "ningyo-kotobank": {"title":"人形の家","publisher":"コトバンク","url":"https://kotobank.jp/word/人形の家-111484","scope":"1879年の刊行と初演・1911年の文芸協会による日本初演と松井須磨子"},
+    "ningyo-1911": {"title":"Ningyō no ie（1911年）","publisher":"IbsenStage（オスロ大学）","url":"https://ibsenstage.hf.uio.no/pages/event/76254","scope":"1911年9月の文芸協会私演場と11月の帝国劇場での上演"},
+    "seito-nora": {"title":"青鞜 2(1)","publisher":"国立国会図書館","url":"https://ndlsearch.ndl.go.jp/books/R100000039-I1511492","scope":"1912年1月号のノラ特集の目次"},
+    "bushido-1900": {"title":"Bushido: the Soul of Japan (1900)","publisher":"Internet Archive","url":"https://archive.org/details/bushidosouljapa00nitogoog","scope":"初版の扉（Philadelphia, 1900）・著作権表示と序文の日付（1899年）・全17章"},
+    "bushido-ndl": {"title":"Bushido; : the soul of Japan, an exposition of Japanese thought","publisher":"国立国会図書館","url":"https://ndlsearch.ndl.go.jp/books/R100000002-I000000524989","scope":"初版の書誌（Philadelphia: Leeds & Biddle, 1900, 127p.）"},
+    "nitobe-jef": {"title":"Nitobe Inazo and Bushido","publisher":"Journal of Japanese Trade & Industry（Sato Masahiro）","url":"https://www.jef.or.jp/journal/pdf/pioneers0201.pdf","scope":"療養中の執筆と動機・欧米での受容・日本語訳の刊行"},
+    "nitobe": {"title":"新渡戸稲造","publisher":"国立国会図書館「近代日本人の肖像」","url":"https://www.ndl.go.jp/portrait/datas/311/","scope":"経歴・1900年の『武士道』刊行"},
+    "wakai": {"title":"『和解』作品紹介・著者紹介","publisher":"新潮社","url":"https://www.shinchosha.co.jp/book/103001/","scope":"長女の死と次女の誕生を経て父と和解する内容・著者"},
+    "wakai-kotobank": {"title":"和解","publisher":"コトバンク","url":"https://kotobank.jp/word/和解-152878","scope":"1917年10月『黒潮』の初出・翌年の『夜の光』収録・我孫子と麻布・中編三部作"},
+    "wakai-osaka": {"title":"志賀直哉『和解』における〈自己〉：父子関係を中心に","publisher":"阪大近代文学研究","url":"https://doi.org/10.18910/92665","scope":"1917年8月30日の和解・9月の執筆と10月の掲載・『夜の光』での加筆"},
+    "shiga-kotobank": {"title":"志賀直哉","publisher":"コトバンク","url":"https://kotobank.jp/word/志賀直哉-17117","scope":"生没年・『白樺』創刊・『時任謙作』から『暗夜行路』への変化・1949年の文化勲章"},
+    "meian": {"title":"『明暗』書誌・原文","publisher":"青空文庫","url":"https://www.aozora.gr.jp/cards/000148/card782.html","scope":"1916年5月26日〜12月14日の『朝日新聞』連載・188回で未完"},
+    "meian-kotobank": {"title":"明暗","publisher":"コトバンク","url":"https://kotobank.jp/word/明暗-141046","scope":"東京・大阪の『朝日新聞』への連載・1917年1月の岩波書店刊・我執を多角的に描く内容"},
+    "meian-fukamachi": {"title":"夏目漱石『明暗』論","publisher":"立命館文學（深町博史）","url":"https://www.ritsumei.ac.jp/acd/cg/lt/rb/685/685PDF/fukamachi.pdf","scope":"東京朝日新聞の掲載期間・全188回・1917年1月の単行本・漱石最後にして最長の作品"}
   },
   "entries": {
     "li-shibusawa-amayogatari":{"dateLabel":"口述","publication":"1887年（明治20年）の口述。後年の文庫版の刊行年とは区別。","setting":"幕末から明治初期にかけての自身の経験を回想。","context":"渋沢栄一が自らの歩みを語った口述自伝です。出来事の当時に書いた日記ではなく、後年に振り返った証言として読むことができます。","significance":"幕末・維新期を経験した人物の自己認識と、年表上の出来事を照らし合わせられます。","sourceIds":["amayogatari"],"themes":["回想","幕末維新","渋沢栄一"],"authorBio":{"summary":"渋沢栄一は幕末・維新を経験した実業家。自らの活動について多くの談話と回想を残しました。"}},
@@ -83,8 +108,8 @@
     "li-sanshiro":{"dateLabel":"連載開始","publication":"1908年","setting":"明治後期の東京。地方から大学へ進んだ青年の生活。","sourceIds":["sanshiro"],"significance":"都市の新しい人間関係を、まだその規則を知らない青年の目から眺めます。後の『こゝろ』と比べると、世代と語り手の違いを考えられます。","themes":["個人と社会","都市","夏目漱石"]},
     "jp-taisho":{"context":"1912年の明治天皇崩御に伴い、大正へ改元されました。政治・社会の変化は改元の日に一斉に起きたわけではなく、明治末から続く動きを含んでいます。","significance":"『こゝろ』では、明治天皇の死と乃木希典の殉死が登場人物の語りに入ります。年表上の時代区分と、人が経験する時代の終わりとを比べられます。","sourceIds":["taisho","kokoro-text"],"themes":["時代の転換","個人と社会"]},
     "li-kokoro":{"dateLabel":"新聞連載","publication":"1914年4〜8月（同年単行本化）","setting":"明治期の回想と、明治天皇崩御・乃木希典の殉死を迎える1912年頃。","sourceIds":["kokoro","kokoro-text"],"significance":"個人の罪や孤独を、時代の終わりと重ねて描いています。発表年の1914年と、作中の1912年を分けて捉えることで、同時代の史実との関係が明確になります。","themes":["個人と社会","時代の転換","夏目漱石","罪と孤独"]},
-    "li-rashomon":{"dateLabel":"初出","publication":"1915年11月『帝国文学』","setting":"荒廃した平安期の京都・羅生門。発表年の大正期が舞台ではない。","sourceIds":["rashomon"],"significance":"古典の題材を用いて人間の行動と正当化を問う短編です。発表された時代と物語の舞台が異なる例としても読めます。"},
-    "li-shisei":{"dateLabel":"初出","setting":"文政期の江戸・深川。","sourceIds":["tanizaki"]},
+    "li-rashomon":{"dateLabel":"初出","publication":"1915年11月『帝国文学』","setting":"荒廃した平安期の京都・羅生門。発表年の大正期が舞台ではない。","context":"東京帝国大学在学中の芥川が『帝国文学』に発表した短編で、『今昔物語集』巻二十九の羅城門の説話を基に、巻三十一の話も取り入れる。主人から暇を出された下人は、楼上で女の死骸から髪を抜く老婆の言い分を聞き、その着物を剥いで闇へ消える。結びの一文は改稿され、1918年刊の短編集『鼻』で「下人の行方は、誰も知らない」となった。","significance":"古典の題材を用いて人間の行動と正当化を問う短編です。発表された時代と物語の舞台が異なる例としても読めます。","sourceIds":["rashomon","rashomon-kotobank","rashomon-hana"]},
+    "li-shisei":{"dateLabel":"初出","publication":"1910年11月『新思潮』（第2次）","setting":"江戸時代の深川。","context":"谷崎が東京帝国大学在学中に小山内薫・和辻哲郎らと創刊した第2次『新思潮』の11月号に発表した短編で、新潮社は処女作と紹介している。元浮世絵師の刺青師清吉は、駕籠の簾からのぞいた素足に理想の女を見いだし、その娘を麻酔剤で眠らせて背に女郎蜘蛛を彫る。目覚めた娘は、清吉を最初の「肥料」とする女へと変わる。","significance":"1911年11月に永井荷風が『三田文学』で谷崎を激賞し、谷崎は文壇に認められた。同年12月に出た最初の作品集も『刺青』と題された。","sourceIds":["tanizaki","shisei-aozora","tanizaki-kotobank","shisei-himitsu"]},
     "li-tanizaki":{"sourceIds":["tanizaki"]},
     "sc-darwin":{"context":"ダーウィンは1859年に『種の起源』を刊行し、自然選択を軸に、生物の変化と多様性を説明しました。長い時間をかけた変化が、現在の自然を理解する手がかりになります。","significance":"種を固定された分類として見るだけでなく、共通の由来と分岐の歴史から考える視点を広めました。社会制度を正当化する議論と、生物学の説明とは区別して読む必要があります。","sourceIds":["darwin"],"themes":["進化","世界像","科学史"],"dateLabel":"刊行"},
     "sc-planck":{"context":"熱した物体が放つ光の分布を説明する問題に対し、プランクは1900年にエネルギーの量子という仮定を導入しました。プランク定数が、エネルギーと振動数を結びます。","significance":"エネルギーを連続的に扱う古典物理の見方だけでは説明できない問題に、新しい道を開きました。この時点で、後の量子力学全体が完成したわけではありません。","sourceIds":["planck"],"themes":["量子","世界像","科学史"]},
@@ -115,7 +140,13 @@
     "li-yujo": {"dateLabel":"連載","publication":"1919年10月16日〜12月11日『大阪毎日新聞』夕刊（単行本は1920年4月）","context":"1919年10〜12月に『大阪毎日新聞』夕刊で連載され、1920年4月に以文社から単行本が刊行された。『新しき村』の活動を始めた時期の実篤が、恋愛の悩みを抱える若者へ向けて書いた作品である。ここでは原著の単行本刊行年を1920年として記録し、指定された電子版の2026年配信とは区別する。\n\n野島、大宮、杉子の関係を通じて、親友を思う気持ちと恋愛感情の衝突を描く。前半の野島を中心とした語りから、後半の書簡へと視点が移ることで、ひとつの恋愛がそれぞれの当事者に異なる姿で経験されることが見えてくる。失恋の苦痛と、その後の生をどう引き受けるかが主題になっている。","sourceIds":["yujo","musha"],"themes":["日本近代文学","白樺派","友情と恋愛","自己と他者","書簡体"],"authorBio":{"born":1885,"died":1976,"summary":"武者小路実篤は東京生まれの小説家・劇作家。1910年に志賀直哉らと『白樺』を創刊し、個人の生を肯定する文学を展開した。1918年には宮崎県で共同生活の実践『新しき村』を始めた。代表作に『お目出たき人』『友情』『真理先生』があり、絵画や書にも取り組んだ。"}},
     "li-omedeta": {"dateLabel":"発表","publication":"1911年2月（執筆は1910年2月）","context":"1910年に執筆され、1911年2月に発表された武者小路実篤の初期の代表作。執筆と同じ1910年には同人誌『白樺』が創刊されており、実篤が文学活動の方向を定めていく時期に位置する。指定の新潮文庫版は1999年刊で、作品の発表年とは分けて扱う。\n\n語り手の青年は、ほとんど交流のない女性との恋愛を思い描き、現実との隔たりを抱え続ける。日記のように率直な語りでありながら虚構も組み込まれており、作者の実生活の記録とそのまま同一視することはできない。欲望、自己肯定、相手を理想化するまなざしを読む作品である。","sourceIds":["omedeta","musha"],"themes":["日本近代文学","白樺派","自意識","片思い","虚構と現実"],"authorBio":{"born":1885,"died":1976,"summary":"武者小路実篤は東京生まれの小説家・劇作家。1910年に志賀直哉らと『白樺』を創刊し、個人の生を肯定する文学を展開した。1918年には宮崎県で共同生活の実践『新しき村』を始めた。代表作に『お目出たき人』『友情』『真理先生』があり、絵画や書にも取り組んだ。"}},
     "li-sansho": {"dateLabel":"初出","publication":"1915年1月『中央公論』","setting":"平安時代の越後・佐渡・丹後など。","context":"安寿と厨子王の伝承をもとに、母と姉弟の離散、隷属からの脱出を描いた歴史小説。大正期に書かれた作品であり、登場人物が生きる時代とは異なる。","sourceIds":["sansho","sansho-takase"],"themes":["歴史小説","人間の尊厳","家族","自由"],"authorBio":{"born":1862,"died":1922,"summary":"森鴎外は津和野生まれの小説家・翻訳家・陸軍軍医。本名は森林太郎。東京大学医学部を卒業し、1884年から1888年までドイツに留学した。軍医として働きながら、西洋文学の翻訳、評論、小説に取り組み、『舞姫』『青年』『雁』などを発表。のちに『阿部一族』『山椒大夫』『高瀬舟』などの歴史小説も執筆した。"}},
-    "ph-nishida": {"dateLabel":"刊行","publication":"1911年","context":"西田幾多郎の初期の主著。主観と客観を分ける以前の経験を出発点に、実在、善、宗教を考える。西洋哲学と東洋の宗教的な経験を背景に、日本語による独自の哲学を構想した。","sourceIds":["nishida","wakamatsu-zen","fujita-zen"],"themes":["日本哲学","純粋経験","善","宗教哲学"],"authorBio":{"born":1870,"died":1945,"summary":"西田幾多郎は石川県生まれの哲学者。第四高等学校や京都帝国大学で教え、京都学派の基礎を築いた。『善の研究』以後も、経験と自己、論理、歴史的世界の問題を探究した。"}}
+    "ph-nishida": {"dateLabel":"刊行","publication":"1911年","context":"西田幾多郎の初期の主著。主観と客観を分ける以前の経験を出発点に、実在、善、宗教を考える。西洋哲学と東洋の宗教的な経験を背景に、日本語による独自の哲学を構想した。","sourceIds":["nishida","wakamatsu-zen","fujita-zen"],"themes":["日本哲学","純粋経験","善","宗教哲学"],"authorBio":{"born":1870,"died":1945,"summary":"西田幾多郎は石川県生まれの哲学者。第四高等学校や京都帝国大学で教え、京都学派の基礎を築いた。『善の研究』以後も、経験と自己、論理、歴史的世界の問題を探究した。"}},
+    "li-wakai": {"dateLabel":"初出","publication":"1917年10月『黒潮』（翌1918年1月、作品集『夜の光』に加筆のうえ収録）","setting":"千葉県我孫子の住まいと、東京・麻布の父の家。","context":"1917年8月30日に父と和解した志賀直哉が、その直後に約半月で書き上げ、同年10月の『黒潮』に発表した中編。作者を思わせる順吉が、千葉県我孫子の住まいと東京・麻布の父の家を行き来しながら、長女の死や次女の誕生を経て父と和解するまでを描く。初出には次女の出産の場面がなく、翌1918年1月の作品集『夜の光』に収める際に書き加えられた。","significance":"『大津順吉』『或る男、其姉の死』とともに父子の葛藤を描く中編三部作をなす。父との不和を題材とした長編『時任謙作』の構想は、和解後に主題を改め、のちの『暗夜行路』となった。","sourceIds":["wakai","wakai-kotobank","wakai-osaka","shiga-kotobank"],"themes":["白樺派","私小説","父と子","和解","志賀直哉"],"authorBio":{"born":1883,"died":1971,"summary":"志賀直哉は宮城県石巻生まれの小説家。1910年に武者小路実篤らと『白樺』を創刊した。父との不和と和解を題材にした『大津順吉』『和解』や、生と死を見つめる『城の崎にて』など、身近な経験を簡潔な文体で描き、唯一の長編『暗夜行路』を残した。1949年に文化勲章を受章した。"}},
+    "li-himitsu": {"dateLabel":"初出","publication":"1911年11月『中央公論』","setting":"明治末の東京・浅草。松葉町辺の寺に隠れ住む「私」が、女装して夜の街を歩く。","context":"『刺青』の翌年に『中央公論』へ発表した短編。秘密を持つこと自体に快楽を見いだした「私」は、女物の着物と鬘で夜の浅草を歩くうちに、上海への航海中に関係したＴ女と再会する。目隠しをされて俥で通う女の家を突き止めると、「私」は秘密の淡い快感に満足できなくなり、より強い刺激を求めていく。","significance":"発表と同じ1911年11月、永井荷風が『三田文学』で谷崎の作品を激賞し、谷崎は新進作家として認められた。オスカー・ワイルドの短編「謎をもたぬスフィンクス」を種本とする指摘もある。","sourceIds":["himitsu","tanizaki-kotobank","shisei-himitsu"],"themes":["秘密","女装","明治の東京","好奇心と幻滅"],"authorBio":{"born":1886,"died":1965,"summary":"谷崎潤一郎は東京・日本橋生まれの小説家。東京帝国大学国文科在学中に第2次『新思潮』を創刊して『刺青』などを発表し、1911年に永井荷風に激賞されて文壇に出た。初期は耽美的な作風で知られ、1923年の関東大震災を機に関西へ移ってからは古典や日本の伝統美に傾き、『春琴抄』『細雪』などを書いた。1949年に文化勲章を受けた。"}},
+    "li-meian": {"dateLabel":"連載","publication":"1916年5月26日〜12月14日『東京朝日新聞』（『大阪朝日新聞』にも連載。全188回で未完。単行本は1917年1月、岩波書店）","setting":"東京の津田夫婦の家や入院先と、東京から一日がかりで行く温泉場。作中に年代は明示されない。","context":"1916年5月から東京・大阪の『朝日新聞』に連載された漱石最後の長編。痔の手術を控えた津田と新婚の妻お延を中心に、入院費をめぐる妹お秀との対立、友人小林の攻撃、かつての恋人清子への未練が交錯する。漱石が同年12月9日に死去したため、津田が温泉場で清子と再会した場面で途切れた。","significance":"未完ながら漱石の小説で最も長く、日常の人間関係に潜む我執を周囲の人物の側からも多角的に描いた作品として評価されてきた。","sourceIds":["meian","meian-kotobank","meian-fukamachi","soseki-works"],"themes":["我執","夫婦","金銭","未完","夏目漱石"],"authorBio":{"born":1867,"died":1916,"summary":"夏目漱石は江戸牛込生まれの小説家・英文学者。本名は金之助。教職とイギリス留学を経て、1905年に『吾輩は猫である』を発表し、1907年に朝日新聞社へ入社した。1910年の修善寺での大病後も『こゝろ』『道草』などを書き続け、『明暗』の連載中だった1916年12月に死去した。"}},
+    "li-ibsen-dollhouse": {"dateLabel":"刊行","publication":"1879年12月4日、コペンハーゲンのギルデンダル社（同月21日に王立劇場で初演）","setting":"ヘルメル家の住居。クリスマスの時期。","context":"イプセンが国外生活中に滞在したローマとアマルフィで書き進め、1879年9月に完成させた3幕の戯曲。友人の作家ラウラ・キーラーをめぐる出来事も構想に関わったとされる。夫の病気の際の借金と署名偽造の秘密が露見し、夫の態度に失望したノラが、子どもを残して家を出るまでを描く。","significance":"結末は発表当時から論争を呼び、近代リアリズム劇の代表作とされる。日本では1911年の文芸協会公演で松井須磨子がノラを演じ、翌年1月に『青鞜』がこの劇を特集した。","sourceIds":["ibsen-dollhouse","dukkehjem-snl","ningyo-kotobank","ningyo-1911","seito-nora"],"themes":["近代劇","リアリズム演劇","女性の自立","結婚と家庭"],"authorBio":{"born":1828,"died":1906,"summary":"ヘンリク・イプセンはノルウェーのシーエン生まれの劇作家。ベルゲンの劇場で働いたのち、1864年から1891年まで主にイタリアとドイツで暮らした。劇詩『ブラン』『ペール・ギュント』で名声を得て、『人形の家』『幽霊』『ヘッダ・ガブラー』などの散文劇で近代リアリズム劇を切り開いた。"}},
+    "li-hana": {"dateLabel":"初出","publication":"1916年2月『新思潮』（第4次）創刊号","setting":"典拠の説話に基づく平安時代の池の尾。宮中の内道場に仕える高僧禅智内供と、寺に出入りする人々。","context":"1916年2月創刊の第4次『新思潮』に発表した短編で、『今昔物語集』の「池尾禅珍内供鼻語」と『宇治拾遺物語』の「鼻長き僧の事」に取材した。五十歳を越えた内供は、弟子が京で教わった法に従い鼻を茹でて踏ませ、短くすることに成功するが、周囲の笑いはかえって増す。ある朝鼻が元の長さに戻ると、内供は晴れやかな心持ちを取り戻す。","significance":"1916年2月、夏目漱石が芥川宛の書簡で激賞し、芥川の出世作となった。","sourceIds":["hana","hana-kotobank","soseki-akutagawa","rashomon-hana"],"themes":["自尊心","傍観者の利己主義","説話の翻案","滑稽"],"authorBio":{"born":1892,"died":1927,"summary":"芥川龍之介は東京生まれの小説家。東京帝国大学英文科在学中に『羅生門』を発表し、1916年に第4次『新思潮』に載せた『鼻』が夏目漱石に激賞されて文壇に出た。『今昔物語集』などに材を取った王朝物をはじめ、キリシタン物や童話など多彩な短編を書いた。1919年に大阪毎日新聞社の社員となり創作に専念し、1927年に睡眠薬を飲んで自殺した。"}},
+    "ph-nitobe-bushido": {"dateLabel":"刊行","publication":"1900年、フィラデルフィアのリーズ・アンド・ビドル社から英文で刊行（序文の日付と著作権表示は1899年）","context":"札幌農学校での激務から体調を崩した新渡戸稲造が、療養のため滞在した米国で英語で書いた書。序文によれば、宗教教育のない日本でどう道徳を教えるのかというベルギーの法学者ラヴレーの問いと、妻の質問に答えることが執筆の動機である。全17章で武士の徳目のほか、切腹と敵討ち、女性の教育と地位、武士道の将来までを論じる。","significance":"日露戦争の前後に欧米で広く読まれ、多くの言語に翻訳された。日本語訳は1908年に桜井鴎村訳、1938年に矢内原忠雄訳（岩波文庫）が刊行されている。","sourceIds":["bushido-1900","bushido-ndl","nitobe-jef","nitobe"],"themes":["武士道","日本文化論","比較文化","道徳教育"],"authorBio":{"born":1862,"died":1933,"summary":"新渡戸稲造は盛岡生まれの教育者・農政学者。札幌農学校に学び、米国とドイツに留学した。英文の『武士道』で知られ、第一高等学校長、東京女子大学初代学長、国際連盟事務次長を歴任した。晩年は太平洋問題調査会理事長として活動し、1933年にカナダで没した。"}}
   },
   "relations": [
     {"to":"jp-kanto-quake","type":"background","note":"関東大震災後の街と人々、文芸への影響を記した文章です。","sourceIds":["akutagawa-quake"],"from":"li-akutagawa-kanto-quake"},
@@ -174,6 +205,14 @@
     {"entryId":"li-yujo","title":"友情","author":"武者小路実篤"},
     {"entryId":"li-omedeta","title":"お目出たき人","author":"武者小路実篤"},
     {"entryId":"ph-nishida","title":"西田幾多郎 善の研究 日常で深める哲学","author":"若松英輔","kind":"commentary"},
-    {"entryId":"ph-nishida","title":"西田幾多郎『善の研究』を読む","author":"藤田正勝","kind":"commentary"}
+    {"entryId":"ph-nishida","title":"西田幾多郎『善の研究』を読む","author":"藤田正勝","kind":"commentary"},
+    {"entryId":"li-wakai","title":"和解","author":"志賀直哉"},
+    {"entryId":"li-shisei","title":"刺青・秘密","author":"谷崎潤一郎"},
+    {"entryId":"li-himitsu","title":"刺青・秘密","author":"谷崎潤一郎"},
+    {"entryId":"li-meian","title":"明暗","author":"夏目漱石"},
+    {"entryId":"li-ibsen-dollhouse","title":"人形の家","author":"イプセン / 矢崎源九郎 訳"},
+    {"entryId":"li-rashomon","title":"羅生門・鼻","author":"芥川龍之介"},
+    {"entryId":"li-hana","title":"羅生門・鼻","author":"芥川龍之介"},
+    {"entryId":"ph-nitobe-bushido","title":"新訳 武士道","author":"新渡戸稲造 / 大久保喬樹 訳"}
   ]
 }
