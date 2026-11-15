@@ -283,7 +283,7 @@ test('追加解説・関係・出典の参照先が実在し、根拠がある',
   for (const source of Object.values(editorial.sources)) assert.equal(new URL(source.url).protocol, 'https:');
 });
 
-test('発表年と舞台を分け、谷崎の受章年の誤記を残さない', () => {
+test('発表年と舞台を分け、谷崎の受章年やベルクソンの経歴の誤記を残さない', () => {
   assert.match(details['li-kokoro'].publication, /1914/);
   assert.match(details['li-kokoro'].setting, /1912/);
   assert.match(details['li-rashomon'].publication, /1915/);
@@ -292,4 +292,8 @@ test('発表年と舞台を分け、谷崎の受章年の誤記を残さない',
   assert.doesNotMatch(raw, /1965年文化勲章/);
   assert.match(details['li-shisei'].authorBio.summary, /1949年/);
   assert.match(details['li-tanizaki'].authorBio.summary, /1949年/);
+  // エコール・ノルマルで同時期に学んだのはジョレスとデュルケーム。適用除外を示したのはヴィシー政権。
+  assert.doesNotMatch(raw, /ジャンヌ・ピアジェ|ナチスの優遇/);
+  assert.match(details['ph-bergson'].authorBio.summary, /ジャン・ジョレス、エミール・デュルケーム/);
+  assert.match(details['ph-bergson'].authorBio.summary, /ヴィシー政権/);
 });
