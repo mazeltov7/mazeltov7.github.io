@@ -7,6 +7,8 @@ description: "指定した本について Wikipedia / Google Books / Web Search 
 
 Use this skill when the user asks to run the migrated source command `enrich-book`.
 
+このファイルはClaude CodeとCodexで共有する正本。Claude Codeの `/enrich-book`（`.claude/commands/enrich-book.md`）はこのファイルへのシンボリックリンクなので、手順を変えるときはこのファイルを編集する。
+
 ## Command Template
 
 # enrich-book skill
@@ -85,7 +87,7 @@ MyBooks 詳細ビュー（`book.html?id=...`）に表示する周辺情報を「
 ### 6. ブラウザで動作確認
 
 - localhost:8765 が動いてなければ起動: `cd playground/my-books && python3 -m http.server 8765`
-- Codex in Chrome で `http://localhost:8765/book.html?id={KEY}` を navigate して読み込み確認
+- ユーザーのChrome（実行中のツールのChrome接続。Claude CodeはClaude in Chrome、CodexはCodexのChrome接続）で `http://localhost:8765/book.html?id={KEY}` を開いて読み込み確認
 - スクリーンショットで時代背景 / 著者バイオ の表示を視覚確認
 
 ### 7. commit & push（ユーザー確認後）
